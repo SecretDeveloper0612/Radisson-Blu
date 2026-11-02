@@ -22,7 +22,14 @@
 
 # misc
 .DS_Store
+Thumbs.db
+ehthumbs.db
 *.pem
+*.rar
+*.zip
+*.tar.gz
+*.tif
+*.tiff
 
 # debug
 npm-debug.log*

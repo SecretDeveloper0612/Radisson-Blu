@@ -1,26 +1,303 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-poppins), 'Poppins', sans-serif;
+  --font-sans: var(--font-poppins), 'Poppins', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Brand Color Palette */
+    --forest-green: #080097;
+    --darker-green: #04005E;
+    --secondary-green: #0E05B5;
+    --warm-ivory: #FFFFFF;
+    --pure-white: #FFFFFF;
+    --champagne-gold: #C6A568;
+    --muted-gold: #AA8B54;
+    --text-primary: #0A0835;
+    --text-secondary: #5A5A68;
+    --subtle-border: #E8E8F0;
+    --dark-border: rgba(8, 0, 151, 0.2);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font-poppins), 'Poppins', sans-serif !important;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: var(--text-primary);
+    font-family: var(--font-poppins), 'Poppins', sans-serif !important;
+  }
+
+  /* Force all headings to Poppins with refined weights */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-poppins), 'Poppins', sans-serif !important;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  p, span, a, button, input, textarea, select, label {
+    font-family: var(--font-poppins), 'Poppins', sans-serif !important;
+  }
+
+  ::selection {
+    background-color: var(--champagne-gold);
+    color: var(--darker-green);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Force Tailwind font-serif and font-sans utility classes to Poppins */
+.font-serif,
+.font-sans,
+.font-serif-luxury,
+.font-sans-luxury {
+  font-family: var(--font-poppins), 'Poppins', sans-serif !important;
+}
+
+/* Page Transition Animation - Elegant Fade & Rise */
+@keyframes pageEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter-animation {
+  animation: pageEnter 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Subtle Floating & Breathing Animation */
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-subtle-float {
+  animation: subtleFloat 6s ease-in-out infinite;
+}
+
+/* Luxury Shimmer Effect for Accent Badges & Cards */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-gold-shimmer {
+  background: linear-gradient(90deg, rgba(198,165,104,0) 0%, rgba(198,165,104,0.3) 50%, rgba(198,165,104,0) 100%);
+  background-size: 200% 100%;
+  animation: goldShimmer 3.5s infinite;
+}
+
+/* Gentle Glow Pulse */
+@keyframes subtleGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-subtle-glow {
+  animation: subtleGlow 5s ease-in-out infinite;
+}
+
+/* Floating Luxury Aurora Orbs (Smooth Multi-Axis Drift) */
+@keyframes auroraDrift1 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(45px, -30px) scale(1.12);
+  }
+  66% {
+    transform: translate(-35px, 25px) scale(0.92);
+  }
+}
+
+@keyframes auroraDrift2 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(-50px, 35px) scale(1.15);
+  }
+  66% {
+    transform: translate(40px, -20px) scale(0.95);
+  }
+}
+
+@keyframes auroraDrift3 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(0.9);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate(25px, -45px) scale(1.15);
+    opacity: 0.5;
+  }
+}
+
+.animate-aurora-1 {
+  animation: auroraDrift1 14s ease-in-out infinite;
+}
+
+.animate-aurora-2 {
+  animation: auroraDrift2 18s ease-in-out infinite;
+}
+
+.animate-aurora-3 {
+  animation: auroraDrift3 22s ease-in-out infinite;
+}
+
+/* Subtle Star Particle Twinkle */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.25);
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+/* Background utilities */
+.bg-forest {
+  background-color: var(--forest-green);
+}
+.bg-darker-forest {
+  background-color: var(--darker-green);
+}
+.bg-secondary-forest {
+  background-color: var(--secondary-green);
+}
+.bg-ivory {
+  background-color: var(--warm-ivory);
+}
+.bg-gold {
+  background-color: var(--champagne-gold);
+}
+.bg-muted-gold {
+  background-color: var(--muted-gold);
+}
+
+/* Text colors */
+.text-forest {
+  color: var(--forest-green);
+}
+.text-ivory {
+  color: var(--warm-ivory);
+}
+.text-gold {
+  color: var(--champagne-gold);
+}
+.text-muted-gold {
+  color: var(--muted-gold);
+}
+.text-luxury-primary {
+  color: var(--text-primary);
+}
+.text-luxury-secondary {
+  color: var(--text-secondary);
+}
+
+/* Borders */
+.border-subtle {
+  border-color: var(--subtle-border);
+}
+.border-gold {
+  border-color: var(--champagne-gold);
+}
+.border-dark-gold {
+  border-color: var(--dark-border);
+}
+
+/* Infinite Marquee Animations (GPU-accelerated 60/120fps) */
+@keyframes marqueeLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marqueeRight {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft 45s linear infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marqueeRight 45s linear infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.pause-hover:hover .animate-marquee-left,
+.pause-hover:hover .animate-marquee-right {
+  animation-play-state: paused;
+}
+
+/* Rooms auto-slide progress line keyframe */
+@keyframes roomsProgress {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
