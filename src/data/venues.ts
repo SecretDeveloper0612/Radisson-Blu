@@ -269,16 +269,17 @@ export const venuesData: VenueItem[] = [
       "A dynamic venue equipped with concert-grade sound architecture, dramatic stage illumination, and adaptable layouts for live musical entertainment and energetic parties.",
     fullDescription:
       "Concord is built for energy, celebration, and rhythm. Designed to host musical acts, celebrity performances, DJ nights, and high-energy private celebrations, this space features heavy bass acoustic isolation, programmable LED lighting rigs, and VIP elevated lounge tiers.",
-    featuredImage: "/hotel-photos/concord-hall.jpg",
+    featuredImage: "/RBLU PHOTOS/Concord/Banquet Classroom.jpg",
     galleryImages: [
-      "/hotel-photos/concord-hall.jpg",
-      "/RBLU PHOTOS/Sapphire/Banquet Theatre.jpg",
+      "/RBLU PHOTOS/Concord/Banquet Classroom.jpg",
+      "/RBLU PHOTOS/Concord/1 (6).jpeg",
+      "/RBLU PHOTOS/Concord/1 (9).jpeg",
     ],
     specs: {
       capacity: "Up to 300 Guests (Cocktail & Standing) / 180 (Lounge)",
       area: "Approx. 3,800 sq.ft.",
       catering: "Gourmet Finger Foods, Canapés & High-Energy Mixology",
-      setupStyles: ["Standing Cocktail", "Lounge Club", "Performance Stage"],
+      setupStyles: ["Classroom Conference", "Theatre Seminar", "Round Table Banquet"],
     },
     highlights: [
       "Concert-grade line-array sound architecture and bass subwoofers",
