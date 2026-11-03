@@ -126,10 +126,12 @@ export const venuesData: VenueItem[] = [
       "A technology-enabled conference venue optimized for corporate strategy sessions, board discussions, and professional seminars.",
     fullDescription:
       "The Meeting Room delivers seamless productivity with smart video-conferencing technology, ergonomic Herman Miller seating, and crisp acoustic clarity. Whether hosting day-long leadership workshops, vendor presentations, or hybrid global calls, this venue is tailored for seamless business outcomes.",
-    featuredImage: "/hotel-photos/meeting-room.jpg",
+    featuredImage: "/RBLU PHOTOS/Meeting Room/Meeting Room.jpg",
     galleryImages: [
-      "/hotel-photos/meeting-room.jpg",
-      "/hotel-photos/business-centre.jpg",
+      "/RBLU PHOTOS/Meeting Room/Meeting Room.jpg",
+      "/RBLU PHOTOS/Meeting Room/9. RB Business Centre 1.JPG",
+      "/RBLU PHOTOS/Meeting Room/WhatsApp Image 2026-10-12 at 12.42.36 (1).jpeg",
+      "/RBLU PHOTOS/Meeting Room/WhatsApp Image 2026-10-12 at 12.42.36 (3).jpeg",
     ],
     specs: {
       capacity: "Up to 50 Attendees (Theatre) / 30 (U-Shape)",

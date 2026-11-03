@@ -66,7 +66,7 @@ export const galleryData: GalleryItem[] = [
     id: "gal-8",
     title: "Executive Room Boardroom Precision",
     category: "Venues",
-    src: "/hotel-photos/meeting-room.jpg",
+    src: "/RBLU PHOTOS/Meeting Room/Meeting Room.jpg",
     alt: "High-level corporate boardroom meeting setup with leather chairs and audio-visual displays",
     aspect: "landscape",
   },
