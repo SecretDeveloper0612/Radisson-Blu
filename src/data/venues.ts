@@ -201,10 +201,9 @@ export const venuesData: VenueItem[] = [
       "A picturesque manicured open-air lawn framed by lush landscaping and majestic palm trees, ideal for evening sangeet ceremonies, receptions, and al fresco dinners.",
     fullDescription:
       "Queen's Field offers an expansive natural venue beneath the stars. With manicured lawns, romantic pathway illuminations, and vast open space for custom thematic pavilions, stages, and live banquet counters, it is Rudrapur's premier destination for spectacular outdoor celebrations.",
-    featuredImage: "/hotel-photos/queens-field.jpg",
+    featuredImage: "/RBLU PHOTOS/Queens Filed/Queen_s Field.jpg",
     galleryImages: [
-      "/hotel-photos/queens-field.jpg",
-      "/RBLU PHOTOS/Sapphire/Banquet Cluster.jpg",
+      "/RBLU PHOTOS/Queens Filed/Queen_s Field.jpg",
     ],
     specs: {
       capacity: "600 – 1,000+ Guests",

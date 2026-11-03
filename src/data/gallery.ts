@@ -49,7 +49,7 @@ export const galleryData: GalleryItem[] = [
     id: "gal-6",
     title: "Queen's Field Evening Wedding Celebration",
     category: "Events",
-    src: "/hotel-photos/queens-field.jpg",
+    src: "/RBLU PHOTOS/Queens Filed/Queen_s Field.jpg",
     alt: "Starlit wedding banquet reception setup on the open lawn of Queen's Field",
     featured: true,
     aspect: "wide",
