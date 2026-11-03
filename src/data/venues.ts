@@ -162,16 +162,21 @@ export const venuesData: VenueItem[] = [
       "A prestigious boardroom setting designed for private director meetings, confidential negotiations, and high-impact presentations.",
     fullDescription:
       "Engineered for senior executive privacy and discretion, the Executive Room features a solid mahogany boardroom table, plush leather executive armchairs, integrated tabletop connectivity ports, and dedicated hospitality attendants.",
-    featuredImage: "/hotel-photos/business-centre.jpg",
+    featuredImage: "/RBLU PHOTOS/Excutive Lounge/Banquet.jpg",
     galleryImages: [
-      "/hotel-photos/business-centre.jpg",
-      "/hotel-photos/meeting-room.jpg",
+      "/RBLU PHOTOS/Excutive Lounge/Banquet.jpg",
+      "/RBLU PHOTOS/Excutive Lounge/1 (18).jpeg",
+      "/RBLU PHOTOS/Excutive Lounge/1 (2).jpeg",
+      "/RBLU PHOTOS/Excutive Lounge/1 (3).jpeg",
+      "/RBLU PHOTOS/Excutive Lounge/1 (4).jpeg",
+      "/RBLU PHOTOS/Excutive Lounge/1 (7).jpeg",
+      "/RBLU PHOTOS/Excutive Lounge/1 (16).jpeg",
     ],
     specs: {
-      capacity: "14 – 18 Board Members",
-      area: "Approx. 600 sq.ft.",
+      capacity: "Up to 60 Guests (Banquet / Theatre) / 25 (U-Shape)",
+      area: "Approx. 1,400 sq.ft.",
       catering: "Artisanal Coffee Service, Petit Fours & Plated Executive Meals",
-      setupStyles: ["Fixed Boardroom Table"],
+      setupStyles: ["U-Shape Boardroom", "Round Table Banquet", "Seminar Cluster", "Private Dining"],
     },
     highlights: [
       "Custom mahogany conference table with pop-up AC/HDMI/USB power units",
