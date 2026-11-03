@@ -80,7 +80,7 @@ export function FinalCTA() {
           aria-modal="true"
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 animate-in fade-in"
         >
-          <div className="bg-[#080097] border border-[#C6A568]/40 text-[#F7F4EC] rounded-xl max-w-md w-full p-6 sm:p-7 shadow-2xl relative">
+          <div className="bg-[#0A0835] border border-[#C6A568]/40 text-[#F7F4EC] rounded-xl max-w-md w-full p-6 sm:p-7 shadow-2xl relative">
             <h3 className="font-serif text-2xl text-[#F7F4EC] mb-2">
               Book Your Stay
             </h3>
@@ -89,7 +89,7 @@ export function FinalCTA() {
               <br /><br />
               Please contact the front desk team for immediate reservation confirmations:
             </p>
-            <div className="space-y-2.5 bg-[#04005E] p-4 rounded-lg border border-[#E4DED2]/10 mb-6 text-xs sm:text-sm">
+            <div className="space-y-2.5 bg-black/40 p-4 rounded-lg border border-white/10 mb-6 text-xs sm:text-sm">
               <div className="flex justify-between items-center">
                 <span className="text-[#AA8B54]">Telephone:</span>
                 <a
@@ -115,7 +115,7 @@ export function FinalCTA() {
               <Link
                 href="/contact"
                 onClick={() => setShowBookingNotice(false)}
-                className="flex-1 bg-[#C6A568] hover:bg-[#b59457] text-[#04005E] font-semibold py-2.5 px-4 rounded text-xs uppercase tracking-wider text-center"
+                className="flex-1 bg-[#C6A568] hover:bg-[#b59457] text-[#0A0835] font-semibold py-2.5 px-4 rounded text-xs uppercase tracking-wider text-center"
               >
                 Go to Enquiry
               </Link>

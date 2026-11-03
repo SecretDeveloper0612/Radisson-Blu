@@ -65,7 +65,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
   return (
     <div className="flex flex-col min-h-screen bg-[#FAF8F5]">
       {/* Venue Detail Hero with Slideshow */}
-      <section className="relative h-[72vh] min-h-[580px] max-h-[780px] flex items-end overflow-hidden bg-[#0A0835]">
+      <section className="relative h-[72vh] min-h-[580px] max-h-[780px] flex items-end overflow-hidden bg-neutral-950">
         <VenueHeroSlideshow
           images={[venue.featuredImage, ...venue.galleryImages]}
           venueName={venue.name}

@@ -111,8 +111,8 @@ export function CulinaryShowcase() {
                 onClick={() => setActiveTab(idx)}
                 className={`px-5 py-3 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 cursor-pointer flex items-center gap-2.5 whitespace-nowrap ${
                   isCurrent
-                    ? "bg-[#080097] text-white shadow-md scale-102"
-                    : "bg-[#F7F7FA] text-[#5A5A68] border border-[#E8E8F0] hover:border-[#080097]/40 hover:text-[#0A0835]"
+                    ? "bg-[#0A0835] text-white shadow-md scale-102"
+                    : "bg-[#F7F7FA] text-[#5A5A68] border border-[#E8E8F0] hover:border-[#0A0835]/40 hover:text-[#0A0835]"
                 }`}
               >
                 <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${isCurrent ? "bg-white/20 text-[#C6A568]" : "bg-white text-[#AA8B54]"}`}>
@@ -148,12 +148,12 @@ export function CulinaryShowcase() {
                 ))}
 
                 {/* Gradient & Vignette Overlay */}
-                <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#04005E]/60 via-[#04005E]/20 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
 
                 {/* Floating Category Badge */}
                 <div
                   key={`cat-${activeSpot.id}`}
-                  className="absolute top-5 left-5 z-20 bg-[#04005E]/90 backdrop-blur-md border border-[#C6A568]/40 px-3.5 py-1.5 rounded-full text-white flex items-center gap-2 animate-in fade-in slide-in-from-top-2 duration-500"
+                  className="absolute top-5 left-5 z-20 bg-black/75 backdrop-blur-md border border-white/20 px-3.5 py-1.5 rounded-full text-white flex items-center gap-2 animate-in fade-in slide-in-from-top-2 duration-500"
                 >
                   <span className="w-2 h-2 rounded-full bg-[#C6A568] animate-ping" />
                   <span className="text-[10px] font-semibold uppercase tracking-widest text-[#C6A568]">
@@ -164,7 +164,7 @@ export function CulinaryShowcase() {
                 {/* Bottom Card Inside Image */}
                 <div
                   key={`dish-${activeSpot.id}`}
-                  className="absolute bottom-5 left-5 right-5 z-20 bg-[#04005E]/80 backdrop-blur-md border border-[#C6A568]/20 p-4 rounded-xl text-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 animate-in fade-in slide-in-from-bottom-2 duration-500"
+                  className="absolute bottom-5 left-5 right-5 z-20 bg-black/75 backdrop-blur-md border border-white/15 p-4 rounded-xl text-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 animate-in fade-in slide-in-from-bottom-2 duration-500"
                 >
                   <div className="space-y-0.5">
                     <span className="text-[10px] uppercase tracking-wider text-[#C6A568] font-medium block">
@@ -215,7 +215,7 @@ export function CulinaryShowcase() {
                           key={i}
                           className="flex items-center gap-3 p-2.5 rounded-lg bg-white border border-[#E8E8F0] text-xs text-[#0A0835] shadow-xs"
                         >
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#080097] shrink-0" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#C6A568] shrink-0" />
                           <span>{feat}</span>
                         </div>
                       ))}

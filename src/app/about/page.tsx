@@ -17,9 +17,9 @@ import Reveal from "@/components/ui/Reveal";
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#F7F4EC]">
+    <div className="flex flex-col min-h-screen bg-[#FAF8F5]">
       {/* Hero */}
-      <section className="relative min-h-[55vh] flex items-center justify-center overflow-hidden bg-[#04005E]">
+      <section className="relative min-h-[55vh] flex items-center justify-center overflow-hidden bg-neutral-950">
         <div className="absolute inset-0 z-0">
           <Image
             src="/hotel-photos/facade-morning.jpg"
@@ -29,7 +29,10 @@ export default function AboutPage() {
             sizes="100vw"
             className="object-cover scale-105 transition-transform duration-[8000ms] ease-out hover:scale-100"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#04005E]/60 via-[#04005E]/30 to-black/30" />
+          {/* Light black overlay for natural photograph colors & text contrast */}
+          <div className="absolute inset-x-0 top-0 h-44 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-black/25 pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/70 via-black/25 to-transparent pointer-events-none" />
         </div>
 
         <Container className="relative z-10 pt-28 pb-16 text-center max-w-3xl">
@@ -78,7 +81,7 @@ export default function AboutPage() {
 
             <div className="lg:col-span-6">
               <Reveal direction="left" delayMs={200}>
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#E4DED2] shadow-xl bg-[#04005E] group">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#E4DED2] shadow-xl bg-neutral-900 group">
                   <Image
                     src="/hotel-photos/portico.jpg"
                     alt="Hotel facade and welcoming entrance"
@@ -109,7 +112,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Reveal direction="up" delayMs={100}>
-              <div className="bg-[#04005E] p-8 rounded-xl border border-[#C6A568]/20 space-y-4 hover:border-[#C6A568]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(0,0,0,0.4)] group">
+              <div className="bg-[#0A0835] p-8 rounded-xl border border-[#C6A568]/20 space-y-4 hover:border-[#C6A568]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(0,0,0,0.4)] group">
                 <span className="text-2xl font-serif text-[#C6A568] group-hover:scale-110 inline-block transition-transform duration-300">01</span>
                 <h3 className="font-serif text-2xl text-white font-normal group-hover:text-[#C6A568] transition-colors">
                   Restorative Spaces
@@ -121,7 +124,7 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal direction="up" delayMs={200}>
-              <div className="bg-[#04005E] p-8 rounded-xl border border-[#C6A568]/20 space-y-4 hover:border-[#C6A568]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(0,0,0,0.4)] group">
+              <div className="bg-[#0A0835] p-8 rounded-xl border border-[#C6A568]/20 space-y-4 hover:border-[#C6A568]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(0,0,0,0.4)] group">
                 <span className="text-2xl font-serif text-[#C6A568] group-hover:scale-110 inline-block transition-transform duration-300">02</span>
                 <h3 className="font-serif text-2xl text-white font-normal group-hover:text-[#C6A568] transition-colors">
                   Gastronomic Craft
@@ -133,7 +136,7 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal direction="up" delayMs={300}>
-              <div className="bg-[#04005E] p-8 rounded-xl border border-[#C6A568]/20 space-y-4 hover:border-[#C6A568]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(0,0,0,0.4)] group">
+              <div className="bg-[#0A0835] p-8 rounded-xl border border-[#C6A568]/20 space-y-4 hover:border-[#C6A568]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(0,0,0,0.4)] group">
                 <span className="text-2xl font-serif text-[#C6A568] group-hover:scale-110 inline-block transition-transform duration-300">03</span>
                 <h3 className="font-serif text-2xl text-white font-normal group-hover:text-[#C6A568] transition-colors">
                   Seamless Events

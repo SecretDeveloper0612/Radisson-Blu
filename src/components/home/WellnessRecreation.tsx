@@ -213,7 +213,7 @@ export function WellnessRecreation() {
     >
       {/* Ambient background accents */}
       <div className="absolute top-0 right-1/4 w-96 h-96 rounded-full bg-[#C6A568]/8 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-10 w-80 h-80 rounded-full bg-[#080097]/5 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-10 w-80 h-80 rounded-full bg-[#0A0835]/5 blur-3xl pointer-events-none" />
 
       <Container className="relative z-10">
         {/* Editorial Section Header */}
@@ -226,7 +226,7 @@ export function WellnessRecreation() {
               </span>
             </div>
 
-            <h2 className="font-serif text-3xl sm:text-5xl lg:text-[3.25rem] font-normal text-[#080097] leading-[1.18] tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-5xl lg:text-[3.25rem] font-normal text-[#0A0835] leading-[1.18] tracking-tight">
               Restorative harmony for body & soul.
             </h2>
 
@@ -416,7 +416,7 @@ export function WellnessRecreation() {
                 {/* Sanctuary Signature Inclusions */}
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-semibold uppercase tracking-widest text-[#080097] block">
+                    <span className="text-[10px] font-semibold uppercase tracking-widest text-[#0A0835] block">
                       SIGNATURE INCLUSIONS & AMENITIES
                     </span>
                     <span className="text-[10px] text-[#AA8B54] font-medium">
@@ -458,7 +458,7 @@ export function WellnessRecreation() {
                   </span>
                   <a
                     href="tel:+915944000000"
-                    className="flex items-center gap-1 text-[#080097] hover:text-[#AA8B54] font-medium transition-colors"
+                    className="flex items-center gap-1 text-[#0A0835] hover:text-[#AA8B54] font-medium transition-colors"
                   >
                     <Phone className="w-3 h-3" />
                     <span>Desk: +91 5944 000000</span>

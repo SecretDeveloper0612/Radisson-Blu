@@ -18,7 +18,7 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col min-h-screen bg-[#FAF8F5]">
       {/* Hero */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-[#0A0835]">
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-neutral-950">
         <div className="absolute inset-0 z-0">
           <Image
             src="/hotel-photos/portico.jpg"
@@ -28,7 +28,10 @@ export default function ContactPage() {
             sizes="100vw"
             className="object-cover scale-105 transition-transform duration-[8000ms] ease-out hover:scale-100"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0835]/80 via-[#0A0835]/40 to-black/30" />
+          {/* Light black overlay for crystal-clear natural colors and text contrast */}
+          <div className="absolute inset-x-0 top-0 h-44 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-black/25 pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/70 via-black/25 to-transparent pointer-events-none" />
         </div>
 
         <Container className="relative z-10 pt-28 pb-16 text-center max-w-3xl">

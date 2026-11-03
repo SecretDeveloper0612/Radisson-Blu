@@ -66,7 +66,7 @@ export function EnquiryForm() {
       </div>
 
       {submissionStatus === "notice" ? (
-        <div className="bg-[#080097] text-[#F7F4EC] rounded-xl p-6 sm:p-8 border border-[#C6A568]/40 space-y-4 animate-in fade-in">
+        <div className="bg-[#0A0835] text-[#F7F4EC] rounded-xl p-6 sm:p-8 border border-[#C6A568]/40 space-y-4 animate-in fade-in">
           <div className="flex items-center gap-3 text-[#C6A568]">
             <AlertCircle className="w-6 h-6 shrink-0" />
             <h4 className="font-serif text-xl font-normal text-white">
@@ -80,7 +80,7 @@ export function EnquiryForm() {
             Please forward your request directly to our team via our official direct lines:
           </p>
 
-          <div className="bg-[#04005E] p-4 rounded-lg border border-[#E4DED2]/10 space-y-2.5 text-xs">
+          <div className="bg-black/40 p-4 rounded-lg border border-white/10 space-y-2.5 text-xs">
             <div className="flex justify-between items-center">
               <span className="text-[#AA8B54]">Direct Phone:</span>
               <a

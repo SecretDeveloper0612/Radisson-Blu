@@ -155,7 +155,7 @@ function TestimonialCard({ item }: { item: Testimonial }) {
               />
             ))}
           </div>
-          <span className="text-[11px] font-medium tracking-wider uppercase px-2.5 py-1 rounded-full bg-[#080097]/5 text-[#080097] border border-[#080097]/10">
+          <span className="text-[11px] font-medium tracking-wider uppercase px-2.5 py-1 rounded-full bg-[#0A0835]/5 text-[#0A0835] border border-[#0A0835]/10">
             {item.tag}
           </span>
         </div>
@@ -172,12 +172,12 @@ function TestimonialCard({ item }: { item: Testimonial }) {
       {/* Author Footer */}
       <div className="pt-4 border-t border-[#E4DED2]/70 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-[#080097] text-[#C6A568] font-serif font-medium flex items-center justify-center text-sm shadow-sm group-hover:bg-[#0E05B5] transition-colors">
+          <div className="w-10 h-10 rounded-full bg-[#0A0835] text-[#C6A568] font-serif font-medium flex items-center justify-center text-sm shadow-sm group-hover:bg-[#C6A568] group-hover:text-[#0A0835] transition-colors">
             {item.name.charAt(0)}
           </div>
           <div>
             <div className="flex items-center gap-1.5">
-              <h4 className="font-semibold text-xs sm:text-sm text-[#080097]">
+              <h4 className="font-semibold text-xs sm:text-sm text-[#0A0835]">
                 {item.name}
               </h4>
               <CheckCircle2 className="w-3.5 h-3.5 text-[#AA8B54]" />

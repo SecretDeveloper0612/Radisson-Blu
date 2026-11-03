@@ -119,7 +119,7 @@ export function VenuesPreview() {
                       {venue.statusBadge || "Coming Soon"}
                     </div>
                   ) : (
-                    <div className="absolute top-4 right-4 bg-[#080097] text-white text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full shadow">
+                    <div className="absolute top-4 right-4 bg-[#0A0835] text-white text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full shadow">
                       {venue.category}
                     </div>
                   )}

@@ -23,7 +23,7 @@ export function IntroductionSection() {
                 />
               </div>
               {/* Subtle decorative gold badge */}
-              <div className="absolute -bottom-6 -right-6 hidden sm:flex bg-[#080097] text-[#F7F4EC] p-6 rounded-lg border border-[#C6A568]/40 shadow-xl flex-col max-w-[220px]">
+              <div className="absolute -bottom-6 -right-6 hidden sm:flex bg-[#0A0835] text-[#F7F4EC] p-6 rounded-lg border border-[#C6A568]/40 shadow-xl flex-col max-w-[220px]">
                 <span className="text-xs uppercase tracking-widest text-[#C6A568] font-semibold">
                   Uttarakhand
                 </span>

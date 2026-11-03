@@ -68,7 +68,7 @@ export function RoomsPreview() {
                   onClick={() => setActiveRoomIndex(idx)}
                   className={`px-4 py-2 rounded-full text-xs uppercase tracking-wider font-medium whitespace-nowrap transition-all duration-300 cursor-pointer flex items-center gap-1.5 ${
                     isSelected
-                      ? "bg-[#080097] text-[#F7F4EC] shadow-sm border border-[#C6A568]/40"
+                      ? "bg-[#0A0835] text-[#F7F4EC] shadow-sm border border-[#C6A568]/40"
                       : "bg-white text-[#77766D] border border-[#E4DED2] hover:border-[#AA8B54] hover:text-[#0A0835]"
                   }`}
                 >
@@ -91,7 +91,7 @@ export function RoomsPreview() {
           {/* Left Column (7 Cols): Sleek Photo with specs */}
           <div className="lg:col-span-7 flex flex-col justify-between">
             <Reveal direction="right" delayMs={150} className="h-full flex flex-col">
-              <div className="relative aspect-[16/10] lg:aspect-auto lg:flex-1 w-full rounded-xl overflow-hidden shadow-xl border border-[#E4DED2] bg-[#04005E] group min-h-[300px] sm:min-h-[360px]">
+              <div className="relative aspect-[16/10] lg:aspect-auto lg:flex-1 w-full rounded-xl overflow-hidden shadow-xl border border-[#E4DED2] bg-neutral-900 group min-h-[300px] sm:min-h-[360px]">
                 {/* Crossfading Room Images */}
                 {roomsData.map((room, idx) => (
                   <div
@@ -129,7 +129,7 @@ export function RoomsPreview() {
                 {/* Floating Top Badge with smooth transition */}
                 <div
                   key={`badge-${activeRoom.id}`}
-                  className="absolute top-4 left-4 z-20 bg-[#04005E]/85 backdrop-blur-md border border-[#C6A568]/30 px-3 py-1 rounded-full text-white flex items-center gap-2 animate-in fade-in slide-in-from-left-2 duration-500"
+                  className="absolute top-4 left-4 z-20 bg-black/75 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full text-white flex items-center gap-2 animate-in fade-in slide-in-from-left-2 duration-500"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C6A568]" />
                   <span className="text-[10px] uppercase tracking-widest text-[#C6A568] font-semibold">
@@ -145,7 +145,7 @@ export function RoomsPreview() {
                       prevRoom();
                     }}
                     aria-label="Previous room"
-                    className="pointer-events-auto w-9 h-9 rounded-full bg-black/50 hover:bg-[#C6A568] hover:text-[#04005E] text-white flex items-center justify-center backdrop-blur-md border border-white/15 opacity-70 group-hover:opacity-100 transition-all duration-300 cursor-pointer hover:scale-110 active:scale-95 shadow-md"
+                    className="pointer-events-auto w-9 h-9 rounded-full bg-black/50 hover:bg-[#C6A568] hover:text-[#0A0835] text-white flex items-center justify-center backdrop-blur-md border border-white/15 opacity-70 group-hover:opacity-100 transition-all duration-300 cursor-pointer hover:scale-110 active:scale-95 shadow-md"
                   >
                     <ChevronLeft className="w-4 h-4" />
                   </button>
@@ -155,7 +155,7 @@ export function RoomsPreview() {
                       nextRoom();
                     }}
                     aria-label="Next room"
-                    className="pointer-events-auto w-9 h-9 rounded-full bg-black/50 hover:bg-[#C6A568] hover:text-[#04005E] text-white flex items-center justify-center backdrop-blur-md border border-white/15 opacity-70 group-hover:opacity-100 transition-all duration-300 cursor-pointer hover:scale-110 active:scale-95 shadow-md"
+                    className="pointer-events-auto w-9 h-9 rounded-full bg-black/50 hover:bg-[#C6A568] hover:text-[#0A0835] text-white flex items-center justify-center backdrop-blur-md border border-white/15 opacity-70 group-hover:opacity-100 transition-all duration-300 cursor-pointer hover:scale-110 active:scale-95 shadow-md"
                   >
                     <ChevronRight className="w-4 h-4" />
                   </button>
@@ -239,7 +239,7 @@ export function RoomsPreview() {
                     onClick={() => setActiveRoomIndex(index)}
                     className={`p-3.5 sm:p-4 rounded-xl border transition-all duration-300 cursor-pointer relative overflow-hidden group ${
                       isSelected
-                        ? "bg-[#080097] text-[#F7F4EC] border-[#C6A568] shadow-md"
+                        ? "bg-[#0A0835] text-[#F7F4EC] border-[#C6A568] shadow-md"
                         : "bg-white text-[#0A0835] border-[#E4DED2] hover:border-[#AA8B54]/60 hover:bg-[#FAF8F3]"
                     }`}
                   >
@@ -298,7 +298,7 @@ export function RoomsPreview() {
                         href={`/contact?enquiryType=Room+Booking&room=${encodeURIComponent(room.name)}`}
                         className={`text-[10px] uppercase tracking-wider font-semibold px-2.5 py-0.5 rounded transition-colors ${
                           isSelected
-                            ? "bg-[#C6A568] text-[#04005E] hover:bg-[#b59457]"
+                            ? "bg-[#C6A568] text-[#0A0835] hover:bg-[#b59457]"
                             : "text-[#AA8B54] hover:underline"
                         }`}
                       >

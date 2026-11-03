@@ -15,7 +15,7 @@ export function HeroSection() {
   };
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#04005E]">
+    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-black">
       {/* Background Video with Cinematic Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <video

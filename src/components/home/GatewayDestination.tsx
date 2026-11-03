@@ -140,7 +140,7 @@ export function GatewayDestination() {
                   <div className="absolute top-3 left-3 w-8 h-8 rounded-full bg-white/90 backdrop-blur-md border border-[#E8E8F0] flex items-center justify-center shadow">
                     {getIcon(dest.typeIcon)}
                   </div>
-                  <div className="absolute top-3 right-3 text-[10px] font-mono font-semibold uppercase tracking-wider text-white bg-[#080097] px-2.5 py-1 rounded-full shadow">
+                  <div className="absolute top-3 right-3 text-[10px] font-mono font-semibold uppercase tracking-wider text-white bg-[#0A0835] px-2.5 py-1 rounded-full shadow">
                     {dest.distance}
                   </div>
                 </div>

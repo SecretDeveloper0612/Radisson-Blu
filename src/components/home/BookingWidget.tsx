@@ -53,9 +53,9 @@ export function BookingWidget({
     <>
       <div
         className={cn(
-          "w-full bg-[#080097]/95 backdrop-blur-md border border-[#C6A568]/30 shadow-2xl rounded-xl p-5 sm:p-6 lg:p-7 text-white transition-all duration-300",
+          "w-full bg-[#0A0835]/95 backdrop-blur-md border border-[#C6A568]/30 shadow-2xl rounded-xl p-5 sm:p-6 lg:p-7 text-white transition-all duration-300",
           variant === "hero-overlay" && "lg:-mt-16 relative z-30 shadow-[0_20px_50px_rgba(10,33,31,0.5)]",
-          variant === "standalone" && "bg-[#080097] border-[#C6A568]/20",
+          variant === "standalone" && "bg-[#0A0835] border-[#C6A568]/20",
           className
         )}
       >
@@ -73,7 +73,7 @@ export function BookingWidget({
                 type="date"
                 id="checkIn"
                 {...register("checkIn")}
-                className="w-full bg-[#04005E] border border-[#E4DED2]/20 rounded-md px-3.5 py-2.5 text-sm text-[#F7F4EC] focus:border-[#C6A568] focus:outline-none focus:ring-1 focus:ring-[#C6A568] transition-colors"
+                className="w-full bg-black/35 border border-[#E4DED2]/20 rounded-md px-3.5 py-2.5 text-sm text-[#F7F4EC] focus:border-[#C6A568] focus:outline-none focus:ring-1 focus:ring-[#C6A568] transition-colors"
               />
               {errors.checkIn && (
                 <p className="text-xs text-rose-400 mt-1">{errors.checkIn.message}</p>
@@ -92,7 +92,7 @@ export function BookingWidget({
                 type="date"
                 id="checkOut"
                 {...register("checkOut")}
-                className="w-full bg-[#04005E] border border-[#E4DED2]/20 rounded-md px-3.5 py-2.5 text-sm text-[#F7F4EC] focus:border-[#C6A568] focus:outline-none focus:ring-1 focus:ring-[#C6A568] transition-colors"
+                className="w-full bg-black/35 border border-[#E4DED2]/20 rounded-md px-3.5 py-2.5 text-sm text-[#F7F4EC] focus:border-[#C6A568] focus:outline-none focus:ring-1 focus:ring-[#C6A568] transition-colors"
               />
               {errors.checkOut && (
                 <p className="text-xs text-rose-400 mt-1">{errors.checkOut.message}</p>
@@ -110,7 +110,7 @@ export function BookingWidget({
               <select
                 id="guests"
                 {...register("guests", { valueAsNumber: true })}
-                className="w-full bg-[#04005E] border border-[#E4DED2]/20 rounded-md px-3.5 py-2.5 text-sm text-[#F7F4EC] focus:border-[#C6A568] focus:outline-none focus:ring-1 focus:ring-[#C6A568] transition-colors"
+                className="w-full bg-black/35 border border-[#E4DED2]/20 rounded-md px-3.5 py-2.5 text-sm text-[#F7F4EC] focus:border-[#C6A568] focus:outline-none focus:ring-1 focus:ring-[#C6A568] transition-colors"
               >
                 <option value={1}>1 Adult</option>
                 <option value={2}>2 Adults</option>
@@ -134,7 +134,7 @@ export function BookingWidget({
               <select
                 id="rooms"
                 {...register("rooms", { valueAsNumber: true })}
-                className="w-full bg-[#04005E] border border-[#E4DED2]/20 rounded-md px-3.5 py-2.5 text-sm text-[#F7F4EC] focus:border-[#C6A568] focus:outline-none focus:ring-1 focus:ring-[#C6A568] transition-colors"
+                className="w-full bg-black/35 border border-[#E4DED2]/20 rounded-md px-3.5 py-2.5 text-sm text-[#F7F4EC] focus:border-[#C6A568] focus:outline-none focus:ring-1 focus:ring-[#C6A568] transition-colors"
               >
                 <option value={1}>1 Room</option>
                 <option value={2}>2 Rooms</option>
@@ -168,7 +168,7 @@ export function BookingWidget({
           aria-modal="true"
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 animate-in fade-in"
         >
-          <div className="bg-[#080097] border border-[#C6A568]/40 text-[#F7F4EC] rounded-xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative">
+          <div className="bg-[#0A0835] border border-[#C6A568]/40 text-[#F7F4EC] rounded-xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative">
             <div className="w-12 h-12 rounded-full bg-[#C6A568]/20 flex items-center justify-center text-[#C6A568] mb-4">
               <AlertCircle className="w-6 h-6" />
             </div>
@@ -181,7 +181,7 @@ export function BookingWidget({
               For guaranteed room reservations, group blocks, or current tariffs, please connect directly with our front desk team:
             </p>
 
-            <div className="space-y-3 bg-[#04005E] p-4 rounded-lg border border-[#E4DED2]/10 mb-6 text-sm">
+            <div className="space-y-3 bg-black/40 p-4 rounded-lg border border-white/10 mb-6 text-sm">
               <div className="flex justify-between items-center text-xs sm:text-sm">
                 <span className="text-[#AA8B54]">Direct Reservations Desk:</span>
                 <a
@@ -220,14 +220,14 @@ export function BookingWidget({
                   setShowIntegrateModal(false);
                   router.push("/contact");
                 }}
-                className="flex-1 bg-[#C6A568] hover:bg-[#b59457] text-[#04005E] font-semibold py-2.5 px-4 rounded-md text-xs uppercase tracking-wider transition-colors"
+                className="flex-1 bg-[#C6A568] hover:bg-[#b59457] text-[#0A0835] font-semibold py-2.5 px-4 rounded-md text-xs uppercase tracking-wider transition-colors"
               >
                 Submit Stay Enquiry
               </button>
               <button
                 type="button"
                 onClick={() => setShowIntegrateModal(false)}
-                className="px-5 py-2.5 border border-[#E4DED2]/30 text-[#E4DED2] hover:bg-[#04005E] rounded-md text-xs uppercase tracking-wider transition-colors"
+                className="px-5 py-2.5 border border-[#E4DED2]/30 text-[#E4DED2] hover:bg-white/10 rounded-md text-xs uppercase tracking-wider transition-colors"
               >
                 Close
               </button>

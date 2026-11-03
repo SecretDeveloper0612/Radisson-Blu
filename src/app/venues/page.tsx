@@ -31,7 +31,7 @@ export default function VenuesPage() {
   return (
     <div className="flex flex-col min-h-screen bg-[#FAF8F5]">
       {/* Venues Hero */}
-      <section className="relative min-h-[58vh] flex items-center justify-center overflow-hidden bg-[#0A0835]">
+      <section className="relative min-h-[58vh] flex items-center justify-center overflow-hidden bg-neutral-950">
         <div className="absolute inset-0 z-0">
           <Image
             src="/RBLU PHOTOS/Sapphire/Banquet Cluster.jpg"
