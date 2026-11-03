@@ -284,13 +284,13 @@ export function EnquiryForm() {
           <button
             type="submit"
             disabled={submissionStatus === "submitting"}
-            className="w-full bg-[#0A0835] hover:bg-[#080097] text-white font-semibold py-3.5 px-6 rounded-xl tracking-widest uppercase text-xs flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:shadow-xl hover:scale-[1.01] disabled:opacity-50 cursor-pointer"
+            className="w-full bg-[#C6A568] hover:bg-[#b59457] text-[#0A0835] font-semibold py-3.5 px-6 rounded-xl tracking-widest uppercase text-xs flex items-center justify-center gap-2 transition-all duration-300 shadow-sm hover:shadow-md hover:scale-[1.01] disabled:opacity-50 cursor-pointer"
           >
             {submissionStatus === "submitting" ? (
               <span>Transmitting...</span>
             ) : (
               <>
-                <Send className="w-4 h-4 text-[#C6A568]" />
+                <Send className="w-4 h-4 text-[#0A0835]" />
                 <span>Submit Enquiry</span>
               </>
             )}

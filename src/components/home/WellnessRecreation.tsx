@@ -444,11 +444,11 @@ export function WellnessRecreation() {
               <div className="pt-6 mt-6 border-t border-[#E8E8F0] space-y-3">
                 <Link
                   href={`/contact?enquiryType=${currentSanctuary.ctaType}`}
-                  className="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl bg-[#0A0835] hover:bg-[#080097] text-white text-xs font-semibold uppercase tracking-widest transition-all duration-300 shadow-md hover:shadow-xl hover:scale-[1.01] group cursor-pointer"
+                  className="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl bg-[#C6A568] hover:bg-[#b59457] text-[#0A0835] text-xs font-semibold uppercase tracking-widest transition-all duration-300 shadow-sm hover:shadow-md hover:scale-[1.01] group cursor-pointer"
                 >
-                  <CalendarCheck className="w-4 h-4 text-[#C6A568] transition-transform group-hover:scale-110" />
+                  <CalendarCheck className="w-4 h-4 text-[#0A0835] transition-transform group-hover:scale-110" />
                   <span>{currentSanctuary.ctaLabel}</span>
-                  <ArrowRight className="w-4 h-4 text-[#C6A568] transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="w-4 h-4 text-[#0A0835] transition-transform group-hover:translate-x-1" />
                 </Link>
 
                 <div className="flex items-center justify-between px-2 pt-1 text-[11px] text-[#5A5A68]">
