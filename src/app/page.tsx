@@ -5,7 +5,6 @@ import ExperienceSection from "@/components/home/ExperienceSection";
 import CulinaryShowcase from "@/components/home/CulinaryShowcase";
 import VenuesPreview from "@/components/home/VenuesPreview";
 import WellnessRecreation from "@/components/home/WellnessRecreation";
-import GalleryPreview from "@/components/home/GalleryPreview";
 import GatewayDestination from "@/components/home/GatewayDestination";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import AboutPreview from "@/components/home/AboutPreview";
@@ -32,19 +31,16 @@ export default function HomePage() {
       {/* Section F: Restorative Wellness & Recreation (Pool, Spa, Fitness) */}
       <WellnessRecreation />
 
-      {/* Section G: Gallery Preview with Lightbox ("Every detail tells a story.") */}
-      <GalleryPreview />
-
-      {/* Section H: Regional Connectivity & Himalayan Gateway Destinations */}
+      {/* Section G: Regional Connectivity & Himalayan Gateway Destinations */}
       <GatewayDestination />
 
-      {/* Section I: Infinite Testimonials Carousels */}
+      {/* Section H: Infinite Testimonials Carousels */}
       <TestimonialsSection />
 
-      {/* Section J: About the Property */}
+      {/* Section I: About the Property */}
       <AboutPreview />
 
-      {/* Section K: Final Conversion CTA */}
+      {/* Section J: Final Conversion CTA */}
       <FinalCTA />
     </div>
   );
