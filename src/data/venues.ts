@@ -151,6 +151,13 @@ export const venuesData: VenueItem[] = [
       "Secretarial & print concierge assistance",
       "Customizable coffee breaks with healthy energizer menus",
     ],
+    amenities: [
+      "Wheelchair-accessible",
+      "AV equipment",
+      "LED/LCD projector",
+      "Sound system",
+      "Microphone",
+    ],
   },
   {
     id: "venue-executive-room",

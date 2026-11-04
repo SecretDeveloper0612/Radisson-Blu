@@ -21,6 +21,7 @@ import {
   Projector,
   Volume2,
   Sun,
+  Mic,
 } from "lucide-react";
 import { venuesData } from "@/data/venues";
 import { siteConfig } from "@/config/site";
@@ -102,6 +103,10 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
     "LED/LCD projector": {
       badge: "Available Feature",
       icon: Projector,
+    },
+    Microphone: {
+      badge: "Available Feature",
+      icon: Mic,
     },
   };
 
