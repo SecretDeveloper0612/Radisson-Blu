@@ -17,6 +17,9 @@ import {
   ShieldCheck,
   Compass,
   FileText,
+  Accessibility,
+  Projector,
+  Volume2,
 } from "lucide-react";
 import { venuesData } from "@/data/venues";
 import { siteConfig } from "@/config/site";
@@ -224,43 +227,72 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                 galleryImages={venue.galleryImages}
               />
 
-              {/* Seating Configurations & Capacities */}
-              {venue.specs.setupStyles && venue.specs.setupStyles.length > 0 && (
-                <div className="space-y-5">
-                  <div>
-                    <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block mb-1">
-                      CAPACITY & LAYOUTS
-                    </span>
-                    <h3 className="font-serif text-2xl sm:text-3xl text-[#0A0835] font-normal">
-                      Seating Configurations
-                    </h3>
-                    <p className="text-xs sm:text-sm text-[#5A5A68] font-light mt-1">
-                      Our flexible architecture allows tailored arrangements to suit your exact guest flow and ceremony style.
-                    </p>
-                  </div>
+              {/* Venue Amenities & Event Equipment */}
+              <div className="space-y-5">
+                <div>
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block mb-1">
+                    VENUE AMENITIES
+                  </span>
+                  <h3 className="font-serif text-2xl sm:text-3xl text-[#0A0835] font-normal">
+                    Amenities & Event Equipment
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#5A5A68] font-light mt-1">
+                    Comprehensive facilities, modern audiovisual infrastructure, and accessibility features designed for your event.
+                  </p>
+                </div>
 
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                    {venue.specs.setupStyles.map((style, idx) => (
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+                  {[
+                    {
+                      name: "Wheelchair-accessible",
+                      badge: "Accessible Feature",
+                      icon: Accessibility,
+                    },
+                    {
+                      name: "AV equipment",
+                      badge: "Available Feature",
+                      icon: Tv,
+                    },
+                    {
+                      name: "LED/LCD projector",
+                      badge: "Available Feature",
+                      icon: Projector,
+                    },
+                    {
+                      name: "Sound system",
+                      badge: "Available Feature",
+                      icon: Volume2,
+                    },
+                    {
+                      name: "Stage - on request",
+                      badge: "Available On Request",
+                      icon: Layers,
+                    },
+                  ].map((item, idx) => {
+                    const IconComponent = item.icon;
+                    return (
                       <div
                         key={idx}
-                        className="p-4 rounded-xl bg-white border border-[#E8E8F0] hover:border-[#C6A568] transition-all shadow-xs hover:shadow-sm text-center space-y-2 group"
+                        className={`p-4 rounded-xl bg-white border border-[#E8E8F0] hover:border-[#C6A568] transition-all shadow-xs hover:shadow-sm text-center space-y-2 group flex flex-col items-center justify-between min-h-[130px] ${
+                          idx === 4 ? "col-span-2 sm:col-span-1" : ""
+                        }`}
                       >
-                        <div className="w-10 h-10 mx-auto rounded-full bg-[#FAF8F5] group-hover:bg-[#C6A568]/15 border border-[#E8E8F0] group-hover:border-[#C6A568]/30 flex items-center justify-center text-[#AA8B54] transition-colors">
-                          <Layers className="w-4 h-4" />
+                        <div className="w-10 h-10 mx-auto rounded-full bg-[#FAF8F5] group-hover:bg-[#C6A568]/15 border border-[#E8E8F0] group-hover:border-[#C6A568]/30 flex items-center justify-center text-[#AA8B54] transition-colors shrink-0">
+                          <IconComponent className="w-4 h-4" />
                         </div>
-                        <div>
-                          <span className="font-medium text-xs sm:text-sm text-[#0A0835] block">
-                            {style}
+                        <div className="w-full">
+                          <span className="font-medium text-xs sm:text-sm text-[#0A0835] block leading-snug">
+                            {item.name}
                           </span>
-                          <span className="text-[10px] text-[#5A5A68] uppercase tracking-wider block mt-0.5">
-                            Available Format
+                          <span className="text-[10px] text-[#5A5A68] uppercase tracking-wider block mt-1">
+                            {item.badge}
                           </span>
                         </div>
                       </div>
-                    ))}
-                  </div>
+                    );
+                  })}
                 </div>
-              )}
+              </div>
 
               {/* Distinctive Highlights */}
               <div className="space-y-5">
@@ -292,7 +324,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
               <div className="space-y-6">
                 <div>
                   <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block mb-1">
-                    FACILITIES & EQUIPMENT
+                    EVENT SERVICES & SPECS
                   </span>
                   <h3 className="font-serif text-2xl sm:text-3xl text-[#0A0835] font-normal">
                     Technical & Event Services
