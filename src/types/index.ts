@@ -79,6 +79,7 @@ export interface VenueItem {
   };
   highlights: string[];
   features: string[];
+  amenities?: string[];
 }
 
 export interface GalleryItem {

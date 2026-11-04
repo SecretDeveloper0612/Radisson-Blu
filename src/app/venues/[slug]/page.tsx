@@ -20,6 +20,7 @@ import {
   Accessibility,
   Projector,
   Volume2,
+  Sun,
 } from "lucide-react";
 import { venuesData } from "@/data/venues";
 import { siteConfig } from "@/config/site";
@@ -64,6 +65,55 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
   const guestFeatures = venue.features.filter(
     (f) => !avFeatures.includes(f) && !culinaryFeatures.includes(f)
   );
+
+  // Resolve venue-specific or default amenities
+  const defaultAmenities = [
+    "Wheelchair-accessible",
+    "AV equipment",
+    "LED/LCD projector",
+    "Sound system",
+    "Stage - on request",
+  ];
+
+  const amenityConfigMap: Record<
+    string,
+    { badge: string; icon: React.ComponentType<{ className?: string }> }
+  > = {
+    "Natural daylight": {
+      badge: "Available Feature",
+      icon: Sun,
+    },
+    "Sound system": {
+      badge: "Available Feature",
+      icon: Volume2,
+    },
+    "Stage - on request": {
+      badge: "Available On Request",
+      icon: Layers,
+    },
+    "Wheelchair-accessible": {
+      badge: "Accessible Feature",
+      icon: Accessibility,
+    },
+    "AV equipment": {
+      badge: "Available Feature",
+      icon: Tv,
+    },
+    "LED/LCD projector": {
+      badge: "Available Feature",
+      icon: Projector,
+    },
+  };
+
+  const venueAmenities = (
+    venue.amenities && venue.amenities.length > 0
+      ? venue.amenities
+      : defaultAmenities
+  ).map((name) => ({
+    name,
+    badge: amenityConfigMap[name]?.badge || "Available Feature",
+    icon: amenityConfigMap[name]?.icon || Layers,
+  }));
 
   return (
     <div className="flex flex-col min-h-screen bg-[#FAF8F5]">
@@ -241,40 +291,22 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-                  {[
-                    {
-                      name: "Wheelchair-accessible",
-                      badge: "Accessible Feature",
-                      icon: Accessibility,
-                    },
-                    {
-                      name: "AV equipment",
-                      badge: "Available Feature",
-                      icon: Tv,
-                    },
-                    {
-                      name: "LED/LCD projector",
-                      badge: "Available Feature",
-                      icon: Projector,
-                    },
-                    {
-                      name: "Sound system",
-                      badge: "Available Feature",
-                      icon: Volume2,
-                    },
-                    {
-                      name: "Stage - on request",
-                      badge: "Available On Request",
-                      icon: Layers,
-                    },
-                  ].map((item, idx) => {
+                <div
+                  className={`grid gap-3 ${
+                    venueAmenities.length === 4
+                      ? "grid-cols-2 sm:grid-cols-4"
+                      : "grid-cols-2 sm:grid-cols-3 lg:grid-cols-5"
+                  }`}
+                >
+                  {venueAmenities.map((item, idx) => {
                     const IconComponent = item.icon;
                     return (
                       <div
                         key={idx}
                         className={`p-4 rounded-xl bg-white border border-[#E8E8F0] hover:border-[#C6A568] transition-all shadow-xs hover:shadow-sm text-center space-y-2 group flex flex-col items-center justify-between min-h-[130px] ${
-                          idx === 4 ? "col-span-2 sm:col-span-1" : ""
+                          venueAmenities.length === 5 && idx === 4
+                            ? "col-span-2 sm:col-span-1"
+                            : ""
                         }`}
                       >
                         <div className="w-10 h-10 mx-auto rounded-full bg-[#FAF8F5] group-hover:bg-[#C6A568]/15 border border-[#E8E8F0] group-hover:border-[#C6A568]/30 flex items-center justify-center text-[#AA8B54] transition-colors shrink-0">

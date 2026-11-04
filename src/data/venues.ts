@@ -223,6 +223,12 @@ export const venuesData: VenueItem[] = [
       "Outdoor live cooking and cocktail bar infrastructure",
       "Security and perimeter management for exclusive gatherings",
     ],
+    amenities: [
+      "Natural daylight",
+      "Sound system",
+      "Stage - on request",
+      "Wheelchair-accessible",
+    ],
   },
   {
     id: "venue-upcoming-ballroom",
