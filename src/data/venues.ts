@@ -135,7 +135,7 @@ export const venuesData: VenueItem[] = [
     ],
     specs: {
       capacity: "Up to 50 Attendees (Theatre) / 30 (U-Shape)",
-      area: "Approx. 950 sq.ft.",
+      area: "12 m2 / 129.60 ft2",
       catering: "Executive High Tea, Coffee Breaks & Working Lunches",
       setupStyles: ["U-Shape", "Classroom", "Theatre", "Boardroom"],
     },
