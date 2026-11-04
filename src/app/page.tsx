@@ -2,7 +2,6 @@ import React from "react";
 import HeroSection from "@/components/home/HeroSection";
 import IntroductionSection from "@/components/home/IntroductionSection";
 import ExperienceSection from "@/components/home/ExperienceSection";
-import CulinaryShowcase from "@/components/home/CulinaryShowcase";
 import WellnessRecreation from "@/components/home/WellnessRecreation";
 import GatewayDestination from "@/components/home/GatewayDestination";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
@@ -21,22 +20,19 @@ export default function HomePage() {
       {/* Section C: Discover the Experience (Rooms, Dining, Events) */}
       <ExperienceSection />
 
-      {/* Section D: Epicurean Journeys & Culinary Showcase with Interactive Tabs & Reveals */}
-      <CulinaryShowcase />
-
-      {/* Section E: Restorative Wellness & Recreation (Pool, Spa, Fitness) */}
+      {/* Section D: Restorative Wellness & Recreation (Pool, Spa, Fitness) */}
       <WellnessRecreation />
 
-      {/* Section F: Regional Connectivity & Himalayan Gateway Destinations */}
+      {/* Section E: Regional Connectivity & Himalayan Gateway Destinations */}
       <GatewayDestination />
 
-      {/* Section G: Infinite Testimonials Carousels */}
+      {/* Section F: Infinite Testimonials Carousels */}
       <TestimonialsSection />
 
-      {/* Section H: About the Property */}
+      {/* Section G: About the Property */}
       <AboutPreview />
 
-      {/* Section I: Final Conversion CTA */}
+      {/* Section H: Final Conversion CTA */}
       <FinalCTA />
     </div>
   );
