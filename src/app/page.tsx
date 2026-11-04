@@ -3,7 +3,6 @@ import HeroSection from "@/components/home/HeroSection";
 import IntroductionSection from "@/components/home/IntroductionSection";
 import ExperienceSection from "@/components/home/ExperienceSection";
 import CulinaryShowcase from "@/components/home/CulinaryShowcase";
-import VenuesPreview from "@/components/home/VenuesPreview";
 import WellnessRecreation from "@/components/home/WellnessRecreation";
 import GatewayDestination from "@/components/home/GatewayDestination";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
@@ -25,22 +24,19 @@ export default function HomePage() {
       {/* Section D: Epicurean Journeys & Culinary Showcase with Interactive Tabs & Reveals */}
       <CulinaryShowcase />
 
-      {/* Section E: Our Venues Preview (All 7 Venues) */}
-      <VenuesPreview />
-
-      {/* Section F: Restorative Wellness & Recreation (Pool, Spa, Fitness) */}
+      {/* Section E: Restorative Wellness & Recreation (Pool, Spa, Fitness) */}
       <WellnessRecreation />
 
-      {/* Section G: Regional Connectivity & Himalayan Gateway Destinations */}
+      {/* Section F: Regional Connectivity & Himalayan Gateway Destinations */}
       <GatewayDestination />
 
-      {/* Section H: Infinite Testimonials Carousels */}
+      {/* Section G: Infinite Testimonials Carousels */}
       <TestimonialsSection />
 
-      {/* Section I: About the Property */}
+      {/* Section H: About the Property */}
       <AboutPreview />
 
-      {/* Section J: Final Conversion CTA */}
+      {/* Section I: Final Conversion CTA */}
       <FinalCTA />
     </div>
   );
