@@ -27,11 +27,11 @@ export function HeroSection() {
           className="absolute inset-0 w-full h-full object-cover object-center scale-105"
         >
           <source
-            src="/hero-wedding-teaser.mp4"
+            src="/Neha%20%26%20Karan%20_%20Indian%20Wedding%20Teaser%202025_1080p.mp4"
             type="video/mp4"
           />
           <source
-            src="/Cinematic%20Wedding%20Teaser%202025%20_%20Himanshu%20and%20Tannavi%20_%20khanna%20photography%20Karnal%20_1080p50.mp4"
+            src="/hero-wedding-teaser.mp4"
             type="video/mp4"
           />
         </video>
