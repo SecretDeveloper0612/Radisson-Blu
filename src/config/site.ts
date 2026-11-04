@@ -17,21 +17,21 @@ export const siteConfig: SiteConfig = {
     phoneDisplay: "+91 5944 259 500",
     email: "reservations@rdrudrapur.com",
     address: {
-      street: "Plot No. 1, Industrial Area, Nainital Road",
-      locality: "Sidcul / Central Gateway",
+      street: "Opposite Sidcul Plot No. A NH 87, Sector IIE",
+      locality: "Sector IIE",
       city: "Rudrapur",
       state: "Uttarakhand",
       pincode: "263153",
       country: "India",
-      full: "Nainital Road, Rudrapur, Udham Singh Nagar, Uttarakhand 263153, India",
+      full: "Opposite Sidcul Plot No. A NH 87, Sector IIE, Rudrapur, Uttarakhand 263153",
     },
     whatsappNumber: "+919876543210",
     whatsappUrl: "https://wa.me/919876543210?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Radisson%20Hotel%20Rudrapur",
     // Embed URL can be updated with property's verified Google Place CID/Embed URL
     googleMapsEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111812.87228965706!2d79.31758532454178!3d28.98393527210214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a07e868f0814bd%3A0xe54d6bebf1e4b3c0!2sRudrapur%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3522.4285800000003!2d79.355!3d28.981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0832070000001%3A0x808544c8c7c907cb!2sRadisson%20Blu%20Hotel%20Rudrapur!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin",
     googleMapsDirectionsUrl:
-      "https://maps.google.com/?q=Radisson+Hotel+Rudrapur+Uttarakhand",
+      "https://maps.google.com/?q=Radisson+Hotel+Rudrapur,+Opposite+Sidcul+Plot+No.+A+NH+87,+Sector+IIE,+Rudrapur,+Uttarakhand+263153",
   },
 
   booking: {
