@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
+import { siteConfig } from "@/config/site";
 
 interface SanctuaryPillar {
   id: string;
@@ -457,11 +458,11 @@ export function WellnessRecreation() {
                     <span>In-House Resident Privileges</span>
                   </span>
                   <a
-                    href="tel:+915944000000"
+                    href={`tel:${siteConfig.contact.phone}`}
                     className="flex items-center gap-1 text-[#0A0835] hover:text-[#AA8B54] font-medium transition-colors"
                   >
                     <Phone className="w-3 h-3" />
-                    <span>Desk: +91 5944 000000</span>
+                    <span>Desk: {siteConfig.contact.phoneDisplay}</span>
                   </a>
                 </div>
               </div>

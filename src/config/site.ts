@@ -13,9 +13,9 @@ export const siteConfig: SiteConfig = {
 
   contact: {
     // Note for Property Management: Replace with verified contact numbers and desk coordinates
-    phone: "+91 5944 000000",
-    phoneDisplay: "+91 5944 000000",
-    email: "reservations@radissonrudrapur.example.com",
+    phone: "+915944259500",
+    phoneDisplay: "+91 5944 259 500",
+    email: "reservations@rdrudrapur.com",
     address: {
       street: "Plot No. 1, Industrial Area, Nainital Road",
       locality: "Sidcul / Central Gateway",
