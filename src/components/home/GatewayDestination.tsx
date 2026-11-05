@@ -84,8 +84,7 @@ const destinations: ExcursionItem[] = [
     driveTime: "approx. 12 min",
     description:
       "Uttarakhand's foremost industrial corridor housing leading multinational automotive, FMCG, and technology headquarters.",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    image: "/attractions/sidcul.jpg",
     typeIcon: "business",
   },
   {
