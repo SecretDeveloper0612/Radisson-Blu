@@ -88,7 +88,7 @@ export function Lightbox({
           <button
             onClick={onClose}
             aria-label="Close lightbox"
-            className="p-2.5 text-white/80 hover:text-[#0A0835] transition-colors rounded-full bg-white/10 hover:bg-[#C6A568] cursor-pointer"
+            className="p-2.5 text-white/80 hover:text-[#0E0D35] transition-colors rounded-full bg-white/10 hover:bg-[#C6A568] cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
@@ -112,7 +112,7 @@ export function Lightbox({
         <button
           onClick={onPrev}
           aria-label="Previous image"
-          className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 p-3 text-white hover:text-[#0A0835] bg-black/60 hover:bg-[#C6A568] border border-white/20 hover:border-[#C6A568] rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-[#C6A568] cursor-pointer shadow-lg"
+          className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 p-3 text-white hover:text-[#0E0D35] bg-black/60 hover:bg-[#C6A568] border border-white/20 hover:border-[#C6A568] rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-[#C6A568] cursor-pointer shadow-lg"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
@@ -120,7 +120,7 @@ export function Lightbox({
         <button
           onClick={onNext}
           aria-label="Next image"
-          className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 p-3 text-white hover:text-[#0A0835] bg-black/60 hover:bg-[#C6A568] border border-white/20 hover:border-[#C6A568] rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-[#C6A568] cursor-pointer shadow-lg"
+          className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 p-3 text-white hover:text-[#0E0D35] bg-black/60 hover:bg-[#C6A568] border border-white/20 hover:border-[#C6A568] rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-[#C6A568] cursor-pointer shadow-lg"
         >
           <ChevronRight className="w-6 h-6" />
         </button>

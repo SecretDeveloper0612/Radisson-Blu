@@ -209,12 +209,12 @@ export function WellnessRecreation() {
 
   return (
     <section
-      className="py-20 sm:py-28 bg-[#FAF8F5] text-[#0A0835] relative overflow-hidden border-t border-[#E8E8F0]"
+      className="py-20 sm:py-28 bg-[#FAF8F5] text-[#0E0D35] relative overflow-hidden border-t border-[#E8E8F0]"
       aria-label="Wellness and Recreation Sanctuaries"
     >
       {/* Ambient background accents */}
       <div className="absolute top-0 right-1/4 w-96 h-96 rounded-full bg-[#C6A568]/8 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-10 w-80 h-80 rounded-full bg-[#0A0835]/5 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-10 w-80 h-80 rounded-full bg-[#0E0D35]/5 blur-3xl pointer-events-none" />
 
       <Container className="relative z-10">
         {/* Editorial Section Header */}
@@ -227,7 +227,7 @@ export function WellnessRecreation() {
               </span>
             </div>
 
-            <h2 className="font-serif text-3xl sm:text-5xl lg:text-[3.25rem] font-normal text-[#0A0835] leading-[1.18] tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-5xl lg:text-[3.25rem] font-normal text-[#0E0D35] leading-[1.18] tracking-tight">
               Restorative harmony for body & soul.
             </h2>
 
@@ -260,15 +260,15 @@ export function WellnessRecreation() {
                   onClick={() => handleTabChange(idx)}
                   className={`group relative p-3.5 sm:p-5 rounded-2xl border transition-all duration-300 text-left cursor-pointer flex flex-col justify-between ${
                     isActive
-                      ? "bg-[#0A0835] text-white border-[#C6A568] shadow-lg -translate-y-0.5"
-                      : "bg-white text-[#0A0835] border-[#E8E8F0] hover:border-[#C6A568]/60 hover:bg-[#FAF8F5] hover:shadow-xs"
+                      ? "bg-[#0E0D35] text-white border-[#C6A568] shadow-lg -translate-y-0.5"
+                      : "bg-white text-[#0E0D35] border-[#E8E8F0] hover:border-[#C6A568]/60 hover:bg-[#FAF8F5] hover:shadow-xs"
                   }`}
                 >
                   <div className="flex items-center justify-between w-full mb-3">
                     <div
                       className={`w-8 h-8 rounded-xl flex items-center justify-center transition-colors ${
                         isActive
-                          ? "bg-[#C6A568] text-[#0A0835]"
+                          ? "bg-[#C6A568] text-[#0E0D35]"
                           : "bg-[#FAF8F5] text-[#AA8B54] border border-[#E8E8F0] group-hover:bg-[#C6A568]/15"
                       }`}
                     >
@@ -288,7 +288,7 @@ export function WellnessRecreation() {
                   <div>
                     <h3
                       className={`font-serif text-sm sm:text-base font-normal leading-snug ${
-                        isActive ? "text-white" : "text-[#0A0835] group-hover:text-[#AA8B54]"
+                        isActive ? "text-white" : "text-[#0E0D35] group-hover:text-[#AA8B54]"
                       }`}
                     >
                       {item.shortLabel}
@@ -342,7 +342,7 @@ export function WellnessRecreation() {
                   <span>{currentSanctuary.categoryTag}</span>
                 </span>
 
-                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-[#0A0835] text-[11px] font-medium shadow-md">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-[#0E0D35] text-[11px] font-medium shadow-md">
                   <Clock className="w-3.5 h-3.5 text-[#AA8B54]" />
                   <span>{currentSanctuary.hours.split("•")[0]}</span>
                 </div>
@@ -360,7 +360,7 @@ export function WellnessRecreation() {
                       onClick={() => setActiveSubImageIdx(sIdx)}
                       className={`px-3 py-1 rounded-lg text-xs font-medium backdrop-blur-md transition-all cursor-pointer ${
                         activeSubImageIdx === sIdx
-                          ? "bg-[#C6A568] text-[#0A0835] font-semibold shadow-md"
+                          ? "bg-[#C6A568] text-[#0E0D35] font-semibold shadow-md"
                           : "bg-black/55 text-white/90 hover:bg-black/80 border border-white/20"
                       }`}
                     >
@@ -404,7 +404,7 @@ export function WellnessRecreation() {
                       <span className="text-[9px] uppercase tracking-wider text-[#AA8B54] font-semibold block">
                         {spec.label}
                       </span>
-                      <span className="text-xs sm:text-sm font-semibold text-[#0A0835] block truncate">
+                      <span className="text-xs sm:text-sm font-semibold text-[#0E0D35] block truncate">
                         {spec.value}
                       </span>
                       <span className="text-[10px] text-[#77766D] font-light block truncate">
@@ -417,7 +417,7 @@ export function WellnessRecreation() {
                 {/* Sanctuary Signature Inclusions */}
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-semibold uppercase tracking-widest text-[#0A0835] block">
+                    <span className="text-[10px] font-semibold uppercase tracking-widest text-[#0E0D35] block">
                       SIGNATURE INCLUSIONS & AMENITIES
                     </span>
                     <span className="text-[10px] text-[#AA8B54] font-medium">
@@ -445,11 +445,11 @@ export function WellnessRecreation() {
               <div className="pt-6 mt-6 border-t border-[#E8E8F0] space-y-3">
                 <Link
                   href={`/contact?enquiryType=${currentSanctuary.ctaType}`}
-                  className="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl bg-[#C6A568] hover:bg-[#b59457] text-[#0A0835] text-xs font-semibold uppercase tracking-widest transition-all duration-300 shadow-sm hover:shadow-md hover:scale-[1.01] group cursor-pointer"
+                  className="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl bg-[#C6A568] hover:bg-[#b59457] text-[#0E0D35] text-xs font-semibold uppercase tracking-widest transition-all duration-300 shadow-sm hover:shadow-md hover:scale-[1.01] group cursor-pointer"
                 >
-                  <CalendarCheck className="w-4 h-4 text-[#0A0835] transition-transform group-hover:scale-110" />
+                  <CalendarCheck className="w-4 h-4 text-[#0E0D35] transition-transform group-hover:scale-110" />
                   <span>{currentSanctuary.ctaLabel}</span>
-                  <ArrowRight className="w-4 h-4 text-[#0A0835] transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="w-4 h-4 text-[#0E0D35] transition-transform group-hover:translate-x-1" />
                 </Link>
 
                 <div className="flex items-center justify-between px-2 pt-1 text-[11px] text-[#5A5A68]">
@@ -459,7 +459,7 @@ export function WellnessRecreation() {
                   </span>
                   <a
                     href={`tel:${siteConfig.contact.phone}`}
-                    className="flex items-center gap-1 text-[#0A0835] hover:text-[#AA8B54] font-medium transition-colors"
+                    className="flex items-center gap-1 text-[#0E0D35] hover:text-[#AA8B54] font-medium transition-colors"
                   >
                     <Phone className="w-3 h-3" />
                     <span>Desk: {siteConfig.contact.phoneDisplay}</span>
@@ -478,7 +478,7 @@ export function WellnessRecreation() {
                 <Flower2 className="w-4 h-4" />
               </div>
               <div>
-                <h5 className="font-serif text-sm font-semibold text-[#0A0835]">
+                <h5 className="font-serif text-sm font-semibold text-[#0E0D35]">
                   Certified Ayurvedic Practitioners
                 </h5>
                 <p className="text-xs text-[#5A5A68] font-light leading-relaxed mt-0.5">
@@ -492,7 +492,7 @@ export function WellnessRecreation() {
                 <Droplets className="w-4 h-4" />
               </div>
               <div>
-                <h5 className="font-serif text-sm font-semibold text-[#0A0835]">
+                <h5 className="font-serif text-sm font-semibold text-[#0E0D35]">
                   Thermal Hydro & Steam Suites
                 </h5>
                 <p className="text-xs text-[#5A5A68] font-light leading-relaxed mt-0.5">
@@ -506,7 +506,7 @@ export function WellnessRecreation() {
                 <ShieldCheck className="w-4 h-4" />
               </div>
               <div>
-                <h5 className="font-serif text-sm font-semibold text-[#0A0835]">
+                <h5 className="font-serif text-sm font-semibold text-[#0E0D35]">
                   Complimentary Resident Access
                 </h5>
                 <p className="text-xs text-[#5A5A68] font-light leading-relaxed mt-0.5">

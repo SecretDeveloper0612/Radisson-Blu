@@ -31,15 +31,15 @@ export function Button({
 
   const variantStyles = {
     "primary-gold":
-      "bg-[#C6A568] hover:bg-[#b59457] text-[#0A0835] font-semibold shadow-sm hover:shadow-md focus-visible:ring-[#C6A568]",
+      "bg-[#C6A568] hover:bg-[#b59457] text-[#0E0D35] font-semibold shadow-sm hover:shadow-md focus-visible:ring-[#C6A568]",
     "secondary-outline":
-      "border-2 border-[#C6A568] text-[#0A0835] hover:bg-[#C6A568] hover:text-[#0A0835] focus-visible:ring-[#C6A568]",
+      "border-2 border-[#C6A568] text-[#0E0D35] hover:bg-[#C6A568] hover:text-[#0E0D35] focus-visible:ring-[#C6A568]",
     "gold-outline":
-      "border-2 border-[#C6A568] text-[#C6A568] hover:bg-[#C6A568] hover:text-[#0A0835] focus-visible:ring-[#C6A568]",
+      "border-2 border-[#C6A568] text-[#C6A568] hover:bg-[#C6A568] hover:text-[#0E0D35] focus-visible:ring-[#C6A568]",
     "forest-solid":
-      "bg-[#C6A568] hover:bg-[#b59457] text-[#0A0835] font-semibold shadow-sm hover:shadow-md focus-visible:ring-[#C6A568]",
+      "bg-[#C6A568] hover:bg-[#b59457] text-[#0E0D35] font-semibold shadow-sm hover:shadow-md focus-visible:ring-[#C6A568]",
     ghost:
-      "text-[#0A0835] hover:text-[#C6A568] hover:bg-transparent underline-offset-4 hover:underline p-0",
+      "text-[#0E0D35] hover:text-[#C6A568] hover:bg-transparent underline-offset-4 hover:underline p-0",
   };
 
   const combinedClasses = cn(

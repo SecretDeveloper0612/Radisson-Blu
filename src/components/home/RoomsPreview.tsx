@@ -33,7 +33,7 @@ export function RoomsPreview() {
   }, [isHovered, nextRoom]);
 
   return (
-    <section className="py-14 sm:py-18 bg-white text-[#0A0835] overflow-hidden">
+    <section className="py-14 sm:py-18 bg-white text-[#0E0D35] overflow-hidden">
       <Container>
         {/* Header with Title and View All CTA - Compact Spacing */}
         <Reveal direction="up">
@@ -68,8 +68,8 @@ export function RoomsPreview() {
                   onClick={() => setActiveRoomIndex(idx)}
                   className={`px-4 py-2 rounded-full text-xs uppercase tracking-wider font-medium whitespace-nowrap transition-all duration-300 cursor-pointer flex items-center gap-1.5 ${
                     isSelected
-                      ? "bg-[#0A0835] text-[#F7F4EC] shadow-sm border border-[#C6A568]/40"
-                      : "bg-white text-[#77766D] border border-[#E4DED2] hover:border-[#AA8B54] hover:text-[#0A0835]"
+                      ? "bg-[#0E0D35] text-[#F7F4EC] shadow-sm border border-[#C6A568]/40"
+                      : "bg-white text-[#77766D] border border-[#E4DED2] hover:border-[#AA8B54] hover:text-[#0E0D35]"
                   }`}
                 >
                   <span className={`text-[10px] font-mono ${isSelected ? "text-[#C6A568]" : "text-[#AA8B54]"}`}>
@@ -145,7 +145,7 @@ export function RoomsPreview() {
                       prevRoom();
                     }}
                     aria-label="Previous room"
-                    className="pointer-events-auto w-9 h-9 rounded-full bg-black/50 hover:bg-[#C6A568] hover:text-[#0A0835] text-white flex items-center justify-center backdrop-blur-md border border-white/15 opacity-70 group-hover:opacity-100 transition-all duration-300 cursor-pointer hover:scale-110 active:scale-95 shadow-md"
+                    className="pointer-events-auto w-9 h-9 rounded-full bg-black/50 hover:bg-[#C6A568] hover:text-[#0E0D35] text-white flex items-center justify-center backdrop-blur-md border border-white/15 opacity-70 group-hover:opacity-100 transition-all duration-300 cursor-pointer hover:scale-110 active:scale-95 shadow-md"
                   >
                     <ChevronLeft className="w-4 h-4" />
                   </button>
@@ -155,7 +155,7 @@ export function RoomsPreview() {
                       nextRoom();
                     }}
                     aria-label="Next room"
-                    className="pointer-events-auto w-9 h-9 rounded-full bg-black/50 hover:bg-[#C6A568] hover:text-[#0A0835] text-white flex items-center justify-center backdrop-blur-md border border-white/15 opacity-70 group-hover:opacity-100 transition-all duration-300 cursor-pointer hover:scale-110 active:scale-95 shadow-md"
+                    className="pointer-events-auto w-9 h-9 rounded-full bg-black/50 hover:bg-[#C6A568] hover:text-[#0E0D35] text-white flex items-center justify-center backdrop-blur-md border border-white/15 opacity-70 group-hover:opacity-100 transition-all duration-300 cursor-pointer hover:scale-110 active:scale-95 shadow-md"
                   >
                     <ChevronRight className="w-4 h-4" />
                   </button>
@@ -177,7 +177,7 @@ export function RoomsPreview() {
 
                   <Link
                     href={`/rooms/${activeRoom.slug}`}
-                    className="bg-[#C6A568] hover:bg-[#b59457] text-[#04005E] text-[11px] font-semibold uppercase tracking-widest px-4 py-2 rounded transition-all duration-300 shadow-md inline-flex items-center gap-1.5 self-start sm:self-auto hover:scale-105"
+                    className="bg-[#C6A568] hover:bg-[#b59457] text-[#0E0D35] text-[11px] font-semibold uppercase tracking-widest px-4 py-2 rounded transition-all duration-300 shadow-md inline-flex items-center gap-1.5 self-start sm:self-auto hover:scale-105"
                   >
                     <span>Explore Room</span>
                     <ArrowRight className="w-3 h-3" />
@@ -196,7 +196,7 @@ export function RoomsPreview() {
                     <span className="text-[#AA8B54] uppercase tracking-wider block text-[9px] font-medium">
                       Dimensions
                     </span>
-                    <span className="font-medium text-[#0A0835] text-xs truncate block">
+                    <span className="font-medium text-[#0E0D35] text-xs truncate block">
                       {activeRoom.specs.size || "Spacious"}
                     </span>
                   </div>
@@ -208,7 +208,7 @@ export function RoomsPreview() {
                     <span className="text-[#AA8B54] uppercase tracking-wider block text-[9px] font-medium">
                       Bedding
                     </span>
-                    <span className="font-medium text-[#0A0835] text-xs truncate block">
+                    <span className="font-medium text-[#0E0D35] text-xs truncate block">
                       {activeRoom.specs.bedType || "King / Twin"}
                     </span>
                   </div>
@@ -220,7 +220,7 @@ export function RoomsPreview() {
                     <span className="text-[#AA8B54] uppercase tracking-wider block text-[9px] font-medium">
                       Max Guests
                     </span>
-                    <span className="font-medium text-[#0A0835] text-xs truncate block">
+                    <span className="font-medium text-[#0E0D35] text-xs truncate block">
                       {activeRoom.specs.maxOccupancy || "Up to 2"}
                     </span>
                   </div>
@@ -239,8 +239,8 @@ export function RoomsPreview() {
                     onClick={() => setActiveRoomIndex(index)}
                     className={`p-3.5 sm:p-4 rounded-xl border transition-all duration-300 cursor-pointer relative overflow-hidden group ${
                       isSelected
-                        ? "bg-[#0A0835] text-[#F7F4EC] border-[#C6A568] shadow-md"
-                        : "bg-white text-[#0A0835] border-[#E4DED2] hover:border-[#AA8B54]/60 hover:bg-[#FAF8F3]"
+                        ? "bg-[#0E0D35] text-[#F7F4EC] border-[#C6A568] shadow-md"
+                        : "bg-white text-[#0E0D35] border-[#E4DED2] hover:border-[#AA8B54]/60 hover:bg-[#FAF8F3]"
                     }`}
                   >
                     {/* Active Left Indicator Bar */}
@@ -267,7 +267,7 @@ export function RoomsPreview() {
 
                     <h4
                       className={`font-serif text-lg sm:text-xl font-normal transition-colors leading-snug ${
-                        isSelected ? "text-[#F7F4EC]" : "text-[#080097] group-hover:text-[#AA8B54]"
+                        isSelected ? "text-[#F7F4EC]" : "text-[#0E0D35] group-hover:text-[#AA8B54]"
                       }`}
                     >
                       {room.name}
@@ -287,7 +287,7 @@ export function RoomsPreview() {
                         className={`text-[11px] uppercase tracking-wider font-medium flex items-center gap-1 ${
                           isSelected
                             ? "text-[#C6A568] hover:underline"
-                            : "text-[#080097] hover:text-[#AA8B54]"
+                            : "text-[#0E0D35] hover:text-[#AA8B54]"
                         }`}
                       >
                         <span>Specifications</span>
@@ -298,7 +298,7 @@ export function RoomsPreview() {
                         href={`/contact?enquiryType=Room+Booking&room=${encodeURIComponent(room.name)}`}
                         className={`text-[10px] uppercase tracking-wider font-semibold px-2.5 py-0.5 rounded transition-colors ${
                           isSelected
-                            ? "bg-[#C6A568] text-[#0A0835] hover:bg-[#b59457]"
+                            ? "bg-[#C6A568] text-[#0E0D35] hover:bg-[#b59457]"
                             : "text-[#AA8B54] hover:underline"
                         }`}
                       >

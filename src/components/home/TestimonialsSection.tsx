@@ -155,7 +155,7 @@ function TestimonialCard({ item }: { item: Testimonial }) {
               />
             ))}
           </div>
-          <span className="text-[11px] font-medium tracking-wider uppercase px-2.5 py-1 rounded-full bg-[#0A0835]/5 text-[#0A0835] border border-[#0A0835]/10">
+          <span className="text-[11px] font-medium tracking-wider uppercase px-2.5 py-1 rounded-full bg-[#0E0D35]/5 text-[#0E0D35] border border-[#0E0D35]/10">
             {item.tag}
           </span>
         </div>
@@ -163,7 +163,7 @@ function TestimonialCard({ item }: { item: Testimonial }) {
         {/* Quote */}
         <div className="relative mb-6">
           <Quote className="w-8 h-8 text-[#C6A568]/15 absolute -top-2 -left-1 pointer-events-none group-hover:text-[#C6A568]/30 transition-colors" />
-          <p className="text-sm sm:text-[15px] text-[#0A0835] leading-relaxed relative z-10 font-light">
+          <p className="text-sm sm:text-[15px] text-[#0E0D35] leading-relaxed relative z-10 font-light">
             &ldquo;{item.quote}&rdquo;
           </p>
         </div>
@@ -172,12 +172,12 @@ function TestimonialCard({ item }: { item: Testimonial }) {
       {/* Author Footer */}
       <div className="pt-4 border-t border-[#E4DED2]/70 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-[#0A0835] text-[#C6A568] font-serif font-medium flex items-center justify-center text-sm shadow-sm group-hover:bg-[#C6A568] group-hover:text-[#0A0835] transition-colors">
+          <div className="w-10 h-10 rounded-full bg-[#0E0D35] text-[#C6A568] font-serif font-medium flex items-center justify-center text-sm shadow-sm group-hover:bg-[#C6A568] group-hover:text-[#0E0D35] transition-colors">
             {item.name.charAt(0)}
           </div>
           <div>
             <div className="flex items-center gap-1.5">
-              <h4 className="font-semibold text-xs sm:text-sm text-[#0A0835]">
+              <h4 className="font-semibold text-xs sm:text-sm text-[#0E0D35]">
                 {item.name}
               </h4>
               <CheckCircle2 className="w-3.5 h-3.5 text-[#AA8B54]" />
@@ -201,7 +201,7 @@ export function TestimonialsSection() {
   const rowTwoItems = [...ROW_TWO_TESTIMONIALS, ...ROW_TWO_TESTIMONIALS];
 
   return (
-    <section className="py-20 sm:py-28 bg-white text-[#0A0835] relative overflow-hidden border-t border-[#E8E8F0] [contain:paint]">
+    <section className="py-20 sm:py-28 bg-white text-[#0E0D35] relative overflow-hidden border-t border-[#E8E8F0] [contain:paint]">
       <Container>
         <SectionHeading
           eyebrow="GUEST STORIES & EXPERIENCES"

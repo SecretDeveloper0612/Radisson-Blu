@@ -25,7 +25,7 @@ export function AboutPreview() {
   ];
 
   return (
-    <section className="py-20 sm:py-28 bg-white text-[#0A0835] overflow-hidden border-t border-[#E8E8F0]">
+    <section className="py-20 sm:py-28 bg-white text-[#0E0D35] overflow-hidden border-t border-[#E8E8F0]">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Text & 3 Pillars with Reveal */}
@@ -35,7 +35,7 @@ export function AboutPreview() {
                 <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#AA8B54]">
                   ABOUT THE PROPERTY
                 </span>
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#080097] font-normal leading-[1.18]">
+                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#0E0D35] font-normal leading-[1.18]">
                   A place to arrive. A place to belong.
                 </h2>
                 <p className="text-[#5A5A68] text-base sm:text-lg font-light leading-relaxed pt-2">
@@ -49,11 +49,11 @@ export function AboutPreview() {
               {pillars.map((item, idx) => (
                 <Reveal key={idx} direction="up" delayMs={idx * 120}>
                   <div className="flex gap-4">
-                    <span className="font-serif text-xl text-[#080097] font-semibold shrink-0">
+                    <span className="font-serif text-xl text-[#0E0D35] font-semibold shrink-0">
                       0{idx + 1}
                     </span>
                     <div>
-                      <h3 className="font-serif text-xl text-[#0A0835] font-normal">
+                      <h3 className="font-serif text-xl text-[#0E0D35] font-normal">
                         {item.title}
                       </h3>
                       <p className="text-xs sm:text-sm text-[#5A5A68] font-light mt-1 leading-relaxed">

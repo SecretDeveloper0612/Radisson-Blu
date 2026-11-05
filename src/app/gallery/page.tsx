@@ -108,7 +108,7 @@ export default function GalleryPage() {
       {/* 2. Floating Highlights Ribbon (Connecting Hero & Content) */}
       <section className="relative z-20 -mt-10 sm:-mt-12 px-4 sm:px-6 lg:px-8">
         <Container>
-          <div className="bg-white text-[#0A0835] rounded-2xl border border-[#E8E8F0] shadow-xl p-5 sm:p-7 backdrop-blur-xl relative overflow-hidden">
+          <div className="bg-white text-[#0E0D35] rounded-2xl border border-[#E8E8F0] shadow-xl p-5 sm:p-7 backdrop-blur-xl relative overflow-hidden">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8 divide-y md:divide-y-0 md:divide-x divide-[#E8E8F0] relative z-10">
               {/* Highlight 1: Architecture */}
               <button
@@ -132,7 +132,7 @@ export default function GalleryPage() {
                   <span className="text-[10px] uppercase tracking-widest text-[#AA8B54] font-semibold block">
                     Architecture & Grounds
                   </span>
-                  <span className="text-xs sm:text-sm font-semibold text-[#0A0835] block mt-0.5">
+                  <span className="text-xs sm:text-sm font-semibold text-[#0E0D35] block mt-0.5">
                     Facade & Garden Lawns
                   </span>
                 </div>
@@ -160,7 +160,7 @@ export default function GalleryPage() {
                   <span className="text-[10px] uppercase tracking-widest text-[#AA8B54] font-semibold block">
                     Tailored Sanctuaries
                   </span>
-                  <span className="text-xs sm:text-sm font-semibold text-[#0A0835] block mt-0.5">
+                  <span className="text-xs sm:text-sm font-semibold text-[#0E0D35] block mt-0.5">
                     Suites & Deluxe Rooms
                   </span>
                 </div>
@@ -188,7 +188,7 @@ export default function GalleryPage() {
                   <span className="text-[10px] uppercase tracking-widest text-[#AA8B54] font-semibold block">
                     Culinary Theatre
                   </span>
-                  <span className="text-xs sm:text-sm font-semibold text-[#0A0835] block mt-0.5">
+                  <span className="text-xs sm:text-sm font-semibold text-[#0E0D35] block mt-0.5">
                     NH 87 & K2 Artisanal Bar
                   </span>
                 </div>
@@ -216,7 +216,7 @@ export default function GalleryPage() {
                   <span className="text-[10px] uppercase tracking-widest text-[#AA8B54] font-semibold block">
                     Grand Celebrations
                   </span>
-                  <span className="text-xs sm:text-sm font-semibold text-[#0A0835] block mt-0.5">
+                  <span className="text-xs sm:text-sm font-semibold text-[#0E0D35] block mt-0.5">
                     Sapphire Ballroom & Lawns
                   </span>
                 </div>
@@ -235,7 +235,7 @@ export default function GalleryPage() {
               <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block mb-1">
                 CURATED VISUAL SPACES
               </span>
-              <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#0A0835] font-normal">
+              <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#0E0D35] font-normal">
                 Explore The Collection
               </h2>
             </div>
@@ -251,16 +251,16 @@ export default function GalleryPage() {
                     onClick={() => setSelectedCategory(cat)}
                     className={`group inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs uppercase tracking-wider transition-all duration-200 cursor-pointer whitespace-nowrap ${
                       isActive
-                        ? "bg-[#0A0835] text-white shadow-md border border-[#0A0835] font-semibold"
-                        : "bg-white text-[#5A5A68] border border-[#E0DEE8] hover:border-[#C6A568] hover:text-[#0A0835] shadow-2xs"
+                        ? "bg-[#0E0D35] text-white shadow-md border border-[#0E0D35] font-semibold"
+                        : "bg-white text-[#5A5A68] border border-[#E0DEE8] hover:border-[#C6A568] hover:text-[#0E0D35] shadow-2xs"
                     }`}
                   >
                     <span>{cat}</span>
                     <span
                       className={`text-[10px] px-2 py-0.5 rounded-full font-mono font-medium transition-colors ${
                         isActive
-                          ? "bg-[#C6A568] text-[#0A0835] font-bold"
-                          : "bg-[#FAF8F5] text-[#7A7A8A] group-hover:bg-[#0A0835]/10 group-hover:text-[#0A0835]"
+                          ? "bg-[#C6A568] text-[#0E0D35] font-bold"
+                          : "bg-[#FAF8F5] text-[#7A7A8A] group-hover:bg-[#0E0D35]/10 group-hover:text-[#0E0D35]"
                       }`}
                     >
                       {count}
@@ -277,11 +277,11 @@ export default function GalleryPage() {
               <Camera className="w-4 h-4 text-[#AA8B54]" />
               <span>
                 Displaying{" "}
-                <strong className="font-semibold text-[#0A0835]">
+                <strong className="font-semibold text-[#0E0D35]">
                   {filteredImages.length}
                 </strong>{" "}
                 photographs in{" "}
-                <span className="font-medium text-[#0A0835]">
+                <span className="font-medium text-[#0E0D35]">
                   {selectedCategory === "All" ? "all categories" : selectedCategory}
                 </span>
               </span>
@@ -318,12 +318,12 @@ export default function GalleryPage() {
 
                   {/* Top Badges (Category Pill & Expand Button) */}
                   <div className="absolute top-4 inset-x-4 flex items-center justify-between z-10 pointer-events-none">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0A0835]/90 backdrop-blur-md border border-[#C6A568]/50 text-[#C6A568] text-[10px] uppercase font-semibold tracking-wider shadow-sm">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0E0D35]/90 backdrop-blur-md border border-[#C6A568]/50 text-[#C6A568] text-[10px] uppercase font-semibold tracking-wider shadow-sm">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#C6A568]" />
                       {image.category}
                     </span>
 
-                    <span className="w-8 h-8 rounded-full bg-black/50 backdrop-blur-md border border-white/20 text-white flex items-center justify-center group-hover:bg-[#C6A568] group-hover:text-[#0A0835] transition-all duration-300 shadow-sm">
+                    <span className="w-8 h-8 rounded-full bg-black/50 backdrop-blur-md border border-white/20 text-white flex items-center justify-center group-hover:bg-[#C6A568] group-hover:text-[#0E0D35] transition-all duration-300 shadow-sm">
                       <Maximize2 className="w-3.5 h-3.5" />
                     </span>
                   </div>
@@ -353,7 +353,7 @@ export default function GalleryPage() {
               <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block mb-1">
                 RADISSON IDENTITY
               </span>
-              <h3 className="font-serif text-3xl sm:text-4xl text-[#0A0835] font-normal">
+              <h3 className="font-serif text-3xl sm:text-4xl text-[#0E0D35] font-normal">
                 Crafted for Discerning Guests
               </h3>
               <p className="text-xs sm:text-sm text-[#5A5A68] font-light mt-2 leading-relaxed">
@@ -367,7 +367,7 @@ export default function GalleryPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[#E8E8F0] flex items-center justify-center text-[#AA8B54]">
                   <Building2 className="w-6 h-6" />
                 </div>
-                <h4 className="font-serif text-xl text-[#0A0835] font-normal">
+                <h4 className="font-serif text-xl text-[#0E0D35] font-normal">
                   Architectural Elegance
                 </h4>
                 <p className="text-xs text-[#5A5A68] font-light leading-relaxed">
@@ -380,7 +380,7 @@ export default function GalleryPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[#E8E8F0] flex items-center justify-center text-[#AA8B54]">
                   <UtensilsCrossed className="w-6 h-6" />
                 </div>
-                <h4 className="font-serif text-xl text-[#0A0835] font-normal">
+                <h4 className="font-serif text-xl text-[#0E0D35] font-normal">
                   Gastronomic Excellence
                 </h4>
                 <p className="text-xs text-[#5A5A68] font-light leading-relaxed">
@@ -393,7 +393,7 @@ export default function GalleryPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[#E8E8F0] flex items-center justify-center text-[#AA8B54]">
                   <PartyPopper className="w-6 h-6" />
                 </div>
-                <h4 className="font-serif text-xl text-[#0A0835] font-normal">
+                <h4 className="font-serif text-xl text-[#0E0D35] font-normal">
                   Banqueting & Venues
                 </h4>
                 <p className="text-xs text-[#5A5A68] font-light leading-relaxed">
@@ -404,7 +404,7 @@ export default function GalleryPage() {
           </div>
 
           {/* 6. Experience Invitation / Call to Action Banner */}
-          <div className="mt-16 bg-white text-[#0A0835] rounded-3xl border border-[#E8E8F0] shadow-xl p-8 sm:p-12 relative overflow-hidden">
+          <div className="mt-16 bg-white text-[#0E0D35] rounded-3xl border border-[#E8E8F0] shadow-xl p-8 sm:p-12 relative overflow-hidden">
             <div className="relative z-10 max-w-3xl">
               <div className="inline-flex items-center gap-2 mb-3">
                 <span className="w-6 h-[1px] bg-[#AA8B54]" />
@@ -413,7 +413,7 @@ export default function GalleryPage() {
                 </span>
               </div>
 
-              <h3 className="font-serif text-3xl sm:text-4xl text-[#0A0835] font-normal leading-tight">
+              <h3 className="font-serif text-3xl sm:text-4xl text-[#0E0D35] font-normal leading-tight">
                 Experience Radisson Hotel Rudrapur Firsthand
               </h3>
 
@@ -441,7 +441,7 @@ export default function GalleryPage() {
 
                 <a
                   href={`tel:${siteConfig.contact.phone}`}
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-full text-xs font-semibold uppercase tracking-wider text-[#0A0835] hover:text-[#AA8B54] transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-full text-xs font-semibold uppercase tracking-wider text-[#0E0D35] hover:text-[#AA8B54] transition-colors"
                 >
                   <Phone className="w-4 h-4 text-[#C6A568]" />
                   <span>{siteConfig.contact.phoneDisplay}</span>

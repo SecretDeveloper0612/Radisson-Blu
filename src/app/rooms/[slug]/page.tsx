@@ -65,7 +65,7 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
           <div className="flex items-center gap-2 mb-4 sm:mb-6">
             <Link
               href="/rooms"
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/45 hover:bg-[#C6A568] hover:text-[#0A0835] text-[#C6A568] border border-white/20 backdrop-blur-md transition-all text-xs uppercase tracking-widest font-medium shadow-md cursor-pointer group"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/45 hover:bg-[#C6A568] hover:text-[#0E0D35] text-[#C6A568] border border-white/20 backdrop-blur-md transition-all text-xs uppercase tracking-widest font-medium shadow-md cursor-pointer group"
             >
               <ArrowLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-1" />
               <span>All Rooms</span>
@@ -98,7 +98,7 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
       {/* Floating Key Specs Bar (Connecting Hero & Content) */}
       <section className="relative z-30 -mt-10 sm:-mt-12 px-4 sm:px-6 lg:px-8">
         <Container>
-          <div className="bg-white text-[#0A0835] rounded-2xl border border-[#E8E8F0] shadow-xl p-5 sm:p-7 backdrop-blur-xl relative overflow-hidden">
+          <div className="bg-white text-[#0E0D35] rounded-2xl border border-[#E8E8F0] shadow-xl p-5 sm:p-7 backdrop-blur-xl relative overflow-hidden">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8 divide-y md:divide-y-0 md:divide-x divide-[#E8E8F0] relative z-10">
               {/* Metric 1: Size */}
               <div className="flex items-start gap-3.5 pt-0">
@@ -109,7 +109,7 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
                   <span className="text-[10px] uppercase tracking-widest text-[#AA8B54] font-semibold block">
                     Room Dimensions
                   </span>
-                  <span className="text-xs sm:text-sm font-semibold text-[#0A0835] block mt-0.5">
+                  <span className="text-xs sm:text-sm font-semibold text-[#0E0D35] block mt-0.5">
                     {room.specs.size || "Spacious Layout"}
                   </span>
                 </div>
@@ -124,7 +124,7 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
                   <span className="text-[10px] uppercase tracking-widest text-[#AA8B54] font-semibold block">
                     Bedding Configuration
                   </span>
-                  <span className="text-xs sm:text-sm font-semibold text-[#0A0835] block mt-0.5">
+                  <span className="text-xs sm:text-sm font-semibold text-[#0E0D35] block mt-0.5">
                     {room.specs.bedType || "King / Twin"}
                   </span>
                 </div>
@@ -139,7 +139,7 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
                   <span className="text-[10px] uppercase tracking-widest text-[#AA8B54] font-semibold block">
                     Max Occupancy
                   </span>
-                  <span className="text-xs sm:text-sm font-semibold text-[#0A0835] block mt-0.5">
+                  <span className="text-xs sm:text-sm font-semibold text-[#0E0D35] block mt-0.5">
                     {room.specs.maxOccupancy || "Up to 2 Adults"}
                   </span>
                 </div>
@@ -154,7 +154,7 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
                   <span className="text-[10px] uppercase tracking-widest text-[#AA8B54] font-semibold block">
                     Orientation & View
                   </span>
-                  <span className="text-xs sm:text-sm font-semibold text-[#0A0835] block mt-0.5">
+                  <span className="text-xs sm:text-sm font-semibold text-[#0E0D35] block mt-0.5">
                     {room.specs.view || "City & Mountain Vista"}
                   </span>
                 </div>
@@ -178,7 +178,7 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
                     OVERVIEW & SPACE
                   </span>
                 </div>
-                <h2 className="font-serif text-3xl sm:text-4xl text-[#0A0835] font-normal tracking-tight">
+                <h2 className="font-serif text-3xl sm:text-4xl text-[#0E0D35] font-normal tracking-tight">
                   The {room.name} Experience
                 </h2>
                 <p className="text-base sm:text-lg text-[#4B4B59] leading-relaxed font-light pt-1">
@@ -187,14 +187,14 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
 
                 {/* Badges */}
                 <div className="pt-3 flex flex-wrap gap-2">
-                  <span className="inline-flex items-center px-3 py-1.5 rounded-lg bg-white border border-[#E8E8F0] text-xs font-medium text-[#0A0835] shadow-xs">
+                  <span className="inline-flex items-center px-3 py-1.5 rounded-lg bg-white border border-[#E8E8F0] text-xs font-medium text-[#0E0D35] shadow-xs">
                     <span>Radisson Restorative Standard</span>
                   </span>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-[#E8E8F0] text-xs font-medium text-[#0A0835] shadow-xs">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-[#E8E8F0] text-xs font-medium text-[#0E0D35] shadow-xs">
                     <ShieldCheck className="w-3.5 h-3.5 text-[#AA8B54]" />
                     <span>Dedicated Daily Housekeeping</span>
                   </span>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-[#E8E8F0] text-xs font-medium text-[#0A0835] shadow-xs">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-[#E8E8F0] text-xs font-medium text-[#0E0D35] shadow-xs">
                     <Compass className="w-3.5 h-3.5 text-[#AA8B54]" />
                     <span>Soundproof Acoustic Glazing</span>
                   </span>
@@ -208,7 +208,7 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
                     <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block mb-1">
                       ROOM PERSPECTIVES
                     </span>
-                    <h3 className="font-serif text-2xl sm:text-3xl text-[#0A0835] font-normal">
+                    <h3 className="font-serif text-2xl sm:text-3xl text-[#0E0D35] font-normal">
                       Interior Visual Tour
                     </h3>
                   </div>
@@ -237,7 +237,7 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
                   <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block mb-1">
                     KEY SIGNATURES
                   </span>
-                  <h3 className="font-serif text-2xl sm:text-3xl text-[#0A0835] font-normal">
+                  <h3 className="font-serif text-2xl sm:text-3xl text-[#0E0D35] font-normal">
                     Room Highlights & Finishes
                   </h3>
                 </div>
@@ -262,7 +262,7 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
                   <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block mb-1">
                     IN-ROOM COMFORTS
                   </span>
-                  <h3 className="font-serif text-2xl sm:text-3xl text-[#0A0835] font-normal">
+                  <h3 className="font-serif text-2xl sm:text-3xl text-[#0E0D35] font-normal">
                     Comprehensive Amenities
                   </h3>
                 </div>
@@ -282,13 +282,13 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
 
             {/* Right Sidebar (4 Cols): Room Specifications & Reservation Box */}
             <div className="lg:col-span-4 lg:sticky lg:top-28 space-y-6">
-              <div className="bg-white text-[#0A0835] rounded-2xl p-6 sm:p-8 border border-[#E8E8F0] shadow-xl space-y-6 relative overflow-hidden">
+              <div className="bg-white text-[#0E0D35] rounded-2xl p-6 sm:p-8 border border-[#E8E8F0] shadow-xl space-y-6 relative overflow-hidden">
                 {/* Header */}
                 <div className="relative z-10">
                   <div className="inline-flex items-center px-2.5 py-1 rounded-full bg-[#FAF8F5] border border-[#E8E8F0] text-[#AA8B54] text-[10px] font-semibold uppercase tracking-widest mb-2">
                     <span>RESERVATIONS DESK</span>
                   </div>
-                  <h3 className="font-serif text-2xl sm:text-3xl text-[#0A0835] font-normal">
+                  <h3 className="font-serif text-2xl sm:text-3xl text-[#0E0D35] font-normal">
                     Room Specifications
                   </h3>
                   <p className="text-[11px] text-[#5A5A68] font-light mt-1">
@@ -300,27 +300,27 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
                 <div className="space-y-3.5 text-xs font-light divide-y divide-[#E8E8F0] relative z-10">
                   <div className="pt-2 flex justify-between items-center">
                     <span className="text-[#5A5A68] font-medium">Category:</span>
-                    <span className="font-semibold text-[#0A0835]">{room.category}</span>
+                    <span className="font-semibold text-[#0E0D35]">{room.category}</span>
                   </div>
 
                   <div className="pt-3 flex justify-between items-center">
                     <span className="text-[#5A5A68] font-medium">Room Size:</span>
-                    <span className="font-semibold text-[#0A0835]">{room.specs.size || "Spacious Layout"}</span>
+                    <span className="font-semibold text-[#0E0D35]">{room.specs.size || "Spacious Layout"}</span>
                   </div>
 
                   <div className="pt-3 flex justify-between items-center">
                     <span className="text-[#5A5A68] font-medium">Bedding:</span>
-                    <span className="font-semibold text-[#0A0835]">{room.specs.bedType || "King or Twin"}</span>
+                    <span className="font-semibold text-[#0E0D35]">{room.specs.bedType || "King or Twin"}</span>
                   </div>
 
                   <div className="pt-3 flex justify-between items-center">
                     <span className="text-[#5A5A68] font-medium">Max Occupancy:</span>
-                    <span className="font-semibold text-[#0A0835]">{room.specs.maxOccupancy || "Up to 2 Adults"}</span>
+                    <span className="font-semibold text-[#0E0D35]">{room.specs.maxOccupancy || "Up to 2 Adults"}</span>
                   </div>
 
                   <div className="pt-3 flex justify-between items-center">
                     <span className="text-[#5A5A68] font-medium">View:</span>
-                    <span className="font-semibold text-[#0A0835]">{room.specs.view || "City / Garden"}</span>
+                    <span className="font-semibold text-[#0E0D35]">{room.specs.view || "City / Garden"}</span>
                   </div>
                 </div>
 
@@ -339,7 +339,7 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
                     <span className="text-[10px] uppercase tracking-widest text-[#AA8B54] font-semibold block">
                       Direct Front Desk
                     </span>
-                    <div className="flex items-center justify-between text-[#0A0835]">
+                    <div className="flex items-center justify-between text-[#0E0D35]">
                       <a
                         href={`tel:${siteConfig.contact.phone}`}
                         className="flex items-center gap-2 hover:text-[#AA8B54] transition-colors"
@@ -381,13 +381,13 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
                   <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block mb-1">
                     OTHER ACCOMMODATIONS
                   </span>
-                  <h3 className="font-serif text-3xl sm:text-4xl text-[#0A0835] font-normal">
+                  <h3 className="font-serif text-3xl sm:text-4xl text-[#0E0D35] font-normal">
                     Discover More Rooms & Suites
                   </h3>
                 </div>
                 <Link
                   href="/rooms"
-                  className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-[#0A0835] hover:text-[#AA8B54] transition-colors"
+                  className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-[#0E0D35] hover:text-[#AA8B54] transition-colors"
                 >
                   <span>View All Accommodations</span>
                   <ArrowRight className="w-4 h-4" />
@@ -418,7 +418,7 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
                         <span className="text-[10px] font-semibold uppercase tracking-widest text-[#AA8B54] block mb-1">
                           {item.specs.size || "Spacious Layout"}
                         </span>
-                        <h4 className="font-serif text-xl sm:text-2xl text-[#0A0835] group-hover:text-[#AA8B54] transition-colors">
+                        <h4 className="font-serif text-xl sm:text-2xl text-[#0E0D35] group-hover:text-[#AA8B54] transition-colors">
                           {item.name}
                         </h4>
                         <p className="text-xs text-[#5A5A68] font-light mt-2 line-clamp-2 leading-relaxed">
@@ -427,7 +427,7 @@ export default async function RoomDetailPage({ params }: RoomPageProps) {
                       </div>
                     </div>
 
-                    <div className="p-6 pt-0 flex items-center justify-between text-xs font-semibold uppercase tracking-widest text-[#0A0835] group-hover:text-[#AA8B54] transition-colors border-t border-[#E8E8F0]/70 mt-4">
+                    <div className="p-6 pt-0 flex items-center justify-between text-xs font-semibold uppercase tracking-widest text-[#0E0D35] group-hover:text-[#AA8B54] transition-colors border-t border-[#E8E8F0]/70 mt-4">
                       <span className="pt-3">Explore Room</span>
                       <ArrowRight className="w-4 h-4 pt-3 transition-transform group-hover:translate-x-1" />
                     </div>

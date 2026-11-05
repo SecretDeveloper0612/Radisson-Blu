@@ -53,9 +53,9 @@ export function BookingWidget({
     <>
       <div
         className={cn(
-          "w-full bg-[#0A0835]/95 backdrop-blur-md border border-[#C6A568]/30 shadow-2xl rounded-xl p-5 sm:p-6 lg:p-7 text-white transition-all duration-300",
+          "w-full bg-[#0E0D35]/95 backdrop-blur-md border border-[#C6A568]/30 shadow-2xl rounded-xl p-5 sm:p-6 lg:p-7 text-white transition-all duration-300",
           variant === "hero-overlay" && "lg:-mt-16 relative z-30 shadow-[0_20px_50px_rgba(10,33,31,0.5)]",
-          variant === "standalone" && "bg-[#0A0835] border-[#C6A568]/20",
+          variant === "standalone" && "bg-[#0E0D35] border-[#C6A568]/20",
           className
         )}
       >
@@ -151,7 +151,7 @@ export function BookingWidget({
               <button
                 type="submit"
                 id="booking-submit-button"
-                className="w-full bg-[#C6A568] hover:bg-[#b59457] text-[#04005E] font-semibold py-2.5 px-4 rounded-md tracking-wider uppercase text-xs flex items-center justify-center gap-2 transition-all shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#C6A568] focus:ring-offset-2 focus:ring-offset-[#080097] cursor-pointer"
+                className="w-full bg-[#C6A568] hover:bg-[#b59457] text-[#0E0D35] font-semibold py-2.5 px-4 rounded-md tracking-wider uppercase text-xs flex items-center justify-center gap-2 transition-all shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#C6A568] focus:ring-offset-2 focus:ring-offset-[#0E0D35] cursor-pointer"
               >
                 <Search className="w-4 h-4" />
                 Check Availability
@@ -168,7 +168,7 @@ export function BookingWidget({
           aria-modal="true"
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 animate-in fade-in"
         >
-          <div className="bg-[#0A0835] border border-[#C6A568]/40 text-[#F7F4EC] rounded-xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative">
+          <div className="bg-[#0E0D35] border border-[#C6A568]/40 text-[#F7F4EC] rounded-xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative">
             <div className="w-12 h-12 rounded-full bg-[#C6A568]/20 flex items-center justify-center text-[#C6A568] mb-4">
               <AlertCircle className="w-6 h-6" />
             </div>
@@ -220,7 +220,7 @@ export function BookingWidget({
                   setShowIntegrateModal(false);
                   router.push("/contact");
                 }}
-                className="flex-1 bg-[#C6A568] hover:bg-[#b59457] text-[#0A0835] font-semibold py-2.5 px-4 rounded-md text-xs uppercase tracking-wider transition-colors"
+                className="flex-1 bg-[#C6A568] hover:bg-[#b59457] text-[#0E0D35] font-semibold py-2.5 px-4 rounded-md text-xs uppercase tracking-wider transition-colors"
               >
                 Submit Stay Enquiry
               </button>

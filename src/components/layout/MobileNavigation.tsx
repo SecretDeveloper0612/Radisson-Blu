@@ -44,12 +44,12 @@ export function MobileNavigation({
     <div
       role="dialog"
       aria-modal="true"
-      className="fixed inset-0 z-50 flex flex-col bg-white text-[#0A0835] animate-in fade-in duration-300"
+      className="fixed inset-0 z-50 flex flex-col bg-white text-[#0E0D35] animate-in fade-in duration-300"
     >
       {/* Top Bar with Branding and Close Button */}
       <div className="flex items-center justify-between px-6 py-5 border-b border-[#E8E8F0]">
         <div className="flex flex-col">
-          <span className="font-serif text-lg tracking-widest text-[#0A0835] font-semibold">
+          <span className="font-serif text-lg tracking-widest text-[#0E0D35] font-semibold">
             VYAH
           </span>
           <span className="text-[9px] uppercase tracking-[0.25em] text-[#AA8B54]">
@@ -59,7 +59,7 @@ export function MobileNavigation({
         <button
           onClick={onClose}
           aria-label="Close menu"
-          className="p-2 text-[#0A0835] hover:text-[#AA8B54] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C6A568] rounded-md"
+          className="p-2 text-[#0E0D35] hover:text-[#AA8B54] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C6A568] rounded-md"
         >
           <X className="w-6 h-6" />
         </button>
@@ -78,14 +78,14 @@ export function MobileNavigation({
                     <Link
                       href={link.href}
                       onClick={onClose}
-                      className="py-1 text-xl font-serif tracking-wide text-[#0A0835] hover:text-[#AA8B54] transition-colors"
+                      className="py-1 text-xl font-serif tracking-wide text-[#0E0D35] hover:text-[#AA8B54] transition-colors"
                     >
                       {link.label}
                     </Link>
                     <button
                       onClick={() => setVenuesExpanded(!venuesExpanded)}
                       aria-label="Toggle venues submenu"
-                      className="p-2 text-[#AA8B54] hover:text-[#0A0835]"
+                      className="p-2 text-[#AA8B54] hover:text-[#0E0D35]"
                     >
                       <ChevronDown
                         className={`w-5 h-5 transition-transform duration-200 ${
@@ -105,7 +105,7 @@ export function MobileNavigation({
                           onClick={onClose}
                           className="flex items-center justify-between py-1.5 text-sm text-[#5A5A68] hover:text-[#AA8B54] transition-colors"
                         >
-                          <span className="font-serif text-base text-[#0A0835]">{venue.name}</span>
+                          <span className="font-serif text-base text-[#0E0D35]">{venue.name}</span>
                           {venue.isUpcoming && (
                             <span className="text-[9px] bg-[#C6A568]/20 text-[#AA8B54] px-1.5 py-0.5 rounded font-mono">
                               Soon
@@ -131,7 +131,7 @@ export function MobileNavigation({
                 key={link.href}
                 href={link.href}
                 onClick={onClose}
-                className="flex items-center justify-between py-3 border-b border-[#E8E8F0] text-xl font-serif tracking-wide text-[#0A0835] hover:text-[#AA8B54] transition-colors"
+                className="flex items-center justify-between py-3 border-b border-[#E8E8F0] text-xl font-serif tracking-wide text-[#0E0D35] hover:text-[#AA8B54] transition-colors"
               >
                 <span>{link.label}</span>
                 <ArrowRight className="w-4 h-4 text-[#AA8B54]" />
@@ -160,14 +160,14 @@ export function MobileNavigation({
               className="flex items-center gap-2.5 hover:text-[#AA8B54] transition-colors"
             >
               <Phone className="w-4 h-4 text-[#AA8B54]" />
-              <span className="text-[#0A0835] font-medium">{siteConfig.contact.phoneDisplay}</span>
+              <span className="text-[#0E0D35] font-medium">{siteConfig.contact.phoneDisplay}</span>
             </a>
             <a
               href={`mailto:${siteConfig.contact.email}`}
               className="flex items-center gap-2.5 hover:text-[#AA8B54] transition-colors"
             >
               <Mail className="w-4 h-4 text-[#AA8B54]" />
-              <span className="truncate text-[#0A0835]">{siteConfig.contact.email}</span>
+              <span className="truncate text-[#0E0D35]">{siteConfig.contact.email}</span>
             </a>
             <a
               href={siteConfig.contact.whatsappUrl}

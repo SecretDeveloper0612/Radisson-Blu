@@ -134,7 +134,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
           <div className="flex items-center gap-2 mb-4 sm:mb-6">
             <Link
               href="/venues"
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/45 hover:bg-[#C6A568] hover:text-[#0A0835] text-[#C6A568] border border-white/20 backdrop-blur-md transition-all text-xs uppercase tracking-widest font-medium shadow-md cursor-pointer group"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/45 hover:bg-[#C6A568] hover:text-[#0E0D35] text-[#C6A568] border border-white/20 backdrop-blur-md transition-all text-xs uppercase tracking-widest font-medium shadow-md cursor-pointer group"
             >
               <ArrowLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-1" />
               <span>All Venues</span>
@@ -151,7 +151,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
               {venue.category}
             </span>
             {venue.isUpcoming && (
-              <span className="text-[10px] font-bold uppercase tracking-widest bg-[#C6A568] text-[#0A0835] px-3 py-1 rounded-full shadow-lg">
+              <span className="text-[10px] font-bold uppercase tracking-widest bg-[#C6A568] text-[#0E0D35] px-3 py-1 rounded-full shadow-lg">
                 {venue.statusBadge || "Coming Soon"}
               </span>
             )}
@@ -170,7 +170,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
       {/* Floating Quick Reference Bar (Connecting Hero & Content) */}
       <section className="relative z-30 -mt-10 sm:-mt-12 px-4 sm:px-6 lg:px-8">
         <Container>
-          <div className="bg-white text-[#0A0835] rounded-2xl border border-[#E8E8F0] shadow-xl p-5 sm:p-7 backdrop-blur-xl relative overflow-hidden">
+          <div className="bg-white text-[#0E0D35] rounded-2xl border border-[#E8E8F0] shadow-xl p-5 sm:p-7 backdrop-blur-xl relative overflow-hidden">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8 divide-y md:divide-y-0 md:divide-x divide-[#E8E8F0] relative z-10">
               {/* Metric 1: Capacity */}
               <div className="flex items-start gap-3.5 pt-0">
@@ -181,7 +181,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                   <span className="text-[10px] uppercase tracking-widest text-[#AA8B54] font-semibold block">
                     Guest Capacity
                   </span>
-                  <span className="text-xs sm:text-sm font-semibold text-[#0A0835] block mt-0.5">
+                  <span className="text-xs sm:text-sm font-semibold text-[#0E0D35] block mt-0.5">
                     {venue.specs.capacity || "Flexible Planning"}
                   </span>
                 </div>
@@ -196,7 +196,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                   <span className="text-[10px] uppercase tracking-widest text-[#AA8B54] font-semibold block">
                     Floor Space
                   </span>
-                  <span className="text-xs sm:text-sm font-semibold text-[#0A0835] block mt-0.5">
+                  <span className="text-xs sm:text-sm font-semibold text-[#0E0D35] block mt-0.5">
                     {venue.specs.area || "Spacious Layout"}
                   </span>
                 </div>
@@ -211,7 +211,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                   <span className="text-[10px] uppercase tracking-widest text-[#AA8B54] font-semibold block">
                     Culinary Catering
                   </span>
-                  <span className="text-xs sm:text-sm font-semibold text-[#0A0835] block mt-0.5 line-clamp-1">
+                  <span className="text-xs sm:text-sm font-semibold text-[#0E0D35] block mt-0.5 line-clamp-1">
                     {venue.specs.catering || "In-House Multi-Cuisine"}
                   </span>
                 </div>
@@ -226,7 +226,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                   <span className="text-[10px] uppercase tracking-widest text-[#AA8B54] font-semibold block">
                     Configuration
                   </span>
-                  <span className="text-xs sm:text-sm font-semibold text-[#0A0835] block mt-0.5">
+                  <span className="text-xs sm:text-sm font-semibold text-[#0E0D35] block mt-0.5">
                     {venue.specs.setupStyles
                       ? venue.specs.setupStyles.slice(0, 2).join(" • ")
                       : venue.category}
@@ -252,7 +252,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                     VENUE OVERVIEW
                   </span>
                 </div>
-                <h2 className="font-serif text-3xl sm:text-4xl text-[#0A0835] font-normal tracking-tight">
+                <h2 className="font-serif text-3xl sm:text-4xl text-[#0E0D35] font-normal tracking-tight">
                   About {venue.name}
                 </h2>
                 <p className="text-base sm:text-lg text-[#4B4B59] leading-relaxed font-light pt-1">
@@ -261,14 +261,14 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
 
                 {/* Signature Space Attributes */}
                 <div className="pt-3 flex flex-wrap gap-2">
-                  <span className="inline-flex items-center px-3 py-1.5 rounded-lg bg-white border border-[#E8E8F0] text-xs font-medium text-[#0A0835] shadow-xs">
+                  <span className="inline-flex items-center px-3 py-1.5 rounded-lg bg-white border border-[#E8E8F0] text-xs font-medium text-[#0E0D35] shadow-xs">
                     <span>Radisson Signature Venue</span>
                   </span>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-[#E8E8F0] text-xs font-medium text-[#0A0835] shadow-xs">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-[#E8E8F0] text-xs font-medium text-[#0E0D35] shadow-xs">
                     <ShieldCheck className="w-3.5 h-3.5 text-[#AA8B54]" />
                     <span>Dedicated Event Management</span>
                   </span>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-[#E8E8F0] text-xs font-medium text-[#0A0835] shadow-xs">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-[#E8E8F0] text-xs font-medium text-[#0E0D35] shadow-xs">
                     <Compass className="w-3.5 h-3.5 text-[#AA8B54]" />
                     <span>Custom Floor Layouts</span>
                   </span>
@@ -288,7 +288,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                   <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block mb-1">
                     VENUE AMENITIES
                   </span>
-                  <h3 className="font-serif text-2xl sm:text-3xl text-[#0A0835] font-normal">
+                  <h3 className="font-serif text-2xl sm:text-3xl text-[#0E0D35] font-normal">
                     Amenities & Event Equipment
                   </h3>
                   <p className="text-xs sm:text-sm text-[#5A5A68] font-light mt-1">
@@ -318,7 +318,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                           <IconComponent className="w-4 h-4" />
                         </div>
                         <div className="w-full">
-                          <span className="font-medium text-xs sm:text-sm text-[#0A0835] block leading-snug">
+                          <span className="font-medium text-xs sm:text-sm text-[#0E0D35] block leading-snug">
                             {item.name}
                           </span>
                           <span className="text-[10px] text-[#5A5A68] uppercase tracking-wider block mt-1">
@@ -337,7 +337,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                   <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block mb-1">
                     KEY DISTINCTIONS
                   </span>
-                  <h3 className="font-serif text-2xl sm:text-3xl text-[#0A0835] font-normal">
+                  <h3 className="font-serif text-2xl sm:text-3xl text-[#0E0D35] font-normal">
                     What Sets {venue.name} Apart
                   </h3>
                 </div>
@@ -363,7 +363,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                   <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block mb-1">
                     EVENT SERVICES & SPECS
                   </span>
-                  <h3 className="font-serif text-2xl sm:text-3xl text-[#0A0835] font-normal">
+                  <h3 className="font-serif text-2xl sm:text-3xl text-[#0E0D35] font-normal">
                     Technical & Event Services
                   </h3>
                 </div>
@@ -427,13 +427,13 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
               </div>
 
               {/* Bespoke Floor Plan Blueprint Card */}
-              <div className="rounded-2xl p-6 sm:p-8 bg-white text-[#0A0835] border border-[#E8E8F0] relative overflow-hidden flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-sm">
+              <div className="rounded-2xl p-6 sm:p-8 bg-white text-[#0E0D35] border border-[#E8E8F0] relative overflow-hidden flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-sm">
                 <div className="space-y-2 max-w-xl relative z-10">
                   <span className="text-[10px] uppercase tracking-widest text-[#AA8B54] font-semibold flex items-center gap-1.5">
                     <FileText className="w-3.5 h-3.5" />
                     <span>Custom Blueprint & Schematics</span>
                   </span>
-                  <h4 className="font-serif text-2xl text-[#0A0835] font-normal">
+                  <h4 className="font-serif text-2xl text-[#0E0D35] font-normal">
                     Need a personalized floor plan?
                   </h4>
                   <p className="text-xs sm:text-sm text-[#5A5A68] font-light leading-relaxed">
@@ -455,13 +455,13 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
 
             {/* Right Sidebar (4 Cols): Luxury Event Concierge & Specifications */}
             <div className="lg:col-span-4 lg:sticky lg:top-28 space-y-6">
-              <div className="bg-white text-[#0A0835] rounded-2xl p-6 sm:p-8 border border-[#E8E8F0] shadow-xl space-y-6 relative overflow-hidden">
+              <div className="bg-white text-[#0E0D35] rounded-2xl p-6 sm:p-8 border border-[#E8E8F0] shadow-xl space-y-6 relative overflow-hidden">
                 {/* Header */}
                 <div className="relative z-10">
                   <div className="inline-flex items-center px-2.5 py-1 rounded-full bg-[#FAF8F5] border border-[#E8E8F0] text-[#AA8B54] text-[10px] font-bold uppercase tracking-widest mb-2">
                     <span>EVENT CONCIERGE</span>
                   </div>
-                  <h3 className="font-serif text-2xl sm:text-3xl text-[#0A0835] font-normal">
+                  <h3 className="font-serif text-2xl sm:text-3xl text-[#0E0D35] font-normal">
                     Venue Specifications
                   </h3>
                   <p className="text-[11px] text-[#5A5A68] font-light mt-1">
@@ -475,7 +475,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                     <span className="text-[#5A5A68] font-medium shrink-0">
                       Category:
                     </span>
-                    <span className="text-right font-semibold text-[#0A0835]">
+                    <span className="text-right font-semibold text-[#0E0D35]">
                       {venue.category}
                     </span>
                   </div>
@@ -485,7 +485,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                       <Users className="w-3.5 h-3.5 text-[#AA8B54]" />
                       <span>Capacity:</span>
                     </span>
-                    <span className="text-right font-semibold text-[#0A0835]">
+                    <span className="text-right font-semibold text-[#0E0D35]">
                       {venue.specs.capacity || "Upon request"}
                     </span>
                   </div>
@@ -495,7 +495,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                       <Maximize2 className="w-3.5 h-3.5 text-[#AA8B54]" />
                       <span>Floor Space:</span>
                     </span>
-                    <span className="text-right font-semibold text-[#0A0835]">
+                    <span className="text-right font-semibold text-[#0E0D35]">
                       {venue.specs.area || "Upon request"}
                     </span>
                   </div>
@@ -505,7 +505,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                       <Utensils className="w-3.5 h-3.5 text-[#AA8B54]" />
                       <span>Catering:</span>
                     </span>
-                    <span className="text-right font-semibold text-[#0A0835]">
+                    <span className="text-right font-semibold text-[#0E0D35]">
                       {venue.specs.catering || "In-house culinary banquet"}
                     </span>
                   </div>
@@ -520,7 +520,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                         {venue.specs.setupStyles.map((style, i) => (
                           <span
                             key={i}
-                            className="bg-[#FAF8F5] text-[#0A0835] text-[10px] px-2.5 py-1 rounded-md border border-[#E8E8F0] font-medium"
+                            className="bg-[#FAF8F5] text-[#0E0D35] text-[10px] px-2.5 py-1 rounded-md border border-[#E8E8F0] font-medium"
                           >
                             {style}
                           </span>
@@ -570,7 +570,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                   <span className="text-[10px] uppercase tracking-widest text-[#AA8B54] font-semibold block">
                     Direct Banquet Desk
                   </span>
-                  <div className="flex items-center justify-between text-[#0A0835]">
+                  <div className="flex items-center justify-between text-[#0E0D35]">
                     <a
                       href={`tel:${siteConfig.contact.phone}`}
                       className="flex items-center gap-2 hover:text-[#AA8B54] transition-colors font-medium"
@@ -615,13 +615,13 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                   <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block mb-1">
                     EXPLORE OTHER SPACES
                   </span>
-                  <h3 className="font-serif text-3xl sm:text-4xl text-[#0A0835] font-normal">
+                  <h3 className="font-serif text-3xl sm:text-4xl text-[#0E0D35] font-normal">
                     More Venues at Radisson Rudrapur
                   </h3>
                 </div>
                 <Link
                   href="/venues"
-                  className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-[#0A0835] hover:text-[#AA8B54] transition-colors"
+                  className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-[#0E0D35] hover:text-[#AA8B54] transition-colors"
                 >
                   <span>View All Venues</span>
                   <ArrowRight className="w-4 h-4" />
@@ -652,7 +652,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                         <span className="text-[10px] font-semibold uppercase tracking-widest text-[#AA8B54] block mb-1">
                           {item.specs.capacity ? item.specs.capacity.split("/")[0].trim() : "Flexible Capacity"}
                         </span>
-                        <h4 className="font-serif text-xl sm:text-2xl text-[#0A0835] group-hover:text-[#AA8B54] transition-colors">
+                        <h4 className="font-serif text-xl sm:text-2xl text-[#0E0D35] group-hover:text-[#AA8B54] transition-colors">
                           {item.name}
                         </h4>
                         <p className="text-xs text-[#5A5A68] font-light mt-2 line-clamp-2 leading-relaxed">
@@ -661,7 +661,7 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                       </div>
                     </div>
 
-                    <div className="p-6 pt-0 flex items-center justify-between text-xs font-semibold uppercase tracking-widest text-[#0A0835] group-hover:text-[#AA8B54] transition-colors border-t border-[#E8E8F0]/70 mt-4">
+                    <div className="p-6 pt-0 flex items-center justify-between text-xs font-semibold uppercase tracking-widest text-[#0E0D35] group-hover:text-[#AA8B54] transition-colors border-t border-[#E8E8F0]/70 mt-4">
                       <span className="pt-3">Explore Venue</span>
                       <ArrowRight className="w-4 h-4 pt-3 transition-transform group-hover:translate-x-1" />
                     </div>

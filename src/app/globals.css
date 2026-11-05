@@ -8,17 +8,17 @@
 @layer base {
   :root {
     /* Brand Color Palette */
-    --forest-green: #080097;
-    --darker-green: #04005E;
-    --secondary-green: #0E05B5;
+    --forest-green: #0E0D35;
+    --darker-green: #0E0D35;
+    --secondary-green: #0E0D35;
     --warm-ivory: #FFFFFF;
     --pure-white: #FFFFFF;
     --champagne-gold: #C6A568;
     --muted-gold: #AA8B54;
-    --text-primary: #0A0835;
+    --text-primary: #0E0D35;
     --text-secondary: #5A5A68;
     --subtle-border: #E8E8F0;
-    --dark-border: rgba(8, 0, 151, 0.2);
+    --dark-border: rgba(14, 13, 53, 0.2);
   }
 
   html {

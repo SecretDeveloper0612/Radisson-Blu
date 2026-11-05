@@ -61,13 +61,13 @@ export default function ContactPage() {
             <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
               {/* Direct Channels / Property Coordinates Card (Styled like Venue Details Sidebar) */}
               <Reveal direction="right" delayMs={100}>
-                <div className="bg-white text-[#0A0835] rounded-2xl p-6 sm:p-8 border border-[#E8E8F0] shadow-xl space-y-6 relative overflow-hidden">
+                <div className="bg-white text-[#0E0D35] rounded-2xl p-6 sm:p-8 border border-[#E8E8F0] shadow-xl space-y-6 relative overflow-hidden">
                   {/* Header */}
                   <div className="relative z-10">
                     <div className="inline-flex items-center px-2.5 py-1 rounded-full bg-[#FAF8F5] border border-[#E8E8F0] text-[#AA8B54] text-[10px] font-bold uppercase tracking-widest mb-2">
                       <span>DIRECT CHANNELS</span>
                     </div>
-                    <h3 className="font-serif text-2xl sm:text-3xl text-[#0A0835] font-normal">
+                    <h3 className="font-serif text-2xl sm:text-3xl text-[#0E0D35] font-normal">
                       Property Coordinates
                     </h3>
                     <p className="text-[11px] text-[#5A5A68] font-light mt-1">
@@ -86,7 +86,7 @@ export default function ContactPage() {
                         <span className="text-[#AA8B54] font-semibold block text-[10px] uppercase tracking-wider mb-0.5">
                           Physical Address
                         </span>
-                        <span className="text-[#0A0835] leading-relaxed block text-xs sm:text-sm">
+                        <span className="text-[#0E0D35] leading-relaxed block text-xs sm:text-sm">
                           {siteConfig.contact.address.full}
                         </span>
                       </div>
@@ -103,7 +103,7 @@ export default function ContactPage() {
                         </span>
                         <a
                           href={`tel:${siteConfig.contact.phone}`}
-                          className="text-[#0A0835] hover:text-[#AA8B54] font-medium transition-colors text-xs sm:text-sm block"
+                          className="text-[#0E0D35] hover:text-[#AA8B54] font-medium transition-colors text-xs sm:text-sm block"
                         >
                           {siteConfig.contact.phoneDisplay}
                         </a>
@@ -121,7 +121,7 @@ export default function ContactPage() {
                         </span>
                         <a
                           href={`mailto:${siteConfig.contact.email}`}
-                          className="text-[#0A0835] hover:text-[#AA8B54] font-medium transition-colors break-all text-xs sm:text-sm block"
+                          className="text-[#0E0D35] hover:text-[#AA8B54] font-medium transition-colors break-all text-xs sm:text-sm block"
                         >
                           {siteConfig.contact.email}
                         </a>
@@ -158,7 +158,7 @@ export default function ContactPage() {
                         <span className="text-[#AA8B54] font-semibold block text-[10px] uppercase tracking-wider mb-0.5">
                           Timings
                         </span>
-                        <span className="text-[#0A0835] text-xs sm:text-sm block">
+                        <span className="text-[#0E0D35] text-xs sm:text-sm block">
                           Check-in: {siteConfig.checkInTime} &bull; Check-out: {siteConfig.checkOutTime}
                         </span>
                       </div>
@@ -171,11 +171,11 @@ export default function ContactPage() {
                       href={siteConfig.contact.googleMapsDirectionsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full bg-[#C6A568] hover:bg-[#b59457] text-[#0A0835] py-3.5 px-4 rounded-xl text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2 transition-all duration-300 shadow-sm hover:shadow-md hover:scale-[1.01] cursor-pointer"
+                      className="w-full bg-[#C6A568] hover:bg-[#b59457] text-[#0E0D35] py-3.5 px-4 rounded-xl text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2 transition-all duration-300 shadow-sm hover:shadow-md hover:scale-[1.01] cursor-pointer"
                     >
-                      <Compass className="w-4 h-4 text-[#0A0835]" />
+                      <Compass className="w-4 h-4 text-[#0E0D35]" />
                       <span>Open in Google Maps</span>
-                      <ArrowUpRight className="w-4 h-4 text-[#0A0835]" />
+                      <ArrowUpRight className="w-4 h-4 text-[#0E0D35]" />
                     </a>
                   </div>
                 </div>
@@ -185,7 +185,7 @@ export default function ContactPage() {
               <Reveal direction="up" delayMs={200}>
                 <div className="rounded-2xl overflow-hidden border border-[#E8E8F0] shadow-md bg-white">
                   <div className="p-4 border-b border-[#E8E8F0] bg-[#FAF8F5] flex items-center justify-between">
-                    <span className="text-xs uppercase tracking-wider font-semibold text-[#0A0835]">
+                    <span className="text-xs uppercase tracking-wider font-semibold text-[#0E0D35]">
                       Rudrapur Location Map
                     </span>
                     <a

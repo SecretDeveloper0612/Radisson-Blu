@@ -12,14 +12,14 @@ export function FinalCTA() {
   const [showBookingNotice, setShowBookingNotice] = useState(false);
 
   return (
-    <section className="relative py-24 sm:py-32 bg-white text-[#0A0835] overflow-hidden border-t border-[#E8E8F0]">
+    <section className="relative py-24 sm:py-32 bg-white text-[#0E0D35] overflow-hidden border-t border-[#E8E8F0]">
       <Container className="relative z-10">
         <div className="max-w-3xl mx-auto text-center space-y-6">
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#AA8B54]">
             RESERVATIONS & CELEBRATIONS
           </span>
 
-          <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal leading-[1.14] text-[#080097]">
+          <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal leading-[1.14] text-[#0E0D35]">
             Make your next stay memorable.
           </h2>
 
@@ -45,7 +45,7 @@ export function FinalCTA() {
 
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-8 py-4 text-xs uppercase tracking-widest font-semibold rounded border-2 border-[#C6A568] text-[#0A0835] hover:bg-[#C6A568] hover:text-[#0A0835] transition-all shadow-xs"
+              className="w-full sm:w-auto px-8 py-4 text-xs uppercase tracking-widest font-semibold rounded border-2 border-[#C6A568] text-[#0E0D35] hover:bg-[#C6A568] hover:text-[#0E0D35] transition-all shadow-xs"
             >
               Enquire About an Event
             </Link>
@@ -54,17 +54,17 @@ export function FinalCTA() {
           <div className="pt-6 flex items-center justify-center gap-6 text-xs text-[#5A5A68]">
             <a
               href={`tel:${siteConfig.contact.phone}`}
-              className="flex items-center gap-1.5 hover:text-[#080097] transition-colors"
+              className="flex items-center gap-1.5 hover:text-[#0E0D35] transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-[#080097]" />
+              <Phone className="w-3.5 h-3.5 text-[#0E0D35]" />
               <span>{siteConfig.contact.phoneDisplay}</span>
             </a>
-            <span className="text-[#080097]/30">&bull;</span>
+            <span className="text-[#0E0D35]/30">&bull;</span>
             <a
               href={siteConfig.contact.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 hover:text-[#080097] transition-colors text-[#080097] font-medium"
+              className="flex items-center gap-1.5 hover:text-[#0E0D35] transition-colors text-[#0E0D35] font-medium"
             >
               <MessageSquare className="w-3.5 h-3.5" />
               <span>WhatsApp Desk</span>
@@ -80,7 +80,7 @@ export function FinalCTA() {
           aria-modal="true"
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 animate-in fade-in"
         >
-          <div className="bg-[#0A0835] border border-[#C6A568]/40 text-[#F7F4EC] rounded-xl max-w-md w-full p-6 sm:p-7 shadow-2xl relative">
+          <div className="bg-[#0E0D35] border border-[#C6A568]/40 text-[#F7F4EC] rounded-xl max-w-md w-full p-6 sm:p-7 shadow-2xl relative">
             <h3 className="font-serif text-2xl text-[#F7F4EC] mb-2">
               Book Your Stay
             </h3>
@@ -115,7 +115,7 @@ export function FinalCTA() {
               <Link
                 href="/contact"
                 onClick={() => setShowBookingNotice(false)}
-                className="flex-1 bg-[#C6A568] hover:bg-[#b59457] text-[#0A0835] font-semibold py-2.5 px-4 rounded text-xs uppercase tracking-wider text-center"
+                className="flex-1 bg-[#C6A568] hover:bg-[#b59457] text-[#0E0D35] font-semibold py-2.5 px-4 rounded text-xs uppercase tracking-wider text-center"
               >
                 Go to Enquiry
               </Link>

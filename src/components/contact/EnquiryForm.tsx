@@ -57,7 +57,7 @@ export function EnquiryForm() {
         <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#AA8B54]">
           ONLINE ENQUIRY
         </span>
-        <h3 className="font-serif text-2xl sm:text-3xl text-[#0A0835] font-normal">
+        <h3 className="font-serif text-2xl sm:text-3xl text-[#0E0D35] font-normal">
           Plan Your Experience
         </h3>
         <p className="text-xs sm:text-sm text-[#5A5A68] font-light leading-relaxed">
@@ -66,7 +66,7 @@ export function EnquiryForm() {
       </div>
 
       {submissionStatus === "notice" ? (
-        <div className="bg-[#0A0835] text-[#F7F4EC] rounded-xl p-6 sm:p-8 border border-[#C6A568]/40 space-y-4 animate-in fade-in">
+        <div className="bg-[#0E0D35] text-[#F7F4EC] rounded-xl p-6 sm:p-8 border border-[#C6A568]/40 space-y-4 animate-in fade-in">
           <div className="flex items-center gap-3 text-[#C6A568]">
             <AlertCircle className="w-6 h-6 shrink-0" />
             <h4 className="font-serif text-xl font-normal text-white">
@@ -126,7 +126,7 @@ export function EnquiryForm() {
           <div className="space-y-1.5">
             <label
               htmlFor="fullName"
-              className="block text-xs uppercase tracking-wider text-[#0A0835] font-medium"
+              className="block text-xs uppercase tracking-wider text-[#0E0D35] font-medium"
             >
               Full Name *
             </label>
@@ -135,7 +135,7 @@ export function EnquiryForm() {
               id="fullName"
               placeholder="e.g. Rahul Sharma"
               {...register("fullName")}
-              className="w-full bg-[#FAF8F5] border border-[#E8E8F0] rounded-xl px-4 py-2.5 text-sm text-[#0A0835] focus:border-[#C6A568] focus:bg-white focus:outline-none transition-colors"
+              className="w-full bg-[#FAF8F5] border border-[#E8E8F0] rounded-xl px-4 py-2.5 text-sm text-[#0E0D35] focus:border-[#C6A568] focus:bg-white focus:outline-none transition-colors"
             />
             {errors.fullName && (
               <p className="text-xs text-rose-600 mt-1">{errors.fullName.message}</p>
@@ -147,7 +147,7 @@ export function EnquiryForm() {
             <div className="space-y-1.5">
               <label
                 htmlFor="email"
-                className="block text-xs uppercase tracking-wider text-[#0A0835] font-medium"
+                className="block text-xs uppercase tracking-wider text-[#0E0D35] font-medium"
               >
                 Email Address *
               </label>
@@ -156,7 +156,7 @@ export function EnquiryForm() {
                 id="email"
                 placeholder="name@example.com"
                 {...register("email")}
-                className="w-full bg-[#FAF8F5] border border-[#E8E8F0] rounded-xl px-4 py-2.5 text-sm text-[#0A0835] focus:border-[#C6A568] focus:bg-white focus:outline-none transition-colors"
+                className="w-full bg-[#FAF8F5] border border-[#E8E8F0] rounded-xl px-4 py-2.5 text-sm text-[#0E0D35] focus:border-[#C6A568] focus:bg-white focus:outline-none transition-colors"
               />
               {errors.email && (
                 <p className="text-xs text-rose-600 mt-1">{errors.email.message}</p>
@@ -166,7 +166,7 @@ export function EnquiryForm() {
             <div className="space-y-1.5">
               <label
                 htmlFor="phone"
-                className="block text-xs uppercase tracking-wider text-[#0A0835] font-medium"
+                className="block text-xs uppercase tracking-wider text-[#0E0D35] font-medium"
               >
                 Phone Number *
               </label>
@@ -175,7 +175,7 @@ export function EnquiryForm() {
                 id="phone"
                 placeholder="+91 98765 43210"
                 {...register("phone")}
-                className="w-full bg-[#FAF8F5] border border-[#E8E8F0] rounded-xl px-4 py-2.5 text-sm text-[#0A0835] focus:border-[#C6A568] focus:bg-white focus:outline-none transition-colors"
+                className="w-full bg-[#FAF8F5] border border-[#E8E8F0] rounded-xl px-4 py-2.5 text-sm text-[#0E0D35] focus:border-[#C6A568] focus:bg-white focus:outline-none transition-colors"
               />
               {errors.phone && (
                 <p className="text-xs text-rose-600 mt-1">{errors.phone.message}</p>
@@ -188,14 +188,14 @@ export function EnquiryForm() {
             <div className="space-y-1.5">
               <label
                 htmlFor="enquiryType"
-                className="block text-xs uppercase tracking-wider text-[#0A0835] font-medium"
+                className="block text-xs uppercase tracking-wider text-[#0E0D35] font-medium"
               >
                 Enquiry Category *
               </label>
               <select
                 id="enquiryType"
                 {...register("enquiryType")}
-                className="w-full bg-[#FAF8F5] border border-[#E8E8F0] rounded-xl px-4 py-2.5 text-sm text-[#0A0835] focus:border-[#C6A568] focus:bg-white focus:outline-none transition-colors"
+                className="w-full bg-[#FAF8F5] border border-[#E8E8F0] rounded-xl px-4 py-2.5 text-sm text-[#0E0D35] focus:border-[#C6A568] focus:bg-white focus:outline-none transition-colors"
               >
                 <option value="General Enquiry">General Enquiry</option>
                 <option value="Room Booking">Room Booking</option>
@@ -212,7 +212,7 @@ export function EnquiryForm() {
             <div className="space-y-1.5">
               <label
                 htmlFor="venuePreference"
-                className="block text-xs uppercase tracking-wider text-[#0A0835] font-medium"
+                className="block text-xs uppercase tracking-wider text-[#0E0D35] font-medium"
               >
                 Preferred Venue (Optional)
               </label>
@@ -221,7 +221,7 @@ export function EnquiryForm() {
                 id="venuePreference"
                 placeholder="e.g. Sapphire, Queen's Field, NH 87"
                 {...register("venuePreference")}
-                className="w-full bg-[#FAF8F5] border border-[#E8E8F0] rounded-xl px-4 py-2.5 text-sm text-[#0A0835] focus:border-[#C6A568] focus:bg-white focus:outline-none transition-colors"
+                className="w-full bg-[#FAF8F5] border border-[#E8E8F0] rounded-xl px-4 py-2.5 text-sm text-[#0E0D35] focus:border-[#C6A568] focus:bg-white focus:outline-none transition-colors"
               />
             </div>
           </div>
@@ -231,7 +231,7 @@ export function EnquiryForm() {
             <div className="space-y-1.5">
               <label
                 htmlFor="eventDate"
-                className="block text-xs uppercase tracking-wider text-[#0A0835] font-medium"
+                className="block text-xs uppercase tracking-wider text-[#0E0D35] font-medium"
               >
                 Tentative Date (Optional)
               </label>
@@ -239,14 +239,14 @@ export function EnquiryForm() {
                 type="date"
                 id="eventDate"
                 {...register("eventDate")}
-                className="w-full bg-[#FAF8F5] border border-[#E8E8F0] rounded-xl px-4 py-2.5 text-sm text-[#0A0835] focus:border-[#C6A568] focus:bg-white focus:outline-none transition-colors"
+                className="w-full bg-[#FAF8F5] border border-[#E8E8F0] rounded-xl px-4 py-2.5 text-sm text-[#0E0D35] focus:border-[#C6A568] focus:bg-white focus:outline-none transition-colors"
               />
             </div>
 
             <div className="space-y-1.5">
               <label
                 htmlFor="estimatedGuests"
-                className="block text-xs uppercase tracking-wider text-[#0A0835] font-medium"
+                className="block text-xs uppercase tracking-wider text-[#0E0D35] font-medium"
               >
                 Estimated Guests (Optional)
               </label>
@@ -255,7 +255,7 @@ export function EnquiryForm() {
                 id="estimatedGuests"
                 placeholder="e.g. 50 or 250"
                 {...register("estimatedGuests")}
-                className="w-full bg-[#FAF8F5] border border-[#E8E8F0] rounded-xl px-4 py-2.5 text-sm text-[#0A0835] focus:border-[#C6A568] focus:bg-white focus:outline-none transition-colors"
+                className="w-full bg-[#FAF8F5] border border-[#E8E8F0] rounded-xl px-4 py-2.5 text-sm text-[#0E0D35] focus:border-[#C6A568] focus:bg-white focus:outline-none transition-colors"
               />
             </div>
           </div>
@@ -264,7 +264,7 @@ export function EnquiryForm() {
           <div className="space-y-1.5">
             <label
               htmlFor="message"
-              className="block text-xs uppercase tracking-wider text-[#0A0835] font-medium"
+              className="block text-xs uppercase tracking-wider text-[#0E0D35] font-medium"
             >
               Message / Specific Requirements *
             </label>
@@ -273,7 +273,7 @@ export function EnquiryForm() {
               rows={4}
               placeholder="Tell us more about your occasion, catering preferences, or questions..."
               {...register("message")}
-              className="w-full bg-[#FAF8F5] border border-[#E8E8F0] rounded-xl px-4 py-2.5 text-sm text-[#0A0835] focus:border-[#C6A568] focus:bg-white focus:outline-none transition-colors"
+              className="w-full bg-[#FAF8F5] border border-[#E8E8F0] rounded-xl px-4 py-2.5 text-sm text-[#0E0D35] focus:border-[#C6A568] focus:bg-white focus:outline-none transition-colors"
             />
             {errors.message && (
               <p className="text-xs text-rose-600 mt-1">{errors.message.message}</p>
@@ -284,13 +284,13 @@ export function EnquiryForm() {
           <button
             type="submit"
             disabled={submissionStatus === "submitting"}
-            className="w-full bg-[#C6A568] hover:bg-[#b59457] text-[#0A0835] font-semibold py-3.5 px-6 rounded-xl tracking-widest uppercase text-xs flex items-center justify-center gap-2 transition-all duration-300 shadow-sm hover:shadow-md hover:scale-[1.01] disabled:opacity-50 cursor-pointer"
+            className="w-full bg-[#C6A568] hover:bg-[#b59457] text-[#0E0D35] font-semibold py-3.5 px-6 rounded-xl tracking-widest uppercase text-xs flex items-center justify-center gap-2 transition-all duration-300 shadow-sm hover:shadow-md hover:scale-[1.01] disabled:opacity-50 cursor-pointer"
           >
             {submissionStatus === "submitting" ? (
               <span>Transmitting...</span>
             ) : (
               <>
-                <Send className="w-4 h-4 text-[#0A0835]" />
+                <Send className="w-4 h-4 text-[#0E0D35]" />
                 <span>Submit Enquiry</span>
               </>
             )}

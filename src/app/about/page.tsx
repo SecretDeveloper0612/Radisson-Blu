@@ -63,7 +63,7 @@ export default function AboutPage() {
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#AA8B54]">
                   OUR STORY
                 </span>
-                <h2 className="font-serif text-3xl sm:text-4xl text-[#080097] font-normal leading-tight mt-2">
+                <h2 className="font-serif text-3xl sm:text-4xl text-[#0E0D35] font-normal leading-tight mt-2">
                   Crafted for modern corporate travelers and milestone family celebrations.
                 </h2>
               </Reveal>
@@ -112,7 +112,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Reveal direction="up" delayMs={100}>
-              <div className="bg-[#0A0835] p-8 rounded-xl border border-[#C6A568]/20 space-y-4 hover:border-[#C6A568]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(0,0,0,0.4)] group">
+              <div className="bg-[#0E0D35] p-8 rounded-xl border border-[#C6A568]/20 space-y-4 hover:border-[#C6A568]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(0,0,0,0.4)] group">
                 <span className="text-2xl font-serif text-[#C6A568] group-hover:scale-110 inline-block transition-transform duration-300">01</span>
                 <h3 className="font-serif text-2xl text-white font-normal group-hover:text-[#C6A568] transition-colors">
                   Restorative Spaces
@@ -124,7 +124,7 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal direction="up" delayMs={200}>
-              <div className="bg-[#0A0835] p-8 rounded-xl border border-[#C6A568]/20 space-y-4 hover:border-[#C6A568]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(0,0,0,0.4)] group">
+              <div className="bg-[#0E0D35] p-8 rounded-xl border border-[#C6A568]/20 space-y-4 hover:border-[#C6A568]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(0,0,0,0.4)] group">
                 <span className="text-2xl font-serif text-[#C6A568] group-hover:scale-110 inline-block transition-transform duration-300">02</span>
                 <h3 className="font-serif text-2xl text-white font-normal group-hover:text-[#C6A568] transition-colors">
                   Gastronomic Craft
@@ -136,7 +136,7 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal direction="up" delayMs={300}>
-              <div className="bg-[#0A0835] p-8 rounded-xl border border-[#C6A568]/20 space-y-4 hover:border-[#C6A568]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(0,0,0,0.4)] group">
+              <div className="bg-[#0E0D35] p-8 rounded-xl border border-[#C6A568]/20 space-y-4 hover:border-[#C6A568]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(0,0,0,0.4)] group">
                 <span className="text-2xl font-serif text-[#C6A568] group-hover:scale-110 inline-block transition-transform duration-300">03</span>
                 <h3 className="font-serif text-2xl text-white font-normal group-hover:text-[#C6A568] transition-colors">
                   Seamless Events
@@ -174,7 +174,7 @@ export default function AboutPage() {
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#AA8B54]">
                   CONNECTIVITY & LOCATION
                 </span>
-                <h2 className="font-serif text-3xl sm:text-4xl text-[#080097] font-normal leading-tight mt-2">
+                <h2 className="font-serif text-3xl sm:text-4xl text-[#0E0D35] font-normal leading-tight mt-2">
                   Strategically positioned for business and exploration.
                 </h2>
               </Reveal>

@@ -22,7 +22,7 @@ import Container from "@/components/ui/Container";
 
 export function Footer() {
   return (
-    <footer className="relative bg-white text-[#0A0835] pt-20 pb-12 border-t border-[#E8E8F0] overflow-hidden">
+    <footer className="relative bg-white text-[#0E0D35] pt-20 pb-12 border-t border-[#E8E8F0] overflow-hidden">
       {/* Animated Subtle Background Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Floating Subtle Ambient Orb 1 (Gold) */}
@@ -41,7 +41,7 @@ export function Footer() {
           {/* Column 1 (4 Cols): Grand Brand Identity & Hospitality Summary */}
           <div className="lg:col-span-4 space-y-6">
             <Link href="/" className="inline-block group focus:outline-none">
-              <span className="font-serif text-2xl sm:text-3xl tracking-[0.22em] font-medium text-[#0A0835] group-hover:text-[#AA8B54] transition-colors leading-none">
+              <span className="font-serif text-2xl sm:text-3xl tracking-[0.22em] font-medium text-[#0E0D35] group-hover:text-[#AA8B54] transition-colors leading-none">
                 VYAH
               </span>
               <span className="block text-[11px] uppercase tracking-[0.38em] text-[#AA8B54] mt-1.5 font-medium">
@@ -57,11 +57,11 @@ export function Footer() {
             <div className="pt-2 flex flex-wrap items-center gap-4 text-[11px] text-[#AA8B54]">
               <div className="flex items-center gap-1.5 bg-[#FAF8F5] px-3 py-1.5 rounded-lg border border-[#E8E8F0]">
                 <Award className="w-3.5 h-3.5 text-[#AA8B54]" />
-                <span className="text-[#0A0835] font-medium">Premium Hospitality</span>
+                <span className="text-[#0E0D35] font-medium">Premium Hospitality</span>
               </div>
               <div className="flex items-center gap-1.5 bg-[#FAF8F5] px-3 py-1.5 rounded-lg border border-[#E8E8F0]">
                 <ShieldCheck className="w-3.5 h-3.5 text-[#AA8B54]" />
-                <span className="text-[#0A0835] font-medium">Radisson Safety Verified</span>
+                <span className="text-[#0E0D35] font-medium">Radisson Safety Verified</span>
               </div>
             </div>
 
@@ -76,7 +76,7 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-2">
               <span className="w-3 h-[1px] bg-[#AA8B54]" />
-              <h4 className="text-xs font-semibold uppercase tracking-[0.22em] text-[#0A0835]">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.22em] text-[#0E0D35]">
                 Accommodations
               </h4>
             </div>
@@ -110,7 +110,7 @@ export function Footer() {
           <div className="lg:col-span-3 space-y-4">
             <div className="flex items-center gap-2">
               <span className="w-3 h-[1px] bg-[#AA8B54]" />
-              <h4 className="text-xs font-semibold uppercase tracking-[0.22em] text-[#0A0835]">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.22em] text-[#0E0D35]">
                 Venues & Spaces
               </h4>
             </div>
@@ -150,20 +150,20 @@ export function Footer() {
           <div className="lg:col-span-3 space-y-4">
             <div className="flex items-center gap-2">
               <span className="w-3 h-[1px] bg-[#AA8B54]" />
-              <h4 className="text-xs font-semibold uppercase tracking-[0.22em] text-[#0A0835]">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.22em] text-[#0E0D35]">
                 Direct Coordinates
               </h4>
             </div>
             <div className="space-y-3.5 text-xs text-[#5A5A68] font-light">
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#AA8B54] shrink-0 mt-0.5" />
-                <span className="leading-relaxed text-[#0A0835]">{siteConfig.contact.address.full}</span>
+                <span className="leading-relaxed text-[#0E0D35]">{siteConfig.contact.address.full}</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#AA8B54] shrink-0" />
                 <a
                   href={`tel:${siteConfig.contact.phone}`}
-                  className="hover:text-[#AA8B54] text-[#0A0835] transition-colors"
+                  className="hover:text-[#AA8B54] text-[#0E0D35] transition-colors"
                 >
                   {siteConfig.contact.phoneDisplay}
                 </a>
@@ -172,7 +172,7 @@ export function Footer() {
                 <Mail className="w-4 h-4 text-[#AA8B54] shrink-0" />
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="hover:text-[#AA8B54] text-[#0A0835] transition-colors truncate"
+                  className="hover:text-[#AA8B54] text-[#0E0D35] transition-colors truncate"
                 >
                   {siteConfig.contact.email}
                 </a>
@@ -182,7 +182,7 @@ export function Footer() {
                   href={siteConfig.contact.googleMapsDirectionsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#FAF8F5] text-[#0A0835] border border-[#E8E8F0] hover:bg-[#C6A568] hover:text-[#0A0835] text-[11px] font-medium transition-all shadow-xs"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#FAF8F5] text-[#0E0D35] border border-[#E8E8F0] hover:bg-[#C6A568] hover:text-[#0E0D35] text-[11px] font-medium transition-all shadow-xs"
                 >
                   <span>Get Driving Directions</span>
                   <ArrowUpRight className="w-3 h-3" />

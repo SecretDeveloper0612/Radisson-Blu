@@ -45,7 +45,7 @@ export function RoomCard({ room, priority = false }: RoomCardProps) {
           <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block">
             {room.tagline}
           </span>
-          <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#0A0835] group-hover:text-[#AA8B54] transition-colors">
+          <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#0E0D35] group-hover:text-[#AA8B54] transition-colors">
             {room.name}
           </h3>
           <p className="text-xs sm:text-sm text-[#5A5A68] font-light leading-relaxed line-clamp-2">
@@ -61,7 +61,7 @@ export function RoomCard({ room, priority = false }: RoomCardProps) {
               <span className="text-[9px] uppercase tracking-wider text-[#5A5A68] block">
                 Dimensions
               </span>
-              <span className="font-medium text-[#0A0835] truncate block text-[11px] sm:text-xs">
+              <span className="font-medium text-[#0E0D35] truncate block text-[11px] sm:text-xs">
                 {room.specs.size || "Spacious Layout"}
               </span>
             </div>
@@ -72,7 +72,7 @@ export function RoomCard({ room, priority = false }: RoomCardProps) {
               <span className="text-[9px] uppercase tracking-wider text-[#5A5A68] block">
                 Bedding
               </span>
-              <span className="font-medium text-[#0A0835] truncate block text-[11px] sm:text-xs">
+              <span className="font-medium text-[#0E0D35] truncate block text-[11px] sm:text-xs">
                 {room.specs.bedType || "King / Twin Beds"}
               </span>
             </div>
@@ -93,7 +93,7 @@ export function RoomCard({ room, priority = false }: RoomCardProps) {
         <div className="pt-4 border-t border-[#E8E8F0] flex items-center justify-between gap-3">
           <Link
             href={`/rooms/${room.slug}`}
-            className="text-xs uppercase tracking-widest font-semibold text-[#0A0835] group-hover:text-[#AA8B54] flex items-center gap-1.5 transition-colors"
+            className="text-xs uppercase tracking-widest font-semibold text-[#0E0D35] group-hover:text-[#AA8B54] flex items-center gap-1.5 transition-colors"
           >
             <span>Explore Room</span>
             <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />

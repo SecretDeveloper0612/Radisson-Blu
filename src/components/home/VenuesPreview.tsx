@@ -13,7 +13,7 @@ export function VenuesPreview() {
   const supportingVenues = venuesData.slice(1);
 
   return (
-    <section className="py-20 sm:py-28 bg-white text-[#0A0835] overflow-hidden border-t border-[#E8E8F0]">
+    <section className="py-20 sm:py-28 bg-white text-[#0E0D35] overflow-hidden border-t border-[#E8E8F0]">
       <Container>
         <Reveal direction="up">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 sm:mb-16">
@@ -59,7 +59,7 @@ export function VenuesPreview() {
                       FEATURED BALLROOM &bull; {featuredVenue.category}
                     </span>
                   </div>
-                  <h3 className="font-serif text-3xl sm:text-4xl text-[#080097] font-normal">
+                  <h3 className="font-serif text-3xl sm:text-4xl text-[#0E0D35] font-normal">
                     {featuredVenue.name}
                   </h3>
                   <p className="text-sm sm:text-base text-[#5A5A68] font-light leading-relaxed">
@@ -68,11 +68,11 @@ export function VenuesPreview() {
                   <div className="pt-2 grid grid-cols-2 gap-3 text-xs">
                     <div className="bg-white p-3 rounded-lg border border-[#E8E8F0] shadow-xs">
                       <span className="text-[#AA8B54] block font-medium">Capacity</span>
-                      <span className="text-[#0A0835] font-medium mt-0.5 block">{featuredVenue.specs.capacity}</span>
+                      <span className="text-[#0E0D35] font-medium mt-0.5 block">{featuredVenue.specs.capacity}</span>
                     </div>
                     <div className="bg-white p-3 rounded-lg border border-[#E8E8F0] shadow-xs">
                       <span className="text-[#AA8B54] block font-medium">Space</span>
-                      <span className="text-[#0A0835] font-medium mt-0.5 block">{featuredVenue.specs.area}</span>
+                      <span className="text-[#0E0D35] font-medium mt-0.5 block">{featuredVenue.specs.area}</span>
                     </div>
                   </div>
                 </div>
@@ -88,7 +88,7 @@ export function VenuesPreview() {
                   </Button>
                   <Link
                     href="/contact"
-                    className="text-xs uppercase tracking-widest text-[#080097] hover:underline font-semibold transition-colors"
+                    className="text-xs uppercase tracking-widest text-[#0E0D35] hover:underline font-semibold transition-colors"
                   >
                     Enquire for Events &rarr;
                   </Link>
@@ -102,7 +102,7 @@ export function VenuesPreview() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {supportingVenues.map((venue, idx) => (
             <Reveal key={venue.id} direction="up" delayMs={idx * 100}>
-              <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-[#E8E8F0] bg-white hover:border-[#080097]/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shadow-md h-full">
+              <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-[#E8E8F0] bg-white hover:border-[#0E0D35]/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shadow-md h-full">
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-900">
                   <Image
                     src={venue.featuredImage}
@@ -115,11 +115,11 @@ export function VenuesPreview() {
 
                   {/* Coming soon or status badge */}
                   {venue.isUpcoming ? (
-                    <div className="absolute top-4 right-4 bg-[#C6A568] text-[#0A0835] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md">
+                    <div className="absolute top-4 right-4 bg-[#C6A568] text-[#0E0D35] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md">
                       {venue.statusBadge || "Coming Soon"}
                     </div>
                   ) : (
-                    <div className="absolute top-4 right-4 bg-[#0A0835] text-white text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full shadow">
+                    <div className="absolute top-4 right-4 bg-[#0E0D35] text-white text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full shadow">
                       {venue.category}
                     </div>
                   )}
@@ -127,7 +127,7 @@ export function VenuesPreview() {
 
                 <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                   <div>
-                    <h4 className="font-serif text-2xl font-normal text-[#080097] group-hover:text-[#0E05B5] transition-colors">
+                    <h4 className="font-serif text-2xl font-normal text-[#0E0D35] group-hover:text-[#0E0D35] transition-colors">
                       {venue.name}
                     </h4>
                     <p className="text-xs sm:text-sm text-[#5A5A68] font-light mt-2 line-clamp-2 leading-relaxed">
@@ -138,7 +138,7 @@ export function VenuesPreview() {
                   <div className="pt-3 border-t border-[#E8E8F0] flex items-center justify-between">
                     <Link
                       href={`/venues/${venue.slug}`}
-                      className="text-xs uppercase tracking-widest font-semibold text-[#080097] hover:underline flex items-center gap-1.5 transition-colors"
+                      className="text-xs uppercase tracking-widest font-semibold text-[#0E0D35] hover:underline flex items-center gap-1.5 transition-colors"
                     >
                       <span>{venue.isUpcoming ? "Preview Details" : "Explore Venue"}</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -146,7 +146,7 @@ export function VenuesPreview() {
 
                     <Link
                       href="/contact"
-                      className="text-[11px] uppercase tracking-wider text-[#5A5A68] hover:text-[#080097]"
+                      className="text-[11px] uppercase tracking-wider text-[#5A5A68] hover:text-[#0E0D35]"
                     >
                       Enquire
                     </Link>

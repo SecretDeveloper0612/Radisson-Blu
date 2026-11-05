@@ -76,7 +76,7 @@ export default function RoomsPage() {
       {/* Floating Guest Privileges Ribbon (Connecting Hero & Content) */}
       <section className="relative z-20 -mt-10 sm:-mt-12 px-4 sm:px-6 lg:px-8">
         <Container>
-          <div className="bg-white text-[#0A0835] rounded-2xl border border-[#E8E8F0] shadow-xl p-5 sm:p-7 backdrop-blur-xl relative overflow-hidden">
+          <div className="bg-white text-[#0E0D35] rounded-2xl border border-[#E8E8F0] shadow-xl p-5 sm:p-7 backdrop-blur-xl relative overflow-hidden">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8 divide-y md:divide-y-0 md:divide-x divide-[#E8E8F0] relative z-10">
               {/* Privilege 1: Sleep */}
               <div className="flex items-start gap-3.5 pt-0">
@@ -87,7 +87,7 @@ export default function RoomsPage() {
                   <span className="text-[10px] uppercase tracking-widest text-[#AA8B54] font-semibold block">
                     Restorative Sleep
                   </span>
-                  <span className="text-xs sm:text-sm font-semibold text-[#0A0835] block mt-0.5">
+                  <span className="text-xs sm:text-sm font-semibold text-[#0E0D35] block mt-0.5">
                     Custom Orthopaedic Beds
                   </span>
                 </div>
@@ -102,7 +102,7 @@ export default function RoomsPage() {
                   <span className="text-[10px] uppercase tracking-widest text-[#AA8B54] font-semibold block">
                     Connectivity
                   </span>
-                  <span className="text-xs sm:text-sm font-semibold text-[#0A0835] block mt-0.5">
+                  <span className="text-xs sm:text-sm font-semibold text-[#0E0D35] block mt-0.5">
                     High-Speed Wi-Fi 6
                   </span>
                 </div>
@@ -117,7 +117,7 @@ export default function RoomsPage() {
                   <span className="text-[10px] uppercase tracking-widest text-[#AA8B54] font-semibold block">
                     Bespoke Baths
                   </span>
-                  <span className="text-xs sm:text-sm font-semibold text-[#0A0835] block mt-0.5">
+                  <span className="text-xs sm:text-sm font-semibold text-[#0E0D35] block mt-0.5">
                     Marble Rain Showers
                   </span>
                 </div>
@@ -132,7 +132,7 @@ export default function RoomsPage() {
                   <span className="text-[10px] uppercase tracking-widest text-[#AA8B54] font-semibold block">
                     24-Hour Care
                   </span>
-                  <span className="text-xs sm:text-sm font-semibold text-[#0A0835] block mt-0.5">
+                  <span className="text-xs sm:text-sm font-semibold text-[#0E0D35] block mt-0.5">
                     Round-the-Clock In-Room Dining
                   </span>
                 </div>
@@ -151,7 +151,7 @@ export default function RoomsPage() {
               <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block mb-1">
                 SELECT ACCOMMODATION
               </span>
-              <h2 className="font-serif text-2xl sm:text-3xl text-[#0A0835] font-normal">
+              <h2 className="font-serif text-2xl sm:text-3xl text-[#0E0D35] font-normal">
                 Choose Your Sanctuary
               </h2>
             </div>
@@ -164,8 +164,8 @@ export default function RoomsPage() {
                   onClick={() => setActiveCategory(cat)}
                   className={`px-4 sm:px-5 py-2 rounded-full text-xs uppercase tracking-wider font-medium whitespace-nowrap transition-all duration-200 cursor-pointer ${
                     activeCategory === cat
-                      ? "bg-[#0A0835] text-white shadow-md border border-[#0A0835] font-semibold"
-                      : "bg-white text-[#5A5A68] border border-[#E8E8F0] hover:border-[#C6A568] hover:text-[#0A0835]"
+                      ? "bg-[#0E0D35] text-white shadow-md border border-[#0E0D35] font-semibold"
+                      : "bg-white text-[#5A5A68] border border-[#E8E8F0] hover:border-[#C6A568] hover:text-[#0E0D35]"
                   }`}
                 >
                   {cat === "All" ? "All Rooms" : cat}
@@ -187,7 +187,7 @@ export default function RoomsPage() {
               <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block mb-1">
                 THE RADISSON STANDARD
               </span>
-              <h3 className="font-serif text-3xl sm:text-4xl text-[#0A0835] font-normal">
+              <h3 className="font-serif text-3xl sm:text-4xl text-[#0E0D35] font-normal">
                 Exceptional In-Stay Privileges
               </h3>
               <p className="text-xs sm:text-sm text-[#5A5A68] font-light mt-2 leading-relaxed">
@@ -201,7 +201,7 @@ export default function RoomsPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[#E8E8F0] flex items-center justify-center text-[#AA8B54]">
                   <MapPin className="w-6 h-6" />
                 </div>
-                <h4 className="font-serif text-xl text-[#0A0835] font-normal">
+                <h4 className="font-serif text-xl text-[#0E0D35] font-normal">
                   Strategic Hub Location
                 </h4>
                 <p className="text-xs text-[#5A5A68] font-light leading-relaxed">
@@ -214,7 +214,7 @@ export default function RoomsPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[#E8E8F0] flex items-center justify-center text-[#AA8B54]">
                   <Waves className="w-6 h-6" />
                 </div>
-                <h4 className="font-serif text-xl text-[#0A0835] font-normal">
+                <h4 className="font-serif text-xl text-[#0E0D35] font-normal">
                   Wellness & Pool Access
                 </h4>
                 <p className="text-xs text-[#5A5A68] font-light leading-relaxed">
@@ -227,7 +227,7 @@ export default function RoomsPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[#E8E8F0] flex items-center justify-center text-[#AA8B54]">
                   <Utensils className="w-6 h-6" />
                 </div>
-                <h4 className="font-serif text-xl text-[#0A0835] font-normal">
+                <h4 className="font-serif text-xl text-[#0E0D35] font-normal">
                   Curated Culinary Craft
                 </h4>
                 <p className="text-xs text-[#5A5A68] font-light leading-relaxed">
@@ -238,12 +238,12 @@ export default function RoomsPage() {
           </div>
 
           {/* Corporate Room Blocks & Long Stays Banner */}
-          <div className="mt-16 rounded-2xl p-8 sm:p-10 bg-white text-[#0A0835] border border-[#E8E8F0] shadow-xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+          <div className="mt-16 rounded-2xl p-8 sm:p-10 bg-white text-[#0E0D35] border border-[#E8E8F0] shadow-xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
             <div className="space-y-2.5 max-w-xl text-center md:text-left relative z-10">
               <span className="text-xs uppercase tracking-widest text-[#AA8B54] font-semibold">
                 BUSINESS TRAVEL & WEDDING ACCOMMODATIONS
               </span>
-              <h3 className="font-serif text-2xl sm:text-3xl text-[#0A0835] font-normal">
+              <h3 className="font-serif text-2xl sm:text-3xl text-[#0E0D35] font-normal">
                 Corporate Rates & Group Room Blocks
               </h3>
               <p className="text-xs sm:text-sm text-[#5A5A68] font-light leading-relaxed">
@@ -266,7 +266,7 @@ export default function RoomsPage() {
           {/* Direct Assistance Desk Bar */}
           <div className="mt-10 p-5 rounded-2xl bg-white border border-[#E8E8F0] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#5A5A68]">
             <div className="flex items-center gap-2">
-              <span className="font-medium text-[#0A0835]">Need reservation assistance?</span>
+              <span className="font-medium text-[#0E0D35]">Need reservation assistance?</span>
               <span className="hidden sm:inline text-neutral-300">•</span>
               <span>Our front office reservations desk is available 24/7</span>
             </div>
@@ -274,14 +274,14 @@ export default function RoomsPage() {
             <div className="flex items-center gap-6">
               <a
                 href={`tel:${siteConfig.contact.phone}`}
-                className="flex items-center gap-1.5 font-medium text-[#0A0835] hover:text-[#AA8B54] transition-colors"
+                className="flex items-center gap-1.5 font-medium text-[#0E0D35] hover:text-[#AA8B54] transition-colors"
               >
                 <Phone className="w-3.5 h-3.5 text-[#C6A568]" />
                 <span>{siteConfig.contact.phoneDisplay}</span>
               </a>
               <a
                 href={`mailto:${siteConfig.contact.email}`}
-                className="flex items-center gap-1.5 font-medium text-[#0A0835] hover:text-[#AA8B54] transition-colors"
+                className="flex items-center gap-1.5 font-medium text-[#0E0D35] hover:text-[#AA8B54] transition-colors"
               >
                 <Mail className="w-3.5 h-3.5 text-[#C6A568]" />
                 <span>Email Reservations</span>

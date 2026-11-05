@@ -25,7 +25,7 @@ export function VenueCard({ venue, priority = false }: VenueCardProps) {
 
         {/* Badge */}
         {venue.isUpcoming ? (
-          <div className="absolute top-4 right-4 bg-[#C6A568] text-[#0A0835] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md">
+          <div className="absolute top-4 right-4 bg-[#C6A568] text-[#0E0D35] text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md">
             {venue.statusBadge || "Coming Soon"}
           </div>
         ) : (
@@ -41,7 +41,7 @@ export function VenueCard({ venue, priority = false }: VenueCardProps) {
           <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#AA8B54]">
             {venue.tagline}
           </span>
-          <h3 className="font-serif text-2xl font-normal text-[#0A0835] group-hover:text-[#AA8B54] transition-colors">
+          <h3 className="font-serif text-2xl font-normal text-[#0E0D35] group-hover:text-[#AA8B54] transition-colors">
             {venue.name}
           </h3>
           <p className="text-xs sm:text-sm text-[#5A5A68] font-light leading-relaxed line-clamp-3">
@@ -57,7 +57,7 @@ export function VenueCard({ venue, priority = false }: VenueCardProps) {
               <span className="text-[9px] uppercase tracking-wider text-[#5A5A68] block">
                 Capacity
               </span>
-              <span className="font-medium text-[#0A0835] truncate block text-[11px]">
+              <span className="font-medium text-[#0E0D35] truncate block text-[11px]">
                 {venue.specs.capacity ? venue.specs.capacity.split("/")[0].trim() : "Flexible"}
               </span>
             </div>
@@ -68,7 +68,7 @@ export function VenueCard({ venue, priority = false }: VenueCardProps) {
               <span className="text-[9px] uppercase tracking-wider text-[#5A5A68] block">
                 Floor Area
               </span>
-              <span className="font-medium text-[#0A0835] truncate block text-[11px]">
+              <span className="font-medium text-[#0E0D35] truncate block text-[11px]">
                 {venue.specs.area || "Spacious"}
               </span>
             </div>
@@ -79,7 +79,7 @@ export function VenueCard({ venue, priority = false }: VenueCardProps) {
         <div className="pt-3 border-t border-[#E8E8F0] flex items-center justify-between">
           <Link
             href={`/venues/${venue.slug}`}
-            className="text-xs uppercase tracking-widest font-semibold text-[#0A0835] group-hover:text-[#AA8B54] flex items-center gap-1.5 transition-colors"
+            className="text-xs uppercase tracking-widest font-semibold text-[#0E0D35] group-hover:text-[#AA8B54] flex items-center gap-1.5 transition-colors"
           >
             <span>{venue.isUpcoming ? "Preview Details" : "Explore Venue"}</span>
             <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
@@ -88,7 +88,7 @@ export function VenueCard({ venue, priority = false }: VenueCardProps) {
           {!venue.isUpcoming && (
             <Link
               href={`/contact?venue=${encodeURIComponent(venue.name)}`}
-              className="text-xs uppercase tracking-wider text-[#AA8B54] hover:text-[#0A0835] font-medium"
+              className="text-xs uppercase tracking-wider text-[#AA8B54] hover:text-[#0E0D35] font-medium"
             >
               Enquire &rarr;
             </Link>

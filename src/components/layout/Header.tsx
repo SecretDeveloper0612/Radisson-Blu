@@ -58,7 +58,7 @@ export function Header() {
             <span
               className={cn(
                 "font-serif text-lg sm:text-xl lg:text-2xl tracking-[0.18em] font-medium transition-colors leading-none",
-                isScrolled ? "text-[#0A0835] group-hover:text-[#AA8B54]" : "text-[#F7F4EC] group-hover:text-[#C6A568]"
+                isScrolled ? "text-[#0E0D35] group-hover:text-[#AA8B54]" : "text-[#F7F4EC] group-hover:text-[#C6A568]"
               )}
             >
               VYAH
@@ -115,7 +115,7 @@ export function Header() {
                           : "opacity-0 invisible -translate-y-2 pointer-events-none"
                       )}
                     >
-                      <div className="w-[420px] bg-white/98 backdrop-blur-xl border border-[#E8E8F0] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] p-5 text-[#0A0835]">
+                      <div className="w-[420px] bg-white/98 backdrop-blur-xl border border-[#E8E8F0] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] p-5 text-[#0E0D35]">
                         {/* Dropdown Header */}
                         <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#E8E8F0]">
                           <span className="text-[10px] uppercase tracking-[0.22em] text-[#AA8B54] font-semibold">
@@ -142,7 +142,7 @@ export function Header() {
                             >
                               <div>
                                 <div className="flex items-center gap-2">
-                                  <span className="font-serif text-base text-[#0A0835] group-hover/item:text-[#AA8B54] transition-colors">
+                                  <span className="font-serif text-base text-[#0E0D35] group-hover/item:text-[#AA8B54] transition-colors">
                                     {venue.name}
                                   </span>
                                   {venue.isUpcoming && (
@@ -219,7 +219,7 @@ export function Header() {
           <div className="flex lg:hidden items-center space-x-2">
             <button
               onClick={handleBookNow}
-              className="bg-[#C6A568] text-[#04005E] text-[11px] font-semibold uppercase tracking-wider px-3 py-1.5 rounded"
+              className="bg-[#C6A568] text-[#0E0D35] text-[11px] font-semibold uppercase tracking-wider px-3 py-1.5 rounded"
             >
               Book
             </button>
@@ -248,8 +248,8 @@ export function Header() {
           aria-modal="true"
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-in fade-in"
         >
-          <div className="bg-white border border-[#E8E8F0] text-[#0A0835] rounded-xl max-w-md w-full p-6 sm:p-7 shadow-2xl relative">
-            <h3 className="font-serif text-2xl text-[#0A0835] mb-2">
+          <div className="bg-white border border-[#E8E8F0] text-[#0E0D35] rounded-xl max-w-md w-full p-6 sm:p-7 shadow-2xl relative">
+            <h3 className="font-serif text-2xl text-[#0E0D35] mb-2">
               Book Your Stay
             </h3>
             <p className="text-[#5A5A68] text-xs sm:text-sm leading-relaxed mb-5 font-light">
@@ -263,7 +263,7 @@ export function Header() {
                 <span className="text-[#AA8B54] font-medium">Call Reservations:</span>
                 <a
                   href={`tel:${siteConfig.contact.phone}`}
-                  className="text-[#0A0835] hover:text-[#C6A568] font-semibold"
+                  className="text-[#0E0D35] hover:text-[#C6A568] font-semibold"
                 >
                   {siteConfig.contact.phoneDisplay}
                 </a>
@@ -285,7 +285,7 @@ export function Header() {
               <Link
                 href="/contact"
                 onClick={() => setShowBookingNotice(false)}
-                className="flex-1 bg-[#C6A568] hover:bg-[#b59457] text-[#0A0835] font-semibold py-2.5 px-4 rounded-md text-xs uppercase tracking-wider text-center transition-colors shadow-sm"
+                className="flex-1 bg-[#C6A568] hover:bg-[#b59457] text-[#0E0D35] font-semibold py-2.5 px-4 rounded-md text-xs uppercase tracking-wider text-center transition-colors shadow-sm"
               >
                 Go to Enquiry Form
               </Link>

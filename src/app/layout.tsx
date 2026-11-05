@@ -14,7 +14,7 @@ const poppins = Poppins({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#080097",
+  themeColor: "#0E0D35",
   width: "device-width",
   initialScale: 1,
 };
@@ -72,7 +72,7 @@ export default function RootLayout({
     >
       <body
         suppressHydrationWarning
-        className="min-h-full flex flex-col font-poppins text-luxury-primary antialiased bg-warm-ivory selection:bg-[#C6A568] selection:text-[#04005E]"
+        className="min-h-full flex flex-col font-poppins text-luxury-primary antialiased bg-warm-ivory selection:bg-[#C6A568] selection:text-[#0E0D35]"
       >
         <Header />
         <main className="flex-1 w-full flex flex-col font-poppins">

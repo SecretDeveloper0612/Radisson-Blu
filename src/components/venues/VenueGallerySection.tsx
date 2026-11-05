@@ -33,14 +33,14 @@ export function VenueGallerySection({
           <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block mb-1">
             SPACES & AMBIANCE
           </span>
-          <h3 className="font-serif text-2xl sm:text-3xl text-[#0A0835] font-normal">
+          <h3 className="font-serif text-2xl sm:text-3xl text-[#0E0D35] font-normal">
             Visual Tour
           </h3>
         </div>
 
         <button
           onClick={() => setWindowOpen(true)}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-[#0A0835] border border-[#C6A568]/50 hover:bg-[#C6A568] hover:text-[#0A0835] text-xs uppercase tracking-wider font-semibold transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md hover:scale-105 shrink-0 self-start sm:self-auto"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-[#0E0D35] border border-[#C6A568]/50 hover:bg-[#C6A568] hover:text-[#0E0D35] text-xs uppercase tracking-wider font-semibold transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md hover:scale-105 shrink-0 self-start sm:self-auto"
         >
           <Images className="w-3.5 h-3.5 text-[#AA8B54]" />
           <span>Show Full Gallery ({totalCount})</span>

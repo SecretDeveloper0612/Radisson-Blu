@@ -164,7 +164,7 @@ export function GatewayDestination() {
   };
 
   return (
-    <section className="py-20 sm:py-28 bg-white text-[#0A0835] relative overflow-hidden border-t border-[#E8E8F0]">
+    <section className="py-20 sm:py-28 bg-white text-[#0E0D35] relative overflow-hidden border-t border-[#E8E8F0]">
       <Container className="relative z-10">
         {/* Section Header with Left/Right Navigation Buttons */}
         <Reveal direction="up">
@@ -174,7 +174,7 @@ export function GatewayDestination() {
                 <Compass className="w-4 h-4 text-[#AA8B54]" />
                 PRIME LOCATION & GATEWAY
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight text-[#0A0835]">
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight text-[#0E0D35]">
                 The vantage point between commerce & calm.
               </h2>
               <p className="text-sm sm:text-base text-[#5A5A68] font-light leading-relaxed">
@@ -190,7 +190,7 @@ export function GatewayDestination() {
                 aria-label="Previous destination"
                 className={`w-12 h-12 rounded-full flex items-center justify-center border transition-all duration-300 shadow-sm ${
                   canScrollLeft
-                    ? "border-[#E8E8F0] bg-white text-[#0A0835] hover:bg-[#0A0835] hover:text-[#C6A568] hover:border-[#0A0835] hover:scale-105 active:scale-95 cursor-pointer shadow-md"
+                    ? "border-[#E8E8F0] bg-white text-[#0E0D35] hover:bg-[#0E0D35] hover:text-[#C6A568] hover:border-[#0E0D35] hover:scale-105 active:scale-95 cursor-pointer shadow-md"
                     : "border-[#E8E8F0]/60 bg-white/60 text-[#5A5A68]/30 cursor-not-allowed opacity-50"
                 }`}
               >
@@ -202,7 +202,7 @@ export function GatewayDestination() {
                 aria-label="Next destination"
                 className={`w-12 h-12 rounded-full flex items-center justify-center border transition-all duration-300 shadow-sm ${
                   canScrollRight
-                    ? "border-[#E8E8F0] bg-white text-[#0A0835] hover:bg-[#0A0835] hover:text-[#C6A568] hover:border-[#0A0835] hover:scale-105 active:scale-95 cursor-pointer shadow-md"
+                    ? "border-[#E8E8F0] bg-white text-[#0E0D35] hover:bg-[#0E0D35] hover:text-[#C6A568] hover:border-[#0E0D35] hover:scale-105 active:scale-95 cursor-pointer shadow-md"
                     : "border-[#E8E8F0]/60 bg-white/60 text-[#5A5A68]/30 cursor-not-allowed opacity-50"
                 }`}
               >
@@ -219,7 +219,7 @@ export function GatewayDestination() {
             <button
               onClick={() => scroll("left")}
               aria-label="Scroll left"
-              className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/95 backdrop-blur-md text-[#0A0835] border border-[#E8E8F0] shadow-xl items-center justify-center hover:bg-[#0A0835] hover:text-[#C6A568] hover:border-[#0A0835] transition-all duration-300 hover:scale-110 active:scale-95 hidden lg:flex cursor-pointer"
+              className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/95 backdrop-blur-md text-[#0E0D35] border border-[#E8E8F0] shadow-xl items-center justify-center hover:bg-[#0E0D35] hover:text-[#C6A568] hover:border-[#0E0D35] transition-all duration-300 hover:scale-110 active:scale-95 hidden lg:flex cursor-pointer"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
@@ -230,7 +230,7 @@ export function GatewayDestination() {
             <button
               onClick={() => scroll("right")}
               aria-label="Scroll right"
-              className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/95 backdrop-blur-md text-[#0A0835] border border-[#E8E8F0] shadow-xl items-center justify-center hover:bg-[#0A0835] hover:text-[#C6A568] hover:border-[#0A0835] transition-all duration-300 hover:scale-110 active:scale-95 hidden lg:flex cursor-pointer"
+              className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/95 backdrop-blur-md text-[#0E0D35] border border-[#E8E8F0] shadow-xl items-center justify-center hover:bg-[#0E0D35] hover:text-[#C6A568] hover:border-[#0E0D35] transition-all duration-300 hover:scale-110 active:scale-95 hidden lg:flex cursor-pointer"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
@@ -248,8 +248,8 @@ export function GatewayDestination() {
                 onMouseEnter={() => setActiveItem(idx)}
                 className={`group relative w-[85vw] max-w-[320px] sm:w-[320px] md:w-[340px] lg:w-[360px] shrink-0 snap-start rounded-2xl overflow-hidden border transition-all duration-500 flex flex-col justify-between shadow-md hover:shadow-2xl hover:-translate-y-1.5 cursor-pointer bg-white ${
                   activeItem === idx
-                    ? "border-[#0A0835] shadow-xl"
-                    : "border-[#E8E8F0] hover:border-[#0A0835]/40"
+                    ? "border-[#0E0D35] shadow-xl"
+                    : "border-[#E8E8F0] hover:border-[#0E0D35]/40"
                 }`}
               >
                 {/* Dedicated Top Photo Container */}
@@ -267,7 +267,7 @@ export function GatewayDestination() {
                   <div className="absolute top-3 left-3 w-8 h-8 rounded-full bg-white/95 backdrop-blur-md border border-[#E8E8F0] flex items-center justify-center shadow-md">
                     {getIcon(dest.typeIcon)}
                   </div>
-                  <div className="absolute top-3 right-3 text-[10px] font-mono font-semibold uppercase tracking-wider text-white bg-[#0A0835] px-2.5 py-1 rounded-full shadow-md">
+                  <div className="absolute top-3 right-3 text-[10px] font-mono font-semibold uppercase tracking-wider text-white bg-[#0E0D35] px-2.5 py-1 rounded-full shadow-md">
                     {dest.distance}
                   </div>
                 </div>
@@ -278,7 +278,7 @@ export function GatewayDestination() {
                     <span className="text-[10px] uppercase tracking-widest text-[#AA8B54] font-semibold block">
                       {dest.category}
                     </span>
-                    <h3 className="font-serif text-lg sm:text-xl font-normal text-[#0A0835] leading-snug group-hover:text-[#AA8B54] transition-colors line-clamp-2 min-h-[52px] sm:min-h-[56px]">
+                    <h3 className="font-serif text-lg sm:text-xl font-normal text-[#0E0D35] leading-snug group-hover:text-[#AA8B54] transition-colors line-clamp-2 min-h-[52px] sm:min-h-[56px]">
                       {dest.name}
                     </h3>
                     <p className="text-xs text-[#5A5A68] font-light line-clamp-3 leading-relaxed min-h-[48px]">
@@ -293,7 +293,7 @@ export function GatewayDestination() {
                     </span>
                     <Link
                       href={`/contact?enquiryType=Excursions&destination=${encodeURIComponent(dest.name)}`}
-                      className="text-[#0A0835] group-hover:text-[#AA8B54] text-xs font-semibold flex items-center gap-0.5 transition-colors group-hover:underline"
+                      className="text-[#0E0D35] group-hover:text-[#AA8B54] text-xs font-semibold flex items-center gap-0.5 transition-colors group-hover:underline"
                     >
                       <span>Explore</span>
                       <ChevronRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
@@ -320,7 +320,7 @@ export function GatewayDestination() {
                 aria-label={`Go to slide ${i + 1}`}
                 className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
                   activeItem === i
-                    ? "w-8 bg-[#0A0835]"
+                    ? "w-8 bg-[#0E0D35]"
                     : "w-2 bg-[#E8E8F0] hover:bg-[#AA8B54]/60"
                 }`}
               />
@@ -335,7 +335,7 @@ export function GatewayDestination() {
               <span className="text-[10px] font-semibold uppercase tracking-widest text-[#AA8B54] block">
                 COMPLIMENTARY CHAUFFEUR SERVICES
               </span>
-              <h4 className="font-serif text-xl sm:text-2xl text-[#0A0835] font-normal">
+              <h4 className="font-serif text-xl sm:text-2xl text-[#0E0D35] font-normal">
                 Need luxury airport or corporate transit?
               </h4>
               <p className="text-xs sm:text-sm text-[#5A5A68] font-light">
@@ -345,10 +345,10 @@ export function GatewayDestination() {
 
             <Link
               href="/contact?enquiryType=Airport+Transfer"
-              className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest bg-[#C6A568] hover:bg-[#b59457] text-[#0A0835] px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 shrink-0 shadow-md"
+              className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest bg-[#C6A568] hover:bg-[#b59457] text-[#0E0D35] px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 shrink-0 shadow-md"
             >
               <span>Arrange Concierge Ride</span>
-              <Car className="w-4 h-4 text-[#0A0835]" />
+              <Car className="w-4 h-4 text-[#0E0D35]" />
             </Link>
           </div>
         </Reveal>

@@ -143,7 +143,7 @@ export function VenueGalleryWindow({
       role="dialog"
       aria-modal="true"
       aria-label="Venue showcase gallery window"
-      className="fixed inset-0 z-[9999] flex flex-col bg-white text-[#0A0835] select-none animate-in fade-in zoom-in-95 duration-200"
+      className="fixed inset-0 z-[9999] flex flex-col bg-white text-[#0E0D35] select-none animate-in fade-in zoom-in-95 duration-200"
     >
       {/* Window Titlebar / Navigation Header */}
       <header className="h-18 px-4 sm:px-8 border-b border-[#E8E8F0] bg-white/95 backdrop-blur-md flex items-center justify-between shrink-0 z-30">
@@ -152,7 +152,7 @@ export function VenueGalleryWindow({
             <Grid3X3 className="w-4 h-4" />
           </div>
           <div>
-            <h2 className="font-serif text-lg sm:text-xl font-normal text-[#0A0835] flex items-center gap-2">
+            <h2 className="font-serif text-lg sm:text-xl font-normal text-[#0E0D35] flex items-center gap-2">
               <span>
                 {targetVenue ? `${targetVenue.name} Visual Showcase` : "Venues Visual Showcase"}
               </span>
@@ -172,7 +172,7 @@ export function VenueGalleryWindow({
         <div className="flex items-center gap-2 sm:gap-3">
           <button
             onClick={handleShare}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-[#0A0835] hover:bg-[#F7F7FA] transition-colors cursor-pointer border border-[#E8E8F0]"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-[#0E0D35] hover:bg-[#F7F7FA] transition-colors cursor-pointer border border-[#E8E8F0]"
             title="Copy link"
           >
             {copied ? (
@@ -191,7 +191,7 @@ export function VenueGalleryWindow({
           <button
             onClick={onClose}
             aria-label="Close window"
-            className="w-10 h-10 rounded-full bg-[#F7F7FA] hover:bg-[#C6A568] hover:text-[#0A0835] text-[#0A0835] border border-[#E8E8F0] flex items-center justify-center transition-all duration-200 cursor-pointer"
+            className="w-10 h-10 rounded-full bg-[#F7F7FA] hover:bg-[#C6A568] hover:text-[#0E0D35] text-[#0E0D35] border border-[#E8E8F0] flex items-center justify-center transition-all duration-200 cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
@@ -211,8 +211,8 @@ export function VenueGalleryWindow({
             }}
             className={`px-3.5 py-1.5 rounded-full text-xs uppercase tracking-wider font-medium whitespace-nowrap transition-all duration-200 cursor-pointer ${
               activeVenueFilter === "All"
-                ? "bg-[#C6A568] text-[#0A0835] font-semibold shadow-sm"
-                : "bg-[#F7F7FA] text-[#5A5A68] hover:bg-[#E8E8F0] hover:text-[#0A0835] border border-[#E8E8F0]"
+                ? "bg-[#C6A568] text-[#0E0D35] font-semibold shadow-sm"
+                : "bg-[#F7F7FA] text-[#5A5A68] hover:bg-[#E8E8F0] hover:text-[#0E0D35] border border-[#E8E8F0]"
             }`}
           >
             All Venues ({allPhotos.length})
@@ -229,8 +229,8 @@ export function VenueGalleryWindow({
                 }}
                 className={`px-3.5 py-1.5 rounded-full text-xs uppercase tracking-wider font-medium whitespace-nowrap transition-all duration-200 cursor-pointer ${
                   activeVenueFilter === v.name
-                    ? "bg-[#C6A568] text-[#0A0835] font-semibold shadow-sm"
-                    : "bg-[#F7F7FA] text-[#5A5A68] hover:bg-[#E8E8F0] hover:text-[#0A0835] border border-[#E8E8F0]"
+                    ? "bg-[#C6A568] text-[#0E0D35] font-semibold shadow-sm"
+                    : "bg-[#F7F7FA] text-[#5A5A68] hover:bg-[#E8E8F0] hover:text-[#0E0D35] border border-[#E8E8F0]"
                 }`}
               >
                 {v.name} ({count})
@@ -276,7 +276,7 @@ export function VenueGalleryWindow({
                   </div>
 
                   {photo.isCover && (
-                    <span className="absolute top-3 left-3 text-[9px] uppercase tracking-wider font-bold bg-[#0A0835] text-white px-2 py-0.5 rounded shadow-sm">
+                    <span className="absolute top-3 left-3 text-[9px] uppercase tracking-wider font-bold bg-[#0E0D35] text-white px-2 py-0.5 rounded shadow-sm">
                       Signature View
                     </span>
                   )}
@@ -314,7 +314,7 @@ export function VenueGalleryWindow({
               <button
                 onClick={() => setSelectedPhotoIndex(null)}
                 aria-label="Back to showcase grid"
-                className="w-10 h-10 rounded-full bg-white/15 hover:bg-[#C6A568] hover:text-[#0A0835] text-white flex items-center justify-center transition-colors cursor-pointer"
+                className="w-10 h-10 rounded-full bg-white/15 hover:bg-[#C6A568] hover:text-[#0E0D35] text-white flex items-center justify-center transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -327,7 +327,7 @@ export function VenueGalleryWindow({
             <button
               onClick={handlePrevPhoto}
               aria-label="Previous photo"
-              className="absolute left-2 sm:left-4 z-20 w-12 h-12 rounded-full bg-black/60 hover:bg-[#C6A568] hover:text-[#0A0835] text-white flex items-center justify-center backdrop-blur-md transition-all cursor-pointer border border-white/20"
+              className="absolute left-2 sm:left-4 z-20 w-12 h-12 rounded-full bg-black/60 hover:bg-[#C6A568] hover:text-[#0E0D35] text-white flex items-center justify-center backdrop-blur-md transition-all cursor-pointer border border-white/20"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
@@ -348,7 +348,7 @@ export function VenueGalleryWindow({
             <button
               onClick={handleNextPhoto}
               aria-label="Next photo"
-              className="absolute right-2 sm:right-4 z-20 w-12 h-12 rounded-full bg-black/60 hover:bg-[#C6A568] hover:text-[#0A0835] text-white flex items-center justify-center backdrop-blur-md transition-all cursor-pointer border border-white/20"
+              className="absolute right-2 sm:right-4 z-20 w-12 h-12 rounded-full bg-black/60 hover:bg-[#C6A568] hover:text-[#0E0D35] text-white flex items-center justify-center backdrop-blur-md transition-all cursor-pointer border border-white/20"
             >
               <ChevronRight className="w-6 h-6" />
             </button>

@@ -47,7 +47,7 @@ export function GalleryPreview() {
   };
 
   return (
-    <section className="py-20 sm:py-28 bg-white text-[#0A0835]">
+    <section className="py-20 sm:py-28 bg-white text-[#0E0D35]">
       <Container>
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-12">
           <SectionHeading
@@ -75,8 +75,8 @@ export function GalleryPreview() {
               onClick={() => setSelectedCategory(cat)}
               className={`px-4 py-2 rounded-full text-xs uppercase tracking-wider font-medium whitespace-nowrap transition-all duration-200 cursor-pointer ${
                 selectedCategory === cat
-                  ? "bg-[#0A0835] text-[#F7F4EC] shadow-sm"
-                  : "bg-white text-[#77766D] border border-[#E4DED2] hover:border-[#AA8B54] hover:text-[#0A0835]"
+                  ? "bg-[#0E0D35] text-[#F7F4EC] shadow-sm"
+                  : "bg-white text-[#77766D] border border-[#E4DED2] hover:border-[#AA8B54] hover:text-[#0E0D35]"
               }`}
             >
               {cat}

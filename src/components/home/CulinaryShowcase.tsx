@@ -71,7 +71,7 @@ export function CulinaryShowcase() {
   const activeSpot = culinarySpots[activeTab];
 
   return (
-    <section className="py-20 sm:py-28 bg-white text-[#0A0835] relative overflow-hidden border-t border-[#E8E8F0]">
+    <section className="py-20 sm:py-28 bg-white text-[#0E0D35] relative overflow-hidden border-t border-[#E8E8F0]">
       <Container className="relative z-10">
         {/* Section Header */}
         <Reveal direction="up">
@@ -81,7 +81,7 @@ export function CulinaryShowcase() {
                 <Utensils className="w-3.5 h-3.5 text-[#AA8B54]" />
                 CULINARY EXCELLENCE
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#080097]">
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#0E0D35]">
                 Epicurean journeys crafted with passion.
               </h2>
               <p className="text-[#5A5A68] text-sm sm:text-base font-light leading-relaxed">
@@ -92,10 +92,10 @@ export function CulinaryShowcase() {
             <div className="mt-6 md:mt-0">
               <Link
                 href="/contact?enquiryType=Dining+Reservation"
-                className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest bg-[#C6A568] hover:bg-[#b59457] text-[#0A0835] px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 shadow-md"
+                className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest bg-[#C6A568] hover:bg-[#b59457] text-[#0E0D35] px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 shadow-md"
               >
                 <span>Reserve a Table</span>
-                <ArrowRight className="w-4 h-4 text-[#0A0835]" />
+                <ArrowRight className="w-4 h-4 text-[#0E0D35]" />
               </Link>
             </div>
           </div>
@@ -111,8 +111,8 @@ export function CulinaryShowcase() {
                 onClick={() => setActiveTab(idx)}
                 className={`px-5 py-3 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 cursor-pointer flex items-center gap-2.5 whitespace-nowrap ${
                   isCurrent
-                    ? "bg-[#0A0835] text-white shadow-md scale-102"
-                    : "bg-[#F7F7FA] text-[#5A5A68] border border-[#E8E8F0] hover:border-[#0A0835]/40 hover:text-[#0A0835]"
+                    ? "bg-[#0E0D35] text-white shadow-md scale-102"
+                    : "bg-[#F7F7FA] text-[#5A5A68] border border-[#E8E8F0] hover:border-[#0E0D35]/40 hover:text-[#0E0D35]"
                 }`}
               >
                 <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${isCurrent ? "bg-white/20 text-[#C6A568]" : "bg-white text-[#AA8B54]"}`}>
@@ -195,7 +195,7 @@ export function CulinaryShowcase() {
                     <span className="text-xs uppercase tracking-[0.2em] text-[#AA8B54] font-semibold block">
                       {activeSpot.tagline}
                     </span>
-                    <h3 className="font-serif text-2xl sm:text-3xl text-[#080097] font-normal mt-1 leading-tight">
+                    <h3 className="font-serif text-2xl sm:text-3xl text-[#0E0D35] font-normal mt-1 leading-tight">
                       {activeSpot.name}
                     </h3>
                   </div>
@@ -206,14 +206,14 @@ export function CulinaryShowcase() {
 
                   {/* Highlights List */}
                   <div className="space-y-3 pt-4 border-t border-[#E8E8F0]">
-                    <span className="text-[11px] font-semibold uppercase tracking-widest text-[#080097] block">
+                    <span className="text-[11px] font-semibold uppercase tracking-widest text-[#0E0D35] block">
                       EXPERIENCE HIGHLIGHTS
                     </span>
                     <div className="grid grid-cols-1 gap-2.5">
                       {activeSpot.features.map((feat, i) => (
                         <div
                           key={i}
-                          className="flex items-center gap-3 p-2.5 rounded-lg bg-white border border-[#E8E8F0] text-xs text-[#0A0835] shadow-xs"
+                          className="flex items-center gap-3 p-2.5 rounded-lg bg-white border border-[#E8E8F0] text-xs text-[#0E0D35] shadow-xs"
                         >
                           <span className="w-1.5 h-1.5 rounded-full bg-[#C6A568] shrink-0" />
                           <span>{feat}</span>
@@ -232,7 +232,7 @@ export function CulinaryShowcase() {
 
                   <Link
                     href={activeSpot.href}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-[#080097] hover:underline transition-colors group"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-[#0E0D35] hover:underline transition-colors group"
                   >
                     <span>View Venue</span>
                     <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />

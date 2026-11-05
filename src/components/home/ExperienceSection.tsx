@@ -37,7 +37,7 @@ export function ExperienceSection() {
   ];
 
   return (
-    <section className="py-20 sm:py-28 bg-white text-[#0A0835] overflow-hidden border-t border-[#E8E8F0]">
+    <section className="py-20 sm:py-28 bg-white text-[#0E0D35] overflow-hidden border-t border-[#E8E8F0]">
       <Container>
         {/* Section Header */}
         <Reveal direction="up">
@@ -45,7 +45,7 @@ export function ExperienceSection() {
             <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#AA8B54]">
               DISCOVER THE PROPERTY
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight text-[#080097]">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight text-[#0E0D35]">
               Curated spaces designed to inspire.
             </h2>
           </div>
@@ -56,7 +56,7 @@ export function ExperienceSection() {
           {experiences.map((item, idx) => (
             <div key={idx} className={`${item.span}`}>
               <Reveal direction="up" delayMs={idx * 150} className="h-full">
-                <div className="group relative flex flex-col justify-end overflow-hidden rounded-2xl border border-[#E8E8F0] bg-slate-900 transition-all duration-500 hover:border-[#080097]/50 hover:shadow-2xl hover:-translate-y-1 min-h-[460px] lg:min-h-[500px] p-8 shadow-lg">
+                <div className="group relative flex flex-col justify-end overflow-hidden rounded-2xl border border-[#E8E8F0] bg-slate-900 transition-all duration-500 hover:border-[#0E0D35]/50 hover:shadow-2xl hover:-translate-y-1 min-h-[460px] lg:min-h-[500px] p-8 shadow-lg">
                   {/* Image Background */}
                   <div className="absolute inset-0 z-0">
                     <Image

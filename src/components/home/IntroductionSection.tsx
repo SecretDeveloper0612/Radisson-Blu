@@ -7,7 +7,7 @@ import Reveal from "@/components/ui/Reveal";
 
 export function IntroductionSection() {
   return (
-    <section id="radisson-experience-intro" className="py-20 sm:py-28 bg-white text-[#0A0835] scroll-mt-10 overflow-hidden">
+    <section id="radisson-experience-intro" className="py-20 sm:py-28 bg-white text-[#0E0D35] scroll-mt-10 overflow-hidden">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Photographic Composition with Smooth Reveal */}
@@ -23,7 +23,7 @@ export function IntroductionSection() {
                 />
               </div>
               {/* Subtle decorative gold badge */}
-              <div className="absolute -bottom-6 -right-6 hidden sm:flex bg-[#0A0835] text-[#F7F4EC] p-6 rounded-lg border border-[#C6A568]/40 shadow-xl flex-col max-w-[220px]">
+              <div className="absolute -bottom-6 -right-6 hidden sm:flex bg-[#0E0D35] text-[#F7F4EC] p-6 rounded-lg border border-[#C6A568]/40 shadow-xl flex-col max-w-[220px]">
                 <span className="text-xs uppercase tracking-widest text-[#C6A568] font-semibold">
                   Uttarakhand
                 </span>
@@ -41,7 +41,7 @@ export function IntroductionSection() {
                 <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#AA8B54]">
                   THE RADISSON EXPERIENCE
                 </span>
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#080097] leading-[1.18] font-normal">
+                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#0E0D35] leading-[1.18] font-normal">
                   More than a stay. An experience to remember.
                 </h2>
               </div>
@@ -64,7 +64,7 @@ export function IntroductionSection() {
               <div className="pt-2">
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#080097] hover:text-[#C6A568] transition-colors group"
+                  className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#0E0D35] hover:text-[#C6A568] transition-colors group"
                 >
                   <span>Explore the Hotel</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 text-[#AA8B54]" />

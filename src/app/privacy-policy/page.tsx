@@ -6,11 +6,11 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="flex flex-col min-h-screen bg-[#F7F4EC] pt-32 pb-24">
       <Container size="narrow">
-        <div className="bg-white rounded-2xl p-8 sm:p-12 border border-[#E4DED2] shadow-sm space-y-6 text-[#0A0835]">
+        <div className="bg-white rounded-2xl p-8 sm:p-12 border border-[#E4DED2] shadow-sm space-y-6 text-[#0E0D35]">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#AA8B54]">
             LEGAL INFORMATION
           </span>
-          <h1 className="font-serif text-3xl sm:text-4xl text-[#080097] font-normal">
+          <h1 className="font-serif text-3xl sm:text-4xl text-[#0E0D35] font-normal">
             Privacy Policy
           </h1>
           <p className="text-xs text-[#77766D]">
@@ -22,28 +22,28 @@ export default function PrivacyPolicyPage() {
               At {siteConfig.propertyName}, we value the trust you place in our hospitality and are committed to safeguarding your personal information.
             </p>
 
-            <h2 className="font-serif text-xl text-[#080097] font-medium pt-2">
+            <h2 className="font-serif text-xl text-[#0E0D35] font-medium pt-2">
               1. Information We Collect
             </h2>
             <p>
               When you submit a reservation enquiry, banquet query, or reach out to our concierge, we collect your contact information (such as name, email address, phone number) and details about your event or stay preferences.
             </p>
 
-            <h2 className="font-serif text-xl text-[#080097] font-medium pt-2">
+            <h2 className="font-serif text-xl text-[#0E0D35] font-medium pt-2">
               2. Use of Information
             </h2>
             <p>
               The collected information is used solely to respond to your queries, process your room or event bookings, improve our hotel services, and communicate important property notices.
             </p>
 
-            <h2 className="font-serif text-xl text-[#080097] font-medium pt-2">
+            <h2 className="font-serif text-xl text-[#0E0D35] font-medium pt-2">
               3. Data Security & Disclosures
             </h2>
             <p>
               We implement industry-standard security measures to protect your personal data against unauthorized access. We do not sell or rent guest information to third-party advertisers.
             </p>
 
-            <h2 className="font-serif text-xl text-[#080097] font-medium pt-2">
+            <h2 className="font-serif text-xl text-[#0E0D35] font-medium pt-2">
               4. Contact Us
             </h2>
             <p>

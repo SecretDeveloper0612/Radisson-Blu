@@ -68,7 +68,7 @@ export default function VenuesPage() {
             <div className="mt-8 flex items-center justify-center gap-4">
               <button
                 onClick={() => setGalleryWindowOpen(true)}
-                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-[#C6A568] text-[#0A0835] hover:bg-[#AA8B54] text-xs uppercase tracking-widest font-semibold transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer hover:scale-105"
+                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-[#C6A568] text-[#0E0D35] hover:bg-[#AA8B54] text-xs uppercase tracking-widest font-semibold transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer hover:scale-105"
               >
                 <Images className="w-4 h-4" />
                 <span>Explore Visual Gallery</span>
@@ -91,8 +91,8 @@ export default function VenuesPage() {
                     onClick={() => setActiveFilter(cat)}
                     className={`px-4 sm:px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-medium whitespace-nowrap transition-all duration-200 cursor-pointer ${
                       activeFilter === cat
-                        ? "bg-[#0A0835] text-white shadow-md border border-[#0A0835] font-semibold"
-                        : "bg-white text-[#5A5A68] border border-[#E8E8F0] hover:border-[#C6A568] hover:text-[#0A0835]"
+                        ? "bg-[#0E0D35] text-white shadow-md border border-[#0E0D35] font-semibold"
+                        : "bg-white text-[#5A5A68] border border-[#E8E8F0] hover:border-[#C6A568] hover:text-[#0E0D35]"
                     }`}
                   >
                     {cat}
@@ -102,7 +102,7 @@ export default function VenuesPage() {
 
               <button
                 onClick={() => setGalleryWindowOpen(true)}
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white text-[#0A0835] border border-[#E8E8F0] hover:border-[#AA8B54] text-xs uppercase tracking-wider font-semibold transition-all duration-200 shadow-sm cursor-pointer shrink-0 hover:scale-105"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white text-[#0E0D35] border border-[#E8E8F0] hover:border-[#AA8B54] text-xs uppercase tracking-wider font-semibold transition-all duration-200 shadow-sm cursor-pointer shrink-0 hover:scale-105"
               >
                 <Images className="w-3.5 h-3.5 text-[#AA8B54]" />
                 <span>Show Gallery</span>
@@ -121,12 +121,12 @@ export default function VenuesPage() {
 
           {/* Bottom Event Planning Banner */}
           <Reveal direction="up" delayMs={200}>
-            <div className="mt-20 bg-white text-[#0A0835] rounded-2xl p-8 sm:p-12 border border-[#E8E8F0] shadow-xl flex flex-col md:flex-row items-center justify-between gap-8 hover:border-[#AA8B54] transition-colors relative overflow-hidden">
+            <div className="mt-20 bg-white text-[#0E0D35] rounded-2xl p-8 sm:p-12 border border-[#E8E8F0] shadow-xl flex flex-col md:flex-row items-center justify-between gap-8 hover:border-[#AA8B54] transition-colors relative overflow-hidden">
               <div className="space-y-2 max-w-xl text-center md:text-left relative z-10">
                 <span className="text-xs uppercase tracking-widest text-[#AA8B54] font-semibold">
                   PLANNING AN EVENT OR WEDDING?
                 </span>
-                <h2 className="font-serif text-2xl sm:text-3xl text-[#0A0835] font-normal">
+                <h2 className="font-serif text-2xl sm:text-3xl text-[#0E0D35] font-normal">
                   Let our banquet specialists bring your vision to life.
                 </h2>
                 <p className="text-xs sm:text-sm text-[#5A5A68] font-light leading-relaxed">

@@ -91,14 +91,14 @@ export function VenueHeroSlideshow({
             <button
               onClick={prevSlide}
               aria-label="Previous slide"
-              className="pointer-events-auto w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-[#C6A568] hover:text-[#0A0835] text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all duration-300 cursor-pointer shadow-2xl hover:scale-105 active:scale-95"
+              className="pointer-events-auto w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-[#C6A568] hover:text-[#0E0D35] text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all duration-300 cursor-pointer shadow-2xl hover:scale-105 active:scale-95"
             >
               <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
             <button
               onClick={nextSlide}
               aria-label="Next slide"
-              className="pointer-events-auto w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-[#C6A568] hover:text-[#0A0835] text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all duration-300 cursor-pointer shadow-2xl hover:scale-105 active:scale-95"
+              className="pointer-events-auto w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-[#C6A568] hover:text-[#0E0D35] text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all duration-300 cursor-pointer shadow-2xl hover:scale-105 active:scale-95"
             >
               <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
@@ -109,7 +109,7 @@ export function VenueHeroSlideshow({
             {onOpenGallery && (
               <button
                 onClick={onOpenGallery}
-                className="hidden sm:inline-flex items-center gap-2 bg-black/45 hover:bg-[#C6A568] text-white hover:text-[#0A0835] backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 text-xs font-medium uppercase tracking-wider transition-all duration-300 cursor-pointer shadow-lg hover:scale-105"
+                className="hidden sm:inline-flex items-center gap-2 bg-black/45 hover:bg-[#C6A568] text-white hover:text-[#0E0D35] backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 text-xs font-medium uppercase tracking-wider transition-all duration-300 cursor-pointer shadow-lg hover:scale-105"
               >
                 <Images className="w-3.5 h-3.5" />
                 <span>All Photos ({slides.length})</span>
