@@ -95,8 +95,7 @@ const destinations: ExcursionItem[] = [
     driveTime: "approx. 20 min",
     description:
       "Direct commercial flights connecting Uttarakhand with New Delhi, Dehradun, and Northern regional capitals with private chauffeur transfers.",
-    image:
-      "https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=1200&q=80",
+    image: "/attractions/pantnagar-airport.jpg",
     typeIcon: "airport",
   },
 ];

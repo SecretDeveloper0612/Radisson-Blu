@@ -13,6 +13,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "images.hindustantimes.com",
       },
+      {
+        protocol: "https",
+        hostname: "rudrapurproperty.com",
+      },
     ],
   },
   turbopack: {
