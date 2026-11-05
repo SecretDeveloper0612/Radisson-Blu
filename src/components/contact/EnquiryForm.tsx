@@ -39,7 +39,7 @@ export function EnquiryForm() {
     },
   });
 
-  const onSubmit = async (_data: EnquiryFormData) => {
+  const onSubmit = async () => {
     setSubmissionStatus("submitting");
 
     // Simulate verified API call or CRM webhook

@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Check, Maximize2, Users, Bed, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, Maximize2, Users, Bed, ChevronLeft, ChevronRight } from "lucide-react";
 import { roomsData } from "@/data/rooms";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";

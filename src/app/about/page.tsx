@@ -1,17 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import {
-  Compass,
-  Building,
-  MapPin,
-  Clock,
-  ArrowRight,
-  ShieldCheck,
-} from "lucide-react";
-import { siteConfig } from "@/config/site";
 import Container from "@/components/ui/Container";
-import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 

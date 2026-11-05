@@ -2,8 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { Maximize2, ArrowRight } from "lucide-react";
+import { Maximize2 } from "lucide-react";
 import { galleryData } from "@/data/gallery";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";

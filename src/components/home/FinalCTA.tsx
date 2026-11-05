@@ -1,9 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Phone, MessageSquare } from "lucide-react";
+import { Phone, MessageSquare } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { siteConfig } from "@/config/site";

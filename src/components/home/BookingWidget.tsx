@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -24,7 +24,6 @@ export function BookingWidget({
   const {
     register,
     handleSubmit,
-    setValue,
     formState: { errors },
   } = useForm<BookingFormData>({
     resolver: zodResolver(bookingFormSchema),

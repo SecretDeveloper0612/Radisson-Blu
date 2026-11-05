@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Utensils, Wine, Clock, Award, ArrowRight } from "lucide-react";
+import { Utensils, Wine, Clock, ArrowRight } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
 

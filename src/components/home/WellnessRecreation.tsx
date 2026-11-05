@@ -13,8 +13,6 @@ import {
   CheckCircle2,
   ArrowRight,
   Phone,
-  Maximize2,
-  Scissors,
   Droplets,
   CalendarCheck,
 } from "lucide-react";

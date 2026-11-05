@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import {
   MapPin,
@@ -11,11 +11,8 @@ import {
   ArrowRight,
   ShieldCheck,
   Award,
-  Check,
-  Send,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
-import { footerQuickLinks } from "@/data/navigation";
 import { roomsData } from "@/data/rooms";
 import { venuesData } from "@/data/venues";
 import Container from "@/components/ui/Container";
