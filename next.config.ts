@@ -17,6 +17,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "rudrapurproperty.com",
       },
+      {
+        protocol: "https",
+        hostname: "www.chardham-pilgrimage-tour.com",
+      },
     ],
   },
   turbopack: {

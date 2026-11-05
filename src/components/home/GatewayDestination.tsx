@@ -38,8 +38,7 @@ const destinations: ExcursionItem[] = [
     driveTime: "approx. 1 hr 45 min",
     description:
       "Emerald crescent-shaped lake surrounded by seven verdant peaks, scenic viewpoints, Tibetan bazaars, and colonial-era heritage walking paths.",
-    image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    image: "/attractions/nainital.webp",
     typeIcon: "mountain",
   },
   {
