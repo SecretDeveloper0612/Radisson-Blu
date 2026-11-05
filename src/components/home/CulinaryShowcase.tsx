@@ -111,11 +111,11 @@ export function CulinaryShowcase() {
                 onClick={() => setActiveTab(idx)}
                 className={`px-5 py-3 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 cursor-pointer flex items-center gap-2.5 whitespace-nowrap ${
                   isCurrent
-                    ? "bg-[#0E0D35] text-white shadow-md scale-102"
-                    : "bg-[#F7F7FA] text-[#5A5A68] border border-[#E8E8F0] hover:border-[#0E0D35]/40 hover:text-[#0E0D35]"
+                    ? "bg-white text-[#0E0D35] border-2 border-[#C6A568] shadow-md scale-102"
+                    : "bg-[#F7F7FA] text-[#5A5A68] border border-[#E8E8F0] hover:border-[#C6A568] hover:text-[#0E0D35]"
                 }`}
               >
-                <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${isCurrent ? "bg-white/20 text-[#C6A568]" : "bg-white text-[#AA8B54]"}`}>
+                <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${isCurrent ? "bg-[#C6A568] text-white" : "bg-white text-[#AA8B54]"}`}>
                   0{idx + 1}
                 </span>
                 <span>{spot.name.split(" ")[0]} {spot.name.split(" ")[1]}</span>

@@ -155,7 +155,7 @@ function TestimonialCard({ item }: { item: Testimonial }) {
               />
             ))}
           </div>
-          <span className="text-[11px] font-medium tracking-wider uppercase px-2.5 py-1 rounded-full bg-[#0E0D35]/5 text-[#0E0D35] border border-[#0E0D35]/10">
+          <span className="text-[11px] font-medium tracking-wider uppercase px-2.5 py-1 rounded-full bg-[#FAF8F5] text-[#0E0D35] border border-[#E8E8F0]">
             {item.tag}
           </span>
         </div>
@@ -172,7 +172,7 @@ function TestimonialCard({ item }: { item: Testimonial }) {
       {/* Author Footer */}
       <div className="pt-4 border-t border-[#E4DED2]/70 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-[#0E0D35] text-[#C6A568] font-serif font-medium flex items-center justify-center text-sm shadow-sm group-hover:bg-[#C6A568] group-hover:text-[#0E0D35] transition-colors">
+          <div className="w-10 h-10 rounded-full bg-white text-[#AA8B54] border border-[#E8E8F0] font-serif font-medium flex items-center justify-center text-sm shadow-sm group-hover:bg-[#C6A568] group-hover:text-white transition-colors">
             {item.name.charAt(0)}
           </div>
           <div>

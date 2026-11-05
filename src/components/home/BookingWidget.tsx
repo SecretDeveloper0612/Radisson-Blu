@@ -53,9 +53,9 @@ export function BookingWidget({
     <>
       <div
         className={cn(
-          "w-full bg-[#0E0D35]/95 backdrop-blur-md border border-[#C6A568]/30 shadow-2xl rounded-xl p-5 sm:p-6 lg:p-7 text-white transition-all duration-300",
-          variant === "hero-overlay" && "lg:-mt-16 relative z-30 shadow-[0_20px_50px_rgba(10,33,31,0.5)]",
-          variant === "standalone" && "bg-[#0E0D35] border-[#C6A568]/20",
+          "w-full bg-white/95 backdrop-blur-md border border-[#E8E8F0] shadow-2xl rounded-xl p-5 sm:p-6 lg:p-7 text-[#0E0D35] transition-all duration-300",
+          variant === "hero-overlay" && "lg:-mt-16 relative z-30 shadow-[0_20px_50px_rgba(0,0,0,0.12)]",
+          variant === "standalone" && "bg-white border-[#E8E8F0]",
           className
         )}
       >
@@ -168,25 +168,25 @@ export function BookingWidget({
           aria-modal="true"
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 animate-in fade-in"
         >
-          <div className="bg-[#0E0D35] border border-[#C6A568]/40 text-[#F7F4EC] rounded-xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative">
-            <div className="w-12 h-12 rounded-full bg-[#C6A568]/20 flex items-center justify-center text-[#C6A568] mb-4">
+          <div className="bg-white border border-[#E8E8F0] text-[#0E0D35] rounded-xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative">
+            <div className="w-12 h-12 rounded-full bg-[#C6A568]/20 flex items-center justify-center text-[#AA8B54] mb-4">
               <AlertCircle className="w-6 h-6" />
             </div>
-            <h3 className="font-serif text-2xl text-[#F7F4EC] mb-2">
+            <h3 className="font-serif text-2xl text-[#0E0D35] mb-2">
               Direct Reservation Desk
             </h3>
-            <p className="text-[#E4DED2]/80 text-sm leading-relaxed mb-6 font-light">
+            <p className="text-[#5A5A68] text-sm leading-relaxed mb-6 font-light">
               The real-time property management booking engine link is currently awaiting final verified URL integration. We strictly avoid presenting simulated rates or false booking confirmations.
               <br /><br />
               For guaranteed room reservations, group blocks, or current tariffs, please connect directly with our front desk team:
             </p>
 
-            <div className="space-y-3 bg-black/40 p-4 rounded-lg border border-white/10 mb-6 text-sm">
+            <div className="space-y-3 bg-[#FAF8F5] p-4 rounded-lg border border-[#E8E8F0] mb-6 text-sm">
               <div className="flex justify-between items-center text-xs sm:text-sm">
                 <span className="text-[#AA8B54]">Direct Reservations Desk:</span>
                 <a
                   href={`tel:${siteConfig.contact.phone}`}
-                  className="text-white hover:text-[#C6A568] font-medium"
+                  className="text-[#0E0D35] hover:text-[#AA8B54] font-medium"
                 >
                   {siteConfig.contact.phoneDisplay}
                 </a>
@@ -195,7 +195,7 @@ export function BookingWidget({
                 <span className="text-[#AA8B54]">Reservations Email:</span>
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="text-white hover:text-[#C6A568] font-medium truncate max-w-[200px]"
+                  className="text-[#0E0D35] hover:text-[#AA8B54] font-medium truncate max-w-[200px]"
                 >
                   {siteConfig.contact.email}
                 </a>
@@ -206,7 +206,7 @@ export function BookingWidget({
                   href={siteConfig.contact.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#C6A568] hover:underline flex items-center gap-1 font-medium"
+                  className="text-[#AA8B54] hover:underline flex items-center gap-1 font-medium"
                 >
                   Chat with Desk <ArrowUpRight className="w-3 h-3" />
                 </a>

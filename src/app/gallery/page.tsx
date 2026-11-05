@@ -251,7 +251,7 @@ export default function GalleryPage() {
                     onClick={() => setSelectedCategory(cat)}
                     className={`group inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs uppercase tracking-wider transition-all duration-200 cursor-pointer whitespace-nowrap ${
                       isActive
-                        ? "bg-[#0E0D35] text-white shadow-md border border-[#0E0D35] font-semibold"
+                        ? "bg-white text-[#0E0D35] shadow-md border-2 border-[#C6A568] font-semibold"
                         : "bg-white text-[#5A5A68] border border-[#E0DEE8] hover:border-[#C6A568] hover:text-[#0E0D35] shadow-2xs"
                     }`}
                   >
@@ -259,8 +259,8 @@ export default function GalleryPage() {
                     <span
                       className={`text-[10px] px-2 py-0.5 rounded-full font-mono font-medium transition-colors ${
                         isActive
-                          ? "bg-[#C6A568] text-[#0E0D35] font-bold"
-                          : "bg-[#FAF8F5] text-[#7A7A8A] group-hover:bg-[#0E0D35]/10 group-hover:text-[#0E0D35]"
+                          ? "bg-[#C6A568] text-white font-bold"
+                          : "bg-[#FAF8F5] text-[#7A7A8A] group-hover:bg-[#FAF8F5] group-hover:text-[#0E0D35]"
                       }`}
                     >
                       {count}
@@ -318,8 +318,8 @@ export default function GalleryPage() {
 
                   {/* Top Badges (Category Pill & Expand Button) */}
                   <div className="absolute top-4 inset-x-4 flex items-center justify-between z-10 pointer-events-none">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0E0D35]/90 backdrop-blur-md border border-[#C6A568]/50 text-[#C6A568] text-[10px] uppercase font-semibold tracking-wider shadow-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#C6A568]" />
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border border-[#E8E8F0] text-[#0E0D35] text-[10px] uppercase font-semibold tracking-wider shadow-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#AA8B54]" />
                       {image.category}
                     </span>
 

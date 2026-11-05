@@ -80,21 +80,21 @@ export function FinalCTA() {
           aria-modal="true"
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 animate-in fade-in"
         >
-          <div className="bg-[#0E0D35] border border-[#C6A568]/40 text-[#F7F4EC] rounded-xl max-w-md w-full p-6 sm:p-7 shadow-2xl relative">
-            <h3 className="font-serif text-2xl text-[#F7F4EC] mb-2">
+          <div className="bg-white border border-[#E8E8F0] text-[#0E0D35] rounded-xl max-w-md w-full p-6 sm:p-7 shadow-2xl relative">
+            <h3 className="font-serif text-2xl text-[#0E0D35] mb-2">
               Book Your Stay
             </h3>
-            <p className="text-[#E4DED2]/80 text-xs sm:text-sm leading-relaxed mb-5 font-light">
+            <p className="text-[#5A5A68] text-xs sm:text-sm leading-relaxed mb-5 font-light">
               Online reservations for Radisson Hotel Rudrapur are being finalized with central reservation systems.
               <br /><br />
               Please contact the front desk team for immediate reservation confirmations:
             </p>
-            <div className="space-y-2.5 bg-black/40 p-4 rounded-lg border border-white/10 mb-6 text-xs sm:text-sm">
+            <div className="space-y-2.5 bg-[#FAF8F5] p-4 rounded-lg border border-[#E8E8F0] mb-6 text-xs sm:text-sm">
               <div className="flex justify-between items-center">
                 <span className="text-[#AA8B54]">Telephone:</span>
                 <a
                   href={`tel:${siteConfig.contact.phone}`}
-                  className="text-white hover:text-[#C6A568] font-medium"
+                  className="text-[#0E0D35] hover:text-[#AA8B54] font-medium"
                 >
                   {siteConfig.contact.phoneDisplay}
                 </a>
@@ -105,7 +105,7 @@ export function FinalCTA() {
                   href={siteConfig.contact.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#C6A568] hover:underline flex items-center gap-1"
+                  className="text-[#AA8B54] hover:underline flex items-center gap-1 font-medium"
                 >
                   Message Directly &rarr;
                 </a>
@@ -115,14 +115,14 @@ export function FinalCTA() {
               <Link
                 href="/contact"
                 onClick={() => setShowBookingNotice(false)}
-                className="flex-1 bg-[#C6A568] hover:bg-[#b59457] text-[#0E0D35] font-semibold py-2.5 px-4 rounded text-xs uppercase tracking-wider text-center"
+                className="flex-1 bg-[#C6A568] hover:bg-[#b59457] text-[#0E0D35] font-semibold py-2.5 px-4 rounded text-xs uppercase tracking-wider text-center transition-colors shadow-sm"
               >
                 Go to Enquiry
               </Link>
               <button
                 type="button"
                 onClick={() => setShowBookingNotice(false)}
-                className="px-4 py-2.5 border border-[#E4DED2]/30 text-[#E4DED2] rounded text-xs uppercase tracking-wider"
+                className="px-4 py-2.5 border border-[#E8E8F0] text-[#5A5A68] hover:bg-[#FAF8F5] rounded text-xs uppercase tracking-wider transition-colors"
               >
                 Close
               </button>

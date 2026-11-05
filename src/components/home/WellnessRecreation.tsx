@@ -214,7 +214,7 @@ export function WellnessRecreation() {
     >
       {/* Ambient background accents */}
       <div className="absolute top-0 right-1/4 w-96 h-96 rounded-full bg-[#C6A568]/8 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-10 w-80 h-80 rounded-full bg-[#0E0D35]/5 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-10 w-80 h-80 rounded-full bg-[#C6A568]/5 blur-3xl pointer-events-none" />
 
       <Container className="relative z-10">
         {/* Editorial Section Header */}
@@ -260,7 +260,7 @@ export function WellnessRecreation() {
                   onClick={() => handleTabChange(idx)}
                   className={`group relative p-3.5 sm:p-5 rounded-2xl border transition-all duration-300 text-left cursor-pointer flex flex-col justify-between ${
                     isActive
-                      ? "bg-[#0E0D35] text-white border-[#C6A568] shadow-lg -translate-y-0.5"
+                      ? "bg-white text-[#0E0D35] border-2 border-[#C6A568] shadow-md -translate-y-0.5"
                       : "bg-white text-[#0E0D35] border-[#E8E8F0] hover:border-[#C6A568]/60 hover:bg-[#FAF8F5] hover:shadow-xs"
                   }`}
                 >
@@ -268,7 +268,7 @@ export function WellnessRecreation() {
                     <div
                       className={`w-8 h-8 rounded-xl flex items-center justify-center transition-colors ${
                         isActive
-                          ? "bg-[#C6A568] text-[#0E0D35]"
+                          ? "bg-[#C6A568] text-white"
                           : "bg-[#FAF8F5] text-[#AA8B54] border border-[#E8E8F0] group-hover:bg-[#C6A568]/15"
                       }`}
                     >
@@ -277,7 +277,7 @@ export function WellnessRecreation() {
                     <span
                       className={`text-[10px] font-mono font-semibold tracking-wider px-2 py-0.5 rounded-full ${
                         isActive
-                          ? "bg-white/15 text-[#C6A568]"
+                          ? "bg-[#FAF8F5] text-[#AA8B54] border border-[#C6A568]/40"
                           : "bg-[#FAF8F5] text-[#77766D] border border-[#E8E8F0]"
                       }`}
                     >
@@ -286,16 +286,12 @@ export function WellnessRecreation() {
                   </div>
 
                   <div>
-                    <h3
-                      className={`font-serif text-sm sm:text-base font-normal leading-snug ${
-                        isActive ? "text-white" : "text-[#0E0D35] group-hover:text-[#AA8B54]"
-                      }`}
-                    >
+                    <h3 className="font-serif text-sm sm:text-base font-normal leading-snug text-[#0E0D35] group-hover:text-[#AA8B54]">
                       {item.shortLabel}
                     </h3>
                     <span
                       className={`text-[10px] uppercase tracking-wider block mt-0.5 truncate ${
-                        isActive ? "text-[#C6A568]" : "text-[#77766D]"
+                        isActive ? "text-[#AA8B54] font-medium" : "text-[#77766D]"
                       }`}
                     >
                       {item.categoryTag}

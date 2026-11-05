@@ -68,7 +68,7 @@ export function RoomsPreview() {
                   onClick={() => setActiveRoomIndex(idx)}
                   className={`px-4 py-2 rounded-full text-xs uppercase tracking-wider font-medium whitespace-nowrap transition-all duration-300 cursor-pointer flex items-center gap-1.5 ${
                     isSelected
-                      ? "bg-[#0E0D35] text-[#F7F4EC] shadow-sm border border-[#C6A568]/40"
+                      ? "bg-white text-[#0E0D35] shadow-sm border-2 border-[#C6A568] font-semibold"
                       : "bg-white text-[#77766D] border border-[#E4DED2] hover:border-[#AA8B54] hover:text-[#0E0D35]"
                   }`}
                 >
@@ -239,45 +239,33 @@ export function RoomsPreview() {
                     onClick={() => setActiveRoomIndex(index)}
                     className={`p-3.5 sm:p-4 rounded-xl border transition-all duration-300 cursor-pointer relative overflow-hidden group ${
                       isSelected
-                        ? "bg-[#0E0D35] text-[#F7F4EC] border-[#C6A568] shadow-md"
+                        ? "bg-white text-[#0E0D35] border-2 border-[#C6A568] shadow-md"
                         : "bg-white text-[#0E0D35] border-[#E4DED2] hover:border-[#AA8B54]/60 hover:bg-[#FAF8F3]"
                     }`}
                   >
                     {/* Active Left Indicator Bar */}
                     {isSelected && (
-                      <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#C6A568]" />
+                      <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-[#C6A568]" />
                     )}
 
                     <div className="flex items-center justify-between mb-1">
                       <span
                         className={`text-[11px] font-semibold uppercase tracking-widest ${
-                          isSelected ? "text-[#C6A568]" : "text-[#AA8B54]"
+                          isSelected ? "text-[#AA8B54]" : "text-[#AA8B54]"
                         }`}
                       >
                         0{index + 1} &bull; {room.category}
                       </span>
-                      <span
-                        className={`text-[10px] font-light ${
-                          isSelected ? "text-[#E4DED2]/70" : "text-[#77766D]"
-                        }`}
-                      >
+                      <span className="text-[10px] font-light text-[#77766D]">
                         {room.tagline}
                       </span>
                     </div>
 
-                    <h4
-                      className={`font-serif text-lg sm:text-xl font-normal transition-colors leading-snug ${
-                        isSelected ? "text-[#F7F4EC]" : "text-[#0E0D35] group-hover:text-[#AA8B54]"
-                      }`}
-                    >
+                    <h4 className="font-serif text-lg sm:text-xl font-normal transition-colors leading-snug text-[#0E0D35] group-hover:text-[#AA8B54]">
                       {room.name}
                     </h4>
 
-                    <p
-                      className={`text-xs mt-1 font-light leading-relaxed line-clamp-2 ${
-                        isSelected ? "text-[#E4DED2]/85" : "text-[#77766D]"
-                      }`}
-                    >
+                    <p className="text-xs mt-1 font-light leading-relaxed line-clamp-2 text-[#77766D]">
                       {room.description}
                     </p>
 

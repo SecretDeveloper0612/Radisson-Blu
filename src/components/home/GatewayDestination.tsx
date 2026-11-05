@@ -190,7 +190,7 @@ export function GatewayDestination() {
                 aria-label="Previous destination"
                 className={`w-12 h-12 rounded-full flex items-center justify-center border transition-all duration-300 shadow-sm ${
                   canScrollLeft
-                    ? "border-[#E8E8F0] bg-white text-[#0E0D35] hover:bg-[#0E0D35] hover:text-[#C6A568] hover:border-[#0E0D35] hover:scale-105 active:scale-95 cursor-pointer shadow-md"
+                    ? "border-[#E8E8F0] bg-white text-[#0E0D35] hover:bg-[#C6A568] hover:text-[#0E0D35] hover:border-[#C6A568] hover:scale-105 active:scale-95 cursor-pointer shadow-md"
                     : "border-[#E8E8F0]/60 bg-white/60 text-[#5A5A68]/30 cursor-not-allowed opacity-50"
                 }`}
               >
@@ -202,7 +202,7 @@ export function GatewayDestination() {
                 aria-label="Next destination"
                 className={`w-12 h-12 rounded-full flex items-center justify-center border transition-all duration-300 shadow-sm ${
                   canScrollRight
-                    ? "border-[#E8E8F0] bg-white text-[#0E0D35] hover:bg-[#0E0D35] hover:text-[#C6A568] hover:border-[#0E0D35] hover:scale-105 active:scale-95 cursor-pointer shadow-md"
+                    ? "border-[#E8E8F0] bg-white text-[#0E0D35] hover:bg-[#C6A568] hover:text-[#0E0D35] hover:border-[#C6A568] hover:scale-105 active:scale-95 cursor-pointer shadow-md"
                     : "border-[#E8E8F0]/60 bg-white/60 text-[#5A5A68]/30 cursor-not-allowed opacity-50"
                 }`}
               >
@@ -219,7 +219,7 @@ export function GatewayDestination() {
             <button
               onClick={() => scroll("left")}
               aria-label="Scroll left"
-              className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/95 backdrop-blur-md text-[#0E0D35] border border-[#E8E8F0] shadow-xl items-center justify-center hover:bg-[#0E0D35] hover:text-[#C6A568] hover:border-[#0E0D35] transition-all duration-300 hover:scale-110 active:scale-95 hidden lg:flex cursor-pointer"
+              className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/95 backdrop-blur-md text-[#0E0D35] border border-[#E8E8F0] shadow-xl items-center justify-center hover:bg-[#C6A568] hover:text-[#0E0D35] hover:border-[#C6A568] transition-all duration-300 hover:scale-110 active:scale-95 hidden lg:flex cursor-pointer"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
@@ -230,7 +230,7 @@ export function GatewayDestination() {
             <button
               onClick={() => scroll("right")}
               aria-label="Scroll right"
-              className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/95 backdrop-blur-md text-[#0E0D35] border border-[#E8E8F0] shadow-xl items-center justify-center hover:bg-[#0E0D35] hover:text-[#C6A568] hover:border-[#0E0D35] transition-all duration-300 hover:scale-110 active:scale-95 hidden lg:flex cursor-pointer"
+              className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/95 backdrop-blur-md text-[#0E0D35] border border-[#E8E8F0] shadow-xl items-center justify-center hover:bg-[#C6A568] hover:text-[#0E0D35] hover:border-[#C6A568] transition-all duration-300 hover:scale-110 active:scale-95 hidden lg:flex cursor-pointer"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
@@ -267,7 +267,7 @@ export function GatewayDestination() {
                   <div className="absolute top-3 left-3 w-8 h-8 rounded-full bg-white/95 backdrop-blur-md border border-[#E8E8F0] flex items-center justify-center shadow-md">
                     {getIcon(dest.typeIcon)}
                   </div>
-                  <div className="absolute top-3 right-3 text-[10px] font-mono font-semibold uppercase tracking-wider text-white bg-[#0E0D35] px-2.5 py-1 rounded-full shadow-md">
+                  <div className="absolute top-3 right-3 text-[10px] font-mono font-bold uppercase tracking-wider text-[#0E0D35] bg-white/95 backdrop-blur-md border border-[#E8E8F0] px-2.5 py-1 rounded-full shadow-md">
                     {dest.distance}
                   </div>
                 </div>
@@ -320,7 +320,7 @@ export function GatewayDestination() {
                 aria-label={`Go to slide ${i + 1}`}
                 className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
                   activeItem === i
-                    ? "w-8 bg-[#0E0D35]"
+                    ? "w-8 bg-[#C6A568]"
                     : "w-2 bg-[#E8E8F0] hover:bg-[#AA8B54]/60"
                 }`}
               />

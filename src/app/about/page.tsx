@@ -112,36 +112,36 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Reveal direction="up" delayMs={100}>
-              <div className="bg-[#0E0D35] p-8 rounded-xl border border-[#C6A568]/20 space-y-4 hover:border-[#C6A568]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(0,0,0,0.4)] group">
-                <span className="text-2xl font-serif text-[#C6A568] group-hover:scale-110 inline-block transition-transform duration-300">01</span>
-                <h3 className="font-serif text-2xl text-white font-normal group-hover:text-[#C6A568] transition-colors">
+              <div className="bg-white p-8 rounded-xl border border-[#E8E8F0] space-y-4 hover:border-[#C6A568]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
+                <span className="text-2xl font-serif text-[#AA8B54] group-hover:scale-110 inline-block transition-transform duration-300">01</span>
+                <h3 className="font-serif text-2xl text-[#0E0D35] font-normal group-hover:text-[#AA8B54] transition-colors">
                   Restorative Spaces
                 </h3>
-                <p className="text-xs sm:text-sm text-[#E4DED2]/80 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#5A5A68] font-light leading-relaxed">
                   Acoustically engineered guest rooms, high-thread-count linens, and ergonomic workspaces that allow you to recharge in complete tranquility.
                 </p>
               </div>
             </Reveal>
 
             <Reveal direction="up" delayMs={200}>
-              <div className="bg-[#0E0D35] p-8 rounded-xl border border-[#C6A568]/20 space-y-4 hover:border-[#C6A568]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(0,0,0,0.4)] group">
-                <span className="text-2xl font-serif text-[#C6A568] group-hover:scale-110 inline-block transition-transform duration-300">02</span>
-                <h3 className="font-serif text-2xl text-white font-normal group-hover:text-[#C6A568] transition-colors">
+              <div className="bg-white p-8 rounded-xl border border-[#E8E8F0] space-y-4 hover:border-[#C6A568]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
+                <span className="text-2xl font-serif text-[#AA8B54] group-hover:scale-110 inline-block transition-transform duration-300">02</span>
+                <h3 className="font-serif text-2xl text-[#0E0D35] font-normal group-hover:text-[#AA8B54] transition-colors">
                   Gastronomic Craft
                 </h3>
-                <p className="text-xs sm:text-sm text-[#E4DED2]/80 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#5A5A68] font-light leading-relaxed">
                   From live open tandoors at NH 87 to bespoke banqueting menus, our chefs celebrate both authentic Kumaoni nuances and global culinary classics.
                 </p>
               </div>
             </Reveal>
 
             <Reveal direction="up" delayMs={300}>
-              <div className="bg-[#0E0D35] p-8 rounded-xl border border-[#C6A568]/20 space-y-4 hover:border-[#C6A568]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(0,0,0,0.4)] group">
-                <span className="text-2xl font-serif text-[#C6A568] group-hover:scale-110 inline-block transition-transform duration-300">03</span>
-                <h3 className="font-serif text-2xl text-white font-normal group-hover:text-[#C6A568] transition-colors">
+              <div className="bg-white p-8 rounded-xl border border-[#E8E8F0] space-y-4 hover:border-[#C6A568]/60 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
+                <span className="text-2xl font-serif text-[#AA8B54] group-hover:scale-110 inline-block transition-transform duration-300">03</span>
+                <h3 className="font-serif text-2xl text-[#0E0D35] font-normal group-hover:text-[#AA8B54] transition-colors">
                   Seamless Events
                 </h3>
-                <p className="text-xs sm:text-sm text-[#E4DED2]/80 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#5A5A68] font-light leading-relaxed">
                   State-of-the-art audiovisual systems, high-bandwidth conference streaming, and majestic pillarless banquet halls managed with hospitality precision.
                 </p>
               </div>

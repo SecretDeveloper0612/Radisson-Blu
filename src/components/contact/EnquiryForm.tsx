@@ -66,26 +66,26 @@ export function EnquiryForm() {
       </div>
 
       {submissionStatus === "notice" ? (
-        <div className="bg-[#0E0D35] text-[#F7F4EC] rounded-xl p-6 sm:p-8 border border-[#C6A568]/40 space-y-4 animate-in fade-in">
-          <div className="flex items-center gap-3 text-[#C6A568]">
+        <div className="bg-white text-[#0E0D35] rounded-xl p-6 sm:p-8 border border-[#E8E8F0] shadow-xl space-y-4 animate-in fade-in">
+          <div className="flex items-center gap-3 text-[#AA8B54]">
             <AlertCircle className="w-6 h-6 shrink-0" />
-            <h4 className="font-serif text-xl font-normal text-white">
+            <h4 className="font-serif text-xl font-normal text-[#0E0D35]">
               Direct Connection Required
             </h4>
           </div>
-          <p className="text-xs sm:text-sm text-[#E4DED2]/85 font-light leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#5A5A68] font-light leading-relaxed">
             In accordance with our property policy, customer enquiries require verified backend email or CRM integration. While this gateway is being connected to the property&apos;s corporate portal, we strictly avoid simulating automated email dispatch.
           </p>
-          <p className="text-xs sm:text-sm text-[#E4DED2]/85 font-light leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#5A5A68] font-light leading-relaxed">
             Please forward your request directly to our team via our official direct lines:
           </p>
 
-          <div className="bg-black/40 p-4 rounded-lg border border-white/10 space-y-2.5 text-xs">
+          <div className="bg-[#FAF8F5] p-4 rounded-lg border border-[#E8E8F0] space-y-2.5 text-xs">
             <div className="flex justify-between items-center">
               <span className="text-[#AA8B54]">Direct Phone:</span>
               <a
                 href={`tel:${siteConfig.contact.phone}`}
-                className="text-white hover:text-[#C6A568] font-medium"
+                className="text-[#0E0D35] hover:text-[#AA8B54] font-medium"
               >
                 {siteConfig.contact.phoneDisplay}
               </a>
@@ -94,7 +94,7 @@ export function EnquiryForm() {
               <span className="text-[#AA8B54]">Direct Email:</span>
               <a
                 href={`mailto:${siteConfig.contact.email}`}
-                className="text-white hover:text-[#C6A568] font-medium"
+                className="text-[#0E0D35] hover:text-[#AA8B54] font-medium"
               >
                 {siteConfig.contact.email}
               </a>
@@ -105,7 +105,7 @@ export function EnquiryForm() {
                 href={siteConfig.contact.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#C6A568] hover:underline flex items-center gap-1 font-medium"
+                className="text-[#AA8B54] hover:underline flex items-center gap-1 font-medium"
               >
                 Message Concierge <ArrowUpRight className="w-3.5 h-3.5" />
               </a>

@@ -276,7 +276,7 @@ export function VenueGalleryWindow({
                   </div>
 
                   {photo.isCover && (
-                    <span className="absolute top-3 left-3 text-[9px] uppercase tracking-wider font-bold bg-[#0E0D35] text-white px-2 py-0.5 rounded shadow-sm">
+                    <span className="absolute top-3 left-3 text-[9px] uppercase tracking-wider font-bold bg-white/95 backdrop-blur-sm text-[#0E0D35] border border-[#E8E8F0] px-2 py-0.5 rounded shadow-sm">
                       Signature View
                     </span>
                   )}

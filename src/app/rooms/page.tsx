@@ -164,7 +164,7 @@ export default function RoomsPage() {
                   onClick={() => setActiveCategory(cat)}
                   className={`px-4 sm:px-5 py-2 rounded-full text-xs uppercase tracking-wider font-medium whitespace-nowrap transition-all duration-200 cursor-pointer ${
                     activeCategory === cat
-                      ? "bg-[#0E0D35] text-white shadow-md border border-[#0E0D35] font-semibold"
+                      ? "bg-white text-[#0E0D35] shadow-md border-2 border-[#C6A568] font-semibold"
                       : "bg-white text-[#5A5A68] border border-[#E8E8F0] hover:border-[#C6A568] hover:text-[#0E0D35]"
                   }`}
                 >
