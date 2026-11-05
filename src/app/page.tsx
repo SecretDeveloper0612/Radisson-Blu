@@ -5,7 +5,6 @@ import ExperienceSection from "@/components/home/ExperienceSection";
 import WellnessRecreation from "@/components/home/WellnessRecreation";
 import GatewayDestination from "@/components/home/GatewayDestination";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
-import AboutPreview from "@/components/home/AboutPreview";
 import FinalCTA from "@/components/home/FinalCTA";
 
 export default function HomePage() {
@@ -29,10 +28,7 @@ export default function HomePage() {
       {/* Section F: Infinite Testimonials Carousels */}
       <TestimonialsSection />
 
-      {/* Section G: About the Property */}
-      <AboutPreview />
-
-      {/* Section H: Final Conversion CTA */}
+      {/* Section G: Final Conversion CTA */}
       <FinalCTA />
     </div>
   );
