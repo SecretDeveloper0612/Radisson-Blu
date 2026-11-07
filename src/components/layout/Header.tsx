@@ -253,7 +253,7 @@ export function Header() {
               Book Your Stay
             </h3>
             <p className="text-[#5A5A68] text-xs sm:text-sm leading-relaxed mb-5 font-light">
-              The direct booking gateway for Radisson Hotel Rudrapur is in the process of finalizing PMS integration.
+              The direct booking gateway for Radisson Blu Hotel Rudrapur is in the process of finalizing PMS integration.
               <br /><br />
               Please contact the 24/7 reservations desk for instant room confirmations, executive packages, and group tariffs:
             </p>

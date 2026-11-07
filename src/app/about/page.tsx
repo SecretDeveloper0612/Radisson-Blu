@@ -12,7 +12,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/hotel-photos/facade-morning.jpg"
-            alt="Radisson Hotel Rudrapur architectural grounds"
+            alt="Radisson Blu Hotel Rudrapur architectural grounds"
             fill
             priority
             sizes="100vw"
@@ -32,12 +32,12 @@ export default function AboutPage() {
           </Reveal>
           <Reveal direction="up" delayMs={200}>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F7F4EC] font-normal leading-tight">
-              About Radisson Rudrapur
+              About Radisson Blu Hotel Rudrapur
             </h1>
           </Reveal>
           <Reveal direction="up" delayMs={300}>
             <p className="mt-4 text-base sm:text-lg text-[#E4DED2]/85 font-light leading-relaxed">
-              Elevating the standard of international business and leisure hospitality in Uttarakhand.
+              A distinguished five-star destination renowned for elegant hospitality, contemporary comforts, and exceptional event experiences.
             </p>
           </Reveal>
         </Container>
@@ -63,7 +63,7 @@ export default function AboutPage() {
               </Reveal>
               <Reveal direction="up" delayMs={300}>
                 <p className="text-base text-[#77766D] font-light leading-relaxed">
-                  Radisson Hotel Rudrapur was envisioned to provide executives, visiting dignitaries, and celebratory guests with a sanctuary of quiet luxury, cutting-edge corporate conference facilities, and majestic wedding venues.
+                  Radisson Blu Hotel Rudrapur was envisioned to provide executives, visiting dignitaries, and celebratory guests with a sanctuary of quiet luxury, 124 well-appointed rooms and suites, world-class dining, cutting-edge corporate conference facilities, and over 61,000 sq.ft. of majestic event spaces.
                 </p>
               </Reveal>
             </div>
@@ -119,7 +119,7 @@ export default function AboutPage() {
                   Gastronomic Craft
                 </h3>
                 <p className="text-xs sm:text-sm text-[#5A5A68] font-light leading-relaxed">
-                  From live open tandoors at NH 87 to bespoke banqueting menus, our chefs celebrate both authentic Kumaoni nuances and global culinary classics.
+                  From authentic Kumaoni, North Indian, Continental, and Chinese delicacies at Kumaon Café to handcrafted cakes at Pastry Shop and signature cocktails at K2 Bar.
                 </p>
               </div>
             </Reveal>

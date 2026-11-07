@@ -23,45 +23,45 @@ interface CulinaryHighlight {
 
 const culinarySpots: CulinaryHighlight[] = [
   {
-    id: "nh-87",
-    name: "NH 87 Signature Restaurant",
-    category: "All-Day Gourmet Dining",
-    tagline: "Theatrical Live Kitchens & Regional Delights",
+    id: "kumaon-cafe",
+    name: "Kumaon Café",
+    category: "All-Day Multi-Cuisine Restaurant",
+    tagline: "Authentic Kumaoni, North Indian, Continental & Chinese",
     hours: "06:30 AM – 11:30 PM",
-    highlight: "Gourmet Global Buffet & Kumaoni Specials",
+    highlight: "All-Day Multi-Cuisine Delicacies",
     description:
-      "An upscale dining destination celebrating Uttarakhand culinary traditions alongside authentic Mediterranean, Pan-Asian, and continental classics prepared by master chefs.",
+      "An all-day multi-cuisine restaurant serving authentic Kumaoni, North Indian, Continental, Chinese, and international delicacies crafted by master chefs.",
     image: "/RBLU PHOTOS/NH-87/1 (1).JPG",
-    features: ["Interactive Live Grills", "Private Dining Salon", "Sunday Champagne Brunch"],
-    signatureDish: "Clay Oven Roasted Kumaoni Lamb Shank & Dum Pukht Biryani",
+    features: ["Authentic Kumaoni Delicacies", "Interactive Live Grills & Tandoor", "Grand Continental & Asian Buffet"],
+    signatureDish: "Authentic Kumaoni Thali & Clay Oven Kebabs",
     href: "/venues/nh-87",
   },
   {
-    id: "lounge-bar",
-    name: "The Polo Lounge & Bar",
-    category: "Artisanal Libations & Tapas",
-    tagline: "Craft Cocktails & Aged Single Malts",
+    id: "k2-bar",
+    name: "K2 Bar",
+    category: "Refined Lounge Bar",
+    tagline: "World-Class Spirits & Signature Cocktails",
     hours: "04:00 PM – Midnight",
-    highlight: "Curated Global Spirits & Mixology",
+    highlight: "World-Class Spirits & Mixology",
     description:
-      "An intimate mahogany-and-leather sanctuary for unwinding after corporate summits. Sip bespoke smoky infusions, botanical concoctions, and rare reserve single malts.",
+      "Experience a refined lounge bar offering world-class spirits, signature cocktails, and gourmet bites in an intimate, sophisticated ambiance.",
     image: "/hotel-photos/k2-bar.jpg",
-    features: ["Barrel-Aged Smoked Cocktails", "Acoustic Lounge Evenings", "Cigar & Single Malt Pairing"],
-    signatureDish: "Smoked Rosemary Old Fashioned & Truffle-Glazed Sliders",
+    features: ["World-Class Premium Spirits", "Master Mixologist Cocktails", "Curated Gourmet Bar Tapas"],
+    signatureDish: "Signature Cocktails & Gourmet Bites",
     href: "/contact?enquiryType=Dining+Reservation",
   },
   {
-    id: "patisserie",
-    name: "Cacao & Crust Pastry Studio",
-    category: "Boulangerie & Specialty Brews",
-    tagline: "Freshly Baked Viennoiserie & Single-Origin Coffees",
+    id: "pastry-shop",
+    name: "Pastry Shop",
+    category: "Artisanal Bakery & Patisserie",
+    tagline: "Handcrafted Cakes & Artisanal Pastries",
     hours: "07:00 AM – 10:00 PM",
-    highlight: "French Pastries & Artisanal Roasts",
+    highlight: "Handcrafted Cakes & Baked Delights",
     description:
-      "Start your morning with buttery croissants, handmade artisan chocolates, or a delicate afternoon high tea accompanied by single-estate Himalayan leaves.",
+      "Pastry Shop offers handcrafted cakes, artisanal pastries, and freshly baked delights—crafted to make every celebration unforgettable.",
     image: "/hotel-photos/bakery-shop.jpg",
-    features: ["Fresh Morning Bakes", "Estate-Grown Teas & Brews", "Gift Hampers & Confections"],
-    signatureDish: "Madagascan Dark Chocolate Truffle Cake & Saffron Latte",
+    features: ["Bespoke Celebration Cakes", "Handcrafted Artisanal Pastries", "Fresh Daily Bakes & Gourmet Coffee"],
+    signatureDish: "Artisanal Celebration Cakes & Handcrafted Pastries",
     href: "/contact?enquiryType=Dining+Reservation",
   },
 ];
@@ -79,7 +79,7 @@ export function CulinaryShowcase() {
             <div className="max-w-2xl space-y-3">
               <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#AA8B54] flex items-center gap-2">
                 <Utensils className="w-3.5 h-3.5 text-[#AA8B54]" />
-                CULINARY EXCELLENCE
+                WHERE FLAVOURS COME ALIVE
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#0E0D35]">
                 Epicurean journeys crafted with passion.

@@ -46,18 +46,18 @@ export function HeroSection() {
           <div className="inline-flex items-center gap-3">
             <span className="w-8 h-[1px] bg-[#C6A568]" />
             <span className="text-xs sm:text-sm font-semibold uppercase tracking-[0.3em] text-[#C6A568]">
-              VYAH BY RADISSON
+              JOURNEY BEGINS &bull; RADISSON BLU RUDRAPUR
             </span>
           </div>
 
           {/* Headline */}
           <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-[5.25rem] text-[#F7F4EC] font-normal leading-[1.06] tracking-tight">
-            A stay, beautifully reimagined.
+            Distinguished five-star hospitality.
           </h1>
 
           {/* Supporting Copy */}
           <p className="text-base sm:text-xl text-[#E4DED2]/90 font-light leading-relaxed max-w-2xl">
-            Discover thoughtful comfort, memorable dining, and exceptional spaces for every occasion in the heart of Rudrapur.
+            Renowned for elegant hospitality, contemporary comforts, 124 well-appointed rooms and suites, and exceptional event experiences.
           </p>
 
           {/* Category Tagline */}

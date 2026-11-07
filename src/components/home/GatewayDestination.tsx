@@ -34,46 +34,57 @@ const destinations: ExcursionItem[] = [
     id: "nainital",
     name: "Nainital Lake & Hill Station",
     category: "Iconic Hill Getaway",
-    distance: "68 km",
+    distance: "71 km",
     driveTime: "approx. 1 hr 45 min",
     description:
-      "Emerald crescent-shaped lake surrounded by seven verdant peaks, scenic viewpoints, Tibetan bazaars, and colonial-era heritage walking paths.",
+      "Nainital, just 71 km from Radisson Blu Hotel Rudrapur, is the perfect hill getaway featuring an emerald lake, verdant peaks, and colonial walking paths.",
     image: "/attractions/nainital.webp",
     typeIcon: "mountain",
   },
   {
-    id: "kainchi",
-    name: "Kainchi Dham (Neem Karoli Baba Ashram)",
-    category: "Spiritual Hill Sanctuary",
+    id: "corbett",
+    name: "Jim Corbett National Park, Ramnagar",
+    category: "Wildlife & Safari Sanctuary",
     distance: "75 km",
+    driveTime: "approx. 2 hr",
+    description:
+      "Jim Corbett National Park, Ramnagar, is just 75 km from Radisson Blu Hotel Rudrapur, home to majestic Bengal tigers, wild elephants, and lush sal forests.",
+    image:
+      "https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1200&q=80",
+    typeIcon: "nature",
+  },
+  {
+    id: "kainchi",
+    name: "Neem Karoli Baba Ashram (Kainchi Dham)",
+    category: "Spiritual Hill Sanctuary",
+    distance: "76 km",
     driveTime: "approx. 2 hr 15 min",
     description:
-      "World-revered Himalayan ashram of Neem Karoli Baba nestled in a serene pine valley, attracting spiritual seekers, world leaders, and pilgrims worldwide.",
+      "Neem Karoli Baba Ashram is just 76 km from Radisson Blu Hotel Rudrapur, a world-revered Himalayan sanctuary in a serene pine valley.",
     image: "/hotel-photos/kainchi-dham.jpg",
     typeIcon: "spiritual",
   },
   {
-    id: "bhimtal",
-    name: "Bhimtal Lake & Island Sanctuary",
-    category: "Scenic Lake & Water Retreat",
-    distance: "62 km",
-    driveTime: "approx. 1 hr 40 min",
+    id: "airport",
+    name: "Pantnagar Airport (PGH)",
+    category: "Regional Aviation Gateway",
+    distance: "11 km",
+    driveTime: "approx. 15 min",
     description:
-      "Picturesque mountain lake featuring an iconic central island aquarium, Victorian masonry dam, tranquil boating waters, and peaceful forested trails.",
-    image: "/hotel-photos/bhimtal-lake.jpg",
-    typeIcon: "lake",
+      "Located just 11 km from Radisson Blu Hotel Rudrapur along the Delhi–Nainital Highway, offering direct commercial flights to New Delhi and Dehradun.",
+    image: "/attractions/pantnagar-airport.jpg",
+    typeIcon: "airport",
   },
   {
-    id: "corbett",
-    name: "Jim Corbett National Park",
-    category: "Wildlife & Safari Sanctuary",
-    distance: "74 km",
-    driveTime: "approx. 2 hr",
+    id: "rudrapur-city",
+    name: "Rudrapur City Centre",
+    category: "Corporate & Civic Heart",
+    distance: "2.7 km",
+    driveTime: "approx. 6 min",
     description:
-      "India's oldest national park, home to the majestic Bengal tiger, wild Asian elephants, and hundreds of bird species amidst dense sal forests.",
-    image:
-      "https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1200&q=80",
-    typeIcon: "nature",
+      "Just 2.7 km from the hotel, providing immediate connectivity to regional government offices, banking centers, and retail markets.",
+    image: "/attractions/sidcul.jpg",
+    typeIcon: "business",
   },
   {
     id: "sidcul",
@@ -82,20 +93,20 @@ const destinations: ExcursionItem[] = [
     distance: "6.5 km",
     driveTime: "approx. 12 min",
     description:
-      "Uttarakhand's foremost industrial corridor housing leading multinational automotive, FMCG, and technology headquarters.",
+      "Uttarakhand's foremost industrial corridor housing leading multinational automotive, FMCG, and engineering corporate headquarters.",
     image: "/attractions/sidcul.jpg",
     typeIcon: "business",
   },
   {
-    id: "airport",
-    name: "Pantnagar Airport (PGH)",
-    category: "Regional Aviation Gateway",
-    distance: "14 km",
-    driveTime: "approx. 20 min",
+    id: "bhimtal",
+    name: "Bhimtal Lake & Island Sanctuary",
+    category: "Scenic Lake & Water Retreat",
+    distance: "62 km",
+    driveTime: "approx. 1 hr 40 min",
     description:
-      "Direct commercial flights connecting Uttarakhand with New Delhi, Dehradun, and Northern regional capitals with private chauffeur transfers.",
-    image: "/attractions/pantnagar-airport.jpg",
-    typeIcon: "airport",
+      "Picturesque mountain lake featuring an iconic central island aquarium, Victorian masonry dam, and tranquil boating waters.",
+    image: "/hotel-photos/bhimtal-lake.jpg",
+    typeIcon: "lake",
   },
 ];
 
@@ -167,13 +178,13 @@ export function GatewayDestination() {
             <div className="max-w-2xl space-y-3">
               <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#AA8B54] flex items-center gap-2">
                 <Compass className="w-4 h-4 text-[#AA8B54]" />
-                PRIME LOCATION & GATEWAY
+                EXPLORE BEYOND THE STAY • SEAMLESS CONNECTIVITY
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight text-[#0E0D35]">
-                The vantage point between commerce & calm.
+                Strategically located on the Delhi–Nainital Highway.
               </h2>
               <p className="text-sm sm:text-base text-[#5A5A68] font-light leading-relaxed">
-                Ideally positioned on Nainital Road in Rudrapur, providing effortless connectivity for corporate executives and serving as the scenic threshold to Himalayan retreats.
+                Just 11 km from Pantnagar Airport and 2.7 km from Rudrapur city centre, offering seamless connectivity to commerce and scenic Himalayan getaways.
               </p>
             </div>
 
@@ -334,7 +345,7 @@ export function GatewayDestination() {
                 Need luxury airport or corporate transit?
               </h4>
               <p className="text-xs sm:text-sm text-[#5A5A68] font-light">
-                Our 24-hour concierge coordinates seamless executive airport pickups from Pantnagar Airport and bespoke day-trips to Nainital, Kainchi Dham, Bhimtal, and Corbett.
+                Our 24-hour concierge coordinates seamless executive airport pickups from Pantnagar Airport (11 km) and bespoke excursions to Nainital (71 km), Jim Corbett National Park (75 km), and Neem Karoli Baba Ashram (76 km).
               </p>
             </div>
 

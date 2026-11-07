@@ -1,11 +1,34 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Bed, Utensils, Sparkles, PartyPopper } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
 
 export function IntroductionSection() {
+  const highlights = [
+    {
+      icon: Bed,
+      title: "124 ROOMS & SUITES",
+      desc: "Elegant rooms with premium amenities",
+    },
+    {
+      icon: Utensils,
+      title: "WORLD-CLASS DINING",
+      desc: "Curated cuisines from around the world",
+    },
+    {
+      icon: Sparkles,
+      title: "SPA & WELLNESS",
+      desc: "Rejuvenate your mind, body & soul",
+    },
+    {
+      icon: PartyPopper,
+      title: "EVENTS & CELEBRATIONS",
+      desc: "Luxurious spaces for memorable moments",
+    },
+  ];
+
   return (
     <section id="radisson-experience-intro" className="py-20 sm:py-28 bg-white text-[#0E0D35] scroll-mt-10 overflow-hidden">
       <Container>
@@ -16,7 +39,7 @@ export function IntroductionSection() {
               <div className="relative aspect-[4/5] w-full rounded-lg overflow-hidden shadow-2xl border border-[#E4DED2] group">
                 <Image
                   src="/hotel-photos/facade-morning.jpg"
-                  alt="Radisson Hotel Rudrapur hospitality and grand facade"
+                  alt="Radisson Blu Hotel Rudrapur hospitality and grand facade"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -39,23 +62,23 @@ export function IntroductionSection() {
             <Reveal direction="up" delayMs={100}>
               <div className="space-y-3">
                 <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#AA8B54]">
-                  THE RADISSON EXPERIENCE
+                  JOURNEY BEGINS
                 </span>
                 <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#0E0D35] leading-[1.18] font-normal">
-                  More than a stay. An experience to remember.
+                  A distinguished five-star destination in Rudrapur.
                 </h2>
               </div>
             </Reveal>
 
             <Reveal direction="up" delayMs={200}>
-              <p className="text-base sm:text-lg text-[#77766D] leading-relaxed font-light">
-                Situated in the vibrant industrial center of Rudrapur, Radisson Hotel Rudrapur combines contemporary international hospitality with genuine warmth. Every space—from our acoustically balanced rooms to our grand celebratory ballrooms—is crafted with purpose and distinction.
+              <p className="text-base sm:text-lg text-[#5A5A68] leading-relaxed font-light">
+                Nestled in the heart of Uttarakhand&apos;s industrial hub, Radisson Blu Hotel Rudrapur is a distinguished five-star destination renowned for its elegant hospitality, contemporary comforts, and exceptional event experiences.
               </p>
             </Reveal>
 
             <Reveal direction="up" delayMs={300}>
-              <p className="text-sm sm:text-base text-[#77766D] leading-relaxed font-light">
-                Whether visiting for business summits in the SIDCUL industrial belt, hosting a majestic wedding ceremony at Sapphire or Queen&apos;s Field, or relishing artisanal recipes at NH 87, our dedicated team ensures your moments are effortless and memorable.
+              <p className="text-sm sm:text-base text-[#5A5A68] leading-relaxed font-light">
+                The hotel features 124 well-appointed rooms and suites, thoughtfully designed to cater to business and leisure travellers alike. Guests can enjoy premium amenities, world-class dining at Kumaon Café, Pastry Shop, and K2 Bar, and personalized service synonymous with the Radisson Blu brand.
               </p>
             </Reveal>
 
@@ -73,6 +96,33 @@ export function IntroductionSection() {
             </Reveal>
           </div>
         </div>
+
+        {/* Factsheet 4-Pillars Quick Highlight Strip */}
+        <Reveal direction="up" delayMs={500}>
+          <div className="mt-16 sm:mt-20 pt-10 border-t border-[#E8E8F0]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {highlights.map((h, i) => {
+                const IconComponent = h.icon;
+                return (
+                  <div
+                    key={i}
+                    className="p-5 rounded-2xl bg-[#FAF8F5] border border-[#E8E8F0] space-y-2 hover:border-[#C6A568] transition-all duration-300 hover:shadow-md group"
+                  >
+                    <div className="w-10 h-10 rounded-xl bg-white border border-[#E8E8F0] flex items-center justify-center text-[#AA8B54] group-hover:scale-110 transition-transform shadow-xs">
+                      <IconComponent className="w-5 h-5" />
+                    </div>
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-[#0E0D35] pt-1">
+                      {h.title}
+                    </h4>
+                    <p className="text-xs text-[#5A5A68] font-light leading-relaxed">
+                      {h.desc}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </Reveal>
       </Container>
     </section>
   );

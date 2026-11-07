@@ -282,6 +282,67 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                 galleryImages={venue.galleryImages}
               />
 
+              {/* Modular Halls & Detailed Seating Capacity Breakdown (if venue has subHalls) */}
+              {venue.subHalls && venue.subHalls.length > 0 && (
+                <div className="space-y-5">
+                  <div>
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block mb-1">
+                      TECHNICAL METRICS & CAPACITY
+                    </span>
+                    <h3 className="font-serif text-2xl sm:text-3xl text-[#0E0D35] font-normal">
+                      Hall Partitions & Seating Capacities
+                    </h3>
+                    <p className="text-xs sm:text-sm text-[#5A5A68] font-light mt-1">
+                      Exact dimensions, ceiling heights, and maximum guest capacities per layout format.
+                    </p>
+                  </div>
+
+                  <div className="overflow-x-auto rounded-xl border border-[#E8E8F0] bg-white shadow-xs">
+                    <table className="w-full text-left text-xs border-collapse min-w-[700px]">
+                      <thead>
+                        <tr className="bg-[#0E0D35] text-white uppercase text-[10px] tracking-wider">
+                          <th className="py-3 px-4 font-semibold">Hall / Section</th>
+                          <th className="py-3 px-3 font-semibold text-right">Area</th>
+                          <th className="py-3 px-3 font-semibold text-center">Dimensions (L x W x H)</th>
+                          <th className="py-3 px-2.5 font-semibold text-center">Theatre</th>
+                          <th className="py-3 px-2.5 font-semibold text-center">Classroom</th>
+                          <th className="py-3 px-2.5 font-semibold text-center">Cluster</th>
+                          <th className="py-3 px-2.5 font-semibold text-center">U-Shape</th>
+                          <th className="py-3 px-2.5 font-semibold text-center">Hollow</th>
+                          <th className="py-3 px-2.5 font-semibold text-center">Sit Down</th>
+                          <th className="py-3 px-3 font-semibold text-center text-[#C6A568]">Social</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-[#E8E8F0] text-[#0E0D35]">
+                        {venue.subHalls.map((sh, idx) => (
+                          <tr
+                            key={idx}
+                            className={`hover:bg-[#FAF8F5] transition-colors ${
+                              sh.name.includes("Combined") ? "bg-[#FAF8F5] font-semibold" : ""
+                            }`}
+                          >
+                            <td className="py-3 px-4 font-medium">{sh.name}</td>
+                            <td className="py-3 px-3 text-right font-mono text-[#AA8B54]">{sh.area}</td>
+                            <td className="py-3 px-3 text-center font-mono text-[#5A5A68]">
+                              {sh.dimensions || `${sh.length || ""} x ${sh.width || ""}`}
+                            </td>
+                            <td className="py-3 px-2.5 text-center">{sh.theatre ?? "—"}</td>
+                            <td className="py-3 px-2.5 text-center">{sh.classroom ?? "—"}</td>
+                            <td className="py-3 px-2.5 text-center">{sh.cluster ?? "—"}</td>
+                            <td className="py-3 px-2.5 text-center">{sh.ushape ?? "—"}</td>
+                            <td className="py-3 px-2.5 text-center">{sh.hollowBlock ?? "—"}</td>
+                            <td className="py-3 px-2.5 text-center">{sh.sitDown ?? "—"}</td>
+                            <td className="py-3 px-3 text-center font-bold text-[#AA8B54]">
+                              {sh.social ?? "—"}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              )}
+
               {/* Venue Amenities & Event Equipment */}
               <div className="space-y-5">
                 <div>

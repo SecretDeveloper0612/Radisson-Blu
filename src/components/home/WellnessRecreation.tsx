@@ -45,134 +45,129 @@ interface SanctuaryPillar {
 
 const sanctuaries: SanctuaryPillar[] = [
   {
-    id: "pool",
-    name: "Azure Open-Air Swimming Pool",
-    shortLabel: "Lap Pool & Deck",
-    categoryTag: "AQUATIC REJUVENATION",
-    subtitle: "Temperature-Controlled Heated Waters & Sunken Cabanas",
+    id: "gym",
+    name: "State-of-the-Art Gym",
+    shortLabel: "Gym",
+    categoryTag: "FITNESS & VITALITY",
+    subtitle: "Equipped with Modern Fitness Equipment for a Complete Workout",
     narrative:
-      "Submerge yourself into crystal-clear heated waters embraced by landscaped palm groves and northern skies. Whether completing morning laps in the temperature-controlled pool or sipping bespoke mocktails under shaded loungers, the pool deck delivers pure serenity.",
-    hours: "06:00 AM – 09:00 PM Daily",
+      "Stay fit at our state-of-the-art gym, equipped with modern fitness equipment for a complete workout experience. From advanced cardio treadmills and cross-trainers to strength conditioning gear, maintain your routine in comfort.",
+    hours: "24 Hours Daily (Resident Keycard)",
     images: [
       {
-        src: "/hotel-photos/swimming-pool.jpg",
-        label: "Azure Pool & Palm Courtyard",
-        alt: "Radisson Blu Rudrapur azure open-air heated swimming pool and sun loungers",
+        src: "/RBLU PHOTOS/Health Club/Gym.jpg",
+        label: "State-of-the-Art Fitness Center",
+        alt: "Radisson Blu Hotel Rudrapur modern gym with fitness equipment",
       },
     ],
     specs: [
-      { label: "Water Temperature", value: "28°C Heated", sublabel: "Year-Round Comfort" },
-      { label: "Pool Dimensions", value: "1.2m – 1.8m", sublabel: "Lap & Leisure Depth" },
-      { label: "Deck Experience", value: "Sunken Cabanas", sublabel: "Complimentary Towels" },
+      { label: "Equipment Tier", value: "Modern Systems", sublabel: "Cardio & Free Weights" },
+      { label: "Guest Access", value: "24/7 Access", sublabel: "Complimentary for Residents" },
+      { label: "Environment", value: "Climate Controlled", sublabel: "Fresh Towels & Water" },
     ],
     inclusions: [
-      "Plush organic cotton towel service & cushioned sun deck loungers",
-      "Poolside vitality hydration bar serving chilled juices & fresh coconuts",
-      "Safe, dedicated shallow splash enclave designed for young families",
-      "Sunscreen, cooling mist & afternoon light refreshment service",
+      "Advanced cardio treadmills, cross-trainers & recumbent stationary bikes",
+      "Full array of dumbbells, multi-tier benches & core workout accessories",
+      "Complimentary chilled mineral water, apples & sanitized workout towels",
+      "Individual audio and screen entertainment on cardio consoles",
     ],
-    ctaLabel: "Reserve Poolside Cabana",
-    ctaType: "Pool+Cabana",
+    ctaLabel: "Enquire About Gym Services",
+    ctaType: "Gym+Fitness",
   },
   {
     id: "spa",
-    name: "Svaastha Ayurvedic Spa & Wellness",
-    shortLabel: "Ayurvedic Spa",
-    categoryTag: "HOLISTIC HEALING",
-    subtitle: "Ancient Vedic Therapies, Botanical Oils & Couple Suites",
+    name: "Mastak Spa & Salon",
+    shortLabel: "Mastak Spa",
+    categoryTag: "HARMONY OF MIND, BODY & SOUL",
+    subtitle: "Serene Ambiance Complemented by Skilled Therapists",
     narrative:
-      "Step into a sanctuary scented with Himalayan cedarwood, wild lemongrass, and warm sesame oil. Our master therapists employ authentic Abhyanga strokes, warm herbal compresses, and classical steam therapy to release fatigue, calm the mind, and restore vital energy.",
+      "Designed to restore harmony of mind, body, and soul, Mastak Spa & Salon offers a serene ambiance complemented by skilled therapists and premium wellness experiences. Relieve fatigue and rediscover inner balance with our therapeutic rituals.",
     hours: "08:00 AM – 08:00 PM Daily",
     images: [
       {
         src: "/RBLU PHOTOS/Spa and Saloon/Spa.jpg",
-        label: "Private Couple Therapy Suite",
-        alt: "Svaastha Ayurvedic Spa couple therapy massage suite with warm cove lighting and floral decor",
+        label: "Mastak Spa Therapy Sanctuary",
+        alt: "Mastak Spa tranquil therapy suite at Radisson Blu Hotel Rudrapur",
       },
       {
         src: "/RBLU PHOTOS/Spa and Saloon/Salon.jpg",
-        label: "Luxury Grooming Salon",
-        alt: "Radisson Blu Rudrapur luxury salon and styling studio",
+        label: "Mastak Salon Studio",
+        alt: "Mastak Salon styling and grooming suite at Radisson Blu Hotel Rudrapur",
       },
     ],
     specs: [
-      { label: "Sanctuary Suites", value: "Private Pavilions", sublabel: "Single & Couple Suites" },
-      { label: "Therapeutic Lineage", value: "Classical Vedic", sublabel: "Herbal Oil Therapies" },
-      { label: "Thermal Amenities", value: "Steam & Sauna", sublabel: "Complimentary with Session" },
+      { label: "Sanctuary Suites", value: "Private Rooms", sublabel: "Single & Couple Suites" },
+      { label: "Therapists", value: "Skilled Specialists", sublabel: "Customized Therapies" },
+      { label: "Ambiance", value: "Serene & Calming", sublabel: "Aromatherapy & Steam" },
     ],
     inclusions: [
-      "Classical Abhyanga & Ayurvedic warm herbal compress treatments",
-      "Signature pre-treatment Himalayan foot soak & floral cleansing ritual",
-      "Private couple treatment suite featuring en-suite rainfall showers",
-      "Post-therapy restorative organic herbal tea infusion & eucalyptus steam",
+      "Signature full-body therapies restoring physical energy and calm",
+      "Warm herbal compresses and botanical essential oils",
+      "Private shower and steam amenities within therapy suites",
+      "Post-treatment soothing herbal teas in relaxation lounge",
     ],
-    ctaLabel: "Book Ayurvedic Therapy",
-    ctaType: "Spa+%26+Wellness",
+    ctaLabel: "Book Mastak Spa Ritual",
+    ctaType: "Mastak+Spa",
   },
   {
-    id: "jacuzzi",
-    name: "Whirlpool Hydrotherapy Jacuzzi",
-    shortLabel: "Hydro Jacuzzi",
-    categoryTag: "HYDROTHERAPY SANCTUARY",
-    subtitle: "Contoured Warm Hydro-Jets & Natural Slate Decompression",
+    id: "pool",
+    name: "Luxurious Swimming Pool",
+    shortLabel: "Swimming Pool",
+    categoryTag: "AQUATIC RELAXATION",
+    subtitle: "Designed for Relaxation and Comfort",
     narrative:
-      "A private hydrotherapy oasis lined with rich natural slate and polished travertine. Ergonomically positioned hydro-massage jets soothe deep tissue knots, stimulate blood circulation, and deliver profound physical renewal following high-stakes meetings or gala ceremonies.",
-    hours: "07:00 AM – 09:00 PM Daily",
+      "Enjoy a refreshing swim in our luxurious pool, designed for relaxation and comfort. Whether greeting the sunrise with morning laps or lounging under peaceful afternoon skies with cooling refreshments, our pool is your personal retreat.",
+    hours: "06:00 AM – 09:00 PM Daily",
     images: [
       {
-        src: "/RBLU PHOTOS/jakuzi/Jacuzzi.jpg",
-        label: "Slate-Stone Hydro Whirlpool",
-        alt: "Radisson Blu Rudrapur private warm hydrotherapy jacuzzi with contoured jets and natural slate stone",
+        src: "/hotel-photos/swimming-pool.jpg",
+        label: "Luxurious Open-Air Swimming Pool",
+        alt: "Radisson Blu Hotel Rudrapur luxurious swimming pool and sun loungers",
       },
     ],
     specs: [
-      { label: "Hydro Jet System", value: "Ergonomic Multi-Jet", sublabel: "Targeted Muscle Relief" },
-      { label: "Surround Architecture", value: "Natural Slate Stone", sublabel: "Acoustic Seclusion" },
-      { label: "Experience Style", value: "Private Booking", sublabel: "Post-Travel Recovery" },
+      { label: "Experience", value: "Pure Relaxation", sublabel: "Designed for Comfort" },
+      { label: "Water Quality", value: "Crystal Clear", sublabel: "Monitored Hygiene" },
+      { label: "Deck Experience", value: "Sun Loungers", sublabel: "Complimentary Towels" },
     ],
     inclusions: [
-      "Multi-directional high-pressure water jets targeting lumbar and calves",
-      "Continuous thermal circulation maintaining optimal therapeutic warmth",
-      "Stepped travertine rim with comfortable headrests for quiet meditation",
-      "Dedicated changing suite with rainfall shower and plush terry robes",
+      "Plush cotton pool towels and shaded sun loungers",
+      "Poolside hydration with fresh juices and refreshments",
+      "Dedicated shallow splash zone for family relaxation",
+      "Lifeguard assistance and monitored crystal-clear waters",
     ],
-    ctaLabel: "Schedule Hydrotherapy Session",
-    ctaType: "Hydrotherapy",
+    ctaLabel: "Reserve Poolside Lounger",
+    ctaType: "Swimming+Pool",
   },
   {
-    id: "fitness",
-    name: "Equinox Fitness Center & Salon",
-    shortLabel: "Fitness & Salon",
-    categoryTag: "VITALITY & GROOMING",
-    subtitle: "24/7 Technogym Cardio, Strength Studio & Professional Styling",
+    id: "parlour",
+    name: "Beauty Parlour & Salon",
+    shortLabel: "Beauty Parlour",
+    categoryTag: "PREMIUM CARE",
+    subtitle: "Indulge in Premium Beauty Treatments and Personalized Care",
     narrative:
-      "Empower your daily wellness regime in our light-filled fitness center equipped with Technogym treadmills, elliptical trainers, and multi-tier free weights. Adjacent, our full-service salon offers bespoke hair styling, bridal grooming, and beauty rituals to keep you radiant.",
-    hours: "Gym: 24 Hours (Keycard) • Salon: 09:00 AM – 08:00 PM",
+      "Indulge in premium beauty treatments and personalized care for a flawless experience. From celebratory hairstyling and bridal preparations to manicure, pedicure, and skin rejuvenation, our experts ensure you look and feel radiant.",
+    hours: "09:00 AM – 08:00 PM Daily",
     images: [
-      {
-        src: "/RBLU PHOTOS/Health Club/Gym.jpg",
-        label: "Technogym Fitness Studio",
-        alt: "Radisson Blu Rudrapur state-of-the-art gym with treadmills, bikes and weights",
-      },
       {
         src: "/RBLU PHOTOS/Spa and Saloon/Salon.jpg",
-        label: "Haute Styling Salon",
-        alt: "Professional beauty salon and bridal grooming studio at Radisson Blu Rudrapur",
+        label: "Beauty Parlour & Grooming Salon",
+        alt: "Radisson Blu Hotel Rudrapur beauty parlour and salon suite",
       },
     ],
     specs: [
-      { label: "Fitness Equipment", value: "Technogym Systems", sublabel: "Cardio & Free Weights" },
-      { label: "Guest Access", value: "24/7 Keycard", sublabel: "Complimentary for Residents" },
-      { label: "Salon Services", value: "Hair & Grooming", sublabel: "Bridal & Executive Styling" },
+      { label: "Services", value: "Hair & Skin Care", sublabel: "Personalized Regimes" },
+      { label: "Stylists", value: "Expert Care", sublabel: "Flawless Experience" },
+      { label: "Specialty", value: "Bridal & Occasion", sublabel: "Tailored Packages" },
     ],
     inclusions: [
-      "Top-tier Technogym treadmills, cross-trainers & recumbent stationary bikes",
-      "Comprehensive dumbbell racks, cable crossovers & core conditioning mats",
-      "Dedicated beauty salon for hair styling, manicures, and event grooming",
-      "Chilled infused mineral water, fresh green apples & clean workout towels",
+      "Bespoke hair styling, blow-dry, and professional coloring",
+      "Facial rejuvenation and premium skin care rituals",
+      "Hand and foot beauty spa rituals (manicure & pedicure)",
+      "Dedicated wedding party and celebratory styling packages",
     ],
-    ctaLabel: "Inquire / Book Salon Service",
-    ctaType: "Fitness+%26+Salon",
+    ctaLabel: "Book Beauty Treatment",
+    ctaType: "Beauty+Parlour",
   },
 ];
 
@@ -221,16 +216,16 @@ export function WellnessRecreation() {
             <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-[#E8E8F0] shadow-xs">
               <Sparkles className="w-3.5 h-3.5 text-[#AA8B54]" />
               <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#AA8B54]">
-                VYAH WELLNESS & SANCTUARY
+                THE ART OF STAYING WELL
               </span>
             </div>
 
             <h2 className="font-serif text-3xl sm:text-5xl lg:text-[3.25rem] font-normal text-[#0E0D35] leading-[1.18] tracking-tight">
-              Restorative harmony for body & soul.
+              Rest. Relax. Rejuvenate.
             </h2>
 
             <p className="text-[#5A5A68] text-sm sm:text-base lg:text-lg font-light leading-relaxed max-w-2xl mx-auto pt-1">
-              Unwind effortlessly between landmark celebrations and executive summits. Experience authentic Ayurvedic healing, tranquil heated waters, contoured hydrotherapy, and advanced Technogym conditioning.
+              Designed to restore harmony of mind, body, and soul. Experience our state-of-the-art gym, Mastak Spa & Salon with skilled therapists, luxurious swimming pool, and premium beauty parlour.
             </p>
           </div>
         </Reveal>

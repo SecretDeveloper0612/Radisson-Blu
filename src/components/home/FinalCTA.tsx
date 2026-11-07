@@ -15,15 +15,15 @@ export function FinalCTA() {
       <Container className="relative z-10">
         <div className="max-w-3xl mx-auto text-center space-y-6">
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#AA8B54]">
-            RESERVATIONS & CELEBRATIONS
+            DEDICATED TO EXCELLENCE
           </span>
 
           <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal leading-[1.14] text-[#0E0D35]">
-            Make your next stay memorable.
+            We&apos;re ready to welcome you.
           </h2>
 
           <p className="text-base sm:text-lg text-[#5A5A68] font-light leading-relaxed max-w-2xl mx-auto">
-            Plan a relaxing stay, discover our dining experiences, or find a space for your next gathering in Rudrapur.
+            Our dedicated team is committed to delivering exceptional hospitality with warmth, professionalism, and attention to detail—ensuring every stay and event is truly memorable.
           </p>
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -84,7 +84,7 @@ export function FinalCTA() {
               Book Your Stay
             </h3>
             <p className="text-[#5A5A68] text-xs sm:text-sm leading-relaxed mb-5 font-light">
-              Online reservations for Radisson Hotel Rudrapur are being finalized with central reservation systems.
+              Online reservations for Radisson Blu Hotel Rudrapur are being finalized with central reservation systems.
               <br /><br />
               Please contact the front desk team for immediate reservation confirmations:
             </p>
