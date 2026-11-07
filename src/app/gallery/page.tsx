@@ -74,7 +74,7 @@ export default function GalleryPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/hotel-photos/facade-morning.jpg"
-            alt="Radisson Blu Hotel Rudrapur visual portfolio and architecture"
+            alt="Radisson Hotel Rudrapur visual portfolio and architecture"
             fill
             priority
             sizes="100vw"
@@ -100,7 +100,7 @@ export default function GalleryPage() {
           </h1>
 
           <p className="mt-4 text-base sm:text-lg text-[#F7F4EC] font-light leading-relaxed max-w-2xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
-            Immerse yourself in the architectural grandeur, peaceful guest suites, culinary theatre, and celebratory spaces of Radisson Blu Hotel Rudrapur.
+            Immerse yourself in the architectural grandeur, peaceful guest suites, culinary theatre, and celebratory spaces of Radisson Hotel Rudrapur.
           </p>
         </Container>
       </section>
@@ -357,7 +357,7 @@ export default function GalleryPage() {
                 Crafted for Discerning Guests
               </h3>
               <p className="text-xs sm:text-sm text-[#5A5A68] font-light mt-2 leading-relaxed">
-                Every space at Radisson Blu Hotel Rudrapur is sculpted to deliver seamless business connectivity, refined gastronomic experiences, and tranquil rest.
+                Every space at Radisson Hotel Rudrapur is sculpted to deliver seamless business connectivity, refined gastronomic experiences, and tranquil rest.
               </p>
             </div>
 
@@ -414,7 +414,7 @@ export default function GalleryPage() {
               </div>
 
               <h3 className="font-serif text-3xl sm:text-4xl text-[#0E0D35] font-normal leading-tight">
-                Experience Radisson Blu Hotel Rudrapur Firsthand
+                Experience Radisson Hotel Rudrapur Firsthand
               </h3>
 
               <p className="mt-3 text-sm sm:text-base text-[#5A5A68] font-light leading-relaxed max-w-2xl">

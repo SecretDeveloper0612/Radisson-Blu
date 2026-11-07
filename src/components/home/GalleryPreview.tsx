@@ -52,7 +52,7 @@ export function GalleryPreview() {
           <SectionHeading
             eyebrow="GALLERY"
             title="Every detail tells a story."
-            description="Explore the architecture, welcoming suites, live culinary theatre, and vibrant event memories at Radisson Blu Hotel Rudrapur."
+            description="Explore the architecture, welcoming suites, live culinary theatre, and vibrant event memories at Radisson Hotel Rudrapur."
             className="mb-0 max-w-2xl"
           />
           <div className="mt-6 md:mt-0">

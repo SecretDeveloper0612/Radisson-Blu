@@ -42,7 +42,7 @@ export default function RoomsPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/hotel-photos/room-suite.jpg"
-            alt="Radisson Blu Hotel Rudrapur luxury accommodations"
+            alt="Radisson Hotel Rudrapur luxury accommodations"
             fill
             priority
             sizes="100vw"
@@ -58,17 +58,17 @@ export default function RoomsPage() {
           <div className="inline-flex items-center gap-2 mb-3">
             <span className="w-6 h-[1px] bg-[#C6A568]" />
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#C6A568]">
-              REST. RELAX. REJUVENATE
+              RESTORATIVE HOSPITALITY
             </span>
             <span className="w-6 h-[1px] bg-[#C6A568]" />
           </div>
 
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-white font-normal leading-tight tracking-tight drop-shadow-sm">
-            124 Rooms & Suites
+            Rooms & Suites
           </h1>
 
           <p className="mt-4 text-base sm:text-lg text-[#E4DED2]/95 font-light leading-relaxed max-w-2xl mx-auto drop-shadow">
-            124 well-appointed rooms and suites, thoughtfully designed to cater to business and leisure travellers alike with premium amenities and personalized service synonymous with the Radisson Blu brand.
+            Four tailored accommodation tiers thoughtfully engineered for executive productivity, serene comfort, and elevated leisure in Rudrapur.
           </p>
         </Container>
       </section>
@@ -185,13 +185,13 @@ export default function RoomsPage() {
           <div className="mt-20 pt-16 border-t border-[#E8E8F0]">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block mb-1">
-                THE RADISSON BLU STANDARD
+                THE RADISSON STANDARD
               </span>
               <h3 className="font-serif text-3xl sm:text-4xl text-[#0E0D35] font-normal">
                 Exceptional In-Stay Privileges
               </h3>
               <p className="text-xs sm:text-sm text-[#5A5A68] font-light mt-2 leading-relaxed">
-                Every reservation at Radisson Blu Hotel Rudrapur includes attentive guest care, premium amenities, and personalized service synonymous with the Radisson Blu brand.
+                Every reservation at Radisson Hotel Rudrapur includes attentive guest care, contemporary amenities, and curated comforts.
               </p>
             </div>
 

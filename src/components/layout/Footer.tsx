@@ -47,7 +47,7 @@ export function Footer() {
             </Link>
 
             <p className="text-[#5A5A68] text-xs sm:text-sm leading-relaxed font-light max-w-sm">
-              Discover distinguished five-star hospitality in Uttarakhand&apos;s primary commercial engine. Featuring 124 well-appointed rooms and suites, 61,295 sq.ft. of event space including Sapphire Ballroom, Mastak Spa &amp; Salon, and dining at Kumaon Café, Pastry Shop &amp; K2 Bar.
+              Discover refined international hospitality in Uttarakhand&apos;s primary commercial engine. Featuring pillarless banquet ballrooms, state-of-the-art boardroom suites, artisanal gastronomy at NH 87, and restorative guest accommodations.
             </p>
 
             {/* Accolades & Safety Trust Badges */}

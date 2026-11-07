@@ -10,8 +10,6 @@ export interface SiteConfig {
     phone: string;
     phoneDisplay: string;
     email: string;
-    banquetEmail?: string;
-    reservationsEmail?: string;
     address: {
       street: string;
       locality: string;
@@ -61,22 +59,6 @@ export interface RoomItem {
   isAvailableForBooking: boolean;
 }
 
-export interface VenueSubHall {
-  name: string;
-  area: string;
-  dimensions?: string;
-  length?: string;
-  width?: string;
-  height?: string;
-  theatre?: number | string;
-  classroom?: number | string;
-  cluster?: number | string;
-  ushape?: number | string;
-  hollowBlock?: number | string;
-  sitDown?: number | string;
-  social?: number | string;
-}
-
 export interface VenueItem {
   id: string;
   slug: string;
@@ -92,11 +74,9 @@ export interface VenueItem {
   specs: {
     capacity?: string;
     area?: string;
-    dimensions?: string;
     catering?: string;
     setupStyles?: string[];
   };
-  subHalls?: VenueSubHall[];
   highlights: string[];
   features: string[];
   amenities?: string[];

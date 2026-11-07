@@ -22,7 +22,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/hotel-photos/portico.jpg"
-            alt="Radisson Blu Hotel Rudrapur contact and arrival"
+            alt="Radisson Hotel Rudrapur contact and arrival"
             fill
             priority
             sizes="100vw"
@@ -110,38 +110,20 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    {/* Banquet Sales & Event Enquiries */}
+                    {/* Reservations & Enquiries */}
                     <div className="pt-3.5 flex items-start gap-3.5">
                       <div className="w-9 h-9 rounded-xl bg-[#FAF8F5] border border-[#E8E8F0] flex items-center justify-center text-[#AA8B54] shrink-0 mt-0.5">
                         <Mail className="w-4 h-4" />
                       </div>
                       <div>
                         <span className="text-[#AA8B54] font-semibold block text-[10px] uppercase tracking-wider mb-0.5">
-                          Banquet & Event Sales
+                          Reservations & Enquiries
                         </span>
                         <a
-                          href="mailto:banquetsales@rdrudrapur.com"
+                          href={`mailto:${siteConfig.contact.email}`}
                           className="text-[#0E0D35] hover:text-[#AA8B54] font-medium transition-colors break-all text-xs sm:text-sm block"
                         >
-                          banquetsales@rdrudrapur.com
-                        </a>
-                      </div>
-                    </div>
-
-                    {/* Room Reservations */}
-                    <div className="pt-3.5 flex items-start gap-3.5">
-                      <div className="w-9 h-9 rounded-xl bg-[#FAF8F5] border border-[#E8E8F0] flex items-center justify-center text-[#AA8B54] shrink-0 mt-0.5">
-                        <Mail className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <span className="text-[#AA8B54] font-semibold block text-[10px] uppercase tracking-wider mb-0.5">
-                          Reservations Desk
-                        </span>
-                        <a
-                          href="mailto:reservations@rdrudrapur.com"
-                          className="text-[#0E0D35] hover:text-[#AA8B54] font-medium transition-colors break-all text-xs sm:text-sm block"
-                        >
-                          reservations@rdrudrapur.com
+                          {siteConfig.contact.email}
                         </a>
                       </div>
                     </div>
@@ -225,7 +207,7 @@ export default function ContactPage() {
                       allowFullScreen={false}
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Radisson Blu Hotel Rudrapur Map"
+                      title="Radisson Hotel Rudrapur Map"
                       className="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
                     />
                   </div>

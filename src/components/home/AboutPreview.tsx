@@ -39,7 +39,7 @@ export function AboutPreview() {
                   A place to arrive. A place to belong.
                 </h2>
                 <p className="text-[#5A5A68] text-base sm:text-lg font-light leading-relaxed pt-2">
-                  At Radisson Blu Hotel Rudrapur, every touchpoint is intentionally curated to make your stay effortless, productive, and memorable.
+                  At Radisson Hotel Rudrapur, every touchpoint is intentionally curated to make your stay effortless, productive, and memorable.
                 </p>
               </div>
             </Reveal>
@@ -86,7 +86,7 @@ export function AboutPreview() {
               <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden border border-[#E8E8F0] shadow-xl bg-slate-900 group">
                 <Image
                   src="/hotel-photos/portico.jpg"
-                  alt="Radisson Blu Hotel Rudrapur architectural grounds and hospitality entrance"
+                  alt="Radisson Hotel Rudrapur architectural grounds and hospitality entrance"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"

@@ -162,8 +162,8 @@ export function VenueGalleryWindow({
             </h2>
             <p className="text-[11px] text-[#5A5A68] hidden sm:block">
               {targetVenue
-                ? `Radisson Blu Hotel Rudrapur • ${targetVenue.category} • Authentic Interior & Event Ambiance`
-                : "Radisson Blu Hotel Rudrapur • Ballrooms, Meeting Suites, Lawn & Lounges"}
+                ? `Radisson Hotel Rudrapur • ${targetVenue.category} • Authentic Interior & Event Ambiance`
+                : "Radisson Hotel Rudrapur • Ballrooms, Meeting Suites, Lawn & Lounges"}
             </p>
           </div>
         </div>

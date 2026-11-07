@@ -8,28 +8,28 @@ import Reveal from "@/components/ui/Reveal";
 export function ExperienceSection() {
   const experiences = [
     {
-      category: "REST. RELAX. REJUVENATE",
-      title: "124 Rooms & Suites",
+      category: "ACCOMMODATIONS",
+      title: "Rooms & Suites",
       description:
-        "Thoughtfully designed to cater to business and leisure travellers alike with premium amenities and personalized service.",
+        "Calm, thoughtfully appointed sanctuaries tailored for restorative rest and corporate focus.",
       image: "/hotel-photos/room-suite.jpg",
       href: "/rooms",
       span: "lg:col-span-4",
     },
     {
-      category: "WHERE FLAVOURS COME ALIVE",
-      title: "Kumaon Café, Pastry Shop & K2 Bar",
+      category: "GASTRONOMY",
+      title: "Signature Dining",
       description:
-        "An all-day multi-cuisine restaurant serving authentic Kumaoni, North Indian, Continental, Chinese, artisanal cakes, and refined cocktails.",
+        "Theatrical live kitchens and regional delicacies at NH 87, complemented by artisanal cocktails.",
       image: "/RBLU PHOTOS/NH-87/1 (1).JPG",
       href: "/venues/nh-87",
       span: "lg:col-span-4",
     },
     {
-      category: "TIMELESS CELEBRATIONS",
-      title: "Sapphire Ballroom & Queen's Field",
+      category: "EVENTS & CELEBRATIONS",
+      title: "Celebrations & Events",
       description:
-        "Over 61,295 sq.ft. of event space including the 4,614 sq.ft. Sapphire Ballroom, Cypress & Pine Boardrooms, and Queen's Field lawn.",
+        "Regal ballrooms, lush manicured lawns, and executive meeting rooms for gatherings of all scales.",
       image: "/RBLU PHOTOS/Sapphire/Banquet Cluster.jpg",
       href: "/venues",
       span: "lg:col-span-4",
