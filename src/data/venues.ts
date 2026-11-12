@@ -1,4 +1,4 @@
-import { VenueItem } from "@/types";
+import { VenueItem, CeremonyItem } from "@/types";
 
 export const venuesData: VenueItem[] = [
   {
@@ -238,15 +238,15 @@ export const venuesData: VenueItem[] = [
     ],
   },
   {
-    id: "venue-upcoming-ballroom",
-    slug: "upcoming-ballroom",
-    name: "Upcoming Ballroom",
+    id: "venue-vyah-ballroom",
+    slug: "vyah-ballroom",
+    name: "Vyah Ballroom",
     category: "Banquet & Ballroom",
     tagline: "The region's forthcoming architectural landmark for events",
     description:
       "An upcoming landmark ballroom currently under development, set to elevate banqueting standards with soaring heights, modular partition walls, and massive capacity.",
     fullDescription:
-      "Designed to meet the growing demand for mega conventions, international industrial summits, and luxury destination weddings, the Upcoming Ballroom will redefine luxury hospitality in the region. Featuring state-of-the-art acoustic design, modular spatial flexibility, and unmatched pre-function expanses, this venue will soon welcome prestigious gatherings.",
+      "Designed to meet the growing demand for mega conventions, international industrial summits, and luxury destination weddings, the Vyah Ballroom will redefine luxury hospitality in the region. Featuring state-of-the-art acoustic design, modular spatial flexibility, and unmatched pre-function expanses, this venue will soon welcome prestigious gatherings.",
     featuredImage: "/hotel-photos/concord-hall.jpg",
     galleryImages: [
       "/hotel-photos/concord-hall.jpg",
@@ -308,3 +308,131 @@ export const venuesData: VenueItem[] = [
     ],
   },
 ];
+
+export const sapphireCeremonies: CeremonyItem[] = [
+  {
+    id: "ceremony-haldi",
+    name: "Haldi Ceremony",
+    slug: "haldi-ceremony",
+    category: "Pre-Wedding Festivity",
+    tagline: "Vibrant turmeric rituals & joyful traditions",
+    description:
+      "Auspicious morning celebrations adorned with marigold floral canopies, traditional seating cushions, dhol music arrangements, and specialized festive refreshments.",
+    href: "/venues/sapphire#haldi",
+    guestCapacity: "100 - 350 Guests",
+    recommendedTime: "Morning & Afternoon (10:00 AM - 3:00 PM)",
+    image: "/RBLU PHOTOS/Haldi/1 (1).jpeg",
+  },
+  {
+    id: "ceremony-ring",
+    name: "Ring Ceremony",
+    slug: "ring-ceremony",
+    category: "Engagement & Sangeet",
+    tagline: "Glamorous ring exchange & cocktail soirée",
+    description:
+      "A glittering evening featuring elegant stage backdrops, moving-head dynamic concert lighting, dedicated dance floor, and handcrafted cocktail & canapé banquets.",
+    href: "/venues/sapphire#ring-ceremony",
+    guestCapacity: "150 - 450 Guests",
+    recommendedTime: "Evening (6:30 PM - 11:30 PM)",
+    image: "/RBLU PHOTOS/Sapphire/Banquet Theatre.jpg",
+  },
+  {
+    id: "ceremony-wedding",
+    name: "Wedding",
+    slug: "wedding",
+    category: "Grand Nuptials & Gala Banquet",
+    tagline: "Royal mandap architecture & majestic wedding reception",
+    description:
+      "The ultimate regal union beneath soaring crystal chandeliers. Pillarless double-height ballroom supporting royal baraat processions, sacred mandap rituals, and an extravagant multi-cuisine banquet feast.",
+    href: "/venues/sapphire#wedding",
+    guestCapacity: "Up to 500 Guests",
+    recommendedTime: "Full Day / Evening Auspicious Muhurat",
+    image: "/RBLU PHOTOS/Sapphire/Banquet Cluster.jpg",
+  },
+];
+
+export const concordOccasions: CeremonyItem[] = [
+  {
+    id: "concord-business-meetings",
+    name: "Small Business Meetings",
+    slug: "business-meetings",
+    category: "Corporate Conference & Seminars",
+    tagline: "Professional audio-visuals & high-speed Wi-Fi",
+    description:
+      "High-impact boardroom & seminar setups with concert-grade acoustics, laser presentation screens, and dedicated corporate executive dining.",
+    href: "/venues/concord#business-meetings",
+    guestCapacity: "30 - 120 Attendees",
+    recommendedTime: "Morning / Full-Day Conferences",
+    image: "/RBLU PHOTOS/Concord/Banquet Classroom.jpg",
+  },
+  {
+    id: "concord-wedding",
+    name: "Wedding",
+    slug: "wedding",
+    category: "Intimate Nuptials & Receptions",
+    tagline: "Boutique mandap & celebratory feasts",
+    description:
+      "Elegant indoor celebratory space tailored for intimate weddings, ring ceremonies, and musical sangeet gatherings with theatrical lighting.",
+    href: "/venues/concord#wedding",
+    guestCapacity: "Up to 250 Guests",
+    recommendedTime: "Evening Celebration",
+    image: "/RBLU PHOTOS/Concord/1 (6).jpeg",
+  },
+  {
+    id: "concord-birthday",
+    name: "Birthday",
+    slug: "birthday",
+    category: "Milestone Parties & Social Galas",
+    tagline: "DJ dance floor, thematic decor & live counters",
+    description:
+      "High-energy birthday parties with customizable themes, professional sound & lighting, dance floor, and bespoke gourmet dessert buffets.",
+    href: "/venues/concord#birthday",
+    guestCapacity: "50 - 200 Guests",
+    recommendedTime: "Afternoon / Evening Soirée",
+    image: "/RBLU PHOTOS/Concord/1 (9).jpeg",
+  },
+];
+
+export const executiveRoomEvents: CeremonyItem[] = [
+  {
+    id: "exec-meeting",
+    name: "Meeting",
+    slug: "meeting",
+    category: "Board & Strategic Sessions",
+    tagline: "Private executive meetings & confidential deliberations",
+    description:
+      "Prestigious boardroom layout with ultra-clear presentation display, integrated power modules, and dedicated meeting concierge service.",
+    href: "/venues/executive-room#meeting",
+    guestCapacity: "10 - 25 Attendees",
+    recommendedTime: "Half Day / Full Day Executive Session",
+    image: "/RBLU PHOTOS/Meeting Room/Meeting Room.jpg",
+  },
+  {
+    id: "exec-conference",
+    name: "Conference",
+    slug: "conference",
+    category: "Corporate Seminars & Summits",
+    tagline: "State-of-the-art audiovisuals & hybrid conferencing",
+    description:
+      "Optimized for high-impact corporate presentations, investor meets, and interactive workshops with high-speed internet and acoustic clarity.",
+    href: "/venues/executive-room#conference",
+    guestCapacity: "Up to 60 Guests",
+    recommendedTime: "Full Day Corporate Conference",
+    image: "/RBLU PHOTOS/Excutive Lounge/Banquet.jpg",
+  },
+  {
+    id: "exec-small-functions",
+    name: "Small Functions",
+    slug: "small-functions",
+    category: "Private Gatherings & Dinners",
+    tagline: "Bespoke plated dining & intimate milestones",
+    description:
+      "An exclusive private setting for executive retirement dinners, product previews, family celebrations, and celebratory business toasts.",
+    href: "/venues/executive-room#small-functions",
+    guestCapacity: "20 - 50 Guests",
+    recommendedTime: "Evening / Dinner Gathering",
+    image: "/RBLU PHOTOS/Excutive Lounge/1 (18).jpeg",
+  },
+];
+
+

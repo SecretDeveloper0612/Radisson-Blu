@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, ChevronDown, ArrowUpRight, ArrowRight } from "lucide-react";
+import { Menu, ChevronDown, ArrowUpRight, ArrowRight, ChevronRight, Gem, Crown, Sun, Briefcase, Cake, Users, Presentation, GlassWater } from "lucide-react";
 import { headerNavLinks } from "@/data/navigation";
-import { venuesData } from "@/data/venues";
+import { venuesData, sapphireCeremonies, concordOccasions, executiveRoomEvents } from "@/data/venues";
 import { siteConfig } from "@/config/site";
 import MobileNavigation from "./MobileNavigation";
 import Button from "@/components/ui/Button";
@@ -17,6 +17,116 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showBookingNotice, setShowBookingNotice] = useState(false);
   const [venuesDropdownOpen, setVenuesDropdownOpen] = useState(false);
+  const [sapphireSubmenuOpen, setSapphireSubmenuOpen] = useState(false);
+  const [concordSubmenuOpen, setConcordSubmenuOpen] = useState(false);
+  const [executiveSubmenuOpen, setExecutiveSubmenuOpen] = useState(false);
+  const sapphireTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const concordTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const executiveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleSapphireMouseEnter = () => {
+    if (sapphireTimeoutRef.current) {
+      clearTimeout(sapphireTimeoutRef.current);
+      sapphireTimeoutRef.current = null;
+    }
+    if (concordTimeoutRef.current) {
+      clearTimeout(concordTimeoutRef.current);
+      concordTimeoutRef.current = null;
+    }
+    if (executiveTimeoutRef.current) {
+      clearTimeout(executiveTimeoutRef.current);
+      executiveTimeoutRef.current = null;
+    }
+    setConcordSubmenuOpen(false);
+    setExecutiveSubmenuOpen(false);
+    setSapphireSubmenuOpen(true);
+  };
+
+  const handleSapphireMouseLeave = () => {
+    sapphireTimeoutRef.current = setTimeout(() => {
+      setSapphireSubmenuOpen(false);
+    }, 140);
+  };
+
+  const handleConcordMouseEnter = () => {
+    if (concordTimeoutRef.current) {
+      clearTimeout(concordTimeoutRef.current);
+      concordTimeoutRef.current = null;
+    }
+    if (sapphireTimeoutRef.current) {
+      clearTimeout(sapphireTimeoutRef.current);
+      sapphireTimeoutRef.current = null;
+    }
+    if (executiveTimeoutRef.current) {
+      clearTimeout(executiveTimeoutRef.current);
+      executiveTimeoutRef.current = null;
+    }
+    setSapphireSubmenuOpen(false);
+    setExecutiveSubmenuOpen(false);
+    setConcordSubmenuOpen(true);
+  };
+
+  const handleConcordMouseLeave = () => {
+    concordTimeoutRef.current = setTimeout(() => {
+      setConcordSubmenuOpen(false);
+    }, 140);
+  };
+
+  const handleExecutiveMouseEnter = () => {
+    if (executiveTimeoutRef.current) {
+      clearTimeout(executiveTimeoutRef.current);
+      executiveTimeoutRef.current = null;
+    }
+    if (sapphireTimeoutRef.current) {
+      clearTimeout(sapphireTimeoutRef.current);
+      sapphireTimeoutRef.current = null;
+    }
+    if (concordTimeoutRef.current) {
+      clearTimeout(concordTimeoutRef.current);
+      concordTimeoutRef.current = null;
+    }
+    setSapphireSubmenuOpen(false);
+    setConcordSubmenuOpen(false);
+    setExecutiveSubmenuOpen(true);
+  };
+
+  const handleExecutiveMouseLeave = () => {
+    executiveTimeoutRef.current = setTimeout(() => {
+      setExecutiveSubmenuOpen(false);
+    }, 140);
+  };
+
+  const handleOtherVenueMouseEnter = () => {
+    if (sapphireTimeoutRef.current) {
+      clearTimeout(sapphireTimeoutRef.current);
+      sapphireTimeoutRef.current = null;
+    }
+    if (concordTimeoutRef.current) {
+      clearTimeout(concordTimeoutRef.current);
+      concordTimeoutRef.current = null;
+    }
+    if (executiveTimeoutRef.current) {
+      clearTimeout(executiveTimeoutRef.current);
+      executiveTimeoutRef.current = null;
+    }
+    setSapphireSubmenuOpen(false);
+    setConcordSubmenuOpen(false);
+    setExecutiveSubmenuOpen(false);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (sapphireTimeoutRef.current) {
+        clearTimeout(sapphireTimeoutRef.current);
+      }
+      if (concordTimeoutRef.current) {
+        clearTimeout(concordTimeoutRef.current);
+      }
+      if (executiveTimeoutRef.current) {
+        clearTimeout(executiveTimeoutRef.current);
+      }
+    };
+  }, []);
 
   // Scroll detection for header background transition
   useEffect(() => {
@@ -63,8 +173,8 @@ export function Header() {
             >
               VYAH
             </span>
-            <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-[#C6A568] mt-1 font-sans font-light">
-              By Radisson
+            <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.22em] text-[#C6A568] mt-1 font-sans font-light">
+              By Radisson BLU Rudrapur
             </span>
           </Link>
 
@@ -81,7 +191,11 @@ export function Header() {
                     key={link.href}
                     className="relative group py-2"
                     onMouseEnter={() => setVenuesDropdownOpen(true)}
-                    onMouseLeave={() => setVenuesDropdownOpen(false)}
+                    onMouseLeave={() => {
+                      setVenuesDropdownOpen(false);
+                      setSapphireSubmenuOpen(false);
+                      setConcordSubmenuOpen(false);
+                    }}
                   >
                     <Link
                       href="/venues"
@@ -123,7 +237,11 @@ export function Header() {
                           </span>
                           <Link
                             href="/venues"
-                            onClick={() => setVenuesDropdownOpen(false)}
+                            onClick={() => {
+                              setVenuesDropdownOpen(false);
+                              setSapphireSubmenuOpen(false);
+                              setConcordSubmenuOpen(false);
+                            }}
                             className="text-[11px] text-[#5A5A68] hover:text-[#C6A568] uppercase tracking-wider flex items-center gap-1 transition-colors font-medium"
                           >
                             <span>Overview</span>
@@ -133,33 +251,563 @@ export function Header() {
 
                         {/* List of all venues */}
                         <div className="space-y-1">
-                          {venuesData.map((venue) => (
-                            <Link
-                              key={venue.id}
-                              href={`/venues/${venue.slug}`}
-                              onClick={() => setVenuesDropdownOpen(false)}
-                              className="group/item flex items-center justify-between p-2.5 rounded-lg hover:bg-[#FAF8F5] transition-colors"
-                            >
-                              <div>
-                                <div className="flex items-center gap-2">
-                                  <span className="font-serif text-base text-[#0E0D35] group-hover/item:text-[#AA8B54] transition-colors">
-                                    {venue.name}
-                                  </span>
-                                  {venue.isUpcoming && (
-                                    <span className="text-[9px] bg-[#C6A568]/20 text-[#AA8B54] px-1.5 py-0.5 rounded font-mono font-medium">
-                                      Upcoming
-                                    </span>
-                                  )}
+                          {venuesData.map((venue) => {
+                            const isSapphire = venue.slug === "sapphire";
+
+                            if (isSapphire) {
+                              return (
+                                <div
+                                  key={venue.id}
+                                  className="relative"
+                                  onMouseEnter={handleSapphireMouseEnter}
+                                  onMouseLeave={handleSapphireMouseLeave}
+                                >
+                                  <Link
+                                    href={`/venues/${venue.slug}`}
+                                    onClick={() => {
+                                      setVenuesDropdownOpen(false);
+                                      setSapphireSubmenuOpen(false);
+                                    }}
+                                    className={cn(
+                                      "group/item flex items-center justify-between p-2.5 rounded-lg transition-all",
+                                      sapphireSubmenuOpen
+                                        ? "bg-[#FAF8F5] ring-1 ring-[#C6A568]/40"
+                                        : "hover:bg-[#FAF8F5]"
+                                    )}
+                                  >
+                                    <div>
+                                      <div className="flex items-center gap-2">
+                                        <span
+                                          className={cn(
+                                            "font-serif text-base transition-colors",
+                                            sapphireSubmenuOpen
+                                              ? "text-[#AA8B54] font-medium"
+                                              : "text-[#0E0D35] group-hover/item:text-[#AA8B54]"
+                                          )}
+                                        >
+                                          {venue.name}
+                                        </span>
+                                      </div>
+                                      <span className="text-[10px] text-[#77766D] uppercase tracking-wider block">
+                                        {venue.category}
+                                      </span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5">
+                                      <span
+                                        className={cn(
+                                          "text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded transition-all",
+                                          sapphireSubmenuOpen
+                                            ? "bg-[#C6A568]/20 text-[#AA8B54]"
+                                            : "bg-[#FAF8F5] text-[#8C7A5B] group-hover/item:bg-[#C6A568]/15 group-hover/item:text-[#AA8B54]"
+                                        )}
+                                      >
+                                        3 Events
+                                      </span>
+                                      <ChevronRight
+                                        className={cn(
+                                          "w-4 h-4 transition-all duration-200",
+                                          sapphireSubmenuOpen
+                                            ? "text-[#AA8B54] translate-x-1"
+                                            : "text-[#77766D] group-hover/item:text-[#AA8B54] group-hover/item:translate-x-0.5"
+                                        )}
+                                      />
+                                    </div>
+                                  </Link>
+
+                                  {/* Flyout Submenu to the right */}
+                                  <div
+                                    className={cn(
+                                      "absolute left-full top-0 pl-3.5 transition-all duration-200 z-50",
+                                      sapphireSubmenuOpen
+                                        ? "opacity-100 visible translate-x-0 pointer-events-auto"
+                                        : "opacity-0 invisible -translate-x-2 pointer-events-none"
+                                    )}
+                                  >
+                                    <div className="w-[340px] bg-white/98 backdrop-blur-xl border border-[#E8E8F0] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.18)] p-4 text-[#0E0D35]">
+                                      {/* Submenu Header */}
+                                      <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-[#E8E8F0]">
+                                        <div>
+                                          <span className="text-[10px] uppercase tracking-[0.22em] text-[#AA8B54] font-semibold block">
+                                            Sapphire Celebrations (3)
+                                          </span>
+                                          <span className="text-[10px] text-[#77766D] font-light">
+                                            Pillarless ballroom & pre-function lawn
+                                          </span>
+                                        </div>
+                                        <Link
+                                          href="/venues/sapphire"
+                                          onClick={() => {
+                                            setVenuesDropdownOpen(false);
+                                            setSapphireSubmenuOpen(false);
+                                          }}
+                                          className="text-[10px] text-[#5A5A68] hover:text-[#C6A568] uppercase tracking-wider flex items-center gap-1 transition-colors font-medium"
+                                        >
+                                          <span>Details</span>
+                                          <ArrowRight className="w-3 h-3 text-[#C6A568]" />
+                                        </Link>
+                                      </div>
+
+                                      {/* 3 Ceremonies list */}
+                                      <div className="space-y-1.5">
+                                        {sapphireCeremonies.map((ceremony) => {
+                                          const Icon =
+                                            ceremony.slug === "haldi-ceremony"
+                                              ? Sun
+                                              : ceremony.slug === "ring-ceremony"
+                                              ? Gem
+                                              : Crown;
+
+                                          const iconStyles =
+                                            ceremony.slug === "haldi-ceremony"
+                                              ? "bg-[#FEF9E7] text-[#D97706] border-[#FDE68A]"
+                                              : ceremony.slug === "ring-ceremony"
+                                              ? "bg-[#FDF4F5] text-[#AA8B54] border-[#F8D7DA]"
+                                              : "bg-[#FAF5EB] text-[#AA8B54] border-[#E8D7B8]";
+
+                                          return (
+                                            <Link
+                                              key={ceremony.id}
+                                              href={ceremony.href}
+                                              onClick={() => {
+                                                setVenuesDropdownOpen(false);
+                                                setSapphireSubmenuOpen(false);
+                                              }}
+                                              className="group/ceremony flex items-center justify-between p-2.5 rounded-lg border border-transparent hover:border-[#E8E8F0] hover:bg-[#FAF8F5] transition-all"
+                                            >
+                                              <div className="flex items-center gap-3">
+                                                <div
+                                                  className={cn(
+                                                    "w-9 h-9 rounded-lg border flex items-center justify-center shrink-0 transition-transform group-hover/ceremony:scale-105 shadow-xs",
+                                                    iconStyles
+                                                  )}
+                                                >
+                                                  <Icon className="w-4 h-4" />
+                                                </div>
+                                                <div>
+                                                  <span className="font-serif text-sm font-medium text-[#0E0D35] group-hover/ceremony:text-[#AA8B54] transition-colors block leading-tight">
+                                                    {ceremony.name}
+                                                  </span>
+                                                  <span className="text-[10px] text-[#77766D] uppercase tracking-wider block mt-0.5">
+                                                    {ceremony.category}
+                                                  </span>
+                                                </div>
+                                              </div>
+                                              <span className="text-xs text-[#77766D] group-hover/ceremony:text-[#AA8B54] group-hover/ceremony:translate-x-1 transition-all">
+                                                &rarr;
+                                              </span>
+                                            </Link>
+                                          );
+                                        })}
+                                      </div>
+
+                                      {/* Submenu Footer */}
+                                      <div className="mt-3 pt-2.5 border-t border-[#E8E8F0] flex items-center justify-between text-xs">
+                                        <span className="text-[#77766D] text-[10px] font-light">
+                                          Capacity up to 500 guests
+                                        </span>
+                                        <Link
+                                          href="/contact?venue=sapphire"
+                                          onClick={() => {
+                                            setVenuesDropdownOpen(false);
+                                            setSapphireSubmenuOpen(false);
+                                          }}
+                                          className="text-[#AA8B54] hover:underline font-medium text-[10px] uppercase tracking-wider"
+                                        >
+                                          Enquire Now &rarr;
+                                        </Link>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
-                                <span className="text-[10px] text-[#77766D] uppercase tracking-wider block">
-                                  {venue.category}
+                              );
+                            }
+
+                            if (venue.slug === "concord") {
+                              return (
+                                <div
+                                  key={venue.id}
+                                  className="relative"
+                                  onMouseEnter={handleConcordMouseEnter}
+                                  onMouseLeave={handleConcordMouseLeave}
+                                >
+                                  <Link
+                                    href={`/venues/${venue.slug}`}
+                                    onClick={() => {
+                                      setVenuesDropdownOpen(false);
+                                      setSapphireSubmenuOpen(false);
+                                      setConcordSubmenuOpen(false);
+                                      setExecutiveSubmenuOpen(false);
+                                    }}
+                                    className={cn(
+                                      "group/item flex items-center justify-between p-2.5 rounded-lg transition-all",
+                                      concordSubmenuOpen
+                                        ? "bg-[#FAF8F5] ring-1 ring-[#C6A568]/40"
+                                        : "hover:bg-[#FAF8F5]"
+                                    )}
+                                  >
+                                    <div>
+                                      <div className="flex items-center gap-2">
+                                        <span
+                                          className={cn(
+                                            "font-serif text-base transition-colors",
+                                            concordSubmenuOpen
+                                              ? "text-[#AA8B54] font-medium"
+                                              : "text-[#0E0D35] group-hover/item:text-[#AA8B54]"
+                                          )}
+                                        >
+                                          {venue.name}
+                                        </span>
+                                      </div>
+                                      <span className="text-[10px] text-[#77766D] uppercase tracking-wider block">
+                                        {venue.category}
+                                      </span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5">
+                                      <span
+                                        className={cn(
+                                          "text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded transition-all",
+                                          concordSubmenuOpen
+                                            ? "bg-[#C6A568]/20 text-[#AA8B54]"
+                                            : "bg-[#FAF8F5] text-[#8C7A5B] group-hover/item:bg-[#C6A568]/15 group-hover/item:text-[#AA8B54]"
+                                        )}
+                                      >
+                                        3 Events
+                                      </span>
+                                      <ChevronRight
+                                        className={cn(
+                                          "w-4 h-4 transition-all duration-200",
+                                          concordSubmenuOpen
+                                            ? "text-[#AA8B54] translate-x-1"
+                                            : "text-[#77766D] group-hover/item:text-[#AA8B54] group-hover/item:translate-x-0.5"
+                                        )}
+                                      />
+                                    </div>
+                                  </Link>
+
+                                  {/* Concord Flyout Submenu to the right */}
+                                  <div
+                                    className={cn(
+                                      "absolute left-full bottom-0 pl-3.5 transition-all duration-200 z-50",
+                                      concordSubmenuOpen
+                                        ? "opacity-100 visible translate-x-0 pointer-events-auto"
+                                        : "opacity-0 invisible -translate-x-2 pointer-events-none"
+                                    )}
+                                  >
+                                    <div className="w-[340px] bg-white/98 backdrop-blur-xl border border-[#E8E8F0] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.18)] p-4 text-[#0E0D35]">
+                                      {/* Submenu Header */}
+                                      <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-[#E8E8F0]">
+                                        <div>
+                                          <span className="text-[10px] uppercase tracking-[0.22em] text-[#AA8B54] font-semibold block">
+                                            Concord Occasions (3)
+                                          </span>
+                                          <span className="text-[10px] text-[#77766D] font-light">
+                                            Versatile hall & entertainment space
+                                          </span>
+                                        </div>
+                                        <Link
+                                          href="/venues/concord"
+                                          onClick={() => {
+                                            setVenuesDropdownOpen(false);
+                                            setSapphireSubmenuOpen(false);
+                                            setConcordSubmenuOpen(false);
+                                            setExecutiveSubmenuOpen(false);
+                                          }}
+                                          className="text-[10px] text-[#5A5A68] hover:text-[#C6A568] uppercase tracking-wider flex items-center gap-1 transition-colors font-medium"
+                                        >
+                                          <span>Details</span>
+                                          <ArrowRight className="w-3 h-3 text-[#C6A568]" />
+                                        </Link>
+                                      </div>
+
+                                      {/* 3 Concord items */}
+                                      <div className="space-y-1.5">
+                                        {concordOccasions.map((occasion) => {
+                                          const Icon =
+                                            occasion.slug === "business-meetings"
+                                              ? Briefcase
+                                              : occasion.slug === "wedding"
+                                              ? Crown
+                                              : Cake;
+
+                                          const iconStyles =
+                                            occasion.slug === "business-meetings"
+                                              ? "bg-[#EFF6FF] text-[#2563EB] border-[#BFDBFE]"
+                                              : occasion.slug === "wedding"
+                                              ? "bg-[#FAF5EB] text-[#AA8B54] border-[#E8D7B8]"
+                                              : "bg-[#FDF2F8] text-[#DB2777] border-[#FBCFE8]";
+
+                                          return (
+                                            <Link
+                                              key={occasion.id}
+                                              href={occasion.href}
+                                              onClick={() => {
+                                                setVenuesDropdownOpen(false);
+                                                setSapphireSubmenuOpen(false);
+                                                setConcordSubmenuOpen(false);
+                                                setExecutiveSubmenuOpen(false);
+                                              }}
+                                              className="group/occasion flex items-center justify-between p-2.5 rounded-lg border border-transparent hover:border-[#E8E8F0] hover:bg-[#FAF8F5] transition-all"
+                                            >
+                                              <div className="flex items-center gap-3">
+                                                <div
+                                                  className={cn(
+                                                    "w-9 h-9 rounded-lg border flex items-center justify-center shrink-0 transition-transform group-hover/occasion:scale-105 shadow-xs",
+                                                    iconStyles
+                                                  )}
+                                                >
+                                                  <Icon className="w-4 h-4" />
+                                                </div>
+                                                <div>
+                                                  <span className="font-serif text-sm font-medium text-[#0E0D35] group-hover/occasion:text-[#AA8B54] transition-colors block leading-tight">
+                                                    {occasion.name}
+                                                  </span>
+                                                  <span className="text-[10px] text-[#77766D] uppercase tracking-wider block mt-0.5">
+                                                    {occasion.category}
+                                                  </span>
+                                                </div>
+                                              </div>
+                                              <span className="text-xs text-[#77766D] group-hover/occasion:text-[#AA8B54] group-hover/occasion:translate-x-1 transition-all">
+                                                &rarr;
+                                              </span>
+                                            </Link>
+                                          );
+                                        })}
+                                      </div>
+
+                                      {/* Submenu Footer */}
+                                      <div className="mt-3 pt-2.5 border-t border-[#E8E8F0] flex items-center justify-between text-xs">
+                                        <span className="text-[#77766D] text-[10px] font-light">
+                                          Capacity up to 300 guests
+                                        </span>
+                                        <Link
+                                          href="/contact?venue=concord"
+                                          onClick={() => {
+                                            setVenuesDropdownOpen(false);
+                                            setSapphireSubmenuOpen(false);
+                                            setConcordSubmenuOpen(false);
+                                            setExecutiveSubmenuOpen(false);
+                                          }}
+                                          className="text-[#AA8B54] hover:underline font-medium text-[10px] uppercase tracking-wider"
+                                        >
+                                          Enquire Now &rarr;
+                                        </Link>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            }
+
+                            if (venue.slug === "executive-room") {
+                              return (
+                                <div
+                                  key={venue.id}
+                                  className="relative"
+                                  onMouseEnter={handleExecutiveMouseEnter}
+                                  onMouseLeave={handleExecutiveMouseLeave}
+                                >
+                                  <Link
+                                    href={`/venues/${venue.slug}`}
+                                    onClick={() => {
+                                      setVenuesDropdownOpen(false);
+                                      setSapphireSubmenuOpen(false);
+                                      setConcordSubmenuOpen(false);
+                                      setExecutiveSubmenuOpen(false);
+                                    }}
+                                    className={cn(
+                                      "group/item flex items-center justify-between p-2.5 rounded-lg transition-all",
+                                      executiveSubmenuOpen
+                                        ? "bg-[#FAF8F5] ring-1 ring-[#C6A568]/40"
+                                        : "hover:bg-[#FAF8F5]"
+                                    )}
+                                  >
+                                    <div>
+                                      <div className="flex items-center gap-2">
+                                        <span
+                                          className={cn(
+                                            "font-serif text-base transition-colors",
+                                            executiveSubmenuOpen
+                                              ? "text-[#AA8B54] font-medium"
+                                              : "text-[#0E0D35] group-hover/item:text-[#AA8B54]"
+                                          )}
+                                        >
+                                          {venue.name}
+                                        </span>
+                                      </div>
+                                      <span className="text-[10px] text-[#77766D] uppercase tracking-wider block">
+                                        {venue.category}
+                                      </span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5">
+                                      <span
+                                        className={cn(
+                                          "text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded transition-all",
+                                          executiveSubmenuOpen
+                                            ? "bg-[#C6A568]/20 text-[#AA8B54]"
+                                            : "bg-[#FAF8F5] text-[#8C7A5B] group-hover/item:bg-[#C6A568]/15 group-hover/item:text-[#AA8B54]"
+                                        )}
+                                      >
+                                        3 Events
+                                      </span>
+                                      <ChevronRight
+                                        className={cn(
+                                          "w-4 h-4 transition-all duration-200",
+                                          executiveSubmenuOpen
+                                            ? "text-[#AA8B54] translate-x-1"
+                                            : "text-[#77766D] group-hover/item:text-[#AA8B54] group-hover/item:translate-x-0.5"
+                                        )}
+                                      />
+                                    </div>
+                                  </Link>
+
+                                  {/* Executive Room Flyout Submenu to the right */}
+                                  <div
+                                    className={cn(
+                                      "absolute left-full bottom-0 pl-3.5 transition-all duration-200 z-50",
+                                      executiveSubmenuOpen
+                                        ? "opacity-100 visible translate-x-0 pointer-events-auto"
+                                        : "opacity-0 invisible -translate-x-2 pointer-events-none"
+                                    )}
+                                  >
+                                    <div className="w-[340px] bg-white/98 backdrop-blur-xl border border-[#E8E8F0] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.18)] p-4 text-[#0E0D35]">
+                                      {/* Submenu Header */}
+                                      <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-[#E8E8F0]">
+                                        <div>
+                                          <span className="text-[10px] uppercase tracking-[0.22em] text-[#AA8B54] font-semibold block">
+                                            Executive Occasions (3)
+                                          </span>
+                                          <span className="text-[10px] text-[#77766D] font-light">
+                                            Meeting, Conference & Small Functions
+                                          </span>
+                                        </div>
+                                        <Link
+                                          href="/venues/executive-room"
+                                          onClick={() => {
+                                            setVenuesDropdownOpen(false);
+                                            setSapphireSubmenuOpen(false);
+                                            setConcordSubmenuOpen(false);
+                                            setExecutiveSubmenuOpen(false);
+                                          }}
+                                          className="text-[10px] text-[#5A5A68] hover:text-[#C6A568] uppercase tracking-wider flex items-center gap-1 transition-colors font-medium"
+                                        >
+                                          <span>Details</span>
+                                          <ArrowRight className="w-3 h-3 text-[#C6A568]" />
+                                        </Link>
+                                      </div>
+
+                                      {/* 3 Executive Room items */}
+                                      <div className="space-y-1.5">
+                                        {executiveRoomEvents.map((item) => {
+                                          const Icon =
+                                            item.slug === "meeting"
+                                              ? Users
+                                              : item.slug === "conference"
+                                              ? Presentation
+                                              : GlassWater;
+
+                                          const iconStyles =
+                                            item.slug === "meeting"
+                                              ? "bg-[#EFF6FF] text-[#1D4ED8] border-[#BFDBFE]"
+                                              : item.slug === "conference"
+                                              ? "bg-[#FAF5EB] text-[#AA8B54] border-[#E8D7B8]"
+                                              : "bg-[#F5F3FF] text-[#7C3AED] border-[#DDD6FE]";
+
+                                          return (
+                                            <Link
+                                              key={item.id}
+                                              href={item.href}
+                                              onClick={() => {
+                                                setVenuesDropdownOpen(false);
+                                                setSapphireSubmenuOpen(false);
+                                                setConcordSubmenuOpen(false);
+                                                setExecutiveSubmenuOpen(false);
+                                              }}
+                                              className="group/exec flex items-center justify-between p-2.5 rounded-lg border border-transparent hover:border-[#E8E8F0] hover:bg-[#FAF8F5] transition-all"
+                                            >
+                                              <div className="flex items-center gap-3">
+                                                <div
+                                                  className={cn(
+                                                    "w-9 h-9 rounded-lg border flex items-center justify-center shrink-0 transition-transform group-hover/exec:scale-105 shadow-xs",
+                                                    iconStyles
+                                                  )}
+                                                >
+                                                  <Icon className="w-4 h-4" />
+                                                </div>
+                                                <div>
+                                                  <span className="font-serif text-sm font-medium text-[#0E0D35] group-hover/exec:text-[#AA8B54] transition-colors block leading-tight">
+                                                    {item.name}
+                                                  </span>
+                                                  <span className="text-[10px] text-[#77766D] uppercase tracking-wider block mt-0.5">
+                                                    {item.category}
+                                                  </span>
+                                                </div>
+                                              </div>
+                                              <span className="text-xs text-[#77766D] group-hover/exec:text-[#AA8B54] group-hover/exec:translate-x-1 transition-all">
+                                                &rarr;
+                                              </span>
+                                            </Link>
+                                          );
+                                        })}
+                                      </div>
+
+                                      {/* Submenu Footer */}
+                                      <div className="mt-3 pt-2.5 border-t border-[#E8E8F0] flex items-center justify-between text-xs">
+                                        <span className="text-[#77766D] text-[10px] font-light">
+                                          Capacity up to 60 guests
+                                        </span>
+                                        <Link
+                                          href="/contact?venue=executive-room"
+                                          onClick={() => {
+                                            setVenuesDropdownOpen(false);
+                                            setSapphireSubmenuOpen(false);
+                                            setConcordSubmenuOpen(false);
+                                            setExecutiveSubmenuOpen(false);
+                                          }}
+                                          className="text-[#AA8B54] hover:underline font-medium text-[10px] uppercase tracking-wider"
+                                        >
+                                          Enquire Now &rarr;
+                                        </Link>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            }
+
+                            return (
+                              <Link
+                                key={venue.id}
+                                href={`/venues/${venue.slug}`}
+                                onMouseEnter={handleOtherVenueMouseEnter}
+                                onClick={() => {
+                                  setVenuesDropdownOpen(false);
+                                  setSapphireSubmenuOpen(false);
+                                  setConcordSubmenuOpen(false);
+                                  setExecutiveSubmenuOpen(false);
+                                }}
+                                className="group/item flex items-center justify-between p-2.5 rounded-lg hover:bg-[#FAF8F5] transition-colors"
+                              >
+                                <div>
+                                  <div className="flex items-center gap-2">
+                                    <span className="font-serif text-base text-[#0E0D35] group-hover/item:text-[#AA8B54] transition-colors">
+                                      {venue.name}
+                                    </span>
+                                    {venue.isUpcoming && (
+                                      <span className="text-[9px] bg-[#C6A568]/20 text-[#AA8B54] px-1.5 py-0.5 rounded font-mono font-medium">
+                                        Upcoming
+                                      </span>
+                                    )}
+                                  </div>
+                                  <span className="text-[10px] text-[#77766D] uppercase tracking-wider block">
+                                    {venue.category}
+                                  </span>
+                                </div>
+                                <span className="text-xs text-[#77766D] group-hover/item:text-[#AA8B54] group-hover/item:translate-x-1 transition-all">
+                                  &rarr;
                                 </span>
-                              </div>
-                              <span className="text-xs text-[#77766D] group-hover/item:text-[#AA8B54] group-hover/item:translate-x-1 transition-all">
-                                &rarr;
-                              </span>
-                            </Link>
-                          ))}
+                              </Link>
+                            );
+                          })}
                         </div>
 
                         {/* Bottom Quick Action */}

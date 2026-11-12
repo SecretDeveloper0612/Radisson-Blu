@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useSyncExternalStore } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { GalleryItem } from "@/types";
@@ -15,6 +16,8 @@ interface LightboxProps {
   onSelectIndex?: (index: number) => void;
 }
 
+const emptySubscribe = () => () => {};
+
 export function Lightbox({
   images,
   currentIndex,
@@ -25,6 +28,11 @@ export function Lightbox({
   onSelectIndex,
 }: LightboxProps) {
   const thumbStripRef = useRef<HTMLDivElement>(null);
+  const mounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
 
   useEffect(() => {
     if (!isOpen) return;
@@ -43,45 +51,49 @@ export function Lightbox({
     };
   }, [isOpen, onClose, onNext, onPrev]);
 
-  // Keep active thumbnail in view
+  // Keep active thumbnail in view horizontally without scrolling the parent window
   useEffect(() => {
     if (!isOpen || !thumbStripRef.current) return;
-    const activeThumb = thumbStripRef.current.children[currentIndex] as HTMLElement | undefined;
+    const container = thumbStripRef.current;
+    const activeThumb = container.children[currentIndex] as HTMLElement | undefined;
     if (activeThumb) {
-      activeThumb.scrollIntoView({
+      const thumbLeft = activeThumb.offsetLeft;
+      const thumbWidth = activeThumb.offsetWidth;
+      const containerWidth = container.offsetWidth;
+      const targetScrollLeft = thumbLeft - containerWidth / 2 + thumbWidth / 2;
+      container.scrollTo({
+        left: targetScrollLeft,
         behavior: "smooth",
-        inline: "center",
-        block: "nearest",
       });
     }
   }, [currentIndex, isOpen]);
 
-  if (!isOpen || images.length === 0) return null;
+  if (!isOpen || !mounted || images.length === 0) return null;
 
   const currentImage = images[currentIndex];
 
-  return (
+  return createPortal(
     <div
       role="dialog"
       aria-modal="true"
       aria-label="Image gallery lightbox"
-      className="fixed inset-0 z-50 flex flex-col justify-between bg-black/95 backdrop-blur-2xl animate-in fade-in duration-300"
+      className="fixed inset-0 z-[9999] flex flex-col justify-between bg-black/95 backdrop-blur-2xl animate-in fade-in duration-300 select-none"
     >
       {/* Top Header Bar */}
-      <div className="w-full px-6 py-5 flex items-center justify-between text-white z-20 bg-gradient-to-b from-black/90 via-black/60 to-transparent border-b border-white/10">
-        <div className="flex flex-col">
+      <div className="w-full px-4 sm:px-8 py-4 flex items-center justify-between text-white z-20 bg-gradient-to-b from-black/95 via-black/70 to-transparent border-b border-white/10 shrink-0">
+        <div className="flex flex-col pr-4">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#C6A568]" />
             <span className="text-[11px] uppercase tracking-[0.2em] text-[#C6A568] font-semibold">
               {currentImage.category}
             </span>
           </div>
-          <h2 className="font-serif text-lg sm:text-xl text-white font-normal mt-0.5">
+          <h2 className="font-serif text-base sm:text-xl text-white font-normal mt-0.5 line-clamp-1">
             {currentImage.title}
           </h2>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 shrink-0">
           <span className="text-xs tracking-widest text-[#E4DED2]/80 font-mono px-3 py-1 rounded-full bg-white/10 border border-white/15">
             {currentIndex + 1} / {images.length}
           </span>
@@ -96,14 +108,15 @@ export function Lightbox({
       </div>
 
       {/* Main Image Stage */}
-      <div className="relative flex-1 w-full max-w-6xl mx-auto px-6 sm:px-16 flex items-center justify-center my-2">
-        <div className="relative w-full h-full max-h-[68vh]">
+      <div className="relative flex-1 w-full max-w-7xl mx-auto px-4 sm:px-16 flex items-center justify-center min-h-0 my-auto py-2">
+        <div className="relative w-full h-[60vh] sm:h-[68vh] md:h-[72vh] flex items-center justify-center">
           <Image
+            key={currentImage.src}
             src={currentImage.src}
-            alt={currentImage.alt}
+            alt={currentImage.alt || currentImage.title}
             fill
-            sizes="90vw"
-            className="object-contain select-none"
+            sizes="(max-width: 1024px) 95vw, 1200px"
+            className="object-contain"
             priority
           />
         </div>
@@ -112,7 +125,7 @@ export function Lightbox({
         <button
           onClick={onPrev}
           aria-label="Previous image"
-          className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 p-3 text-white hover:text-[#0E0D35] bg-black/60 hover:bg-[#C6A568] border border-white/20 hover:border-[#C6A568] rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-[#C6A568] cursor-pointer shadow-lg"
+          className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 p-3 text-white hover:text-[#0E0D35] bg-black/60 hover:bg-[#C6A568] border border-white/20 hover:border-[#C6A568] rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-[#C6A568] cursor-pointer shadow-xl z-30"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
@@ -120,14 +133,14 @@ export function Lightbox({
         <button
           onClick={onNext}
           aria-label="Next image"
-          className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 p-3 text-white hover:text-[#0E0D35] bg-black/60 hover:bg-[#C6A568] border border-white/20 hover:border-[#C6A568] rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-[#C6A568] cursor-pointer shadow-lg"
+          className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 p-3 text-white hover:text-[#0E0D35] bg-black/60 hover:bg-[#C6A568] border border-white/20 hover:border-[#C6A568] rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-[#C6A568] cursor-pointer shadow-xl z-30"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
       </div>
 
       {/* Bottom Tray: Caption + Thumbnail Scroller */}
-      <div className="w-full bg-gradient-to-t from-black via-black/90 to-transparent pt-3 pb-5 px-6 z-20 border-t border-white/10">
+      <div className="w-full bg-gradient-to-t from-black via-black/95 to-transparent pt-3 pb-5 px-4 sm:px-6 z-20 border-t border-white/10 shrink-0">
         <p className="text-xs text-[#E4DED2]/80 font-light max-w-3xl mx-auto text-center line-clamp-1 mb-3">
           {currentImage.alt}
         </p>
@@ -161,7 +174,8 @@ export function Lightbox({
           </div>
         )}
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
 

@@ -3,6 +3,7 @@ import HeroSection from "@/components/home/HeroSection";
 import IntroductionSection from "@/components/home/IntroductionSection";
 import ExperienceSection from "@/components/home/ExperienceSection";
 import WellnessRecreation from "@/components/home/WellnessRecreation";
+import VintageSection from "@/components/home/VintageSection";
 import GatewayDestination from "@/components/home/GatewayDestination";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import FinalCTA from "@/components/home/FinalCTA";
@@ -22,7 +23,10 @@ export default function HomePage() {
       {/* Section D: Restorative Wellness & Recreation (Pool, Spa, Fitness) */}
       <WellnessRecreation />
 
-      {/* Section E: Regional Connectivity & Himalayan Gateway Destinations */}
+      {/* Section E: Vintage Heritage Fleet & Wedding Experiences */}
+      <VintageSection />
+
+      {/* Section F: Regional Connectivity & Himalayan Gateway Destinations */}
       <GatewayDestination />
 
       {/* Section F: Infinite Testimonials Carousels */}

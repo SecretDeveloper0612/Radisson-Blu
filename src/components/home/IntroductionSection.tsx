@@ -11,7 +11,7 @@ export function IntroductionSection() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Photographic Composition with Smooth Reveal */}
-          <div className="lg:col-span-6 relative">
+          <div className="lg:col-span-6 space-y-4">
             <Reveal direction="right">
               <div className="relative aspect-[4/5] w-full rounded-lg overflow-hidden shadow-2xl border border-[#E4DED2] group">
                 <Image
@@ -22,12 +22,12 @@ export function IntroductionSection() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
-              {/* Subtle decorative badge */}
-              <div className="absolute -bottom-6 -right-6 hidden sm:flex bg-white text-[#0E0D35] p-6 rounded-lg border border-[#E8E8F0] shadow-2xl flex-col max-w-[220px]">
-                <span className="text-xs uppercase tracking-widest text-[#AA8B54] font-semibold">
+              {/* Text placed beneath the image */}
+              <div className="pt-3 flex flex-col">
+                <span className="text-[11px] uppercase tracking-[0.25em] text-[#AA8B54] font-semibold">
                   Uttarakhand
                 </span>
-                <span className="font-serif text-lg mt-1 text-[#0E0D35]">
+                <span className="font-serif text-xl sm:text-2xl text-[#0E0D35] mt-1 font-normal">
                   Gateway to Kumaon & SIDCUL Hub
                 </span>
               </div>

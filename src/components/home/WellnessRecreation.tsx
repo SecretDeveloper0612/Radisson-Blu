@@ -6,7 +6,7 @@ import Link from "next/link";
 import {
   Waves,
   Flower2,
-  Sparkles,
+  Heart,
   Dumbbell,
   Clock,
   ShieldCheck,
@@ -51,7 +51,7 @@ const sanctuaries: SanctuaryPillar[] = [
     categoryTag: "AQUATIC REJUVENATION",
     subtitle: "Temperature-Controlled Heated Waters & Sunken Cabanas",
     narrative:
-      "Submerge yourself into crystal-clear heated waters embraced by landscaped palm groves and northern skies. Whether completing morning laps in the temperature-controlled pool or sipping bespoke mocktails under shaded loungers, the pool deck delivers pure serenity.",
+      "Temperature-controlled crystal waters embraced by palm courtyards and sunken shaded cabanas for morning laps or quiet relaxation.",
     hours: "06:00 AM – 09:00 PM Daily",
     images: [
       {
@@ -61,15 +61,14 @@ const sanctuaries: SanctuaryPillar[] = [
       },
     ],
     specs: [
-      { label: "Water Temperature", value: "28°C Heated", sublabel: "Year-Round Comfort" },
-      { label: "Pool Dimensions", value: "1.2m – 1.8m", sublabel: "Lap & Leisure Depth" },
-      { label: "Deck Experience", value: "Sunken Cabanas", sublabel: "Complimentary Towels" },
+      { label: "Temperature", value: "28°C Heated", sublabel: "Year-Round" },
+      { label: "Depth", value: "1.2m – 1.8m", sublabel: "Lap & Leisure" },
+      { label: "Cabanas", value: "Sunken Lounges", sublabel: "Towel Service" },
     ],
     inclusions: [
-      "Plush organic cotton towel service & cushioned sun deck loungers",
-      "Poolside vitality hydration bar serving chilled juices & fresh coconuts",
-      "Safe, dedicated shallow splash enclave designed for young families",
-      "Sunscreen, cooling mist & afternoon light refreshment service",
+      "Organic cotton towels & cushioned sun loungers",
+      "Poolside vitality hydration bar & fresh coconuts",
+      "Dedicated shallow splash pool for young children",
     ],
     ctaLabel: "Reserve Poolside Cabana",
     ctaType: "Pool+Cabana",
@@ -79,9 +78,9 @@ const sanctuaries: SanctuaryPillar[] = [
     name: "Svaastha Ayurvedic Spa & Wellness",
     shortLabel: "Ayurvedic Spa",
     categoryTag: "HOLISTIC HEALING",
-    subtitle: "Ancient Vedic Therapies, Botanical Oils & Couple Suites",
+    subtitle: "Ancient Vedic Therapies & Botanical Herbal Oils",
     narrative:
-      "Step into a sanctuary scented with Himalayan cedarwood, wild lemongrass, and warm sesame oil. Our master therapists employ authentic Abhyanga strokes, warm herbal compresses, and classical steam therapy to release fatigue, calm the mind, and restore vital energy.",
+      "Authentic Abhyanga body therapies, warm herbal poultices, and cedarwood steam baths to melt stress and restore vitality.",
     hours: "08:00 AM – 08:00 PM Daily",
     images: [
       {
@@ -96,15 +95,14 @@ const sanctuaries: SanctuaryPillar[] = [
       },
     ],
     specs: [
-      { label: "Sanctuary Suites", value: "Private Pavilions", sublabel: "Single & Couple Suites" },
-      { label: "Therapeutic Lineage", value: "Classical Vedic", sublabel: "Herbal Oil Therapies" },
-      { label: "Thermal Amenities", value: "Steam & Sauna", sublabel: "Complimentary with Session" },
+      { label: "Suites", value: "Private Pavilions", sublabel: "Couple Suites" },
+      { label: "Therapies", value: "Classical Vedic", sublabel: "Herbal Oils" },
+      { label: "Hydro", value: "Steam & Sauna", sublabel: "Complimentary" },
     ],
     inclusions: [
-      "Classical Abhyanga & Ayurvedic warm herbal compress treatments",
-      "Signature pre-treatment Himalayan foot soak & floral cleansing ritual",
-      "Private couple treatment suite featuring en-suite rainfall showers",
-      "Post-therapy restorative organic herbal tea infusion & eucalyptus steam",
+      "Classical Abhyanga & warm herbal compress sessions",
+      "Private couple treatment rooms with rainfall showers",
+      "Herbal tea infusion & restorative steam bath",
     ],
     ctaLabel: "Book Ayurvedic Therapy",
     ctaType: "Spa+%26+Wellness",
@@ -116,7 +114,7 @@ const sanctuaries: SanctuaryPillar[] = [
     categoryTag: "HYDROTHERAPY SANCTUARY",
     subtitle: "Contoured Warm Hydro-Jets & Natural Slate Decompression",
     narrative:
-      "A private hydrotherapy oasis lined with rich natural slate and polished travertine. Ergonomically positioned hydro-massage jets soothe deep tissue knots, stimulate blood circulation, and deliver profound physical renewal following high-stakes meetings or gala ceremonies.",
+      "Warm multi-jet water massage lined with natural slate to release deep tissue knots and stimulate circulation after events.",
     hours: "07:00 AM – 09:00 PM Daily",
     images: [
       {
@@ -126,15 +124,14 @@ const sanctuaries: SanctuaryPillar[] = [
       },
     ],
     specs: [
-      { label: "Hydro Jet System", value: "Ergonomic Multi-Jet", sublabel: "Targeted Muscle Relief" },
-      { label: "Surround Architecture", value: "Natural Slate Stone", sublabel: "Acoustic Seclusion" },
-      { label: "Experience Style", value: "Private Booking", sublabel: "Post-Travel Recovery" },
+      { label: "Jet System", value: "Multi-Directional", sublabel: "Muscle Relief" },
+      { label: "Stone", value: "Natural Slate", sublabel: "Acoustic Peace" },
+      { label: "Booking", value: "Private Slots", sublabel: "Recovery" },
     ],
     inclusions: [
-      "Multi-directional high-pressure water jets targeting lumbar and calves",
-      "Continuous thermal circulation maintaining optimal therapeutic warmth",
-      "Stepped travertine rim with comfortable headrests for quiet meditation",
-      "Dedicated changing suite with rainfall shower and plush terry robes",
+      "Targeted lumbar & calf high-pressure hydro-jets",
+      "Optimal therapeutic thermal water circulation",
+      "Private changing suite with rain shower & plush robes",
     ],
     ctaLabel: "Schedule Hydrotherapy Session",
     ctaType: "Hydrotherapy",
@@ -144,10 +141,10 @@ const sanctuaries: SanctuaryPillar[] = [
     name: "Equinox Fitness Center & Salon",
     shortLabel: "Fitness & Salon",
     categoryTag: "VITALITY & GROOMING",
-    subtitle: "24/7 Technogym Cardio, Strength Studio & Professional Styling",
+    subtitle: "24/7 Technogym Cardio, Strength Studio & Styling",
     narrative:
-      "Empower your daily wellness regime in our light-filled fitness center equipped with Technogym treadmills, elliptical trainers, and multi-tier free weights. Adjacent, our full-service salon offers bespoke hair styling, bridal grooming, and beauty rituals to keep you radiant.",
-    hours: "Gym: 24 Hours (Keycard) • Salon: 09:00 AM – 08:00 PM",
+      "Round-the-clock Technogym cardio and strength conditioning, accompanied by a full-service bridal and grooming salon.",
+    hours: "Gym: 24 Hours • Salon: 09:00 AM – 08:00 PM",
     images: [
       {
         src: "/RBLU PHOTOS/Health Club/Gym.jpg",
@@ -161,15 +158,14 @@ const sanctuaries: SanctuaryPillar[] = [
       },
     ],
     specs: [
-      { label: "Fitness Equipment", value: "Technogym Systems", sublabel: "Cardio & Free Weights" },
-      { label: "Guest Access", value: "24/7 Keycard", sublabel: "Complimentary for Residents" },
-      { label: "Salon Services", value: "Hair & Grooming", sublabel: "Bridal & Executive Styling" },
+      { label: "Equipment", value: "Technogym Systems", sublabel: "Cardio & Weights" },
+      { label: "Access", value: "24/7 Keycard", sublabel: "Complimentary" },
+      { label: "Salon", value: "Hair & Styling", sublabel: "Bridal / Men" },
     ],
     inclusions: [
-      "Top-tier Technogym treadmills, cross-trainers & recumbent stationary bikes",
-      "Comprehensive dumbbell racks, cable crossovers & core conditioning mats",
-      "Dedicated beauty salon for hair styling, manicures, and event grooming",
-      "Chilled infused mineral water, fresh green apples & clean workout towels",
+      "Technogym treadmills, ellipticals & free weight rack",
+      "Hair styling, manicures, and bridal makeover studio",
+      "Infused hydration bar, fresh fruit & clean towels",
     ],
     ctaLabel: "Inquire / Book Salon Service",
     ctaType: "Fitness+%26+Salon",
@@ -201,7 +197,7 @@ export function WellnessRecreation() {
       case "fitness":
         return <Dumbbell className={className} />;
       default:
-        return <Sparkles className={className} />;
+        return <Flower2 className={className} />;
     }
   };
 
@@ -219,7 +215,6 @@ export function WellnessRecreation() {
         <Reveal direction="up">
           <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16 space-y-4">
             <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-[#E8E8F0] shadow-xs">
-              <Sparkles className="w-3.5 h-3.5 text-[#AA8B54]" />
               <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#AA8B54]">
                 VYAH WELLNESS & SANCTUARY
               </span>
@@ -229,8 +224,8 @@ export function WellnessRecreation() {
               Restorative harmony for body & soul.
             </h2>
 
-            <p className="text-[#5A5A68] text-sm sm:text-base lg:text-lg font-light leading-relaxed max-w-2xl mx-auto pt-1">
-              Unwind effortlessly between landmark celebrations and executive summits. Experience authentic Ayurvedic healing, tranquil heated waters, contoured hydrotherapy, and advanced Technogym conditioning.
+            <p className="text-[#5A5A68] text-sm sm:text-base font-light leading-relaxed max-w-xl mx-auto pt-1">
+              Ayurvedic healing, temperature-controlled open pool, hydrotherapy jacuzzi, and 24/7 Technogym conditioning.
             </p>
           </div>
         </Reveal>

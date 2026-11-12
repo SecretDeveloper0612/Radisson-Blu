@@ -45,8 +45,8 @@ export function HeroSection() {
           {/* Eyebrow Label */}
           <div className="inline-flex items-center gap-3">
             <span className="w-8 h-[1px] bg-[#C6A568]" />
-            <span className="text-xs sm:text-sm font-semibold uppercase tracking-[0.3em] text-[#C6A568]">
-              VYAH BY RADISSON
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-[#C6A568]">
+              VYAH BY RADISSON BLU RUDRAPUR
             </span>
           </div>
 

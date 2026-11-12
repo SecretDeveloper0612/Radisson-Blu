@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { X, Phone, Mail, MessageSquare, ArrowRight, ChevronDown } from "lucide-react";
 import { headerNavLinks } from "@/data/navigation";
-import { venuesData } from "@/data/venues";
+import { venuesData, sapphireCeremonies, concordOccasions, executiveRoomEvents } from "@/data/venues";
 import { siteConfig } from "@/config/site";
 import Button from "@/components/ui/Button";
 
@@ -20,6 +20,9 @@ export function MobileNavigation({
   onBookNowClick,
 }: MobileNavigationProps) {
   const [venuesExpanded, setVenuesExpanded] = useState(false);
+  const [sapphireExpanded, setSapphireExpanded] = useState(false);
+  const [concordExpanded, setConcordExpanded] = useState(false);
+  const [executiveExpanded, setExecutiveExpanded] = useState(false);
 
   // Prevent background scroll and support Escape key
   useEffect(() => {
@@ -52,8 +55,8 @@ export function MobileNavigation({
           <span className="font-serif text-lg tracking-widest text-[#0E0D35] font-semibold">
             VYAH
           </span>
-          <span className="text-[9px] uppercase tracking-[0.25em] text-[#AA8B54]">
-            By Radisson
+          <span className="text-[9px] uppercase tracking-[0.2em] text-[#AA8B54]">
+            By Radisson BLU Rudrapur
           </span>
         </div>
         <button
@@ -98,21 +101,188 @@ export function MobileNavigation({
                   {/* Expandable Venues Submenu */}
                   {venuesExpanded && (
                     <div className="mt-2 pl-4 space-y-2 border-l border-[#C6A568]/30 py-2 animate-in fade-in">
-                      {venuesData.map((venue) => (
-                        <Link
-                          key={venue.id}
-                          href={`/venues/${venue.slug}`}
-                          onClick={onClose}
-                          className="flex items-center justify-between py-1.5 text-sm text-[#5A5A68] hover:text-[#AA8B54] transition-colors"
-                        >
-                          <span className="font-serif text-base text-[#0E0D35]">{venue.name}</span>
-                          {venue.isUpcoming && (
-                            <span className="text-[9px] bg-[#C6A568]/20 text-[#AA8B54] px-1.5 py-0.5 rounded font-mono">
-                              Soon
-                            </span>
-                          )}
-                        </Link>
-                      ))}
+                      {venuesData.map((venue) => {
+                        if (venue.slug === "sapphire") {
+                          return (
+                            <div key={venue.id} className="space-y-1.5 py-1">
+                              <div className="flex items-center justify-between">
+                                <Link
+                                  href={`/venues/${venue.slug}`}
+                                  onClick={onClose}
+                                  className="flex items-center gap-2 text-sm text-[#5A5A68] hover:text-[#AA8B54] transition-colors"
+                                >
+                                  <span className="font-serif text-base text-[#0E0D35]">{venue.name}</span>
+                                </Link>
+                                <button
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    setSapphireExpanded(!sapphireExpanded);
+                                  }}
+                                  className="px-2 py-0.5 rounded bg-[#FAF8F5] border border-[#E8E8F0] text-[#AA8B54] flex items-center gap-1 text-[10px] uppercase tracking-wider font-semibold"
+                                >
+                                  <span>3 Events</span>
+                                  <ChevronDown
+                                    className={`w-3 h-3 transition-transform duration-200 ${
+                                      sapphireExpanded ? "rotate-180" : ""
+                                    }`}
+                                  />
+                                </button>
+                              </div>
+
+                              {sapphireExpanded && (
+                                <div className="ml-3 pl-3 space-y-2 border-l-2 border-[#C6A568]/40 py-1.5 text-xs animate-in fade-in bg-[#FAF8F5]/60 rounded-r-lg">
+                                  {sapphireCeremonies.map((ceremony) => (
+                                    <Link
+                                      key={ceremony.id}
+                                      href={ceremony.href}
+                                      onClick={onClose}
+                                      className="flex items-center justify-between py-1 px-1.5 text-[#5A5A68] hover:text-[#AA8B54] transition-colors"
+                                    >
+                                      <div>
+                                        <span className="font-medium text-[#0E0D35] block leading-tight">
+                                          {ceremony.name}
+                                        </span>
+                                        <span className="text-[9px] text-[#77766D] uppercase tracking-wider">
+                                          {ceremony.category}
+                                        </span>
+                                      </div>
+                                      <span className="text-xs text-[#AA8B54]">&rarr;</span>
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        }
+
+                        if (venue.slug === "concord") {
+                          return (
+                            <div key={venue.id} className="space-y-1.5 py-1">
+                              <div className="flex items-center justify-between">
+                                <Link
+                                  href={`/venues/${venue.slug}`}
+                                  onClick={onClose}
+                                  className="flex items-center gap-2 text-sm text-[#5A5A68] hover:text-[#AA8B54] transition-colors"
+                                >
+                                  <span className="font-serif text-base text-[#0E0D35]">{venue.name}</span>
+                                </Link>
+                                <button
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    setConcordExpanded(!concordExpanded);
+                                  }}
+                                  className="px-2 py-0.5 rounded bg-[#FAF8F5] border border-[#E8E8F0] text-[#AA8B54] flex items-center gap-1 text-[10px] uppercase tracking-wider font-semibold"
+                                >
+                                  <span>3 Events</span>
+                                  <ChevronDown
+                                    className={`w-3 h-3 transition-transform duration-200 ${
+                                      concordExpanded ? "rotate-180" : ""
+                                    }`}
+                                  />
+                                </button>
+                              </div>
+
+                              {concordExpanded && (
+                                <div className="ml-3 pl-3 space-y-2 border-l-2 border-[#C6A568]/40 py-1.5 text-xs animate-in fade-in bg-[#FAF8F5]/60 rounded-r-lg">
+                                  {concordOccasions.map((occasion) => (
+                                    <Link
+                                      key={occasion.id}
+                                      href={occasion.href}
+                                      onClick={onClose}
+                                      className="flex items-center justify-between py-1 px-1.5 text-[#5A5A68] hover:text-[#AA8B54] transition-colors"
+                                    >
+                                      <div>
+                                        <span className="font-medium text-[#0E0D35] block leading-tight">
+                                          {occasion.name}
+                                        </span>
+                                        <span className="text-[9px] text-[#77766D] uppercase tracking-wider">
+                                          {occasion.category}
+                                        </span>
+                                      </div>
+                                      <span className="text-xs text-[#AA8B54]">&rarr;</span>
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        }
+
+                        if (venue.slug === "executive-room") {
+                          return (
+                            <div key={venue.id} className="space-y-1.5 py-1">
+                              <div className="flex items-center justify-between">
+                                <Link
+                                  href={`/venues/${venue.slug}`}
+                                  onClick={onClose}
+                                  className="flex items-center gap-2 text-sm text-[#5A5A68] hover:text-[#AA8B54] transition-colors"
+                                >
+                                  <span className="font-serif text-base text-[#0E0D35]">{venue.name}</span>
+                                </Link>
+                                <button
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    setExecutiveExpanded(!executiveExpanded);
+                                  }}
+                                  className="px-2 py-0.5 rounded bg-[#FAF8F5] border border-[#E8E8F0] text-[#AA8B54] flex items-center gap-1 text-[10px] uppercase tracking-wider font-semibold"
+                                >
+                                  <span>3 Events</span>
+                                  <ChevronDown
+                                    className={`w-3 h-3 transition-transform duration-200 ${
+                                      executiveExpanded ? "rotate-180" : ""
+                                    }`}
+                                  />
+                                </button>
+                              </div>
+
+                              {executiveExpanded && (
+                                <div className="ml-3 pl-3 space-y-2 border-l-2 border-[#C6A568]/40 py-1.5 text-xs animate-in fade-in bg-[#FAF8F5]/60 rounded-r-lg">
+                                  {executiveRoomEvents.map((item) => (
+                                    <Link
+                                      key={item.id}
+                                      href={item.href}
+                                      onClick={onClose}
+                                      className="flex items-center justify-between py-1 px-1.5 text-[#5A5A68] hover:text-[#AA8B54] transition-colors"
+                                    >
+                                      <div>
+                                        <span className="font-medium text-[#0E0D35] block leading-tight">
+                                          {item.name}
+                                        </span>
+                                        <span className="text-[9px] text-[#77766D] uppercase tracking-wider">
+                                          {item.category}
+                                        </span>
+                                      </div>
+                                      <span className="text-xs text-[#AA8B54]">&rarr;</span>
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        }
+
+                        return (
+                          <Link
+                            key={venue.id}
+                            href={`/venues/${venue.slug}`}
+                            onClick={onClose}
+                            className="flex items-center justify-between py-1.5 text-sm text-[#5A5A68] hover:text-[#AA8B54] transition-colors"
+                          >
+                            <span className="font-serif text-base text-[#0E0D35]">{venue.name}</span>
+                            {venue.isUpcoming && (
+                              <span className="text-[9px] bg-[#C6A568]/20 text-[#AA8B54] px-1.5 py-0.5 rounded font-mono">
+                                Soon
+                              </span>
+                            )}
+                          </Link>
+                        );
+                      })}
                       <Link
                         href="/venues"
                         onClick={onClose}

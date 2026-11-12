@@ -96,3 +96,17 @@ export interface NavLink {
   label: string;
   href: string;
 }
+
+export interface CeremonyItem {
+  id: string;
+  name: string;
+  slug: string;
+  category: string;
+  tagline: string;
+  description: string;
+  href: string;
+  guestCapacity?: string;
+  recommendedTime?: string;
+  image?: string;
+}
+

@@ -323,24 +323,9 @@ export default function GalleryPage() {
                       {image.category}
                     </span>
 
-                    <span className="w-8 h-8 rounded-full bg-black/50 backdrop-blur-md border border-white/20 text-white flex items-center justify-center group-hover:bg-[#C6A568] group-hover:text-[#0E0D35] transition-all duration-300 shadow-sm">
+                    <span className="w-8 h-8 rounded-full bg-white/90 backdrop-blur-md border border-[#E8E8F0] text-[#0E0D35] flex items-center justify-center group-hover:bg-[#C6A568] group-hover:text-white transition-all duration-300 shadow-sm">
                       <Maximize2 className="w-3.5 h-3.5" />
                     </span>
-                  </div>
-
-                  {/* Gradient Scrim & Bottom Information */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent flex flex-col justify-end p-5 sm:p-6 text-white transition-opacity duration-300">
-                    <h3 className="font-serif text-lg sm:text-xl font-normal text-white drop-shadow-sm group-hover:text-[#F7F4EC] transition-colors leading-snug">
-                      {image.title}
-                    </h3>
-                    <p className="text-xs text-[#E4DED2]/85 font-light mt-1 line-clamp-2 leading-relaxed">
-                      {image.alt}
-                    </p>
-
-                    <div className="flex items-center gap-1.5 text-[11px] text-[#C6A568] font-medium tracking-wide mt-2.5 opacity-90 group-hover:opacity-100 transition-opacity">
-                      <Eye className="w-3.5 h-3.5" />
-                      <span>View full size photograph</span>
-                    </div>
                   </div>
                 </div>
               );

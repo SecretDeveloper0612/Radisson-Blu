@@ -21,6 +21,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "www.chardham-pilgrimage-tour.com",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.tripuntold.com",
+      },
     ],
   },
   turbopack: {
@@ -36,6 +40,11 @@ const nextConfig: NextConfig = {
       {
         source: "/venues/concert",
         destination: "/venues/concord",
+        permanent: true,
+      },
+      {
+        source: "/venues/upcoming-ballroom",
+        destination: "/venues/vyah-ballroom",
         permanent: true,
       },
     ];

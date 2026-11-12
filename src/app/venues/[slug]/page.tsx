@@ -22,8 +22,13 @@ import {
   Volume2,
   Sun,
   Mic,
+  Gem,
+  Crown,
+  Calendar,
+  Briefcase,
+  Cake,
 } from "lucide-react";
-import { venuesData } from "@/data/venues";
+import { venuesData, sapphireCeremonies, concordOccasions } from "@/data/venues";
 import { siteConfig } from "@/config/site";
 import VenueGallerySection from "@/components/venues/VenueGallerySection";
 import VenueHeroSlideshow from "@/components/venues/VenueHeroSlideshow";
@@ -281,6 +286,203 @@ export default async function VenueDetailPage({ params }: VenuePageProps) {
                 venueSlug={venue.slug}
                 galleryImages={venue.galleryImages}
               />
+
+              {/* Weddings & Celebrations Section (Specific to Sapphire) */}
+              {venue.slug === "sapphire" && (
+                <div id="ceremonies" className="space-y-6 pt-2 scroll-mt-28">
+                  <div>
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block mb-1">
+                      SIGNATURE CELEBRATIONS
+                    </span>
+                    <h3 className="font-serif text-2xl sm:text-3xl text-[#0E0D35] font-normal">
+                      Weddings & Ceremonies at Sapphire
+                    </h3>
+                    <p className="text-xs sm:text-sm text-[#5A5A68] font-light mt-1 max-w-2xl">
+                      From sacred morning rituals to vibrant cocktail soirées and grand nuptials, Sapphire transforms effortlessly for every milestone tradition.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-5">
+                    {sapphireCeremonies.map((ceremony) => {
+                      const anchorId =
+                        ceremony.slug === "haldi-ceremony"
+                          ? "haldi"
+                          : ceremony.slug;
+
+                      const Icon =
+                        ceremony.slug === "haldi-ceremony"
+                          ? Sun
+                          : ceremony.slug === "ring-ceremony"
+                          ? Gem
+                          : Crown;
+
+                      const themeAccent =
+                        ceremony.slug === "haldi-ceremony"
+                          ? "border-[#FDE68A]/80 hover:border-[#F59E0B]"
+                          : ceremony.slug === "ring-ceremony"
+                          ? "border-[#F8D7DA]/80 hover:border-[#AA8B54]"
+                          : "border-[#E8D7B8]/80 hover:border-[#AA8B54]";
+
+                      const iconBg =
+                        ceremony.slug === "haldi-ceremony"
+                          ? "bg-[#FEF9E7] text-[#D97706]"
+                          : ceremony.slug === "ring-ceremony"
+                          ? "bg-[#FDF4F5] text-[#AA8B54]"
+                          : "bg-[#FAF5EB] text-[#AA8B54]";
+
+                      return (
+                        <div
+                          key={ceremony.id}
+                          id={anchorId}
+                          className={`p-6 sm:p-7 rounded-2xl bg-white border ${themeAccent} transition-all shadow-sm hover:shadow-md scroll-mt-32 relative overflow-hidden`}
+                        >
+                          <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+                            <div className="flex items-start gap-4">
+                              <div
+                                className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 border border-black/5 shadow-xs ${iconBg}`}
+                              >
+                                <Icon className="w-6 h-6" />
+                              </div>
+                              <div className="space-y-1">
+                                <div className="flex items-center gap-2">
+                                  <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#AA8B54]">
+                                    {ceremony.category}
+                                  </span>
+                                </div>
+                                <h4 className="font-serif text-2xl text-[#0E0D35]">
+                                  {ceremony.name}
+                                </h4>
+                                <p className="text-xs sm:text-sm text-[#4B4B59] font-light leading-relaxed max-w-xl pt-1">
+                                  {ceremony.description}
+                                </p>
+                              </div>
+                            </div>
+
+                            <div className="flex flex-col sm:items-end justify-between gap-3 shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-[#E8E8F0]">
+                              {ceremony.guestCapacity && (
+                                <div className="text-left sm:text-right">
+                                  <span className="text-[10px] uppercase tracking-wider text-[#77766D] block">
+                                    Guest Capacity
+                                  </span>
+                                  <span className="text-xs font-semibold text-[#0E0D35]">
+                                    {ceremony.guestCapacity}
+                                  </span>
+                                </div>
+                              )}
+                              <Button
+                                variant="primary-gold"
+                                size="sm"
+                                href={`/contact?venue=Sapphire&enquiryType=Event%20Planning&event=${encodeURIComponent(
+                                  ceremony.name
+                                )}`}
+                                className="text-[11px] uppercase tracking-wider font-semibold"
+                              >
+                                Enquire for {ceremony.name.split(" ")[0]} &rarr;
+                              </Button>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {/* Versatile Occasions Section (Specific to Concord) */}
+              {venue.slug === "concord" && (
+                <div id="occasions" className="space-y-6 pt-2 scroll-mt-28">
+                  <div>
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#AA8B54] block mb-1">
+                      VERSATILE OCCASIONS
+                    </span>
+                    <h3 className="font-serif text-2xl sm:text-3xl text-[#0E0D35] font-normal">
+                      Meetings & Celebrations at Concord
+                    </h3>
+                    <p className="text-xs sm:text-sm text-[#5A5A68] font-light mt-1 max-w-2xl">
+                      From high-focus corporate conferences and seminar presentations to intimate weddings and jubilant birthday galas.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-5">
+                    {concordOccasions.map((occasion) => {
+                      const Icon =
+                        occasion.slug === "business-meetings"
+                          ? Briefcase
+                          : occasion.slug === "wedding"
+                          ? Crown
+                          : Cake;
+
+                      const themeAccent =
+                        occasion.slug === "business-meetings"
+                          ? "border-[#BFDBFE]/80 hover:border-[#2563EB]"
+                          : occasion.slug === "wedding"
+                          ? "border-[#E8D7B8]/80 hover:border-[#AA8B54]"
+                          : "border-[#FBCFE8]/80 hover:border-[#DB2777]";
+
+                      const iconBg =
+                        occasion.slug === "business-meetings"
+                          ? "bg-[#EFF6FF] text-[#2563EB]"
+                          : occasion.slug === "wedding"
+                          ? "bg-[#FAF5EB] text-[#AA8B54]"
+                          : "bg-[#FDF2F8] text-[#DB2777]";
+
+                      return (
+                        <div
+                          key={occasion.id}
+                          id={occasion.slug}
+                          className={`p-6 sm:p-7 rounded-2xl bg-white border ${themeAccent} transition-all shadow-sm hover:shadow-md scroll-mt-32 relative overflow-hidden`}
+                        >
+                          <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+                            <div className="flex items-start gap-4">
+                              <div
+                                className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 border border-black/5 shadow-xs ${iconBg}`}
+                              >
+                                <Icon className="w-6 h-6" />
+                              </div>
+                              <div className="space-y-1">
+                                <div className="flex items-center gap-2">
+                                  <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#AA8B54]">
+                                    {occasion.category}
+                                  </span>
+                                </div>
+                                <h4 className="font-serif text-2xl text-[#0E0D35]">
+                                  {occasion.name}
+                                </h4>
+                                <p className="text-xs sm:text-sm text-[#4B4B59] font-light leading-relaxed max-w-xl pt-1">
+                                  {occasion.description}
+                                </p>
+                              </div>
+                            </div>
+
+                            <div className="flex flex-col sm:items-end justify-between gap-3 shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-[#E8E8F0]">
+                              {occasion.guestCapacity && (
+                                <div className="text-left sm:text-right">
+                                  <span className="text-[10px] uppercase tracking-wider text-[#77766D] block">
+                                    Capacity
+                                  </span>
+                                  <span className="text-xs font-semibold text-[#0E0D35]">
+                                    {occasion.guestCapacity}
+                                  </span>
+                                </div>
+                              )}
+                              <Button
+                                variant="primary-gold"
+                                size="sm"
+                                href={`/contact?venue=Concord&enquiryType=Event%20Planning&event=${encodeURIComponent(
+                                  occasion.name
+                                )}`}
+                                className="text-[11px] uppercase tracking-wider font-semibold"
+                              >
+                                Enquire for {occasion.name.split(" ")[0]} &rarr;
+                              </Button>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
 
               {/* Venue Amenities & Event Equipment */}
               <div className="space-y-5">

@@ -5,6 +5,7 @@ import { siteConfig } from "@/config/site";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import PageTransitionWrapper from "@/components/layout/PageTransitionWrapper";
+import WhatsAppFloatingButton from "@/components/ui/WhatsAppFloatingButton";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     "wedding venue Rudrapur",
     "corporate meeting room Rudrapur",
   ],
-  authors: [{ name: "VYAH By Radisson" }],
+  authors: [{ name: "VYAH By Radisson BLU Rudrapur" }],
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
         url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
         width: 1200,
         height: 630,
-        alt: "VYAH By Radisson",
+        alt: "VYAH By Radisson BLU Rudrapur",
       },
     ],
   },
@@ -79,6 +80,7 @@ export default function RootLayout({
           <PageTransitionWrapper>{children}</PageTransitionWrapper>
         </main>
         <Footer />
+        <WhatsAppFloatingButton />
       </body>
     </html>
   );

@@ -41,8 +41,8 @@ export function Footer() {
               <span className="font-serif text-2xl sm:text-3xl tracking-[0.22em] font-medium text-[#0E0D35] group-hover:text-[#AA8B54] transition-colors leading-none">
                 VYAH
               </span>
-              <span className="block text-[11px] uppercase tracking-[0.38em] text-[#AA8B54] mt-1.5 font-medium">
-                By Radisson
+              <span className="block text-[11px] uppercase tracking-[0.25em] text-[#AA8B54] mt-1.5 font-medium">
+                By Radisson BLU Rudrapur
               </span>
             </Link>
 
@@ -194,34 +194,16 @@ export function Footer() {
           <p className="text-center md:text-left">
             &copy; 2026 {siteConfig.propertyName}. All rights reserved.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-6 text-[11px]">
-            <Link
-              href="/privacy-policy"
-              className="hover:text-[#AA8B54] transition-colors"
+          <div className="text-center md:text-right text-[11px] text-[#77766D]">
+            Design &amp; Developed By{" "}
+            <a
+              href="https://preettech.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#AA8B54] hover:text-[#0E0D35] hover:underline font-semibold transition-colors ml-1"
             >
-              Privacy Policy
-            </Link>
-            <span className="text-[#E8E8F0]">&bull;</span>
-            <Link
-              href="/terms"
-              className="hover:text-[#AA8B54] transition-colors"
-            >
-              Terms & Conditions
-            </Link>
-            <span className="text-[#E8E8F0]">&bull;</span>
-            <Link
-              href="/gallery"
-              className="hover:text-[#AA8B54] transition-colors"
-            >
-              Visual Gallery
-            </Link>
-            <span className="text-[#E8E8F0]">&bull;</span>
-            <Link
-              href="/contact"
-              className="hover:text-[#AA8B54] transition-colors"
-            >
-              Enquiries & Reservations
-            </Link>
+              Preet Tech
+            </a>
           </div>
         </div>
       </Container>
