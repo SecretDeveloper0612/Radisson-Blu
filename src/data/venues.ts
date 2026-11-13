@@ -311,17 +311,30 @@ export const venuesData: VenueItem[] = [
 
 export const sapphireCeremonies: CeremonyItem[] = [
   {
-    id: "ceremony-haldi",
-    name: "Haldi Ceremony",
-    slug: "haldi-ceremony",
-    category: "Pre-Wedding Festivity",
-    tagline: "Vibrant turmeric rituals & joyful traditions",
+    id: "ceremony-conference",
+    name: "Conference",
+    slug: "conference",
+    category: "Corporate Summit & Seminars",
+    tagline: "Large-scale corporate summits & conventions",
     description:
-      "Auspicious morning celebrations adorned with marigold floral canopies, traditional seating cushions, dhol music arrangements, and specialized festive refreshments.",
-    href: "/venues/sapphire#haldi",
+      "Double-height pillarless ballroom equipped with high-output laser projection, dual motorized screens, professional acoustics, and theater/classroom setups for executive conventions.",
+    href: "/venues/sapphire#conference",
+    guestCapacity: "Up to 500 Guests",
+    recommendedTime: "Full Day / Multi-Day Conferences",
+    image: "/RBLU PHOTOS/Sapphire/Banquet Theatre.jpg",
+  },
+  {
+    id: "ceremony-birthday-party",
+    name: "Birthday Party",
+    slug: "birthday-party",
+    category: "Grand Milestone Parties",
+    tagline: "Thematic decor, dance floor & live counters",
+    description:
+      "Vibrant celebratory atmospheres with theatrical concert lighting, professional sound arrays, custom dance floors, and multi-cuisine live stations.",
+    href: "/venues/sapphire#birthday-party",
     guestCapacity: "100 - 350 Guests",
-    recommendedTime: "Morning & Afternoon (10:00 AM - 3:00 PM)",
-    image: "/RBLU PHOTOS/Haldi/1 (1).jpeg",
+    recommendedTime: "Afternoon / Evening Soirée",
+    image: "/RBLU PHOTOS/Sapphire/DSC05523.JPG",
   },
   {
     id: "ceremony-ring",
@@ -337,6 +350,19 @@ export const sapphireCeremonies: CeremonyItem[] = [
     image: "/RBLU PHOTOS/Sapphire/Banquet Theatre.jpg",
   },
   {
+    id: "ceremony-haldi",
+    name: "Haldi",
+    slug: "haldi",
+    category: "Pre-Wedding Festivity",
+    tagline: "Vibrant turmeric rituals & joyful traditions",
+    description:
+      "Auspicious morning celebrations adorned with marigold floral canopies, traditional seating cushions, dhol music arrangements, and specialized festive refreshments.",
+    href: "/venues/sapphire#haldi",
+    guestCapacity: "100 - 350 Guests",
+    recommendedTime: "Morning & Afternoon (10:00 AM - 3:00 PM)",
+    image: "/RBLU PHOTOS/Haldi/1 (1).jpeg",
+  },
+  {
     id: "ceremony-wedding",
     name: "Wedding",
     slug: "wedding",
@@ -348,6 +374,58 @@ export const sapphireCeremonies: CeremonyItem[] = [
     guestCapacity: "Up to 500 Guests",
     recommendedTime: "Full Day / Evening Auspicious Muhurat",
     image: "/RBLU PHOTOS/Sapphire/Banquet Cluster.jpg",
+  },
+  {
+    id: "ceremony-cme",
+    name: "CME",
+    slug: "cme",
+    category: "Continuing Medical Education",
+    tagline: "Medical conferences, symposiums & doctor meets",
+    description:
+      "Specialized audiovisual and breakout configurations for medical academic sessions, clinical case presentations, and keynote lectures with high-definition multi-screen relays.",
+    href: "/venues/sapphire#cme",
+    guestCapacity: "50 - 300 Doctors & Delegates",
+    recommendedTime: "Full Day / Weekend Symposium",
+    image: "/RBLU PHOTOS/Sapphire/Banquet Theatre.jpg",
+  },
+  {
+    id: "ceremony-anniversary",
+    name: "Anniversary Ceremony",
+    slug: "anniversary-ceremony",
+    category: "Milestone Celebration & Banquet",
+    tagline: "Silver, golden & platinum milestone galas",
+    description:
+      "Graceful banquet settings honoring marital journeys with bespoke floral styling, nostalgic video projection reels, and fine dining banquets with personalized hospitality.",
+    href: "/venues/sapphire#anniversary-ceremony",
+    guestCapacity: "80 - 300 Guests",
+    recommendedTime: "Evening Celebration",
+    image: "/RBLU PHOTOS/Sapphire/DSC05531.JPG",
+  },
+  {
+    id: "ceremony-exhibition",
+    name: "Exhibition Party",
+    slug: "exhibition-party",
+    category: "Exhibitions & Product Showcases",
+    tagline: "Spacious display stalls & networking reception",
+    description:
+      "Sprawling pillarless floor layout optimal for modular exhibition stalls, brand display counters, art exhibitions, and evening launch cocktails.",
+    href: "/venues/sapphire#exhibition-party",
+    guestCapacity: "Up to 500 Visitors",
+    recommendedTime: "Full Day Expo & Evening Reception",
+    image: "/RBLU PHOTOS/Sapphire/Banquet Empty.jpg",
+  },
+  {
+    id: "ceremony-corporate-annual",
+    name: "Corporate Annual Function",
+    slug: "corporate-annual-function",
+    category: "Annual Days & Award Nights",
+    tagline: "Employee awards, cultural performances & gala dinner",
+    description:
+      "Prestigious annual day functions featuring large performance stages, award ceremony lighting, sound mixing consoles, and extravagant multi-course celebratory buffets.",
+    href: "/venues/sapphire#corporate-annual-function",
+    guestCapacity: "Up to 500 Employees & Families",
+    recommendedTime: "Evening Gala (5:00 PM onwards)",
+    image: "/RBLU PHOTOS/Sapphire/DSC06145.JPG",
   },
 ];
 
@@ -390,6 +468,87 @@ export const concordOccasions: CeremonyItem[] = [
     guestCapacity: "50 - 200 Guests",
     recommendedTime: "Afternoon / Evening Soirée",
     image: "/RBLU PHOTOS/Concord/1 (9).jpeg",
+  },
+];
+
+export const nh87Events: CeremonyItem[] = [
+  {
+    id: "nh87-all-corporate",
+    name: "All Corporate Event",
+    slug: "corporate-events",
+    category: "Corporate Gatherings & Dinners",
+    tagline: "Executive dinners, networking galas & product mixers",
+    description:
+      "Contemporary dining and lounge environment tailored for corporate networking dinners, client appreciation meets, and formal executive lunches.",
+    href: "/venues/nh-87#corporate-events",
+    guestCapacity: "Up to 120 Guests",
+    recommendedTime: "Lunch / Evening Dinner",
+    image: "/RBLU PHOTOS/NH-87/1 (1).JPG",
+  },
+  {
+    id: "nh87-conference",
+    name: "Conference",
+    slug: "conference",
+    category: "Seminars & Presentation Sessions",
+    tagline: "Interactive corporate conferences & business sessions",
+    description:
+      "Comfortable culinary & seminar arrangements with high-speed Wi-Fi, audiovisual links, and gourmet plated or buffet food presentations.",
+    href: "/venues/nh-87#conference",
+    guestCapacity: "30 - 80 Attendees",
+    recommendedTime: "Morning / Full Day Conference",
+    image: "/RBLU PHOTOS/NH-87/1 (2).JPG",
+  },
+  {
+    id: "nh87-birthday",
+    name: "Birthday Party",
+    slug: "birthday-party",
+    category: "Celebrations & Social Parties",
+    tagline: "Live counters, handcrafted mocktails & party vibes",
+    description:
+      "Vibrant birthday celebrations featuring interactive open kitchens, artisanal dessert buffets, and custom celebratory decor.",
+    href: "/venues/nh-87#birthday-party",
+    guestCapacity: "25 - 100 Guests",
+    recommendedTime: "Afternoon / Evening Soirée",
+    image: "/RBLU PHOTOS/NH-87/1 (3).JPG",
+  },
+  {
+    id: "nh87-ring",
+    name: "Ring Ceremony",
+    slug: "ring-ceremony",
+    category: "Boutique Engagements",
+    tagline: "Intimate ring exchange & celebratory feast",
+    description:
+      "Sophisticated setting for intimate ring ceremonies and family gatherings with warm ambient chandeliers and fine-dining banquets.",
+    href: "/venues/nh-87#ring-ceremony",
+    guestCapacity: "40 - 100 Guests",
+    recommendedTime: "Evening Ceremony",
+    image: "/RBLU PHOTOS/NH-87/1 (4).JPG",
+  },
+  {
+    id: "nh87-cme",
+    name: "CME",
+    slug: "cme",
+    category: "Continuing Medical Education",
+    tagline: "Medical lectures, doctor meets & clinical discussions",
+    description:
+      "Convenient interactive venue for clinical symposiums, doctor panel discussions, and medical education dinners.",
+    href: "/venues/nh-87#cme",
+    guestCapacity: "30 - 75 Doctors & Delegates",
+    recommendedTime: "Evening Dinner Symposium",
+    image: "/RBLU PHOTOS/NH-87/1 (1).JPG",
+  },
+  {
+    id: "nh87-wedding",
+    name: "Wedding",
+    slug: "wedding",
+    category: "Intimate Nuptials & Dinners",
+    tagline: "Boutique wedding celebrations & family banquets",
+    description:
+      "Charming intimate nuptial receptions with bespoke regional and global culinary craft, live tandoor delicacies, and attentive hospitality.",
+    href: "/venues/nh-87#wedding",
+    guestCapacity: "Up to 120 Guests",
+    recommendedTime: "Lunch / Evening Wedding Reception",
+    image: "/RBLU PHOTOS/NH-87/1 (5).jpeg",
   },
 ];
 

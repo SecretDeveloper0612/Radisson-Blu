@@ -8,7 +8,7 @@ export const siteConfig: SiteConfig = {
     "Discover thoughtful comfort, memorable dining, and exceptional spaces for every occasion in the heart of Rudrapur, Uttarakhand.",
   fullDescription:
     "Nestled strategically in Uttarakhand's vibrant industrial and commercial gateway, Radisson Hotel Rudrapur offers international hospitality, sophisticated accommodations, versatile banquet and conference venues, and curated gastronomic experiences.",
-  logoText: "VYAH By Radisson BLU Rudrapur",
+  logoText: "VYAH By Radisson Rudrapur",
   logoAssetPath: undefined, // Leave undefined to use clean typography branding unless official SVG is provided
 
   contact: {

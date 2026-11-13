@@ -37,12 +37,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-16 border-b border-[#E8E8F0]">
           {/* Column 1 (4 Cols): Grand Brand Identity & Hospitality Summary */}
           <div className="lg:col-span-4 space-y-6">
-            <Link href="/" className="inline-block group focus:outline-none">
-              <span className="font-serif text-2xl sm:text-3xl tracking-[0.22em] font-medium text-[#0E0D35] group-hover:text-[#AA8B54] transition-colors leading-none">
+            <Link href="/" className="inline-flex flex-col items-start group focus:outline-none">
+              <span className="font-serif text-2xl sm:text-3xl tracking-[0.24em] font-medium text-[#0E0D35] group-hover:text-[#AA8B54] transition-colors leading-none pl-1">
                 VYAH
               </span>
               <span className="block text-[11px] uppercase tracking-[0.25em] text-[#AA8B54] mt-1.5 font-medium">
-                By Radisson BLU Rudrapur
+                By Radisson Rudrapur
               </span>
             </Link>
 
