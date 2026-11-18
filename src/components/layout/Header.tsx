@@ -165,7 +165,7 @@ export function Header() {
               VYAH
             </span>
             <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.22em] text-[#C6A568] mt-1 font-sans font-light text-center">
-              By Radisson Rudrapur
+              By Radisson Blu Rudrapur
             </span>
           </Link>
 

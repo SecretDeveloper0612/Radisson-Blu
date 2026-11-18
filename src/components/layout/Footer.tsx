@@ -42,7 +42,7 @@ export function Footer() {
                 VYAH
               </span>
               <span className="block text-[11px] uppercase tracking-[0.25em] text-[#AA8B54] mt-1.5 font-medium">
-                By Radisson Rudrapur
+                By Radisson Blu Rudrapur
               </span>
             </Link>
 

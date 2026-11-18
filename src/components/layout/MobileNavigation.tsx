@@ -57,7 +57,7 @@ export function MobileNavigation({
             VYAH
           </span>
           <span className="text-[9px] uppercase tracking-[0.2em] text-[#AA8B54]">
-            By Radisson Rudrapur
+            By Radisson Blu Rudrapur
           </span>
         </div>
         <button
