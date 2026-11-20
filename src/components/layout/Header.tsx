@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, ChevronDown, ArrowUpRight, ArrowRight, ChevronRight } from "lucide-react";
 import { headerNavLinks } from "@/data/navigation";
-import { venuesData, sapphireCeremonies, concordOccasions, executiveRoomEvents, nh87Events } from "@/data/venues";
+import { venuesData, sapphireCeremonies, concordOccasions, executiveRoomEvents, nh87Events, k2barEvents } from "@/data/venues";
 import { siteConfig } from "@/config/site";
 import MobileNavigation from "./MobileNavigation";
 import Button from "@/components/ui/Button";
@@ -21,10 +21,12 @@ export function Header() {
   const [concordSubmenuOpen, setConcordSubmenuOpen] = useState(false);
   const [executiveSubmenuOpen, setExecutiveSubmenuOpen] = useState(false);
   const [nh87SubmenuOpen, setNh87SubmenuOpen] = useState(false);
+  const [k2barSubmenuOpen, setK2barSubmenuOpen] = useState(false);
   const sapphireTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const concordTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const executiveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const nh87TimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const k2barTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const clearAllSubmenuTimeouts = () => {
     if (sapphireTimeoutRef.current) {
@@ -43,6 +45,10 @@ export function Header() {
       clearTimeout(nh87TimeoutRef.current);
       nh87TimeoutRef.current = null;
     }
+    if (k2barTimeoutRef.current) {
+      clearTimeout(k2barTimeoutRef.current);
+      k2barTimeoutRef.current = null;
+    }
   };
 
   const closeAllSubmenus = () => {
@@ -50,6 +56,7 @@ export function Header() {
     setConcordSubmenuOpen(false);
     setExecutiveSubmenuOpen(false);
     setNh87SubmenuOpen(false);
+    setK2barSubmenuOpen(false);
   };
 
   const handleSapphireMouseEnter = () => {
@@ -57,6 +64,7 @@ export function Header() {
     setConcordSubmenuOpen(false);
     setExecutiveSubmenuOpen(false);
     setNh87SubmenuOpen(false);
+    setK2barSubmenuOpen(false);
     setSapphireSubmenuOpen(true);
   };
 
@@ -71,6 +79,7 @@ export function Header() {
     setSapphireSubmenuOpen(false);
     setExecutiveSubmenuOpen(false);
     setNh87SubmenuOpen(false);
+    setK2barSubmenuOpen(false);
     setConcordSubmenuOpen(true);
   };
 
@@ -85,6 +94,7 @@ export function Header() {
     setSapphireSubmenuOpen(false);
     setConcordSubmenuOpen(false);
     setNh87SubmenuOpen(false);
+    setK2barSubmenuOpen(false);
     setExecutiveSubmenuOpen(true);
   };
 
@@ -99,12 +109,28 @@ export function Header() {
     setSapphireSubmenuOpen(false);
     setConcordSubmenuOpen(false);
     setExecutiveSubmenuOpen(false);
+    setK2barSubmenuOpen(false);
     setNh87SubmenuOpen(true);
   };
 
   const handleNh87MouseLeave = () => {
     nh87TimeoutRef.current = setTimeout(() => {
       setNh87SubmenuOpen(false);
+    }, 140);
+  };
+
+  const handleK2barMouseEnter = () => {
+    clearAllSubmenuTimeouts();
+    setSapphireSubmenuOpen(false);
+    setConcordSubmenuOpen(false);
+    setExecutiveSubmenuOpen(false);
+    setNh87SubmenuOpen(false);
+    setK2barSubmenuOpen(true);
+  };
+
+  const handleK2barMouseLeave = () => {
+    k2barTimeoutRef.current = setTimeout(() => {
+      setK2barSubmenuOpen(false);
     }, 140);
   };
 
@@ -224,7 +250,7 @@ export function Header() {
                         {/* Dropdown Header */}
                         <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#E8E8F0]">
                           <span className="text-[10px] uppercase tracking-[0.22em] text-[#AA8B54] font-semibold">
-                            All Venues & Spaces (7)
+                            All Venues & Spaces (12)
                           </span>
                           <Link
                             href="/venues"
@@ -241,7 +267,7 @@ export function Header() {
                         </div>
 
                         {/* List of all venues */}
-                        <div className="space-y-1">
+                        <div className="space-y-0.5">
                           {venuesData.map((venue) => {
                             const isSapphire = venue.slug === "sapphire";
 
@@ -829,6 +855,148 @@ export function Header() {
                               );
                             }
 
+                            if (venue.slug === "k2-bar") {
+                              return (
+                                <div
+                                  key={venue.id}
+                                  className="relative"
+                                  onMouseEnter={handleK2barMouseEnter}
+                                  onMouseLeave={handleK2barMouseLeave}
+                                >
+                                  <Link
+                                    href={`/venues/${venue.slug}`}
+                                    onClick={() => {
+                                      setVenuesDropdownOpen(false);
+                                      closeAllSubmenus();
+                                    }}
+                                    className={cn(
+                                      "group/item flex items-center justify-between p-2.5 rounded-lg transition-all",
+                                      k2barSubmenuOpen
+                                        ? "bg-[#FAF8F5] ring-1 ring-[#C6A568]/40"
+                                        : "hover:bg-[#FAF8F5]"
+                                    )}
+                                  >
+                                    <div>
+                                      <div className="flex items-center gap-2">
+                                        <span
+                                          className={cn(
+                                            "font-serif text-base transition-colors",
+                                            k2barSubmenuOpen
+                                              ? "text-[#AA8B54] font-medium"
+                                              : "text-[#0E0D35] group-hover/item:text-[#AA8B54]"
+                                          )}
+                                        >
+                                          {venue.name}
+                                        </span>
+                                      </div>
+                                      <span className="text-[10px] text-[#77766D] uppercase tracking-wider block">
+                                        {venue.category}
+                                      </span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5">
+                                      <span
+                                        className={cn(
+                                          "text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded transition-all",
+                                          k2barSubmenuOpen
+                                            ? "bg-[#C6A568]/20 text-[#AA8B54]"
+                                            : "bg-[#FAF8F5] text-[#8C7A5B] group-hover/item:bg-[#C6A568]/15 group-hover/item:text-[#AA8B54]"
+                                        )}
+                                      >
+                                        2 Events
+                                      </span>
+                                      <ChevronRight
+                                        className={cn(
+                                          "w-4 h-4 transition-all duration-200",
+                                          k2barSubmenuOpen
+                                            ? "text-[#AA8B54] translate-x-1"
+                                            : "text-[#77766D] group-hover/item:text-[#AA8B54] group-hover/item:translate-x-0.5"
+                                        )}
+                                      />
+                                    </div>
+                                  </Link>
+
+                                  {/* K2BAR Flyout Submenu to the right */}
+                                  <div
+                                    className={cn(
+                                      "absolute left-full bottom-0 pl-3.5 transition-all duration-200 z-50",
+                                      k2barSubmenuOpen
+                                        ? "opacity-100 visible translate-x-0 pointer-events-auto"
+                                        : "opacity-0 invisible -translate-x-2 pointer-events-none"
+                                    )}
+                                  >
+                                    <div className="w-[340px] bg-white/98 backdrop-blur-xl border border-[#E8E8F0] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.18)] p-4 text-[#0E0D35]">
+                                      {/* Submenu Header */}
+                                      <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-[#E8E8F0]">
+                                        <div>
+                                          <span className="text-[10px] uppercase tracking-[0.22em] text-[#AA8B54] font-semibold block">
+                                            K2BAR Parties (2)
+                                          </span>
+                                          <span className="text-[10px] text-[#77766D] font-light">
+                                            Night Party &amp; Kitty Party Lounge
+                                          </span>
+                                        </div>
+                                        <Link
+                                          href="/venues/k2-bar"
+                                          onClick={() => {
+                                            setVenuesDropdownOpen(false);
+                                            closeAllSubmenus();
+                                          }}
+                                          className="text-[10px] text-[#5A5A68] hover:text-[#C6A568] uppercase tracking-wider flex items-center gap-1 transition-colors font-medium"
+                                        >
+                                          <span>Details</span>
+                                          <ArrowRight className="w-3 h-3 text-[#C6A568]" />
+                                        </Link>
+                                      </div>
+
+                                      {/* 2 K2BAR items */}
+                                      <div className="space-y-1">
+                                        {k2barEvents.map((item) => (
+                                          <Link
+                                            key={item.id}
+                                            href={item.href}
+                                            onClick={() => {
+                                              setVenuesDropdownOpen(false);
+                                              closeAllSubmenus();
+                                            }}
+                                            className="group/k2 flex items-center justify-between p-2.5 rounded-lg border border-transparent hover:border-[#E8E8F0] hover:bg-[#FAF8F5] transition-all"
+                                          >
+                                            <div>
+                                              <span className="font-serif text-sm font-medium text-[#0E0D35] group-hover/k2:text-[#AA8B54] transition-colors block leading-tight">
+                                                {item.name}
+                                              </span>
+                                              <span className="text-[10px] text-[#77766D] uppercase tracking-wider block mt-0.5">
+                                                {item.category}
+                                              </span>
+                                            </div>
+                                            <span className="text-xs text-[#77766D] group-hover/k2:text-[#AA8B54] group-hover/k2:translate-x-1 transition-all">
+                                              &rarr;
+                                            </span>
+                                          </Link>
+                                        ))}
+                                      </div>
+
+                                      {/* Submenu Footer */}
+                                      <div className="mt-3 pt-2.5 border-t border-[#E8E8F0] flex items-center justify-between text-xs">
+                                        <span className="text-[#77766D] text-[10px] font-light">
+                                          Capacity up to 80 guests
+                                        </span>
+                                        <Link
+                                          href="/contact?venue=k2-bar"
+                                          onClick={() => {
+                                            setVenuesDropdownOpen(false);
+                                            closeAllSubmenus();
+                                          }}
+                                          className="text-[#AA8B54] hover:underline font-medium text-[10px] uppercase tracking-wider"
+                                        >
+                                          Enquire Now &rarr;
+                                        </Link>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            }
+
                             return (
                               <Link
                                 key={venue.id}
@@ -836,9 +1004,7 @@ export function Header() {
                                 onMouseEnter={handleOtherVenueMouseEnter}
                                 onClick={() => {
                                   setVenuesDropdownOpen(false);
-                                  setSapphireSubmenuOpen(false);
-                                  setConcordSubmenuOpen(false);
-                                  setExecutiveSubmenuOpen(false);
+                                  closeAllSubmenus();
                                 }}
                                 className="group/item flex items-center justify-between p-2.5 rounded-lg hover:bg-[#FAF8F5] transition-colors"
                               >

@@ -21,7 +21,7 @@ export function ExperienceSection() {
       title: "Signature Dining",
       description:
         "Theatrical live kitchens and regional delicacies at NH 87, complemented by artisanal cocktails.",
-      image: "/RBLU PHOTOS/NH-87/1 (1).JPG",
+      image: "/hotel-photos/signature-dining-banquet.jpg",
       href: "/venues/nh-87",
       span: "lg:col-span-4",
     },
@@ -66,20 +66,18 @@ export function ExperienceSection() {
                       sizes="(max-width: 1024px) 100vw, 33vw"
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent" />
+                    {/* Bottom gradient overlay only so top of photo stays bright and natural */}
+                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/85 via-black/40 to-transparent pointer-events-none" />
                   </div>
 
                   {/* Content overlay */}
-                  <div className="relative z-10 space-y-3">
+                  <div className="relative z-10 space-y-2">
                     <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#C6A568]">
                       {item.category}
                     </span>
                     <h3 className="font-serif text-2xl sm:text-3xl font-normal text-white">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-white/80 font-light leading-relaxed">
-                      {item.description}
-                    </p>
 
                     <div className="pt-2">
                       <Link

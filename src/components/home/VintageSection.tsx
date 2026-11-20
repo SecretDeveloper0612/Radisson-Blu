@@ -34,7 +34,7 @@ const vintageList: VintageCardItem[] = [
     duration: "Full Event Access",
     summary: "Grand entrance to Sapphire Ballroom or Queen's Field with regal chauffeur & custom floral adornment.",
     bullets: ["Bespoke Floral Bonnet Decor", "Red Carpet Gate-to-Mandap Entry", "Chauffeured in Royal Livery"],
-    image: "/vintage/vintage-car-main.jpg",
+    image: "/vintage/vintage-baraat-arrival.jpg",
     ctaText: "Enquire Wedding Entry",
   },
   {
@@ -180,11 +180,12 @@ export function VintageSection() {
             {/* Direct Calling Pills */}
             <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
               {[
+                { label: "+91 81710 00130", tel: "+918171000130" },
                 { label: "+91 81710 00114", tel: "+918171000114" },
-                { label: "+91 81710 00115", tel: "+918171000115" },
                 { label: "+91 81710 00116", tel: "+918171000116" },
-                { label: "+91 81710 00139", tel: "+918171000139" },
                 { label: "+91 81710 00152", tel: "+918171000152" },
+                { label: "+91 84779 99005", tel: "+918477999005" },
+                { label: "+91 84779 99004", tel: "+918477999004" },
               ].map((item, nIdx) => (
                 <a
                   key={nIdx}

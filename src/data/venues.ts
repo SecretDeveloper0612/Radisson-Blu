@@ -80,7 +80,7 @@ export const venuesData: VenueItem[] = [
   {
     id: "venue-nh87",
     slug: "nh-87",
-    name: "NH 87",
+    name: "NH87",
     category: "Dining & Lounge",
     tagline: "Contemporary dining celebrating regional and global gastronomy",
     description:
@@ -117,15 +117,165 @@ export const venuesData: VenueItem[] = [
     ],
   },
   {
+    id: "venue-pool-lawn",
+    slug: "pool-lawn",
+    name: "Pool lawn",
+    category: "Outdoor Lawn",
+    tagline: "Starlit poolside lawns for glamorous open-air celebrations",
+    description:
+      "A picturesque manicured open-air lawn framed by the serene swimming pool and lush palm landscaping, ideal for evening sangeet ceremonies, poolside cocktails, and wedding receptions.",
+    fullDescription:
+      "Pool lawn offers an exquisite natural setting beneath starlit skies. Overlooking the azure hotel pool with illuminated landscaping and manicured greens, it creates an unforgettable backdrop for sundowner cocktail parties, romantic reception dinners, and grand wedding ceremonies.",
+    featuredImage: "/hotel-photos/facade-pool.jpg",
+    galleryImages: [
+      "/hotel-photos/facade-pool.jpg",
+      "/hotel-photos/swimming-pool.jpg",
+      "/RBLU PHOTOS/Hotel outside Pics/Lawn and Pool.jpg",
+      "/RBLU PHOTOS/Hotel outside Pics/Facade with pool.jpg",
+      "/hotel-photos/queens-field.jpg",
+    ],
+    specs: {
+      capacity: "Up to 500 Guests",
+      area: "Approx. 12,000 sq.ft. of Poolside Greens",
+      catering: "Live Outdoor Barbecue, Tandoor & Grand Buffet Pavilions",
+      setupStyles: ["Poolside Cocktail", "Open Lawn Reception", "Round Tables", "Themed Mandap"],
+    },
+    highlights: [
+      "Breathtaking poolside ambiance with romantic evening illumination",
+      "Seamless layout for live food stations, bar setups, and performance stages",
+      "Direct flow between pool deck and sprawling manicured lawns",
+      "Weather-protected covered buffer terraces adjacent to the pool",
+    ],
+    features: [
+      "Dedicated cocktail bar counter and live grill infrastructure",
+      "Specialized mood lighting reflecting on water",
+      "High-power electrical distribution for DJ and live bands",
+      "Dedicated guest entrance and valet assistance",
+    ],
+    amenities: [
+      "Outdoor lighting",
+      "Swimming pool view",
+      "Sound system setup space",
+      "Wheelchair-accessible",
+    ],
+  },
+  {
+    id: "venue-vyah-ballroom",
+    slug: "vyah-ballroom",
+    name: "Vyah ballroom",
+    category: "Banquet & Ballroom",
+    tagline: "The region's forthcoming architectural landmark for events",
+    description:
+      "An upcoming landmark ballroom currently under development, set to elevate banqueting standards with soaring heights, modular partition walls, and massive capacity.",
+    fullDescription:
+      "Designed to meet the growing demand for mega conventions, international industrial summits, and luxury destination weddings, the Vyah Ballroom will redefine luxury hospitality in the region. Featuring state-of-the-art acoustic design, modular spatial flexibility, and unmatched pre-function expanses, this venue will soon welcome prestigious gatherings.",
+    featuredImage: "/hotel-photos/concord-hall.jpg",
+    galleryImages: [
+      "/hotel-photos/concord-hall.jpg",
+      "/RBLU PHOTOS/Sapphire/Banquet Cluster.jpg",
+    ],
+    isUpcoming: true,
+    statusBadge: "Coming Soon",
+    specs: {
+      capacity: "Projected 800+ Guests",
+      area: "Under Construction (~9,000+ sq.ft.)",
+      catering: "Custom Banqueting & International Menus",
+      setupStyles: ["Modular Configurations", "Grand Banquet", "Mega Convention"],
+    },
+    highlights: [
+      "Monumental ceiling clearance with heavy-duty rigging points",
+      "Motorized acoustic operable partitions for multi-hall dividing",
+      "Expansive marble pre-function corridor",
+      "Dedicated drive-in access for automobile exhibitions and heavy displays",
+    ],
+    features: [
+      "Advance enquiries welcomed for future dates",
+      "Virtual architectural previews available upon request",
+      "Integrated energy-efficient HVAC and green architectural standards",
+    ],
+  },
+  {
+    id: "venue-sapphire-vyah-ball",
+    slug: "sapphire-vyah-ball",
+    name: "Sapphire+vyah ball",
+    category: "Banquet & Ballroom",
+    tagline: "Monumental combined convention & mega wedding venue",
+    description:
+      "The ultimate grand banquet combination connecting Sapphire Hall with the Vyah Ballroom complex, offering unmatched scale for 1,200+ guests.",
+    fullDescription:
+      "Combining the architectural grandeur of Sapphire with the expansive scale of the Vyah Ballroom, this unified mega-venue caters to high-profile destination weddings, state summits, national corporate conventions, and premier industrial expositions. Featuring dual pre-function zones, grand entrances, and simultaneous multi-hall banquet capabilities.",
+    featuredImage: "/RBLU PHOTOS/Sapphire/Banquet Cluster.jpg",
+    galleryImages: [
+      "/RBLU PHOTOS/Sapphire/Banquet Cluster.jpg",
+      "/hotel-photos/concord-hall.jpg",
+      "/RBLU PHOTOS/Sapphire/Banquet Theatre.jpg",
+      "/hotel-photos/sapphire-banquet.jpg",
+    ],
+    specs: {
+      capacity: "1,200 – 1,800+ Guests",
+      area: "Combined ~14,500+ sq.ft.",
+      catering: "Dual Kitchen Mega-Buffet & Multi-Regional Live Stations",
+      setupStyles: ["Mega Banquet", "Plenary Convention", "Dual-Stage Celebrations"],
+    },
+    highlights: [
+      "Massive combined capacity for regional and national scale events",
+      "Seamless indoor guest flow across multiple wings",
+      "Simultaneous ceremonies, dining pavilions, and executive breakout lounges",
+      "Comprehensive parking and dedicated VIP entrance porticos",
+    ],
+    features: [
+      "High-power stage rigging and synchronized multi-hall AV links",
+      "Dedicated bridal staging suites and VIP green rooms",
+      "Full event management and specialized banqueting team",
+      "Customizable partition walls for flexible timing and transitions",
+    ],
+  },
+  {
+    id: "venue-nh87-pool-lawn",
+    slug: "nh87-pool-lawn",
+    name: "NH87+Pool lawn",
+    category: "Outdoor Lawn",
+    tagline: "Dynamic indoor-outdoor fusion for high-energy celebrations",
+    description:
+      "An enchanting hybrid space connecting the indoor culinary lounge of NH87 directly with the open-air starlit Pool Lawn for seamless cocktail parties and receptions.",
+    fullDescription:
+      "Experience the best of both worlds by pairing NH87's vibrant indoor dining atmosphere and live interactive culinary kitchens with the serene starlit open-air ambiance of the Pool Lawn. Guests can effortlessly move between air-conditioned lounge comfort and breezy poolside celebrations, making it the top choice for sangeet nights, sundowners, and celebratory receptions.",
+    featuredImage: "/hotel-photos/facade-pool.jpg",
+    galleryImages: [
+      "/hotel-photos/facade-pool.jpg",
+      "/RBLU PHOTOS/NH-87/1 (1).JPG",
+      "/hotel-photos/swimming-pool.jpg",
+      "/RBLU PHOTOS/Hotel outside Pics/Lawn and Pool.jpg",
+    ],
+    specs: {
+      capacity: "Up to 600 Guests",
+      area: "Combined Indoor & Outdoor ~15,200 sq.ft.",
+      catering: "Live Interactive Kitchens, Outdoor Barbecue & Artisanal Cocktails",
+      setupStyles: ["Indoor Lounge + Outdoor Lawn", "Buffet & Live Counters", "Sundowner Mixer"],
+    },
+    highlights: [
+      "Fluid transition between indoor climate-controlled dining and outdoor starlit greens",
+      "Live tandoor and wok stations indoors alongside outdoor poolside barbecue",
+      "Ideal setup for weather contingency with guaranteed indoor overflow",
+      "Dramatic evening lighting connecting the restaurant terrace and pool",
+    ],
+    features: [
+      "Integrated audio links across indoor lounge and outdoor lawn",
+      "Multiple bar setups including indoor cocktail bar and poolside bar",
+      "Flexible lounge seating and open-air round tables",
+      "Valet service and dedicated banquet coordinator",
+    ],
+  },
+  {
     id: "venue-meeting-room",
     slug: "meeting-room",
-    name: "Meeting Room",
+    name: "Meeting room",
     category: "Meeting & Conference",
     tagline: "Precision meetings & productive corporate summits",
     description:
       "A technology-enabled conference venue optimized for corporate strategy sessions, board discussions, and professional seminars.",
     fullDescription:
-      "The Meeting Room delivers seamless productivity with smart video-conferencing technology, ergonomic Herman Miller seating, and crisp acoustic clarity. Whether hosting day-long leadership workshops, vendor presentations, or hybrid global calls, this venue is tailored for seamless business outcomes.",
+      "The Meeting Room delivers seamless productivity with smart video-conferencing technology, ergonomic seating, and crisp acoustic clarity. Whether hosting day-long leadership workshops, vendor presentations, or hybrid global calls, this venue is tailored for seamless business outcomes.",
     featuredImage: "/RBLU PHOTOS/Meeting Room/Meeting Room.jpg",
     galleryImages: [
       "/RBLU PHOTOS/Meeting Room/Meeting Room.jpg",
@@ -162,13 +312,13 @@ export const venuesData: VenueItem[] = [
   {
     id: "venue-executive-room",
     slug: "executive-room",
-    name: "Executive Room",
+    name: "Executive lounge",
     category: "Meeting & Conference",
     tagline: "Private board sessions & high-level deliberations",
     description:
-      "A prestigious boardroom setting designed for private director meetings, confidential negotiations, and high-impact presentations.",
+      "A prestigious boardroom and lounge setting designed for private director meetings, confidential negotiations, and high-impact presentations.",
     fullDescription:
-      "Engineered for senior executive privacy and discretion, the Executive Room features a solid mahogany boardroom table, plush leather executive armchairs, integrated tabletop connectivity ports, and dedicated hospitality attendants.",
+      "Engineered for senior executive privacy and discretion, the Executive Lounge features solid mahogany conference furnishings, plush leather executive armchairs, integrated tabletop connectivity ports, and dedicated hospitality attendants.",
     featuredImage: "/RBLU PHOTOS/Excutive Lounge/Banquet.jpg",
     galleryImages: [
       "/RBLU PHOTOS/Excutive Lounge/Banquet.jpg",
@@ -196,80 +346,6 @@ export const venuesData: VenueItem[] = [
       "Nespresso coffee bar and sparkling water amenities",
       "Wireless presentation clickers & digital pointer devices",
       "Dedicated conference concierge on standby",
-    ],
-  },
-  {
-    id: "venue-queens-field",
-    slug: "queens-field",
-    name: "Queen's Field",
-    category: "Outdoor Lawn",
-    tagline: "Starlit open-air lawn for grand weddings & receptions",
-    description:
-      "A picturesque manicured open-air lawn framed by lush landscaping and majestic palm trees, ideal for evening sangeet ceremonies, receptions, and al fresco dinners.",
-    fullDescription:
-      "Queen's Field offers an expansive natural venue beneath the stars. With manicured lawns, romantic pathway illuminations, and vast open space for custom thematic pavilions, stages, and live banquet counters, it is Rudrapur's premier destination for spectacular outdoor celebrations.",
-    featuredImage: "/RBLU PHOTOS/Queens Filed/Queen_s Field.jpg",
-    galleryImages: [
-      "/RBLU PHOTOS/Queens Filed/Queen_s Field.jpg",
-    ],
-    specs: {
-      capacity: "600 – 1,000+ Guests",
-      area: "Approx. 18,000 sq.ft. of Manicured Lawn",
-      catering: "Live Outdoor Barbecue, Tandoor & Grand Buffet Pavilions",
-      setupStyles: ["Open Lawn Reception", "Round Tables", "Theme Mandap & Stage"],
-    },
-    highlights: [
-      "Lush open-air environment with architectural ambient lighting",
-      "Dedicated grand ceremonial entrance for baraat and guest arrivals",
-      "High-capacity electrical conduits for stage sound and DJ trussing",
-      "Covered weather-protected buffer areas adjacent to the lawn",
-    ],
-    features: [
-      "Dedicated bridal entry promenade",
-      "Spacious vehicle parking & valet facilities",
-      "Outdoor live cooking and cocktail bar infrastructure",
-      "Security and perimeter management for exclusive gatherings",
-    ],
-    amenities: [
-      "Natural daylight",
-      "Sound system",
-      "Stage - on request",
-      "Wheelchair-accessible",
-    ],
-  },
-  {
-    id: "venue-vyah-ballroom",
-    slug: "vyah-ballroom",
-    name: "Vyah Ballroom",
-    category: "Banquet & Ballroom",
-    tagline: "The region's forthcoming architectural landmark for events",
-    description:
-      "An upcoming landmark ballroom currently under development, set to elevate banqueting standards with soaring heights, modular partition walls, and massive capacity.",
-    fullDescription:
-      "Designed to meet the growing demand for mega conventions, international industrial summits, and luxury destination weddings, the Vyah Ballroom will redefine luxury hospitality in the region. Featuring state-of-the-art acoustic design, modular spatial flexibility, and unmatched pre-function expanses, this venue will soon welcome prestigious gatherings.",
-    featuredImage: "/hotel-photos/concord-hall.jpg",
-    galleryImages: [
-      "/hotel-photos/concord-hall.jpg",
-      "/RBLU PHOTOS/Sapphire/Banquet Cluster.jpg",
-    ],
-    isUpcoming: true,
-    statusBadge: "Coming Soon",
-    specs: {
-      capacity: "Projected 800+ Guests",
-      area: "Under Construction (~9,000+ sq.ft.)",
-      catering: "Custom Banqueting & International Menus",
-      setupStyles: ["Modular Configurations", "Grand Banquet", "Mega Convention"],
-    },
-    highlights: [
-      "Monumental ceiling clearance with heavy-duty rigging points",
-      "Motorized acoustic operable partitions for multi-hall dividing",
-      "Expansive marble pre-function corridor",
-      "Dedicated drive-in access for automobile exhibitions and heavy displays",
-    ],
-    features: [
-      "Advance enquiries welcomed for future dates",
-      "Virtual architectural previews available upon request",
-      "Integrated energy-efficient HVAC and green architectural standards",
     ],
   },
   {
@@ -307,6 +383,112 @@ export const venuesData: VenueItem[] = [
       "Custom staging and dance floor configurations",
     ],
   },
+  {
+    id: "venue-fern",
+    slug: "fern",
+    name: "Fern",
+    category: "Meeting & Conference",
+    tagline: "Intimate business summits & strategic workshop hub",
+    description:
+      "A modern, versatile meeting hall designed for corporate workshops, interactive seminars, board deliberations, and executive committee sessions.",
+    fullDescription:
+      "Fern offers an intimate yet refined environment engineered for productive business gatherings and private functions. Equipped with high-definition projection, acoustic wall paneling, flexible seating formats, and Radisson's attentive corporate concierge service.",
+    featuredImage: "/hotel-photos/meeting-room.jpg",
+    galleryImages: [
+      "/hotel-photos/meeting-room.jpg",
+      "/RBLU PHOTOS/Meeting Room/9. RB Business Centre 1.JPG",
+      "/hotel-photos/business-centre.jpg",
+    ],
+    specs: {
+      capacity: "Up to 40 Guests (Theatre) / 25 (Classroom / U-Shape)",
+      area: "Approx. 850 sq.ft.",
+      catering: "Working Luncheons, Gourmet Teas & Continuous Coffee Station",
+      setupStyles: ["U-Shape", "Classroom", "Theatre", "Boardroom"],
+    },
+    highlights: [
+      "Smart digital display screen with instant wireless sharing",
+      "Acoustically treated interior for crystal clear discussions",
+      "Ergonomic seating suited for extended strategy sessions",
+      "Individual climate control and high-speed enterprise Wi-Fi",
+    ],
+    features: [
+      "High-output laser projector and motorized projection screen",
+      "Executive stationery kits and dedicated meeting host",
+      "Customizable break-out culinary packages",
+      "On-site print, copy, and secretarial assistance",
+    ],
+  },
+  {
+    id: "venue-kumaon-cafe",
+    slug: "kumaon-cafe",
+    name: "Kumaon cafe",
+    category: "Dining & Lounge",
+    tagline: "Artisanal bakery, gourmet cafe & relaxed social rendezvous",
+    description:
+      "A charming European-style cafe and artisanal patisserie celebrating fresh bakes, single-origin coffees, and informal daytime social gatherings.",
+    fullDescription:
+      "Kumaon Cafe welcomes guests with the aroma of freshly roasted artisan coffees and hand-kneaded oven-fresh breads and pastries. Whether dropping in for a casual business catch-up, an afternoon high tea, or an intimate informal get-together, Kumaon Cafe offers a relaxed, chic atmosphere with delightful sweet and savory specialties.",
+    featuredImage: "/hotel-photos/nh87-dining.jpg",
+    galleryImages: [
+      "/hotel-photos/nh87-dining.jpg",
+      "/RBLU PHOTOS/Restaurent/Restaurant.jpg",
+      "/RBLU PHOTOS/Restaurent/Restaurant Breakfast.jpg",
+      "/hotel-photos/bakery-shop.jpg",
+    ],
+    specs: {
+      capacity: "Up to 45 Seated Guests",
+      area: "Approx. 1,100 sq.ft.",
+      catering: "Artisanal Coffees, Teas, French Patisserie & Gourmet Sandwiches",
+      setupStyles: ["Cafe Tables", "Cozy Lounge Corners", "Outdoor Terrace"],
+    },
+    highlights: [
+      "Specialty barista-pulled espresso beverages & Himalayan leaf teas",
+      "Daily fresh-baked croissants, macarons, and bespoke celebration cakes",
+      "Cozy, photogenic ambiance with natural light and relaxed seating",
+      "Takeaway hampers and custom bakery gift boxes available",
+    ],
+    features: [
+      "High-speed cafe Wi-Fi for remote working and informal meetings",
+      "Custom cake ordering for birthdays, anniversaries & celebrations",
+      "Selection of artisanal gelato, shakes, and cold-brew beverages",
+      "Warm, attentive cafe table service",
+    ],
+  },
+  {
+    id: "venue-k2-bar",
+    slug: "k2-bar",
+    name: "K2 Bar",
+    category: "Dining & Lounge",
+    tagline: "Vibrant nightlife, artisanal cocktails & private party lounge",
+    description:
+      "A stylish, atmospheric cocktail bar & lounge designed for high-energy night parties, curated kitty parties, and sophisticated social evenings.",
+    fullDescription:
+      "K2 Bar offers an electric ambiance with contemporary lighting, an artisanal cocktail counter, and curated music playlists. Whether planning a late-night party, a chic afternoon kitty party, or a private celebratory gathering, K2 Bar provides the ultimate setting with bespoke beverages and culinary delights.",
+    featuredImage: "/hotel-photos/k2-bar.jpg",
+    galleryImages: [
+      "/hotel-photos/k2-bar.jpg",
+      "/RBLU PHOTOS/K2 Bar/K2 Bar.jpg",
+      "/RBLU PHOTOS/K2 Bar/8. RB K2 B.JPG",
+    ],
+    specs: {
+      capacity: "Up to 80 Guests (Cocktail & Lounge)",
+      area: "Approx. 1,600 sq.ft.",
+      catering: "Signature Cocktails, Artisanal Mocktails & Finger Foods",
+      setupStyles: ["Lounge Seating", "Cocktail High Tables", "Private Party Setup"],
+    },
+    highlights: [
+      "Artisanal mixology counter with international spirits & Himalayan botanicals",
+      "Dynamic mood lighting and premium acoustic sound setup",
+      "Comfortable plush velvet and leather lounge seating",
+      "Dedicated DJ setup space for night parties and celebration beats",
+    ],
+    features: [
+      "Curated signature cocktails & extensive wine cellar",
+      "Chef-crafted tapas and artisanal finger appetizers",
+      "Private booking options for night and kitty parties",
+      "VIP hospitality service with dedicated mixologists",
+    ],
+  },
 ];
 
 export const sapphireCeremonies: CeremonyItem[] = [
@@ -318,7 +500,7 @@ export const sapphireCeremonies: CeremonyItem[] = [
     tagline: "Large-scale corporate summits & conventions",
     description:
       "Double-height pillarless ballroom equipped with high-output laser projection, dual motorized screens, professional acoustics, and theater/classroom setups for executive conventions.",
-    href: "/venues/sapphire#conference",
+    href: "/venues/sapphire/conference",
     guestCapacity: "Up to 500 Guests",
     recommendedTime: "Full Day / Multi-Day Conferences",
     image: "/RBLU PHOTOS/Sapphire/Banquet Theatre.jpg",
@@ -331,7 +513,7 @@ export const sapphireCeremonies: CeremonyItem[] = [
     tagline: "Thematic decor, dance floor & live counters",
     description:
       "Vibrant celebratory atmospheres with theatrical concert lighting, professional sound arrays, custom dance floors, and multi-cuisine live stations.",
-    href: "/venues/sapphire#birthday-party",
+    href: "/venues/sapphire/birthday-party",
     guestCapacity: "100 - 350 Guests",
     recommendedTime: "Afternoon / Evening Soirée",
     image: "/RBLU PHOTOS/Sapphire/DSC05523.JPG",
@@ -344,7 +526,7 @@ export const sapphireCeremonies: CeremonyItem[] = [
     tagline: "Glamorous ring exchange & cocktail soirée",
     description:
       "A glittering evening featuring elegant stage backdrops, moving-head dynamic concert lighting, dedicated dance floor, and handcrafted cocktail & canapé banquets.",
-    href: "/venues/sapphire#ring-ceremony",
+    href: "/venues/sapphire/ring-ceremony",
     guestCapacity: "150 - 450 Guests",
     recommendedTime: "Evening (6:30 PM - 11:30 PM)",
     image: "/RBLU PHOTOS/Sapphire/Banquet Theatre.jpg",
@@ -357,7 +539,7 @@ export const sapphireCeremonies: CeremonyItem[] = [
     tagline: "Vibrant turmeric rituals & joyful traditions",
     description:
       "Auspicious morning celebrations adorned with marigold floral canopies, traditional seating cushions, dhol music arrangements, and specialized festive refreshments.",
-    href: "/venues/sapphire#haldi",
+    href: "/venues/sapphire/haldi",
     guestCapacity: "100 - 350 Guests",
     recommendedTime: "Morning & Afternoon (10:00 AM - 3:00 PM)",
     image: "/RBLU PHOTOS/Haldi/1 (1).jpeg",
@@ -370,7 +552,7 @@ export const sapphireCeremonies: CeremonyItem[] = [
     tagline: "Royal mandap architecture & majestic wedding reception",
     description:
       "The ultimate regal union beneath soaring crystal chandeliers. Pillarless double-height ballroom supporting royal baraat processions, sacred mandap rituals, and an extravagant multi-cuisine banquet feast.",
-    href: "/venues/sapphire#wedding",
+    href: "/venues/sapphire/wedding",
     guestCapacity: "Up to 500 Guests",
     recommendedTime: "Full Day / Evening Auspicious Muhurat",
     image: "/RBLU PHOTOS/Sapphire/Banquet Cluster.jpg",
@@ -380,10 +562,10 @@ export const sapphireCeremonies: CeremonyItem[] = [
     name: "CME",
     slug: "cme",
     category: "Continuing Medical Education",
-    tagline: "Medical conferences, symposiums & doctor meets",
+    tagline: "Medical lectures, doctor meets & clinical discussions",
     description:
       "Specialized audiovisual and breakout configurations for medical academic sessions, clinical case presentations, and keynote lectures with high-definition multi-screen relays.",
-    href: "/venues/sapphire#cme",
+    href: "/venues/sapphire/cme",
     guestCapacity: "50 - 300 Doctors & Delegates",
     recommendedTime: "Full Day / Weekend Symposium",
     image: "/RBLU PHOTOS/Sapphire/Banquet Theatre.jpg",
@@ -396,7 +578,7 @@ export const sapphireCeremonies: CeremonyItem[] = [
     tagline: "Silver, golden & platinum milestone galas",
     description:
       "Graceful banquet settings honoring marital journeys with bespoke floral styling, nostalgic video projection reels, and fine dining banquets with personalized hospitality.",
-    href: "/venues/sapphire#anniversary-ceremony",
+    href: "/venues/sapphire/anniversary-ceremony",
     guestCapacity: "80 - 300 Guests",
     recommendedTime: "Evening Celebration",
     image: "/RBLU PHOTOS/Sapphire/DSC05531.JPG",
@@ -409,7 +591,7 @@ export const sapphireCeremonies: CeremonyItem[] = [
     tagline: "Spacious display stalls & networking reception",
     description:
       "Sprawling pillarless floor layout optimal for modular exhibition stalls, brand display counters, art exhibitions, and evening launch cocktails.",
-    href: "/venues/sapphire#exhibition-party",
+    href: "/venues/sapphire/exhibition-party",
     guestCapacity: "Up to 500 Visitors",
     recommendedTime: "Full Day Expo & Evening Reception",
     image: "/RBLU PHOTOS/Sapphire/Banquet Empty.jpg",
@@ -422,7 +604,7 @@ export const sapphireCeremonies: CeremonyItem[] = [
     tagline: "Employee awards, cultural performances & gala dinner",
     description:
       "Prestigious annual day functions featuring large performance stages, award ceremony lighting, sound mixing consoles, and extravagant multi-course celebratory buffets.",
-    href: "/venues/sapphire#corporate-annual-function",
+    href: "/venues/sapphire/corporate-annual-function",
     guestCapacity: "Up to 500 Employees & Families",
     recommendedTime: "Evening Gala (5:00 PM onwards)",
     image: "/RBLU PHOTOS/Sapphire/DSC06145.JPG",
@@ -438,7 +620,7 @@ export const concordOccasions: CeremonyItem[] = [
     tagline: "Professional audio-visuals & high-speed Wi-Fi",
     description:
       "High-impact boardroom & seminar setups with concert-grade acoustics, laser presentation screens, and dedicated corporate executive dining.",
-    href: "/venues/concord#business-meetings",
+    href: "/venues/concord/business-meetings",
     guestCapacity: "30 - 120 Attendees",
     recommendedTime: "Morning / Full-Day Conferences",
     image: "/RBLU PHOTOS/Concord/Banquet Classroom.jpg",
@@ -451,7 +633,7 @@ export const concordOccasions: CeremonyItem[] = [
     tagline: "Boutique mandap & celebratory feasts",
     description:
       "Elegant indoor celebratory space tailored for intimate weddings, ring ceremonies, and musical sangeet gatherings with theatrical lighting.",
-    href: "/venues/concord#wedding",
+    href: "/venues/concord/wedding",
     guestCapacity: "Up to 250 Guests",
     recommendedTime: "Evening Celebration",
     image: "/RBLU PHOTOS/Concord/1 (6).jpeg",
@@ -464,7 +646,7 @@ export const concordOccasions: CeremonyItem[] = [
     tagline: "DJ dance floor, thematic decor & live counters",
     description:
       "High-energy birthday parties with customizable themes, professional sound & lighting, dance floor, and bespoke gourmet dessert buffets.",
-    href: "/venues/concord#birthday",
+    href: "/venues/concord/birthday",
     guestCapacity: "50 - 200 Guests",
     recommendedTime: "Afternoon / Evening Soirée",
     image: "/RBLU PHOTOS/Concord/1 (9).jpeg",
@@ -480,7 +662,7 @@ export const nh87Events: CeremonyItem[] = [
     tagline: "Executive dinners, networking galas & product mixers",
     description:
       "Contemporary dining and lounge environment tailored for corporate networking dinners, client appreciation meets, and formal executive lunches.",
-    href: "/venues/nh-87#corporate-events",
+    href: "/venues/nh-87/corporate-events",
     guestCapacity: "Up to 120 Guests",
     recommendedTime: "Lunch / Evening Dinner",
     image: "/RBLU PHOTOS/NH-87/1 (1).JPG",
@@ -493,7 +675,7 @@ export const nh87Events: CeremonyItem[] = [
     tagline: "Interactive corporate conferences & business sessions",
     description:
       "Comfortable culinary & seminar arrangements with high-speed Wi-Fi, audiovisual links, and gourmet plated or buffet food presentations.",
-    href: "/venues/nh-87#conference",
+    href: "/venues/nh-87/conference",
     guestCapacity: "30 - 80 Attendees",
     recommendedTime: "Morning / Full Day Conference",
     image: "/RBLU PHOTOS/NH-87/1 (2).JPG",
@@ -506,7 +688,7 @@ export const nh87Events: CeremonyItem[] = [
     tagline: "Live counters, handcrafted mocktails & party vibes",
     description:
       "Vibrant birthday celebrations featuring interactive open kitchens, artisanal dessert buffets, and custom celebratory decor.",
-    href: "/venues/nh-87#birthday-party",
+    href: "/venues/nh-87/birthday-party",
     guestCapacity: "25 - 100 Guests",
     recommendedTime: "Afternoon / Evening Soirée",
     image: "/RBLU PHOTOS/NH-87/1 (3).JPG",
@@ -519,7 +701,7 @@ export const nh87Events: CeremonyItem[] = [
     tagline: "Intimate ring exchange & celebratory feast",
     description:
       "Sophisticated setting for intimate ring ceremonies and family gatherings with warm ambient chandeliers and fine-dining banquets.",
-    href: "/venues/nh-87#ring-ceremony",
+    href: "/venues/nh-87/ring-ceremony",
     guestCapacity: "40 - 100 Guests",
     recommendedTime: "Evening Ceremony",
     image: "/RBLU PHOTOS/NH-87/1 (4).JPG",
@@ -532,7 +714,7 @@ export const nh87Events: CeremonyItem[] = [
     tagline: "Medical lectures, doctor meets & clinical discussions",
     description:
       "Convenient interactive venue for clinical symposiums, doctor panel discussions, and medical education dinners.",
-    href: "/venues/nh-87#cme",
+    href: "/venues/nh-87/cme",
     guestCapacity: "30 - 75 Doctors & Delegates",
     recommendedTime: "Evening Dinner Symposium",
     image: "/RBLU PHOTOS/NH-87/1 (1).JPG",
@@ -545,7 +727,7 @@ export const nh87Events: CeremonyItem[] = [
     tagline: "Boutique wedding celebrations & family banquets",
     description:
       "Charming intimate nuptial receptions with bespoke regional and global culinary craft, live tandoor delicacies, and attentive hospitality.",
-    href: "/venues/nh-87#wedding",
+    href: "/venues/nh-87/wedding",
     guestCapacity: "Up to 120 Guests",
     recommendedTime: "Lunch / Evening Wedding Reception",
     image: "/RBLU PHOTOS/NH-87/1 (5).jpeg",
@@ -561,7 +743,7 @@ export const executiveRoomEvents: CeremonyItem[] = [
     tagline: "Private executive meetings & confidential deliberations",
     description:
       "Prestigious boardroom layout with ultra-clear presentation display, integrated power modules, and dedicated meeting concierge service.",
-    href: "/venues/executive-room#meeting",
+    href: "/venues/executive-room/meeting",
     guestCapacity: "10 - 25 Attendees",
     recommendedTime: "Half Day / Full Day Executive Session",
     image: "/RBLU PHOTOS/Meeting Room/Meeting Room.jpg",
@@ -574,7 +756,7 @@ export const executiveRoomEvents: CeremonyItem[] = [
     tagline: "State-of-the-art audiovisuals & hybrid conferencing",
     description:
       "Optimized for high-impact corporate presentations, investor meets, and interactive workshops with high-speed internet and acoustic clarity.",
-    href: "/venues/executive-room#conference",
+    href: "/venues/executive-room/conference",
     guestCapacity: "Up to 60 Guests",
     recommendedTime: "Full Day Corporate Conference",
     image: "/RBLU PHOTOS/Excutive Lounge/Banquet.jpg",
@@ -587,11 +769,38 @@ export const executiveRoomEvents: CeremonyItem[] = [
     tagline: "Bespoke plated dining & intimate milestones",
     description:
       "An exclusive private setting for executive retirement dinners, product previews, family celebrations, and celebratory business toasts.",
-    href: "/venues/executive-room#small-functions",
+    href: "/venues/executive-room/small-functions",
     guestCapacity: "20 - 50 Guests",
     recommendedTime: "Evening / Dinner Gathering",
     image: "/RBLU PHOTOS/Excutive Lounge/1 (18).jpeg",
   },
 ];
 
-
+export const k2barEvents: CeremonyItem[] = [
+  {
+    id: "k2-night-party",
+    name: "Night Party",
+    slug: "night-party",
+    category: "Evening Lounge & DJ Celebrations",
+    tagline: "High-energy beats, crafted cocktails & late-night vibes",
+    description:
+      "Transform your night with infectious beats, atmospheric mood lighting, private bar service, and handcrafted cocktails designed for unforgettable celebrations.",
+    href: "/venues/k2-bar/night-party",
+    guestCapacity: "30 - 80 Guests",
+    recommendedTime: "Evening & Late Night (8:00 PM onwards)",
+    image: "/hotel-photos/k2-bar.jpg",
+  },
+  {
+    id: "k2-kitty-party",
+    name: "Kitty Party",
+    slug: "kitty-party",
+    category: "Chic Afternoon Socials & Gatherings",
+    tagline: "Gourmet finger bites, artisanal mocktails & lively banter",
+    description:
+      "An elegant daytime lounge setting tailored for lively kitty parties featuring personalized menus, mocktail concoctions, curated games, and relaxed lounge seating.",
+    href: "/venues/k2-bar/kitty-party",
+    guestCapacity: "15 - 50 Guests",
+    recommendedTime: "Afternoon (1:00 PM - 5:00 PM)",
+    image: "/RBLU PHOTOS/K2 Bar/WhatsApp Image 2026-10-12 at 12.42.36.jpeg",
+  },
+];

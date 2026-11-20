@@ -8,12 +8,12 @@ import Reveal from "@/components/ui/Reveal";
 export function IntroductionSection() {
   return (
     <section id="radisson-experience-intro" className="py-20 sm:py-28 bg-white text-[#0E0D35] scroll-mt-10 overflow-hidden">
-      <Container>
+      <Container size="wide">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Photographic Composition with Smooth Reveal */}
           <div className="lg:col-span-6 space-y-4">
             <Reveal direction="right">
-              <div className="relative aspect-[4/5] w-full rounded-lg overflow-hidden shadow-2xl border border-[#E4DED2] group">
+              <div className="relative aspect-[16/11] sm:aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-2xl border border-[#E4DED2] group">
                 <Image
                   src="/hotel-photos/facade-morning.jpg"
                   alt="Radisson Hotel Rudrapur hospitality and grand facade"
@@ -21,15 +21,6 @@ export function IntroductionSection() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-              </div>
-              {/* Text placed beneath the image */}
-              <div className="pt-3 flex flex-col">
-                <span className="text-[11px] uppercase tracking-[0.25em] text-[#AA8B54] font-semibold">
-                  Uttarakhand
-                </span>
-                <span className="font-serif text-xl sm:text-2xl text-[#0E0D35] mt-1 font-normal">
-                  Gateway to Kumaon & SIDCUL Hub
-                </span>
               </div>
             </Reveal>
           </div>
@@ -57,6 +48,24 @@ export function IntroductionSection() {
               <p className="text-sm sm:text-base text-[#77766D] leading-relaxed font-light">
                 Whether visiting for business summits in the SIDCUL industrial belt, hosting a majestic wedding ceremony at Sapphire or Queen&apos;s Field, or relishing artisanal recipes at NH 87, our dedicated team ensures your moments are effortless and memorable.
               </p>
+            </Reveal>
+
+            {/* Quick Highlights / Stats Grid to elevate blank space */}
+            <Reveal direction="up" delayMs={350}>
+              <div className="grid grid-cols-3 gap-4 pt-4 pb-2 border-y border-[#E8E8F0]">
+                <div>
+                  <span className="font-serif text-2xl sm:text-3xl text-[#0E0D35] block font-light">12+</span>
+                  <span className="text-[10px] sm:text-xs uppercase tracking-wider text-[#77766D]">Venues & Spaces</span>
+                </div>
+                <div>
+                  <span className="font-serif text-2xl sm:text-3xl text-[#0E0D35] block font-light">1,200+</span>
+                  <span className="text-[10px] sm:text-xs uppercase tracking-wider text-[#77766D]">Max Capacity</span>
+                </div>
+                <div>
+                  <span className="font-serif text-2xl sm:text-3xl text-[#0E0D35] block font-light">5-Star</span>
+                  <span className="text-[10px] sm:text-xs uppercase tracking-wider text-[#77766D]">Luxury Hospitality</span>
+                </div>
+              </div>
             </Reveal>
 
             {/* Understated Link */}
