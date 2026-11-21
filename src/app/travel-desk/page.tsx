@@ -20,6 +20,7 @@ import {
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { siteConfig } from "@/config/site";
+import VintageCarSlideshow from "@/components/travel-desk/VintageCarSlideshow";
 
 export const metadata = {
   title: "Travel Desk & Concierge | Radisson Blu Hotel Rudrapur",
@@ -121,14 +122,14 @@ export default function TravelDeskPage() {
       {/* Hero Section */}
       <section className="relative h-[65vh] min-h-[500px] max-h-[680px] flex items-end overflow-hidden bg-neutral-950">
         <Image
-          src="/hotel-photos/portico.jpg"
-          alt="Radisson Blu Hotel Rudrapur Portico & Chauffeured Chauffeurs"
+          src="/vintage/travel-desk-vintage-chauffeur.jpg"
+          alt="Radisson Blu Hotel Rudrapur Vintage Rolls Royce & Chauffeured Travel Services"
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-80"
+          className="object-cover object-[center_35%] opacity-90"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/20" />
 
         <Container className="relative z-20 pb-16 sm:pb-20 pt-32 w-full">
           <div className="flex flex-wrap items-center gap-2 mb-3">
@@ -156,7 +157,7 @@ export default function TravelDeskPage() {
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-xs uppercase tracking-wider font-semibold shadow-md transition-all hover:scale-105"
             >
               <MessageCircle className="w-4 h-4 fill-current" />
-              <span>Book Cab on WhatsApp</span>
+              <span>Connect on WhatsApp</span>
             </a>
 
             <a
@@ -224,6 +225,242 @@ export default function TravelDeskPage() {
                 </div>
               );
             })}
+          </div>
+        </Container>
+      </section>
+
+      {/* Vintage Car & Local Rides Section with Interactive Cards */}
+      <section className="py-16 sm:py-24 bg-white border-b border-[#E8E8F0]">
+        <Container>
+          <div className="text-center max-w-2xl mx-auto mb-14 space-y-2">
+            <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#AA8B54]">
+              EXCLUSIVE FLEET & LOCAL TRANSIT
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl text-[#0E0D35] font-normal">
+              Vintage Car & Travel Services
+            </h2>
+            <p className="text-sm text-[#77766D] font-light">
+              Choose from royal ceremonial vintage entries or flexible hourly local transit packages tailored to your schedule.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-10 items-stretch">
+            {/* Card 1: ROLLS ROYCE VINTAGE CAR */}
+            <div className="rounded-3xl border border-[#C6A568]/40 bg-gradient-to-b from-[#FAF8F5] via-white to-[#FAF8F5] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+              {/* Card Photo Slideshow Header */}
+              <VintageCarSlideshow
+                images={[
+                  "/vintage/vintage-rr-1.jpg",
+                  "/vintage/vintage-rr-2.jpg",
+                  "/vintage/vintage-rr-3.jpg",
+                  "/vintage/vintage-rr-4.jpg",
+                  "/vintage/vintage-rr-5.jpg",
+                  "/vintage/vintage-rr-6.jpg",
+                ]}
+                alt="Rolls Royce Vintage Car Radisson Blu Rudrapur"
+              />
+
+              <div className="p-7 sm:p-9 space-y-6 flex-1 flex flex-col justify-between">
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-serif text-2xl sm:text-3xl text-[#0E0D35] font-normal leading-tight">
+                      ROLLS ROYCE VINTAGE CAR
+                    </h3>
+                    <p className="text-xs sm:text-sm text-[#5A5A68] font-light mt-2 leading-relaxed">
+                      Make an unforgettable, majestic entrance for your Baraat, bridal arrival, milestone reception, or luxury photoshoot with our impeccably preserved vintage convertible.
+                    </p>
+                  </div>
+
+                  {/* Ride Type Options */}
+                  <div className="space-y-3 pt-2">
+                    <span className="text-xs font-semibold uppercase tracking-widest text-[#0E0D35] block">
+                      Ride Type Packages
+                    </span>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                      {[
+                        { title: "1 Hour Ride", subtitle: "Grand Baraat Entry / Photoshoot" },
+                        { title: "2 Hour Ride", subtitle: "Ceremonial Procession & Guest Toast" },
+                        { title: "4 Hour Ride", subtitle: "Extended Reception & VIP Chauffeur" },
+                      ].map((plan, pIdx) => (
+                        <div
+                          key={pIdx}
+                          className="p-4 rounded-xl bg-white border border-[#E8E8F0] shadow-2xs group-hover:border-[#C6A568]/50 transition-colors flex flex-col justify-between"
+                        >
+                          <div>
+                            <div className="flex items-center gap-1.5 text-xs font-semibold text-[#0E0D35]">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-[#AA8B54] shrink-0" />
+                              <span>{plan.title}</span>
+                            </div>
+                            <span className="text-[11px] text-[#77766D] font-light block mt-1 leading-snug">
+                              {plan.subtitle}
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Inclusions list */}
+                  <div className="p-4 rounded-xl bg-white/70 border border-[#E8E8F0] text-xs text-[#5A5A68] space-y-1.5">
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#AA8B54]" />
+                      <span>Uniformed royal chauffeur with white gloves</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#AA8B54]" />
+                      <span>Complimentary floral garland or ceremonial ribbon styling on request</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#AA8B54]" />
+                      <span>Full pre-event polishing & dedicated on-site escort</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-6 border-t border-[#E8E8F0] flex flex-col sm:flex-row items-center gap-3">
+                  <a
+                    href="https://wa.me/918171000114?text=Hello%2C%20I%20would%20like%20to%20reserve%20the%20Rolls%20Royce%20Vintage%20Car%20at%20Radisson%20Blu%20Rudrapur"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-[#0E0D35] hover:bg-[#AA8B54] text-white text-xs font-semibold uppercase tracking-wider transition-all shadow-sm"
+                  >
+                    <MessageCircle className="w-4 h-4 text-[#C6A568]" />
+                    <span>Reserve Vintage Car</span>
+                  </a>
+                  <a
+                    href="tel:+918171000114"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3.5 px-5 rounded-xl border border-[#E8E8F0] text-[#0E0D35] hover:border-[#AA8B54] text-xs font-medium uppercase tracking-wider transition-colors"
+                  >
+                    <Phone className="w-3.5 h-3.5 text-[#AA8B54]" />
+                    <span>Call Desk</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2: LOCAL RIDES & VEHICLE CATEGORIES */}
+            <div className="rounded-3xl border border-[#E8E8F0] bg-white overflow-hidden shadow-lg hover:shadow-xl hover:border-[#C6A568] transition-all duration-300 flex flex-col justify-between group">
+              {/* Card Photo Header */}
+              <div className="relative aspect-[16/9] w-full overflow-hidden bg-neutral-900">
+                <Image
+                  src="/hotel-photos/portico.jpg"
+                  alt="Chauffeured Fleet at Hotel Portico"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute top-4 left-4">
+                  <span className="px-3.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold uppercase tracking-[0.2em]">
+                    FLEXIBLE LOCAL CONCIERGE
+                  </span>
+                </div>
+                <div className="absolute bottom-3 left-4 text-white">
+                  <span className="text-xs font-mono uppercase tracking-wider text-white/90">
+                    City &amp; SIDCUL Industrial Hub Transit
+                  </span>
+                </div>
+              </div>
+
+              <div className="p-7 sm:p-9 space-y-6 flex-1 flex flex-col justify-between">
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-serif text-2xl sm:text-3xl text-[#0E0D35] font-normal leading-tight">
+                      LOCAL RIDES
+                    </h3>
+                    <p className="text-xs sm:text-sm text-[#5A5A68] font-light mt-2 leading-relaxed">
+                      Designed for executive corporate meetings, plant visits across the SIDCUL industrial belt, family shopping excursions, and seamless local city commutes.
+                    </p>
+                  </div>
+
+                  {/* Ride Type Plans */}
+                  <div className="space-y-2.5">
+                    <span className="text-xs font-semibold uppercase tracking-widest text-[#0E0D35] block">
+                      Ride Type Packages
+                    </span>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                      {[
+                        { duration: "4 Hrs", distance: "40 km", label: "Half Day Plan" },
+                        { duration: "6 Hrs", distance: "60 km", label: "Standard Plan" },
+                        { duration: "8 Hrs", distance: "80 km", label: "Full Day Plan" },
+                      ].map((ride, rIdx) => (
+                        <div
+                          key={rIdx}
+                          className="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#E8E8F0] text-center"
+                        >
+                          <span className="font-serif text-base text-[#0E0D35] font-medium block">
+                            {ride.duration} / {ride.distance}
+                          </span>
+                          <span className="text-[10px] uppercase tracking-wider text-[#AA8B54] font-medium block mt-0.5">
+                            {ride.label}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Overtime & Excess Kilometers Notes */}
+                    <div className="flex items-center justify-between px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-dashed border-[#E8E8F0] text-xs text-[#5A5A68]">
+                      <div className="flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#AA8B54]" />
+                        <span><strong>Extra km:</strong> Flat rate billing</span>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#AA8B54]" />
+                        <span><strong>Extra Hour:</strong> Flexible extension</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Vehicle Categories */}
+                  <div className="space-y-2.5 pt-2">
+                    <span className="text-xs font-semibold uppercase tracking-widest text-[#0E0D35] block">
+                      Vehicle Categories
+                    </span>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                      {[
+                        { name: "Sedan", desc: "Dzire / Etios / Honda City", capacity: "Up to 4 Pax" },
+                        { name: "MUV", desc: "Ertiga / Carens", capacity: "Up to 6 Pax" },
+                        { name: "Prime SUV", desc: "Innova Crysta / Hycross", capacity: "Executive Comfort" },
+                      ].map((veh, vIdx) => (
+                        <div
+                          key={vIdx}
+                          className="p-3.5 rounded-xl border border-[#E8E8F0] bg-white hover:border-[#AA8B54] transition-colors"
+                        >
+                          <span className="text-xs font-semibold text-[#0E0D35] block">
+                            {veh.name}
+                          </span>
+                          <span className="text-[11px] text-[#77766D] font-light block leading-tight mt-0.5">
+                            {veh.desc}
+                          </span>
+                          <span className="text-[10px] text-[#AA8B54] font-medium uppercase tracking-wider block mt-1.5">
+                            {veh.capacity}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-6 border-t border-[#E8E8F0] flex flex-col sm:flex-row items-center gap-3">
+                  <a
+                    href="https://wa.me/918171000114?text=Hello%2C%20I%20would%20like%20to%20book%20a%20Local%20Ride%20at%20Radisson%20Blu%20Rudrapur"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-semibold uppercase tracking-wider transition-all shadow-sm"
+                  >
+                    <MessageCircle className="w-4 h-4 fill-current" />
+                    <span>Book Local Ride</span>
+                  </a>
+                  <a
+                    href="tel:+918171000114"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 py-3.5 px-5 rounded-xl border border-[#E8E8F0] text-[#0E0D35] hover:border-[#AA8B54] text-xs font-medium uppercase tracking-wider transition-colors"
+                  >
+                    <Phone className="w-3.5 h-3.5 text-[#AA8B54]" />
+                    <span>+91 8171000114</span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </Container>
       </section>
@@ -321,7 +558,7 @@ export default function TravelDeskPage() {
                 Need a Custom Itinerary or Airport Transfer?
               </h2>
               <p className="text-sm text-white/80 font-light leading-relaxed">
-                Our front desk and travel concierge are stationed 24 hours daily to coordinate sanitized luxury cabs, professional drivers, and mountain tour plans.
+                Our front desk and travel concierge are stationed 24 hours daily to coordinate chauffeured luxury vehicles, professional drivers, and mountain tour plans.
               </p>
             </div>
 

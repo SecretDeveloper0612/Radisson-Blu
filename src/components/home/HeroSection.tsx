@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ArrowRight, ChevronDown, MapPin, MessageCircle } from "lucide-react";
+import { ArrowRight, ChevronDown, Phone } from "lucide-react";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import { siteConfig } from "@/config/site";
@@ -68,6 +68,25 @@ export function HeroSection() {
 
           {/* Action CTAs */}
           <div className="pt-4 flex flex-col items-start gap-4">
+            {/* Direct Contact Phone Numbers before buttons */}
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="tel:+918171000130"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-black/45 hover:bg-[#AA8B54] text-[#F7F4EC] hover:text-white border border-white/20 hover:border-[#AA8B54] backdrop-blur-md transition-all duration-300 text-xs font-semibold tracking-wide shadow-md group hover:scale-105 active:scale-95"
+              >
+                <Phone className="w-3.5 h-3.5 text-[#C6A568] group-hover:text-white transition-colors" />
+                <span>+91 81710 00130</span>
+              </a>
+
+              <a
+                href="tel:+918171000114"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-black/45 hover:bg-[#AA8B54] text-[#F7F4EC] hover:text-white border border-white/20 hover:border-[#AA8B54] backdrop-blur-md transition-all duration-300 text-xs font-semibold tracking-wide shadow-md group hover:scale-105 active:scale-95"
+              >
+                <Phone className="w-3.5 h-3.5 text-[#C6A568] group-hover:text-white transition-colors" />
+                <span>+91 81710 00114</span>
+              </a>
+            </div>
+
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5 w-full sm:w-auto">
               <Button
                 variant="primary-gold"
@@ -87,33 +106,6 @@ export function HeroSection() {
                 <span>Explore Our Venues</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Button>
-            </div>
-
-            {/* Location & WhatsApp Direct Quick Buttons directly below Book Your Stay */}
-            <div className="flex items-center gap-3 pt-1">
-              <a
-                href={siteConfig.contact.googleMapsDirectionsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View hotel location on Google Maps"
-                title="View Hotel Location"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-black/45 hover:bg-[#AA8B54] text-[#C6A568] hover:text-white border border-white/20 hover:border-[#AA8B54] backdrop-blur-md transition-all duration-300 shadow-lg hover:scale-105 active:scale-95 group text-xs uppercase tracking-wider font-medium"
-              >
-                <MapPin className="w-4 h-4 transition-transform group-hover:scale-110" />
-                <span>Location</span>
-              </a>
-
-              <a
-                href="https://wa.me/918171000114?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Vyah%20Radisson%20Blu%20Rudrapur"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Contact us on WhatsApp at +91 8171000114"
-                title="Chat on WhatsApp (+91 8171000114)"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#25D366]/85 hover:bg-[#25D366] text-white border border-white/20 backdrop-blur-md transition-all duration-300 shadow-lg hover:scale-105 active:scale-95 group text-xs uppercase tracking-wider font-semibold"
-              >
-                <MessageCircle className="w-4 h-4 fill-current transition-transform group-hover:scale-110" />
-                <span>WhatsApp</span>
-              </a>
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { X, Phone, Mail, MessageSquare, ArrowRight, ChevronDown } from "lucide-react";
 import { headerNavLinks } from "@/data/navigation";
-import { venuesData, sapphireCeremonies, concordOccasions, executiveRoomEvents, nh87Events, k2barEvents } from "@/data/venues";
+import { venuesData, sapphireCeremonies, concordOccasions, executiveRoomEvents, nh87Events, nh87PoolLawnEvents, poolLawnEvents, k2barEvents, fernEvents, kumaonCafeEvents } from "@/data/venues";
 import { siteConfig } from "@/config/site";
 import Button from "@/components/ui/Button";
 
@@ -24,7 +24,11 @@ export function MobileNavigation({
   const [concordExpanded, setConcordExpanded] = useState(false);
   const [executiveExpanded, setExecutiveExpanded] = useState(false);
   const [nh87Expanded, setNh87Expanded] = useState(false);
+  const [nh87PoolExpanded, setNh87PoolExpanded] = useState(false);
+  const [poolLawnExpanded, setPoolLawnExpanded] = useState(false);
   const [k2barExpanded, setK2barExpanded] = useState(false);
+  const [fernExpanded, setFernExpanded] = useState(false);
+  const [kumaonExpanded, setKumaonExpanded] = useState(false);
 
   // Prevent background scroll and support Escape key
   useEffect(() => {
@@ -356,6 +360,226 @@ export function MobileNavigation({
                               {k2barExpanded && (
                                 <div className="ml-3 pl-3 space-y-2 border-l-2 border-[#C6A568]/40 py-1.5 text-xs animate-in fade-in bg-[#FAF8F5]/60 rounded-r-lg">
                                   {k2barEvents.map((item) => (
+                                    <Link
+                                      key={item.id}
+                                      href={item.href}
+                                      onClick={onClose}
+                                      className="flex items-center justify-between py-1 px-1.5 text-[#5A5A68] hover:text-[#AA8B54] transition-colors"
+                                    >
+                                      <div>
+                                        <span className="font-medium text-[#0E0D35] block leading-tight">
+                                          {item.name}
+                                        </span>
+                                        <span className="text-[9px] text-[#77766D] uppercase tracking-wider">
+                                          {item.category}
+                                        </span>
+                                      </div>
+                                      <span className="text-xs text-[#AA8B54]">&rarr;</span>
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        }
+
+                        if (venue.slug === "fern") {
+                          return (
+                            <div key={venue.id} className="border-b border-[#F0EFEA] last:border-b-0 pb-1.5">
+                              <div className="flex items-center justify-between py-1.5">
+                                <Link
+                                  href={`/venues/${venue.slug}`}
+                                  onClick={onClose}
+                                  className="font-serif text-base text-[#0E0D35] hover:text-[#AA8B54] transition-colors"
+                                >
+                                  {venue.name}
+                                </Link>
+                                <button
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    setFernExpanded(!fernExpanded);
+                                  }}
+                                  className="px-2 py-0.5 rounded bg-[#FAF8F5] border border-[#E8E8F0] text-[#AA8B54] flex items-center gap-1 text-[10px] uppercase tracking-wider font-semibold"
+                                >
+                                  <span>2 Events</span>
+                                  <ChevronDown
+                                    className={`w-3 h-3 transition-transform duration-200 ${
+                                      fernExpanded ? "rotate-180" : ""
+                                    }`}
+                                  />
+                                </button>
+                              </div>
+
+                              {fernExpanded && (
+                                <div className="ml-3 pl-3 space-y-2 border-l-2 border-[#C6A568]/40 py-1.5 text-xs animate-in fade-in bg-[#FAF8F5]/60 rounded-r-lg">
+                                  {fernEvents.map((item) => (
+                                    <Link
+                                      key={item.id}
+                                      href={item.href}
+                                      onClick={onClose}
+                                      className="flex items-center justify-between py-1 px-1.5 text-[#5A5A68] hover:text-[#AA8B54] transition-colors"
+                                    >
+                                      <div>
+                                        <span className="font-medium text-[#0E0D35] block leading-tight">
+                                          {item.name}
+                                        </span>
+                                        <span className="text-[9px] text-[#77766D] uppercase tracking-wider">
+                                          {item.category}
+                                        </span>
+                                      </div>
+                                      <span className="text-xs text-[#AA8B54]">&rarr;</span>
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        }
+
+                        if (venue.slug === "kumaon-cafe") {
+                          return (
+                            <div key={venue.id} className="border-b border-[#F0EFEA] last:border-b-0 pb-1.5">
+                              <div className="flex items-center justify-between py-1.5">
+                                <Link
+                                  href={`/venues/${venue.slug}`}
+                                  onClick={onClose}
+                                  className="font-serif text-base text-[#0E0D35] hover:text-[#AA8B54] transition-colors"
+                                >
+                                  {venue.name}
+                                </Link>
+                                <button
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    setKumaonExpanded(!kumaonExpanded);
+                                  }}
+                                  className="px-2 py-0.5 rounded bg-[#FAF8F5] border border-[#E8E8F0] text-[#AA8B54] flex items-center gap-1 text-[10px] uppercase tracking-wider font-semibold"
+                                >
+                                  <span>4 Events</span>
+                                  <ChevronDown
+                                    className={`w-3 h-3 transition-transform duration-200 ${
+                                      kumaonExpanded ? "rotate-180" : ""
+                                    }`}
+                                  />
+                                </button>
+                              </div>
+
+                              {kumaonExpanded && (
+                                <div className="ml-3 pl-3 space-y-2 border-l-2 border-[#C6A568]/40 py-1.5 text-xs animate-in fade-in bg-[#FAF8F5]/60 rounded-r-lg">
+                                  {kumaonCafeEvents.map((item) => (
+                                    <Link
+                                      key={item.id}
+                                      href={item.href}
+                                      onClick={onClose}
+                                      className="flex items-center justify-between py-1 px-1.5 text-[#5A5A68] hover:text-[#AA8B54] transition-colors"
+                                    >
+                                      <div>
+                                        <span className="font-medium text-[#0E0D35] block leading-tight">
+                                          {item.name}
+                                        </span>
+                                        <span className="text-[9px] text-[#77766D] uppercase tracking-wider">
+                                          {item.category}
+                                        </span>
+                                      </div>
+                                      <span className="text-xs text-[#AA8B54]">&rarr;</span>
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        }
+
+                        if (venue.slug === "nh87-pool-lawn") {
+                          return (
+                            <div key={venue.id} className="border-b border-[#F0EFEA] last:border-b-0 pb-1.5">
+                              <div className="flex items-center justify-between py-1.5">
+                                <Link
+                                  href={`/venues/${venue.slug}`}
+                                  onClick={onClose}
+                                  className="font-serif text-base text-[#0E0D35] hover:text-[#AA8B54] transition-colors"
+                                >
+                                  {venue.name}
+                                </Link>
+                                <button
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    setNh87PoolExpanded(!nh87PoolExpanded);
+                                  }}
+                                  className="px-2 py-0.5 rounded bg-[#FAF8F5] border border-[#E8E8F0] text-[#AA8B54] flex items-center gap-1 text-[10px] uppercase tracking-wider font-semibold"
+                                >
+                                  <span>8 Events</span>
+                                  <ChevronDown
+                                    className={`w-3 h-3 transition-transform duration-200 ${
+                                      nh87PoolExpanded ? "rotate-180" : ""
+                                    }`}
+                                  />
+                                </button>
+                              </div>
+
+                              {nh87PoolExpanded && (
+                                <div className="ml-3 pl-3 space-y-2 border-l-2 border-[#C6A568]/40 py-1.5 text-xs animate-in fade-in bg-[#FAF8F5]/60 rounded-r-lg">
+                                  {nh87PoolLawnEvents.map((item) => (
+                                    <Link
+                                      key={item.id}
+                                      href={item.href}
+                                      onClick={onClose}
+                                      className="flex items-center justify-between py-1 px-1.5 text-[#5A5A68] hover:text-[#AA8B54] transition-colors"
+                                    >
+                                      <div>
+                                        <span className="font-medium text-[#0E0D35] block leading-tight">
+                                          {item.name}
+                                        </span>
+                                        <span className="text-[9px] text-[#77766D] uppercase tracking-wider">
+                                          {item.category}
+                                        </span>
+                                      </div>
+                                      <span className="text-xs text-[#AA8B54]">&rarr;</span>
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        }
+
+                        if (venue.slug === "pool-lawn") {
+                          return (
+                            <div key={venue.id} className="border-b border-[#F0EFEA] last:border-b-0 pb-1.5">
+                              <div className="flex items-center justify-between py-1.5">
+                                <Link
+                                  href={`/venues/${venue.slug}`}
+                                  onClick={onClose}
+                                  className="font-serif text-base text-[#0E0D35] hover:text-[#AA8B54] transition-colors"
+                                >
+                                  {venue.name}
+                                </Link>
+                                <button
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    setPoolLawnExpanded(!poolLawnExpanded);
+                                  }}
+                                  className="px-2 py-0.5 rounded bg-[#FAF8F5] border border-[#E8E8F0] text-[#AA8B54] flex items-center gap-1 text-[10px] uppercase tracking-wider font-semibold"
+                                >
+                                  <span>8 Events</span>
+                                  <ChevronDown
+                                    className={`w-3 h-3 transition-transform duration-200 ${
+                                      poolLawnExpanded ? "rotate-180" : ""
+                                    }`}
+                                  />
+                                </button>
+                              </div>
+
+                              {poolLawnExpanded && (
+                                <div className="ml-3 pl-3 space-y-2 border-l-2 border-[#C6A568]/40 py-1.5 text-xs animate-in fade-in bg-[#FAF8F5]/60 rounded-r-lg">
+                                  {poolLawnEvents.map((item) => (
                                     <Link
                                       key={item.id}
                                       href={item.href}

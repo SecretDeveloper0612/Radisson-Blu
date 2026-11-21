@@ -108,5 +108,6 @@ export interface CeremonyItem {
   guestCapacity?: string;
   recommendedTime?: string;
   image?: string;
+  galleryImages?: string[];
 }
 

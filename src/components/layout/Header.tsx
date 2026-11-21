@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, ChevronDown, ArrowUpRight, ArrowRight, ChevronRight } from "lucide-react";
 import { headerNavLinks } from "@/data/navigation";
-import { venuesData, sapphireCeremonies, concordOccasions, executiveRoomEvents, nh87Events, k2barEvents } from "@/data/venues";
+import { venuesData, sapphireCeremonies, concordOccasions, executiveRoomEvents, nh87Events, k2barEvents, fernEvents, kumaonCafeEvents, nh87PoolLawnEvents, poolLawnEvents } from "@/data/venues";
 import { siteConfig } from "@/config/site";
 import MobileNavigation from "./MobileNavigation";
 import Button from "@/components/ui/Button";
@@ -22,11 +22,19 @@ export function Header() {
   const [executiveSubmenuOpen, setExecutiveSubmenuOpen] = useState(false);
   const [nh87SubmenuOpen, setNh87SubmenuOpen] = useState(false);
   const [k2barSubmenuOpen, setK2barSubmenuOpen] = useState(false);
+  const [fernSubmenuOpen, setFernSubmenuOpen] = useState(false);
+  const [kumaonSubmenuOpen, setKumaonSubmenuOpen] = useState(false);
+  const [nh87PoolSubmenuOpen, setNh87PoolSubmenuOpen] = useState(false);
+  const [poolLawnSubmenuOpen, setPoolLawnSubmenuOpen] = useState(false);
   const sapphireTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const concordTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const executiveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const nh87TimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const k2barTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const fernTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const kumaonTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const nh87PoolTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const poolLawnTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const clearAllSubmenuTimeouts = () => {
     if (sapphireTimeoutRef.current) {
@@ -49,6 +57,22 @@ export function Header() {
       clearTimeout(k2barTimeoutRef.current);
       k2barTimeoutRef.current = null;
     }
+    if (fernTimeoutRef.current) {
+      clearTimeout(fernTimeoutRef.current);
+      fernTimeoutRef.current = null;
+    }
+    if (kumaonTimeoutRef.current) {
+      clearTimeout(kumaonTimeoutRef.current);
+      kumaonTimeoutRef.current = null;
+    }
+    if (nh87PoolTimeoutRef.current) {
+      clearTimeout(nh87PoolTimeoutRef.current);
+      nh87PoolTimeoutRef.current = null;
+    }
+    if (poolLawnTimeoutRef.current) {
+      clearTimeout(poolLawnTimeoutRef.current);
+      poolLawnTimeoutRef.current = null;
+    }
   };
 
   const closeAllSubmenus = () => {
@@ -57,14 +81,15 @@ export function Header() {
     setExecutiveSubmenuOpen(false);
     setNh87SubmenuOpen(false);
     setK2barSubmenuOpen(false);
+    setFernSubmenuOpen(false);
+    setKumaonSubmenuOpen(false);
+    setNh87PoolSubmenuOpen(false);
+    setPoolLawnSubmenuOpen(false);
   };
 
   const handleSapphireMouseEnter = () => {
     clearAllSubmenuTimeouts();
-    setConcordSubmenuOpen(false);
-    setExecutiveSubmenuOpen(false);
-    setNh87SubmenuOpen(false);
-    setK2barSubmenuOpen(false);
+    closeAllSubmenus();
     setSapphireSubmenuOpen(true);
   };
 
@@ -76,10 +101,7 @@ export function Header() {
 
   const handleConcordMouseEnter = () => {
     clearAllSubmenuTimeouts();
-    setSapphireSubmenuOpen(false);
-    setExecutiveSubmenuOpen(false);
-    setNh87SubmenuOpen(false);
-    setK2barSubmenuOpen(false);
+    closeAllSubmenus();
     setConcordSubmenuOpen(true);
   };
 
@@ -91,10 +113,7 @@ export function Header() {
 
   const handleExecutiveMouseEnter = () => {
     clearAllSubmenuTimeouts();
-    setSapphireSubmenuOpen(false);
-    setConcordSubmenuOpen(false);
-    setNh87SubmenuOpen(false);
-    setK2barSubmenuOpen(false);
+    closeAllSubmenus();
     setExecutiveSubmenuOpen(true);
   };
 
@@ -106,10 +125,7 @@ export function Header() {
 
   const handleNh87MouseEnter = () => {
     clearAllSubmenuTimeouts();
-    setSapphireSubmenuOpen(false);
-    setConcordSubmenuOpen(false);
-    setExecutiveSubmenuOpen(false);
-    setK2barSubmenuOpen(false);
+    closeAllSubmenus();
     setNh87SubmenuOpen(true);
   };
 
@@ -121,16 +137,61 @@ export function Header() {
 
   const handleK2barMouseEnter = () => {
     clearAllSubmenuTimeouts();
-    setSapphireSubmenuOpen(false);
-    setConcordSubmenuOpen(false);
-    setExecutiveSubmenuOpen(false);
-    setNh87SubmenuOpen(false);
+    closeAllSubmenus();
     setK2barSubmenuOpen(true);
   };
 
   const handleK2barMouseLeave = () => {
     k2barTimeoutRef.current = setTimeout(() => {
       setK2barSubmenuOpen(false);
+    }, 140);
+  };
+
+  const handleFernMouseEnter = () => {
+    clearAllSubmenuTimeouts();
+    closeAllSubmenus();
+    setFernSubmenuOpen(true);
+  };
+
+  const handleFernMouseLeave = () => {
+    fernTimeoutRef.current = setTimeout(() => {
+      setFernSubmenuOpen(false);
+    }, 140);
+  };
+
+  const handleKumaonMouseEnter = () => {
+    clearAllSubmenuTimeouts();
+    closeAllSubmenus();
+    setKumaonSubmenuOpen(true);
+  };
+
+  const handleKumaonMouseLeave = () => {
+    kumaonTimeoutRef.current = setTimeout(() => {
+      setKumaonSubmenuOpen(false);
+    }, 140);
+  };
+
+  const handleNh87PoolMouseEnter = () => {
+    clearAllSubmenuTimeouts();
+    closeAllSubmenus();
+    setNh87PoolSubmenuOpen(true);
+  };
+
+  const handleNh87PoolMouseLeave = () => {
+    nh87PoolTimeoutRef.current = setTimeout(() => {
+      setNh87PoolSubmenuOpen(false);
+    }, 140);
+  };
+
+  const handlePoolLawnMouseEnter = () => {
+    clearAllSubmenuTimeouts();
+    closeAllSubmenus();
+    setPoolLawnSubmenuOpen(true);
+  };
+
+  const handlePoolLawnMouseLeave = () => {
+    poolLawnTimeoutRef.current = setTimeout(() => {
+      setPoolLawnSubmenuOpen(false);
     }, 140);
   };
 
@@ -198,6 +259,7 @@ export function Header() {
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center space-x-7 xl:space-x-8">
             {headerNavLinks.map((link) => {
+              const isHome = link.href === "/";
               const isVenues = link.href === "/venues";
               const isActive =
                 pathname === link.href || (isVenues && pathname.startsWith("/venues"));
@@ -997,6 +1059,571 @@ export function Header() {
                               );
                             }
 
+                            if (venue.slug === "fern") {
+                              return (
+                                <div
+                                  key={venue.id}
+                                  className="relative group/venue"
+                                  onMouseEnter={handleFernMouseEnter}
+                                  onMouseLeave={handleFernMouseLeave}
+                                >
+                                  <Link
+                                    href={`/venues/${venue.slug}`}
+                                    onClick={() => {
+                                      setVenuesDropdownOpen(false);
+                                      closeAllSubmenus();
+                                    }}
+                                    className={cn(
+                                      "group/item flex items-center justify-between p-2.5 rounded-lg transition-all",
+                                      fernSubmenuOpen
+                                        ? "bg-[#FAF8F5] ring-1 ring-[#C6A568]/40"
+                                        : "hover:bg-[#FAF8F5]"
+                                    )}
+                                  >
+                                    <div>
+                                      <div className="flex items-center gap-2">
+                                        <span
+                                          className={cn(
+                                            "font-serif text-base transition-colors",
+                                            fernSubmenuOpen
+                                              ? "text-[#AA8B54] font-medium"
+                                              : "text-[#0E0D35] group-hover/item:text-[#AA8B54]"
+                                          )}
+                                        >
+                                          {venue.name}
+                                        </span>
+                                      </div>
+                                      <span className="text-[10px] text-[#77766D] uppercase tracking-wider block">
+                                        {venue.category}
+                                      </span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5">
+                                      <span
+                                        className={cn(
+                                          "text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded transition-all",
+                                          fernSubmenuOpen
+                                            ? "bg-[#C6A568]/20 text-[#AA8B54]"
+                                            : "bg-[#FAF8F5] text-[#8C7A5B] group-hover/item:bg-[#C6A568]/15 group-hover/item:text-[#AA8B54]"
+                                        )}
+                                      >
+                                        2 Events
+                                      </span>
+                                      <ChevronRight
+                                        className={cn(
+                                          "w-4 h-4 transition-all duration-200",
+                                          fernSubmenuOpen
+                                            ? "text-[#AA8B54] translate-x-1"
+                                            : "text-[#77766D] group-hover/item:text-[#AA8B54] group-hover/item:translate-x-0.5"
+                                        )}
+                                      />
+                                    </div>
+                                  </Link>
+
+                                  {/* Fern Flyout Submenu to the right */}
+                                  <div
+                                    className={cn(
+                                      "absolute left-full bottom-0 pl-3.5 transition-all duration-200 z-50",
+                                      fernSubmenuOpen
+                                        ? "opacity-100 visible translate-x-0 pointer-events-auto"
+                                        : "opacity-0 invisible -translate-x-2 pointer-events-none"
+                                    )}
+                                  >
+                                    <div className="w-[340px] bg-white/98 backdrop-blur-xl border border-[#E8E8F0] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.18)] p-4 text-[#0E0D35]">
+                                      {/* Submenu Header */}
+                                      <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-[#E8E8F0]">
+                                        <div>
+                                          <span className="text-[10px] uppercase tracking-[0.22em] text-[#AA8B54] font-semibold block">
+                                            Fern Meetings (2)
+                                          </span>
+                                          <span className="font-serif text-sm text-[#0E0D35] block">
+                                            Business Summits & Boards
+                                          </span>
+                                        </div>
+                                        <Link
+                                          href="/venues/fern"
+                                          onClick={() => {
+                                            setVenuesDropdownOpen(false);
+                                            closeAllSubmenus();
+                                          }}
+                                          className="text-[11px] uppercase tracking-wider text-[#AA8B54] hover:underline font-medium"
+                                        >
+                                          View All &rarr;
+                                        </Link>
+                                      </div>
+
+                                      {/* 2 Fern items */}
+                                      <div className="space-y-1">
+                                        {fernEvents.map((item) => (
+                                          <Link
+                                            key={item.id}
+                                            href={item.href}
+                                            onClick={() => {
+                                              setVenuesDropdownOpen(false);
+                                              closeAllSubmenus();
+                                            }}
+                                            className="group/fern flex items-center justify-between p-2.5 rounded-lg border border-transparent hover:border-[#E8E8F0] hover:bg-[#FAF8F5] transition-all"
+                                          >
+                                            <div>
+                                              <span className="font-serif text-sm font-medium text-[#0E0D35] group-hover/fern:text-[#AA8B54] transition-colors block leading-tight">
+                                                {item.name}
+                                              </span>
+                                              <span className="text-[10px] text-[#77766D] uppercase tracking-wider block mt-0.5">
+                                                {item.category}
+                                              </span>
+                                            </div>
+                                            <span className="text-xs text-[#77766D] group-hover/fern:text-[#AA8B54] group-hover/fern:translate-x-1 transition-all">
+                                              &rarr;
+                                            </span>
+                                          </Link>
+                                        ))}
+                                      </div>
+
+                                      {/* Submenu Footer */}
+                                      <div className="mt-3 pt-2.5 border-t border-[#E8E8F0] flex items-center justify-between text-xs">
+                                        <span className="text-[#77766D] text-[10px] font-light">
+                                          Capacity up to 40 delegates
+                                        </span>
+                                        <Link
+                                          href="/contact?venue=fern"
+                                          onClick={() => {
+                                            setVenuesDropdownOpen(false);
+                                            closeAllSubmenus();
+                                          }}
+                                          className="text-[#AA8B54] hover:underline font-medium text-[10px] uppercase tracking-wider"
+                                        >
+                                          Enquire Now &rarr;
+                                        </Link>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            }
+
+                            if (venue.slug === "kumaon-cafe") {
+                              return (
+                                <div
+                                  key={venue.id}
+                                  className="relative group/venue"
+                                  onMouseEnter={handleKumaonMouseEnter}
+                                  onMouseLeave={handleKumaonMouseLeave}
+                                >
+                                  <Link
+                                    href={`/venues/${venue.slug}`}
+                                    onClick={() => {
+                                      setVenuesDropdownOpen(false);
+                                      closeAllSubmenus();
+                                    }}
+                                    className={cn(
+                                      "group/item flex items-center justify-between p-2.5 rounded-lg transition-all",
+                                      kumaonSubmenuOpen
+                                        ? "bg-[#FAF8F5] ring-1 ring-[#C6A568]/40"
+                                        : "hover:bg-[#FAF8F5]"
+                                    )}
+                                  >
+                                    <div>
+                                      <div className="flex items-center gap-2">
+                                        <span
+                                          className={cn(
+                                            "font-serif text-base transition-colors",
+                                            kumaonSubmenuOpen
+                                              ? "text-[#AA8B54] font-medium"
+                                              : "text-[#0E0D35] group-hover/item:text-[#AA8B54]"
+                                          )}
+                                        >
+                                          {venue.name}
+                                        </span>
+                                      </div>
+                                      <span className="text-[10px] text-[#77766D] uppercase tracking-wider block">
+                                        {venue.category}
+                                      </span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5">
+                                      <span
+                                        className={cn(
+                                          "text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded transition-all",
+                                          kumaonSubmenuOpen
+                                            ? "bg-[#C6A568]/20 text-[#AA8B54]"
+                                            : "bg-[#FAF8F5] text-[#8C7A5B] group-hover/item:bg-[#C6A568]/15 group-hover/item:text-[#AA8B54]"
+                                        )}
+                                      >
+                                        4 Events
+                                      </span>
+                                      <ChevronRight
+                                        className={cn(
+                                          "w-4 h-4 transition-all duration-200",
+                                          kumaonSubmenuOpen
+                                            ? "text-[#AA8B54] translate-x-1"
+                                            : "text-[#77766D] group-hover/item:text-[#AA8B54] group-hover/item:translate-x-0.5"
+                                        )}
+                                      />
+                                    </div>
+                                  </Link>
+
+                                  {/* Kumaon Cafe Flyout Submenu to the right */}
+                                  <div
+                                    className={cn(
+                                      "absolute left-full bottom-0 pl-3.5 transition-all duration-200 z-50",
+                                      kumaonSubmenuOpen
+                                        ? "opacity-100 visible translate-x-0 pointer-events-auto"
+                                        : "opacity-0 invisible -translate-x-2 pointer-events-none"
+                                    )}
+                                  >
+                                    <div className="w-[340px] bg-white/98 backdrop-blur-xl border border-[#E8E8F0] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.18)] p-4 text-[#0E0D35]">
+                                      {/* Submenu Header */}
+                                      <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-[#E8E8F0]">
+                                        <div>
+                                          <span className="text-[10px] uppercase tracking-[0.22em] text-[#AA8B54] font-semibold block">
+                                            Kumaon Cafe Events (4)
+                                          </span>
+                                          <span className="font-serif text-sm text-[#0E0D35] block">
+                                            Socials & Dining Gatherings
+                                          </span>
+                                        </div>
+                                        <Link
+                                          href="/venues/kumaon-cafe"
+                                          onClick={() => {
+                                            setVenuesDropdownOpen(false);
+                                            closeAllSubmenus();
+                                          }}
+                                          className="text-[11px] uppercase tracking-wider text-[#AA8B54] hover:underline font-medium"
+                                        >
+                                          View All &rarr;
+                                        </Link>
+                                      </div>
+
+                                      {/* 4 Kumaon Cafe items */}
+                                      <div className="space-y-1">
+                                        {kumaonCafeEvents.map((item) => (
+                                          <Link
+                                            key={item.id}
+                                            href={item.href}
+                                            onClick={() => {
+                                              setVenuesDropdownOpen(false);
+                                              closeAllSubmenus();
+                                            }}
+                                            className="group/kumaon flex items-center justify-between p-2.5 rounded-lg border border-transparent hover:border-[#E8E8F0] hover:bg-[#FAF8F5] transition-all"
+                                          >
+                                            <div>
+                                              <span className="font-serif text-sm font-medium text-[#0E0D35] group-hover/kumaon:text-[#AA8B54] transition-colors block leading-tight">
+                                                {item.name}
+                                              </span>
+                                              <span className="text-[10px] text-[#77766D] uppercase tracking-wider block mt-0.5">
+                                                {item.category}
+                                              </span>
+                                            </div>
+                                            <span className="text-xs text-[#77766D] group-hover/kumaon:text-[#AA8B54] group-hover/kumaon:translate-x-1 transition-all">
+                                              &rarr;
+                                            </span>
+                                          </Link>
+                                        ))}
+                                      </div>
+
+                                      {/* Submenu Footer */}
+                                      <div className="mt-3 pt-2.5 border-t border-[#E8E8F0] flex items-center justify-between text-xs">
+                                        <span className="text-[#77766D] text-[10px] font-light">
+                                          Capacity up to 50 guests
+                                        </span>
+                                        <Link
+                                          href="/contact?venue=kumaon-cafe"
+                                          onClick={() => {
+                                            setVenuesDropdownOpen(false);
+                                            closeAllSubmenus();
+                                          }}
+                                          className="text-[#AA8B54] hover:underline font-medium text-[10px] uppercase tracking-wider"
+                                        >
+                                          Enquire Now &rarr;
+                                        </Link>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            }
+
+                            if (venue.slug === "nh87-pool-lawn") {
+                              return (
+                                <div
+                                  key={venue.id}
+                                  className="relative group/venue"
+                                  onMouseEnter={handleNh87PoolMouseEnter}
+                                  onMouseLeave={handleNh87PoolMouseLeave}
+                                >
+                                  <Link
+                                    href={`/venues/${venue.slug}`}
+                                    onClick={() => {
+                                      setVenuesDropdownOpen(false);
+                                      closeAllSubmenus();
+                                    }}
+                                    className={cn(
+                                      "group/item flex items-center justify-between p-2.5 rounded-lg transition-all",
+                                      nh87PoolSubmenuOpen
+                                        ? "bg-[#FAF8F5] ring-1 ring-[#C6A568]/40"
+                                        : "hover:bg-[#FAF8F5]"
+                                    )}
+                                  >
+                                    <div>
+                                      <div className="flex items-center gap-2">
+                                        <span
+                                          className={cn(
+                                            "font-serif text-base transition-colors",
+                                            nh87PoolSubmenuOpen
+                                              ? "text-[#AA8B54] font-medium"
+                                              : "text-[#0E0D35] group-hover/item:text-[#AA8B54]"
+                                          )}
+                                        >
+                                          {venue.name}
+                                        </span>
+                                      </div>
+                                      <span className="text-[10px] text-[#77766D] uppercase tracking-wider block">
+                                        {venue.category}
+                                      </span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5">
+                                      <span
+                                        className={cn(
+                                          "text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded transition-all",
+                                          nh87PoolSubmenuOpen
+                                            ? "bg-[#C6A568]/20 text-[#AA8B54]"
+                                            : "bg-[#FAF8F5] text-[#8C7A5B] group-hover/item:bg-[#C6A568]/15 group-hover/item:text-[#AA8B54]"
+                                        )}
+                                      >
+                                        8 Events
+                                      </span>
+                                      <ChevronRight
+                                        className={cn(
+                                          "w-4 h-4 transition-all duration-200",
+                                          nh87PoolSubmenuOpen
+                                            ? "text-[#AA8B54] translate-x-1"
+                                            : "text-[#77766D] group-hover/item:text-[#AA8B54] group-hover/item:translate-x-0.5"
+                                        )}
+                                      />
+                                    </div>
+                                  </Link>
+
+                                  {/* NH87+Pool lawn Flyout Submenu to the right */}
+                                  <div
+                                    className={cn(
+                                      "absolute left-full bottom-0 pl-3.5 transition-all duration-200 z-50",
+                                      nh87PoolSubmenuOpen
+                                        ? "opacity-100 visible translate-x-0 pointer-events-auto"
+                                        : "opacity-0 invisible -translate-x-2 pointer-events-none"
+                                    )}
+                                  >
+                                    <div className="w-[340px] bg-white/98 backdrop-blur-xl border border-[#E8E8F0] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.18)] p-4 text-[#0E0D35] max-h-[500px] overflow-y-auto">
+                                      {/* Submenu Header */}
+                                      <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-[#E8E8F0]">
+                                        <div>
+                                          <span className="text-[10px] uppercase tracking-[0.22em] text-[#AA8B54] font-semibold block">
+                                            NH87+Pool Celebrations (8)
+                                          </span>
+                                          <span className="font-serif text-sm text-[#0E0D35] block">
+                                            Weddings, Roka & Galas
+                                          </span>
+                                        </div>
+                                        <Link
+                                          href="/venues/nh87-pool-lawn"
+                                          onClick={() => {
+                                            setVenuesDropdownOpen(false);
+                                            closeAllSubmenus();
+                                          }}
+                                          className="text-[11px] uppercase tracking-wider text-[#AA8B54] hover:underline font-medium"
+                                        >
+                                          View All &rarr;
+                                        </Link>
+                                      </div>
+
+                                      {/* 8 NH87+Pool Lawn items */}
+                                      <div className="space-y-1">
+                                        {nh87PoolLawnEvents.map((item) => (
+                                          <Link
+                                            key={item.id}
+                                            href={item.href}
+                                            onClick={() => {
+                                              setVenuesDropdownOpen(false);
+                                              closeAllSubmenus();
+                                            }}
+                                            className="group/pool flex items-center justify-between p-2.5 rounded-lg border border-transparent hover:border-[#E8E8F0] hover:bg-[#FAF8F5] transition-all"
+                                          >
+                                            <div>
+                                              <span className="font-serif text-sm font-medium text-[#0E0D35] group-hover/pool:text-[#AA8B54] transition-colors block leading-tight">
+                                                {item.name}
+                                              </span>
+                                              <span className="text-[10px] text-[#77766D] uppercase tracking-wider block mt-0.5">
+                                                {item.category}
+                                              </span>
+                                            </div>
+                                            <span className="text-xs text-[#77766D] group-hover/pool:text-[#AA8B54] group-hover/pool:translate-x-1 transition-all">
+                                              &rarr;
+                                            </span>
+                                          </Link>
+                                        ))}
+                                      </div>
+
+                                      {/* Submenu Footer */}
+                                      <div className="mt-3 pt-2.5 border-t border-[#E8E8F0] flex items-center justify-between text-xs">
+                                        <span className="text-[#77766D] text-[10px] font-light">
+                                          Capacity up to 600 guests
+                                        </span>
+                                        <Link
+                                          href="/contact?venue=nh87-pool-lawn"
+                                          onClick={() => {
+                                            setVenuesDropdownOpen(false);
+                                            closeAllSubmenus();
+                                          }}
+                                          className="text-[#AA8B54] hover:underline font-medium text-[10px] uppercase tracking-wider"
+                                        >
+                                          Enquire Now &rarr;
+                                        </Link>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            }
+
+                            if (venue.slug === "pool-lawn") {
+                              return (
+                                <div
+                                  key={venue.id}
+                                  className="relative group/venue"
+                                  onMouseEnter={handlePoolLawnMouseEnter}
+                                  onMouseLeave={handlePoolLawnMouseLeave}
+                                >
+                                  <Link
+                                    href={`/venues/${venue.slug}`}
+                                    onClick={() => {
+                                      setVenuesDropdownOpen(false);
+                                      closeAllSubmenus();
+                                    }}
+                                    className={cn(
+                                      "group/item flex items-center justify-between p-2.5 rounded-lg transition-all",
+                                      poolLawnSubmenuOpen
+                                        ? "bg-[#FAF8F5] ring-1 ring-[#C6A568]/40"
+                                        : "hover:bg-[#FAF8F5]"
+                                    )}
+                                  >
+                                    <div>
+                                      <div className="flex items-center gap-2">
+                                        <span
+                                          className={cn(
+                                            "font-serif text-base transition-colors",
+                                            poolLawnSubmenuOpen
+                                              ? "text-[#AA8B54] font-medium"
+                                              : "text-[#0E0D35] group-hover/item:text-[#AA8B54]"
+                                          )}
+                                        >
+                                          {venue.name}
+                                        </span>
+                                      </div>
+                                      <span className="text-[10px] text-[#77766D] uppercase tracking-wider block">
+                                        {venue.category}
+                                      </span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5">
+                                      <span
+                                        className={cn(
+                                          "text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded transition-all",
+                                          poolLawnSubmenuOpen
+                                            ? "bg-[#C6A568]/20 text-[#AA8B54]"
+                                            : "bg-[#FAF8F5] text-[#8C7A5B] group-hover/item:bg-[#C6A568]/15 group-hover/item:text-[#AA8B54]"
+                                        )}
+                                      >
+                                        8 Events
+                                      </span>
+                                      <ChevronRight
+                                        className={cn(
+                                          "w-4 h-4 transition-all duration-200",
+                                          poolLawnSubmenuOpen
+                                            ? "text-[#AA8B54] translate-x-1"
+                                            : "text-[#77766D] group-hover/item:text-[#AA8B54] group-hover/item:translate-x-0.5"
+                                        )}
+                                      />
+                                    </div>
+                                  </Link>
+
+                                  {/* Pool Lawn Flyout Submenu to the right */}
+                                  <div
+                                    className={cn(
+                                      "absolute left-full top-0 pl-3.5 transition-all duration-200 z-50",
+                                      poolLawnSubmenuOpen
+                                        ? "opacity-100 visible translate-x-0 pointer-events-auto"
+                                        : "opacity-0 invisible -translate-x-2 pointer-events-none"
+                                    )}
+                                  >
+                                    <div className="w-[340px] max-h-[82vh] flex flex-col bg-white/98 backdrop-blur-xl border border-[#E8E8F0] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.18)] p-4 text-[#0E0D35]">
+                                      {/* Submenu Header */}
+                                      <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-[#E8E8F0] shrink-0">
+                                        <div>
+                                          <span className="text-[10px] uppercase tracking-[0.22em] text-[#AA8B54] font-semibold block">
+                                            Pool Lawn Celebrations (8)
+                                          </span>
+                                          <span className="text-[10px] text-[#77766D] font-light">
+                                            Outdoor Weddings &amp; Galas
+                                          </span>
+                                        </div>
+                                        <Link
+                                          href="/venues/pool-lawn"
+                                          onClick={() => {
+                                            setVenuesDropdownOpen(false);
+                                            closeAllSubmenus();
+                                          }}
+                                          className="text-[10px] text-[#5A5A68] hover:text-[#C6A568] uppercase tracking-wider flex items-center gap-1 transition-colors font-medium"
+                                        >
+                                          <span>Details</span>
+                                          <ArrowRight className="w-3 h-3 text-[#C6A568]" />
+                                        </Link>
+                                      </div>
+
+                                      {/* 8 Pool Lawn items */}
+                                      <div className="space-y-1 overflow-y-auto max-h-[58vh] pr-1 select-none">
+                                        {poolLawnEvents.map((item) => (
+                                          <Link
+                                            key={item.id}
+                                            href={item.href}
+                                            onClick={() => {
+                                              setVenuesDropdownOpen(false);
+                                              closeAllSubmenus();
+                                            }}
+                                            className="group/poollawnev flex items-center justify-between p-2 rounded-lg border border-transparent hover:border-[#E8E8F0] hover:bg-[#FAF8F5] transition-all"
+                                          >
+                                            <div>
+                                              <span className="font-serif text-[13px] font-medium text-[#0E0D35] group-hover/poollawnev:text-[#AA8B54] transition-colors block leading-tight">
+                                                {item.name}
+                                              </span>
+                                              <span className="text-[9.5px] text-[#77766D] uppercase tracking-wider block mt-0.5">
+                                                {item.category}
+                                              </span>
+                                            </div>
+                                            <span className="text-xs text-[#77766D] group-hover/poollawnev:text-[#AA8B54] group-hover/poollawnev:translate-x-1 transition-all">
+                                              &rarr;
+                                            </span>
+                                          </Link>
+                                        ))}
+                                      </div>
+
+                                      {/* Submenu Footer */}
+                                      <div className="mt-3 pt-2.5 border-t border-[#E8E8F0] flex items-center justify-between text-xs shrink-0">
+                                        <span className="text-[#77766D] text-[10px] font-light">
+                                          Capacity up to 500 guests
+                                        </span>
+                                        <Link
+                                          href="/contact?venue=pool-lawn"
+                                          onClick={() => {
+                                            setVenuesDropdownOpen(false);
+                                            closeAllSubmenus();
+                                          }}
+                                          className="text-[#AA8B54] hover:underline font-medium text-[10px] uppercase tracking-wider"
+                                        >
+                                          Enquire Now &rarr;
+                                        </Link>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            }
+
                             return (
                               <Link
                                 key={venue.id}
@@ -1056,6 +1683,7 @@ export function Header() {
                   href={link.href}
                   className={cn(
                     "text-xs xl:text-[13px] uppercase tracking-[0.16em] font-medium transition-colors relative py-1 hover:text-[#C6A568]",
+                    isHome && "ml-4 xl:ml-8",
                     isActive
                       ? "text-[#C6A568] font-semibold"
                       : isScrolled

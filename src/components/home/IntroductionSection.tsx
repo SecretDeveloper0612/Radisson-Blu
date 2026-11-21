@@ -67,19 +67,6 @@ export function IntroductionSection() {
                 </div>
               </div>
             </Reveal>
-
-            {/* Understated Link */}
-            <Reveal direction="up" delayMs={400}>
-              <div className="pt-2">
-                <Link
-                  href="/about"
-                  className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#0E0D35] hover:text-[#C6A568] transition-colors group"
-                >
-                  <span>Explore the Hotel</span>
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 text-[#AA8B54]" />
-                </Link>
-              </div>
-            </Reveal>
           </div>
         </div>
       </Container>

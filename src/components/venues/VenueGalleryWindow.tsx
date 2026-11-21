@@ -28,6 +28,8 @@ interface VenueGalleryWindowProps {
   isOpen: boolean;
   onClose: () => void;
   initialVenueSlug?: string;
+  customImages?: string[];
+  customTitle?: string;
 }
 
 const emptySubscribe = () => () => {};
@@ -36,9 +38,23 @@ export function VenueGalleryWindow({
   isOpen,
   onClose,
   initialVenueSlug,
+  customImages,
+  customTitle,
 }: VenueGalleryWindowProps) {
-  // Aggregate all venue photos
+  // Aggregate all venue photos or use custom images when provided
   const allPhotos: VenuePhoto[] = useMemo(() => {
+    if (customImages && customImages.length > 0) {
+      return customImages.map((src, idx) => ({
+        id: `custom-img-${idx}`,
+        venueName: customTitle || "Celebration Gallery",
+        venueCategory: "Celebration",
+        venueSlug: initialVenueSlug || "event",
+        src,
+        alt: `${customTitle || "Event"} photo ${idx + 1}`,
+        isCover: idx === 0,
+      }));
+    }
+
     const list: VenuePhoto[] = [];
     venuesData.forEach((venue) => {
       // Add featured image
@@ -67,7 +83,7 @@ export function VenueGalleryWindow({
       });
     });
     return list;
-  }, []);
+  }, [customImages, customTitle, initialVenueSlug]);
 
   const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
 

@@ -34,6 +34,152 @@ export default function AirbnbGalleryHero({
 
   const totalCount = validImages.length;
 
+  // If there are exactly 2 images, display a clean 2-column side-by-side gallery
+  if (totalCount === 2) {
+    return (
+      <>
+        <div className="relative w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 h-[320px] sm:h-[420px] md:h-[480px] lg:h-[520px] rounded-2xl overflow-hidden shadow-xl bg-neutral-900 border border-[#E8E8F0]">
+            {validImages.map((img, idx) => (
+              <div
+                key={idx}
+                onClick={() => setWindowOpen(true)}
+                className="relative h-full cursor-pointer group overflow-hidden"
+              >
+                <Image
+                  src={img}
+                  alt={`${title} photo ${idx + 1}`}
+                  fill
+                  priority={idx === 0}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors" />
+
+                {idx === 1 && (
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setWindowOpen(true);
+                    }}
+                    className="absolute right-4 bottom-4 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/95 hover:bg-white text-[#0E0D35] border border-black/10 shadow-lg text-xs font-semibold uppercase tracking-wider backdrop-blur-md transition-all duration-200 hover:scale-105 cursor-pointer z-10"
+                  >
+                    <Grid3X3 className="w-3.5 h-3.5 text-[#AA8B54]" />
+                    <span>View Photos (2)</span>
+                  </button>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile "View Photos" Floating Button */}
+          <div className="md:hidden mt-2 flex justify-end">
+            <button
+              type="button"
+              onClick={() => setWindowOpen(true)}
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-white text-[#0E0D35] border border-[#E8E8F0] shadow-sm text-xs font-medium"
+            >
+              <Grid3X3 className="w-3.5 h-3.5 text-[#AA8B54]" />
+              <span>View Photos (2)</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Full Screen Lightbox Modal */}
+        <VenueGalleryWindow
+          isOpen={windowOpen}
+          onClose={() => setWindowOpen(false)}
+          customImages={validImages}
+          customTitle={`${venueName} — ${title}`}
+          initialVenueSlug={venueSlug}
+        />
+      </>
+    );
+  }
+
+  // If there are exactly 3 images, display 1 featured left + 2 stacked right
+  if (totalCount === 3) {
+    return (
+      <>
+        <div className="relative w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 h-[320px] sm:h-[420px] md:h-[480px] lg:h-[520px] rounded-2xl overflow-hidden shadow-xl bg-neutral-900 border border-[#E8E8F0]">
+            {/* Main Featured Photo (Left 2 columns on desktop) */}
+            <div
+              onClick={() => setWindowOpen(true)}
+              className="relative md:col-span-2 h-[260px] md:h-full cursor-pointer group overflow-hidden"
+            >
+              <Image
+                src={validImages[0]}
+                alt={`${title} photo 1`}
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 66vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors" />
+            </div>
+
+            {/* Stacked Right Column for the remaining 2 photos */}
+            <div className="hidden md:grid grid-rows-2 gap-3 h-full">
+              {validImages.slice(1, 3).map((img, idx) => (
+                <div
+                  key={idx}
+                  onClick={() => setWindowOpen(true)}
+                  className="relative h-full cursor-pointer group overflow-hidden"
+                >
+                  <Image
+                    src={img}
+                    alt={`${title} photo ${idx + 2}`}
+                    fill
+                    sizes="33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors" />
+
+                  {idx === 1 && (
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setWindowOpen(true);
+                      }}
+                      className="absolute right-4 bottom-4 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/95 hover:bg-white text-[#0E0D35] border border-black/10 shadow-lg text-xs font-semibold uppercase tracking-wider backdrop-blur-md transition-all duration-200 hover:scale-105 cursor-pointer z-10"
+                    >
+                      <Grid3X3 className="w-3.5 h-3.5 text-[#AA8B54]" />
+                      <span>View Photos (3)</span>
+                    </button>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Mobile "View Photos" Floating Button */}
+          <div className="md:hidden mt-2 flex justify-end">
+            <button
+              type="button"
+              onClick={() => setWindowOpen(true)}
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-white text-[#0E0D35] border border-[#E8E8F0] shadow-sm text-xs font-medium"
+            >
+              <Grid3X3 className="w-3.5 h-3.5 text-[#AA8B54]" />
+              <span>View Photos (3)</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Full Screen Lightbox Modal */}
+        <VenueGalleryWindow
+          isOpen={windowOpen}
+          onClose={() => setWindowOpen(false)}
+          customImages={validImages}
+          customTitle={`${venueName} — ${title}`}
+          initialVenueSlug={venueSlug}
+        />
+      </>
+    );
+  }
+
   return (
     <>
       <div className="relative w-full">
